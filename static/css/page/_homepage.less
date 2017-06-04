@@ -1,0 +1,43 @@
+.welcome {
+  border-radius: 5px;
+  padding: 40px;
+  background: #f5e5c0;
+  margin-bottom: 20px;
+
+  .photo {
+    img {
+      border-radius: 8px;
+      max-width: 100%;
+    }
+  }
+
+  .headline {
+    font-size: 40px;
+  }
+
+  .attributes {
+    font-size: 20px;
+
+    span.label {
+      &:before {
+        content: "#";
+        display: inline-block;
+      }
+    }
+
+    .danger {
+      color: red;
+      font-weight: bold;
+    }
+  }
+
+  .social-buttons {
+
+    a {
+      font-size: 40px;
+      color: #2f3440;
+      margin: 0 15px 0 0;
+      display: inline-block;
+    }
+  }
+}

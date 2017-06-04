@@ -1,0 +1,67 @@
+.skills {
+  ul {
+    li {
+      list-style-type: none;
+    }
+  }
+  .skill-title {
+    font-size: 18px;
+    line-height: 1.7em;
+    width: 40%;
+    text-align: right;
+    padding-right: 30px;
+    display: inline-block;
+  }
+  .skill-size {
+    display: inline-block;
+    background: #cdcdcd;
+    width: 45%;
+    height: 12px;
+    position: relative;
+    z-index: 1;
+  }
+  .skill-size-x {
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+    }
+  }
+  .skill-size-5 {
+    &:before {
+      width: 100%;
+    }
+  }
+  .skill-size-4 {
+    &:before {
+      width: 80%;
+    }
+  }
+  .skill-size-3 {
+    &:before {
+      width: 60%;
+    }
+  }
+  .skill-size-2 {
+    &:before {
+      width: 40%;
+    }
+  }
+  .skill-size-1 {
+    &:before {
+      width: 20%;
+    }
+  }
+  .skill-size-0 {
+    &:before {
+      width: 0;
+    }
+  }
+  .skill-color-1 {
+    &:before {
+      background: green;
+    }
+  }
+}

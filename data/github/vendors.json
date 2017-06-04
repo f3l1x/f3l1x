@@ -1,0 +1,72 @@
+{
+  "vendors": [
+    {
+      "name": "f3l1x",
+      "description": "My (Milan Felix Šulc) personal GitHub profile."
+    },
+    {
+      "name": "contributte",
+      "description": "Extra contribution to Nette Framework"
+    },
+    {
+      "name": "componette",
+      "description": "Awesome Nette Portal"
+    },
+    {
+      "name": "planette",
+      "description": "Nette-land"
+    },
+    {
+      "name": "nette101",
+      "description": "The Nette Cookbook for the Beginners"
+    },
+    {
+      "name": "mockista",
+      "description": "Mockista: tiny PHP mocking tool with adjustable API"
+    },
+    {
+      "name": "nettrine",
+      "description": "Easy & smart integration of Doctrine2 to Nette Framework"
+    },
+    {
+      "name": "FriendsOfNette",
+      "description": "Practises and projects from Nette Comunnity"
+    },
+    {
+      "name": "dockette",
+      "description": "Docker images focused on web applications (Nginx, PHP 7, NodeJS, LetsEncrypt)"
+    },
+    {
+      "name": "GameFX",
+      "description": "Little games written in Java/JavaFX. Most successful is j2048"
+    },
+    {
+      "name": "PlayFX",
+      "description": "Codes and snippets in Java/JavaFX"
+    },
+    {
+      "name": "Markette",
+      "description": "E-commerce addons for Nette Framework (@MarketteFw)"
+    },
+    {
+      "name": "phalette",
+      "description": "Phalcon & Nette"
+    },
+    {
+      "name": "pehapkari",
+      "description": "Czech PHP community"
+    },
+    {
+      "name": "dckrfile",
+      "description": "Czech Docker Point"
+    },
+    {
+      "name": "trainit",
+      "description": "Tutorials, Hints, Tips, Practices, Samples to IT world"
+    },
+    {
+      "name": "minetro",
+      "description": "Collection of plugins and extensions for Nette Framework"
+    }
+  ]
+}

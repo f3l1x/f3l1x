@@ -1,140 +1,84 @@
 {{ define "main" }}
-        <!-- Content -->
-        <div class="content">
-            <div class="panel-container">
-                <div id="about">
 
-                    <!-- About -->
-                    <!-- Welcome block -->
-                    <div class="plain-content">
-                        <p class="about-text">
-                            My name is Milan and I'm a web developer. I live in <abbr title="Czech Republic">Hradec Kralove</abbr> and I have 10+ years of professional experience with web/desktop application development.
-                        </p>
-                        <p class="about-text">
-                            I will gladly help you with your projects, contact me on <i class="fa fa-envelope"></i>&nbsp;<a href="mailto:hack@f3l1x.io?subject=I would like to hack..">hack@f3l1x.io</a>.
-                        </p>
-                    </div>
-                    <!-- /Welcome block -->
+<div class="welcome">
+    <div class="row">
+        <div class="col-md-4">
 
-                    <div class="portfolio-wrapper">
-                        <!-- Portfolio -->
-                        <div class="plain-content portfolio">
-                            <a class="portfolio-item" href="https://github.com/f3l1x"><img alt="" title="My (Milan Felix Šulc) personal GitHub profile." src="https://avatars0.githubusercontent.com/u/538058?v=3&s=100"></a>
-                            <a class="portfolio-item" href="https://github.com/minetro"><img alt="" title="Collection of plugins and extensions for Nette Framework" src="https://avatars0.githubusercontent.com/u/10771980?v=3&s=100"></a>
-                            <a class="portfolio-item" href="https://github.com/contributte"><img alt="" title="Extra contribution to Nette Framework" src="https://avatars0.githubusercontent.com/u/22681157?v=3&s=100"></a>
-                            <a class="portfolio-item" href="https://github.com/componette"><img alt="" title="Awesome Nette Portal" src="https://avatars3.githubusercontent.com/u/10809856?v=3&s=100"></a>
-                            <a class="portfolio-item" href="https://github.com/planette"><img alt="" title="Nette-land" src="https://avatars0.githubusercontent.com/u/25814367?v=3&s=100"></a>
-                            <a class="portfolio-item" href="https://github.com/nette101"><img alt="" title="The Nette Cookbook for the Beginners" src="https://avatars1.githubusercontent.com/u/24988313?v=3&s=100"></a>
-                            <a class="portfolio-item" href="https://github.com/mockista"><img alt="" title="Mockista: tiny PHP mocking tool with adjustable API" src="https://avatars3.githubusercontent.com/u/26198980?v=3&s=100"></a>
-                            <a class="portfolio-item" href="https://github.com/nettrine"><img alt="" title="Easy & smart integration of Doctrine2 to Nette Framework" src="https://avatars2.githubusercontent.com/u/26110973?v=3&s=100"></a>
-                            <a class="portfolio-item" href="https://github.com/FriendsOfNette"><img alt="" title="Practises and projects from Nette Comunnity" src="https://avatars3.githubusercontent.com/u/14782624?v=3&s=100"></a>
-                            <a class="portfolio-item" href="https://github.com/dockette"><img alt="" title="Docker images focused on web applications (Nginx, PHP 7, NodeJS, LetsEncrypt)" src="https://avatars0.githubusercontent.com/u/15856518?v=3&s=100"></a>
-                            <a class="portfolio-item" href="https://github.com/GameFX"><img alt="" title="Little games written in Java/JavaFX. Most successful is j2048" src="https://avatars3.githubusercontent.com/u/11782824?v=3&s=100"></a>
-                            <a class="portfolio-item" href="https://github.com/PlayFX"><img alt="" title="Codes and snippets in Java/JavaFX" src="https://avatars0.githubusercontent.com/u/11848964?v=3&s=100"></a>
-                            <a class="portfolio-item" href="https://github.com/Markette"><img alt="" title="E-commerce addons for Nette Framework (@MarketteFw)" src="https://avatars3.githubusercontent.com/u/1813214?v=3&s=100"></a>
-                            <a class="portfolio-item" href="https://github.com/phalette"><img alt="" title="Phalcon & Nette" src="https://avatars1.githubusercontent.com/u/13978584?v=3&s=100"></a>
-                            <a class="portfolio-item" href="https://github.com/pehapkari"><img alt="" title="Czech PHP community" src="https://avatars2.githubusercontent.com/u/12694503?v=3&s=100"></a>
-                            <a class="portfolio-item" href="https://github.com/dckrfile"><img alt="" title="Czech Docker Point" src="https://avatars1.githubusercontent.com/u/16175917?v=3&s=100"></a>
-                            <a class="portfolio-item" href="https://github.com/trainit"><img alt="" title="Tutorials, Hints, Tips, Practices, Samples to IT world" src="https://avatars3.githubusercontent.com/u/17249862?v=3&s=100"></a>
-                        </div>
-                        <!-- / Portfolio -->
-                    </div>
+            <div class="photo">
+                <img src="{{ .Site.BaseURL }}img/felix.png" alt="Milan Felix Šulc">
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="headline">
+                <div class="name">Milan Felix Šulc</div>
+            </div>
 
-                    <!-- Grey block -->
-                    <div class="grey-content grey-block">
-                        <div class="skills">
-                            <ul>
-                                <li>
-                                    <div class="skill-title">HTML5/CSS3</div>
-                                    <div class="skill-size skill-size-x skill-size-5 skill-color-1"></div>
-                                </li>
-                                <li>
-                                    <div class="skill-title">PHP</div>
-                                    <div class="skill-size skill-size-x skill-size-5 skill-color-1"></div>
-                                </li>
-                                <li>
-                                    <div class="skill-title">Nette Framework</div>
-                                    <div class="skill-size skill-size-x skill-size-5 skill-color-1"></div>
-                                </li>
-                                <li>
-                                    <div class="skill-title">Symfony</div>
-                                    <div class="skill-size skill-size-x skill-size-4 skill-color-1"></div>
-                                </li>
-                                <li>
-                                    <div class="skill-title">Phalcon</div>
-                                    <div class="skill-size skill-size-x skill-size-4 skill-color-1"></div>
-                                </li>
-                                <li>
-                                    <div class="skill-title">JavaScript (ES5/6/7)</div>
-                                    <div class="skill-size skill-size-x skill-size-3 skill-color-1"></div>
-                                </li>
-                                <li>
-                                    <div class="skill-title">ReactJS / Vue.js</div>
-                                    <div class="skill-size skill-size-x skill-size-2 skill-color-1"></div>
-                                </li>
-                                <li>
-                                    <div class="skill-title">NodeJS</div>
-                                    <div class="skill-size skill-size-x skill-size-3 skill-color-1"></div>
-                                </li>
-                                <li>
-                                    <div class="skill-title">Java</div>
-                                    <div class="skill-size skill-size-x skill-size-4 skill-color-1"></div>
-                                </li>
-                                <li>
-                                    <div class="skill-title"><abbr title="Spring Framework, Hibernate, JPA, JSF">Java EE</abbr></div>
-                                    <div class="skill-size skill-size-x skill-size-3 skill-color-1"></div>
-                                </li>
-                                <li>
-                                    <div class="skill-title">MySQL</div>
-                                    <div class="skill-size skill-size-x skill-size-4 skill-color-1"></div>
-                                </li>
-                                <li>
-                                    <div class="skill-title">PostgreSQL</div>
-                                    <div class="skill-size skill-size-x skill-size-4 skill-color-1"></div>
-                                </li>
-                                <li>
-                                    <div class="skill-title">MongoDB</div>
-                                    <div class="skill-size skill-size-x skill-size-3 skill-color-1"></div>
-                                </li>
-                                <li>
-                                    <div class="skill-title">Redis</div>
-                                    <div class="skill-size skill-size-x skill-size-2 skill-color-1"></div>
-                                </li>
-                                <li>
-                                    <div class="skill-title">Python</div>
-                                    <div class="skill-size skill-size-x skill-size-2 skill-color-1"></div>
-                                </li>
-                                <li>
-                                    <div class="skill-title">Go</div>
-                                    <div class="skill-size skill-size-x skill-size-2 skill-color-1"></div>
-                                </li>
-                                <li>
-                                    <div class="skill-title">Rust</div>
-                                    <div class="skill-size skill-size-x skill-size-1 skill-color-1"></div>
-                                </li>
-                                <li>
-                                    <div class="skill-title"><abbr title="Debian / Ubuntu / Mint">Unix</abbr></div>
-                                    <div class="skill-size skill-size-x skill-size-3 skill-color-1"></div>
-                                </li>
-                                <li>
-                                    <div class="skill-title">Docker</div>
-                                    <div class="skill-size skill-size-x skill-size-4 skill-color-1"></div>
-                                </li>
-                                <li>
-                                    <div class="skill-title">Bash</div>
-                                    <div class="skill-size skill-size-x skill-size-3 skill-color-1"></div>
-                                </li>
-                                <li>
-                                    <div class="skill-title">Git</div>
-                                    <div class="skill-size skill-size-x skill-size-5 skill-color-1"></div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- /Grey block -->
-
+            <div class="attributes">
+                <div>
+                    <span class="label label-default">dev-ninja</span>
+                    <span class="label label-default">freelancer</span>
+                    <span class="label label-default">workaholic</span>
+                    <span class="label label-default">perfectionist</span>
+                    <span class="label label-default">open-source</span>
+                </div>
+                <br>
+                <p>
+                    I'm from Czech Republic and I'have more then 10 years of professional experience with web/desktop application development. I'm <span class="danger">open</span> for new challenges!
+                </p>
+                <div class="social-buttons hidden-xs hidden-sm">
+                    <a title="CV/Resume" href="https://cv.jfx.cz">
+                        <div class="resume"><i class="fa fa-tasks"></i></div>
+                    </a>
+                    <a title="My GitHub profile" href="https://github.com/f3l1x">
+                        <div class="github"><i class="fa fa-github"></i></div>
+                    </a>
+                    <a title="My Facebook profile" href="https://www.facebook.com/xfelix">
+                        <div class="facebook"><i class="fa fa-facebook"></i></div>
+                    </a>
+                    <a title="My Twitter stream" href="https://twitter.com/xf3l1x">
+                        <div class="twitter"><i class="fa fa-twitter"></i></div>
+                    </a>
+                    <a title="My LinkedIn professional profile" href="https://www.linkedin.com/in/milansulc">
+                        <div class="linkedin"><i class="fa fa-linkedin"></i></div>
+                    </a>
+                    <a title="Call me on skype (rkfelix)" href="skype:rkfelix">
+                        <div class="skype"><i class="fa fa-skype"></i></div>
+                    </a>
+                    <a title="Write me a message (hack@f3l1x.io)" href="mailto:hack@f3l1x.io?subject=I would like to hack..">
+                        <div class="envelope"><i class="fa fa-envelope"></i></div>
+                    </a>
+                    <a title="Call me maybe (777 211 300)" href="tel:+420777211300">
+                        <div class="mobile"><i class="fa fa-mobile"></i></div>
+                    </a>
                 </div>
             </div>
         </div>
-        <!-- /Content -->
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-5">
+        <div class="opensource">
+            {{ range $vendors := $.Site.Data.github.vendors }}
+            {{ range $vendor := $vendors }}
+            <a href="https://github.com/{{ $vendor.name }}"><img alt="" title="{{ $vendor.description }}" src="https://github.com/{{ $vendor.name }}.png?v=3&s=100"></a>
+            {{ end }}
+            {{ end }}
+        </div>
+    </div>
+    <div class="col-md-7">
+        <div class="skills">
+            <ul>
+                {{ range $skills := $.Site.Data.skills }}
+                {{ range $skill := $skills }}
+                <li>
+                    <div class="skill-title">{{ if $skill.abbr }}<abbr title="{{ $skill.abbr }}">{{ $skill.name }}</abbr>{{ else }}{{ $skill.name }}{{ end }}</div>
+                    <div class="skill-size skill-size-x skill-size-{{ $skill.skill }} skill-color-1"></div>
+                </li>
+                {{ end }}
+                {{ end }}
+            </ul>
+        </div>
+    </div>
+</div>
 {{ end }}

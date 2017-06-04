@@ -1,0 +1,153 @@
+.header,
+.marketing,
+.footer {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.header {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.footer {
+  padding-top: 19px;
+  color: #777;
+  text-align: center;
+  border-top: 1px solid #e5e5e5;
+}
+.footer ul {
+  padding: 0;
+}
+.footer ul li{
+  list-style: none;
+  display: inline;
+}
+.footer ul li::after {
+  content: ' |';
+}
+.footer ul li:last-of-type::after {
+  content: none;
+}
+.container-narrow > hr {
+  margin: 30px 0;
+}
+.marketing {
+  margin: 0 0 40px 0;
+}
+.marketing ul.refs {
+  margin: 0;
+  padding: 0;
+}
+.marketing ul.refs li {
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+  background: #f2f2f2;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  width: 48%;
+  display: inline-block;
+}
+.marketing ul.refs li .caption {
+  width: 50%;
+  padding: 0 10px;
+  float: left;
+}
+.marketing ul.refs li .caption h3 {
+  margin-top: 5px;
+}
+.marketing ul.refs li .image {
+  width: 50%;
+  float: right;
+}
+.marketing ul.refs li .image img {
+  border-radius: 10px;
+}
+.marketing ul.refs li .image a {
+  width: 100%;
+  text-align: right;
+  display: inline-block;
+}
+.marketing h2 a {
+  color: #cdcdcd;
+}
+.marketing ul.brands {
+  text-align: center;
+}
+.marketing ul.brands li {
+  list-style: none;
+  display: inline;
+}
+.marketing h3.deprecated {
+  padding: 20px 0;
+  margin-bottom: 30px;
+  text-align: center;
+  border-bottom: 1px dashed #ddd;
+}
+#navigation {
+  padding: 20px;
+  margin-bottom: 20px;
+}
+#navigation li a {
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  background: #f2f2f2;
+}
+#navigation li.active a {
+  background: #337ab7;
+  color: #fff;
+  border: 1px solid #337ab7;
+}
+
+@media screen and (min-width: 768px) {
+  .header,
+  .marketing,
+  .footer {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .marketing ul.refs li .image img {
+    max-height: 200px;
+  }
+  .marketing .media-left img {
+    max-width: 150px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .marketing ul.refs li .image img {
+    max-height: 180px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .marketing ul.refs li {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  body {
+    text-align: center;
+  }
+  .media .media-left {
+    display: inline-block;
+    text-align: center;
+  }
+  .marketing .media-body ul li {
+    padding: 0;
+  }
+  .marketing .media-body h3 {
+    margin-top: 15px;
+  }
+  .marketing ul.refs li .caption,
+  .marketing ul.refs li .image {
+    float: none;
+    width: 100%;
+  }
+  .marketing ul.refs li .image a {
+    text-align: center;
+  }
+  .marketing ul.refs li .image img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
