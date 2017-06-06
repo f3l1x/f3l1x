@@ -16,10 +16,10 @@
     <meta name="description" content="I'm a web developer. Aimed at backend - PHP, MySQL, JavaScript, Nette Framwork, Nginx.">
     <meta name="googlebot" content="snippet,archive">
     <meta name="robots" content="index, follow">
-    <meta name="author" content="Felix">
+    <meta name="author" content="Felix <hack@f3l1x.io>">
 
     <!-- FACEBOOK -->
-    <meta property="og:image" content="{{ .Site.BaseURL }}/img/fb-logo.png">
+    <meta property="og:image" content="{{ .Site.BaseURL }}img/fb-logo.png">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Milan Felix Šulc - Developer">
     <meta property="og:url" content="{{ .Site.BaseURL }}">
@@ -29,10 +29,8 @@
     <!-- CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/agate.min.css">
     <link rel="stylesheet" href="{{ .Site.BaseURL }}dist/dist.css?v=2.1">
-
-    <!-- Fonts -->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
 
     <!-- Monitoring -->
     {{ partial "smartlook" }}
@@ -43,7 +41,7 @@
     <div class="container">
         <nav>
             <ul>
-                <li><a href="/" class="logo"><img title="Milan Felix Sulc" src="{{ .Site.BaseURL }}img/f3l1x.png"></a></li>
+                <li><a href="/" class="logo"><img title="Milan Felix Sulc" src="{{ .Site.BaseURL }}img/f3l1x2.png"></a></li>
                 <li><a href="/blog">Blog</a></li>
                 <li><a href="/projects">Projects</a></li>
                 <li><a href="/resume">CV</a></li>
@@ -65,9 +63,36 @@
 
 <footer>
     <div class="container">
+        {{ if eq .Type "blog" }}
+        <section class="articles">
+            <div class="container">
+                <div class="row">
+                    {{ if .PrevInSection }}
+                    <article class="post-prev col-md-6 col-sm-6">
+                        <i>PŘEDCHOZÍ</i>
+                        <h2>
+                            <a href="{{ .PrevInSection.RelPermalink }}">{{ .PrevInSection.Title }}</a>
+                        </h2>
+                        <small>{{ .PrevInSection.Date.Format "02/01/2006" }}</small>
+                    </article>
+                    {{ end }}
+                    {{ if .NextInSection }}
+                    <article class="post-next col-md-6 col-sm-6">
+                        <i>PŘEDCHOZÍ</i>
+                        <h2>
+                            <a href="{{ .NextInSection.RelPermalink }}">{{ .NextInSection.Title }}</a>
+                        </h2>
+                        <small>{{ .NextInSection.Date.Format "02/01/2006" }}</small>
+                    </article>
+                    {{ end }}
+                </div>
+            </div>
+        </section>
+        {{ end }}
+
         <section class="end">
             <p>
-                © <a href="http://jfx.cz">Milan Felix Šulc</a> |
+                © <a href="/">Milan Felix Šulc</a> |
                 @<a href="http://twitter.com/xf3l1x">twitter</a> |
                 #<a href="http://github.com/f3l1x">github</a>
             </p>
@@ -79,16 +104,14 @@
     </div>
 </footer>
 
-<!-- MONITORING -->
-<script>
-    ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
-    ga('create','UA-28123999-1','auto');
-    ga('set', 'contentGroup1', 'portfolio');
-    ga('send','pageview');
-</script>
+{{ partial "qa.html" }}
+
 <!-- JS -->
 <script src="https://www.google-analytics.com/analytics.js" async defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/dockerfile.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="{{ .Site.BaseURL }}dist/bundle.js?v=2" type="text/javascript"></script>
 </body>
