@@ -6,3 +6,7 @@ title = "Milan Felix Šulc - Developer"
 [outputFormats.RSS]
 mediatype = "application/rss"
 baseName = "feed"
+
+[params]
+    github = "https://github.com/f3l1x/f3l1x/"
+    github_content = "https://github.com/f3l1x/f3l1x/blob/master/content/"
