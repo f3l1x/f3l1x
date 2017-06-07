@@ -1,3 +1,8 @@
 baseurl = "https://f3l1x.io/"
 languageCode = "en-us"
 title = "Milan Felix Šulc - Developer"
+
+[outputFormats]
+[outputFormats.RSS]
+mediatype = "application/rss"
+baseName = "feed"
