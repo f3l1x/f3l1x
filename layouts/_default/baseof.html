@@ -32,6 +32,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/agate.min.css">
     <link rel="stylesheet" href="{{ .Site.BaseURL }}dist/dist.css?v=2.1">
 
+    {{ if eq .Type "blog" }}
+    {{ if .RSSLink }}
+    <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+    <link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
+    {{ end }}
+    {{ end }}
+
     <!-- Monitoring -->
     {{ partial "smartlook" }}
 </head>
@@ -50,7 +57,7 @@
         </nav>
         <div class="buttons hidden-sm hidden-xs">
             <a class="button" href="https://twitter.com/xf3l1x"><i class="fa fa-twitter" aria-hidden="true"></i> @xf3l1x</a>
-            <a class="button" href="/feed.xml"><i class="fa fa-rss-square" aria-hidden="true"></i> RSS</a>
+            <a class="button" href="/blog/feed.xml"><i class="fa fa-rss-square" aria-hidden="true"></i> RSS</a>
         </div>
     </div>
 </div>
