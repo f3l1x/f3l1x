@@ -27,7 +27,7 @@
                         I'm from Czech Republic and I have more then 10 years of professional experience with web/desktop application development.
                         I'm <span class="danger" data-toggle="tooltip" data-placement="top" title="I'll prepare, help, create, clarify, teach, review, hack for 800 CZK per hour">open</span> for new challenges!
                     </p>
-                    <div class="social-buttons hidden-xs hidden-sm">
+                    <div class="social-buttons">
                         <a title="CV/Resume" href="https://cv.jfx.cz">
                             <div class="resume"><i class="fa fa-tasks"></i></div>
                         </a>
@@ -64,20 +64,16 @@
     </div>
 
     <div class="skills collapse" id="my-skills">
-        <div class="row">
-            <div class="col-md-7 col-md-offset-2">
-                <ul>
-                    {{ range $skills := $.Site.Data.skills }}
-                        {{ range $skill := $skills }}
-                        <li>
-                            <div class="skill-title">{{ if $skill.abbr }}<abbr title="{{ $skill.abbr }}">{{ $skill.name }}</abbr>{{ else }}{{ $skill.name }}{{ end }}</div>
-                            <div class="skill-size skill-size-x skill-size-{{ $skill.skill }} skill-color-1"></div>
-                        </li>
-                        {{ end }}
-                    {{ end }}
-                </ul>
-            </div>
-        </div>
+        <ul>
+            {{ range $skills := $.Site.Data.skills }}
+                {{ range $skill := $skills }}
+                <li>
+                    <div class="skill-title">{{ if $skill.abbr }}<abbr title="{{ $skill.abbr }}">{{ $skill.name }}</abbr>{{ else }}{{ $skill.name }}{{ end }}</div>
+                    <div class="skill-size skill-size-x skill-size-{{ $skill.skill }} skill-color-1"></div>
+                </li>
+                {{ end }}
+            {{ end }}
+        </ul>
     </div>
 
     <div class="posts">
@@ -97,14 +93,16 @@
         </div>
     </div>
 
-    <div class="row">
-        <div class="col-md-12">
-            <div class="opensource">
-                {{ range $vendors := $.Site.Data.github.vendors }}
+    <div class="opensource">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="opensource">
+                    {{ range $vendors := $.Site.Data.github.vendors }}
                     {{ range $vendor := $vendors }}
                     <a href="https://github.com/{{ $vendor.name }}"><img alt="" title="{{ $vendor.description }}" src="https://github.com/{{ $vendor.name }}.png?v=3&s=100"></a>
                     {{ end }}
-                {{ end }}
+                    {{ end }}
+                </div>
             </div>
         </div>
     </div>
