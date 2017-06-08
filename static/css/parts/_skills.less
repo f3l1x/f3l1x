@@ -1,6 +1,10 @@
 .skills {
+  margin-bottom: 20px;
   ul {
+    margin: 0;
+    padding: 0;
     li {
+      padding: 0 10px;
       list-style-type: none;
     }
   }
@@ -62,6 +66,15 @@
   .skill-color-1 {
     &:before {
       background: green;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .skills {
+    .skill-title, .skill-size {
+      width: 100%;
+      text-align: center;
     }
   }
 }
