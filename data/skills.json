@@ -1,90 +1,46 @@
 {
   "skills": [
     {
-      "name": "HTML5/CSS3",
+      "name": "Git",
       "skill": "5"
     },
     {
-      "name": "PHP",
+      "name": "HTML5/CSS3/JavaScript",
+      "abbr": "React/VueJS, Less/Sass, WebPack",
       "skill": "5"
     },
     {
-      "name": "Nette Framework",
+      "name": "PHP / Nette / Symfony / Phalcon",
       "skill": "5"
     },
     {
-      "name": "Symfony",
-      "skill": "4"
-    },
-    {
-      "name": "Phalcon",
-      "skill": "4"
-    },
-    {
-      "name": "JavaScript (ES5/6/7)",
-      "skill": "3"
-    },
-    {
-      "name": "ReactJS / Vue.js",
-      "skill": "2"
-    },
-    {
-      "name": "NodeJS",
-      "skill": "3"
-    },
-    {
-      "name": "Java",
-      "skill": "4"
-    },
-    {
-      "name": "Java EE",
+      "name": "Java / Java EE",
       "abbr": "Spring, Spring Boot, Hibernate, JPA, JSF",
-      "skill": "3"
-    },
-    {
-      "name": "MySQL",
       "skill": "4"
     },
     {
-      "name": "PostgreSQL",
+      "name": "Docker / Rancher / Kubernetes / Swarm",
       "skill": "4"
     },
     {
-      "name": "MongoDB",
+      "name": "Websockets / Ratcher / ReactPHP",
+      "skill": "4"
+    },
+    {
+      "name": "NodeJS / JavaScript",
       "skill": "3"
     },
     {
-      "name": "Redis",
-      "skill": "2"
-    },
-    {
-      "name": "Python",
-      "skill": "2"
+      "name": "MySQL / PostgreSQL / MongoDB / Redis",
+      "skill": "3"
     },
     {
       "name": "Go",
+      "skill": "3"
+    },
+    {
+      "name": "Python / Rust",
       "skill": "2"
-    },
-    {
-      "name": "Rust",
-      "skill": "1"
-    },
-    {
-      "name": "Unix",
-      "abbr": "Debian / Ubuntu / Mint",
-      "skill": "3"
-    },
-    {
-      "name": "Docker",
-      "skill": "4"
-    },
-    {
-      "name": "Bash",
-      "skill": "3"
-    },
-    {
-      "name": "Git",
-      "skill": "5"
     }
   ]
 }
