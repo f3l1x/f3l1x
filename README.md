@@ -2,6 +2,12 @@
 
 This is source of my personal geek website. Welcome!
 
+-----
+
+[![Build Status](https://img.shields.io/travis/f3l1x/f3l1x.svg?style=flat-square)](https://travis-ci.org/f3l1x/f3l1x)
+
+-----
+
 ## Development
 
 - clone this repo (`git@github.com:f3l1x/f3l1x.git`)
