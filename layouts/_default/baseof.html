@@ -9,7 +9,7 @@
     <link rel="shortcut icon" href="{{ .Site.BaseURL }}favicon.png" type="image/x-icon">
     <meta name="google-site-verification" content="XsOAmV1gT-Y3458pKxdVRR0mHQ719UiZOf7_p6T4nyU">
 
-    <title>Milan Felix Šulc - Developer</title>
+    <title>{{ if eq .Title .Site.Title }}{{- .Site.Title -}}{{ else }}{{ with .Title }}{{.}}{{ end }}{{ end }}</title>
 
     <!-- SEO -->
     <meta name="keywords" content="milan felix sulc, milan sulc, developer, web developer, programator, nette">
@@ -30,11 +30,10 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/agate.min.css">
-    <link rel="stylesheet" href="{{ .Site.BaseURL }}dist/dist.css?v={{ readFile "/static/dist/dist.css" | md5}}">
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}dist/dist.css?hash=v1">
 
     {{ if eq .Type "blog" }}
     {{ if .RSSLink }}
-    <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
     <link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
     {{ end }}
     {{ end }}
@@ -42,8 +41,7 @@
     <!-- Monitoring -->
     {{ partial "smartlook" }}
 </head>
-<body>
-
+<body> 
 <div id="header">
     <div class="container">
         <nav>
@@ -53,7 +51,7 @@
                 <li><a href="/projects">Projects</a></li>
                 <li><a href="/resume">CV</a></li>
                 <li><a href="https://github.com/f3l1x">Github</a></li>
-            </ul>
+            </ul>   
         </nav>
         <div class="buttons hidden-sm hidden-xs">
             <a class="button" href="https://twitter.com/xf3l1x"><i class="fa fa-twitter" aria-hidden="true"></i> @xf3l1x</a>
@@ -121,6 +119,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/dockerfile.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="{{ .Site.BaseURL }}dist/bundle.js?v={{ readFile "/static/dist/bundle.js" | md5}}" type="text/javascript"></script>
+<script src="{{ .Site.BaseURL }}dist/bundle.js?v=v1" type="text/javascript"></script>
 </body>
 </html>
