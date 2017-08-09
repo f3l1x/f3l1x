@@ -1,6 +1,7 @@
 baseurl = "https://f3l1x.io/"
 languageCode = "en-us"
-title = "Milan Felix Šulc - Developer"
+title = "Milan Felix Šulc - DevNinja"
+enableGitInfo = true
 
 [outputFormats]
 [outputFormats.RSS]
