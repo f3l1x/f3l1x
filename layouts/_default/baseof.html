@@ -12,8 +12,8 @@
     <title>{{ if eq .Title .Site.Title }}{{- .Site.Title -}}{{ else }}{{ with .Title }}{{.}}{{ end }}{{ end }}</title>
 
     <!-- SEO -->
-    <meta name="keywords" content="milan felix sulc, milan sulc, developer, web developer, programator, nette">
-    <meta name="description" content="I'm a web developer. Aimed at backend - PHP, MySQL, JavaScript, Nette Framwork, Nginx.">
+    <meta name="keywords" content="Milan Felix Šulc, f3l1x, blog, devblog, nette, java, javascript, nodejs, docker, golang">
+    <meta name="description" content="Try to do my best at opensource scene. PHP, Java, JavaScript, NodeJs, Docker, Go-lang.">
     <meta name="googlebot" content="snippet,archive">
     <meta name="robots" content="index, follow">
     <meta name="author" content="Felix <hack@f3l1x.io>">
@@ -21,10 +21,10 @@
     <!-- FACEBOOK -->
     <meta property="og:image" content="{{ .Site.BaseURL }}img/fb-logo.png">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Milan Felix Šulc - Developer">
-    <meta property="og:url" content="{{ .Site.BaseURL }}">
-    <meta property="og:site_name" content="Felix">
-    <meta property="og:description" content="Hello! I'm Milan Felix Šulc and I'm a web developer.">
+    <meta property="og:title" content="{{ if eq .Title .Site.Title }}{{- .Site.Title -}}{{ else }}{{ with .Title }}{{.}}{{ end }}{{ end }}">
+    <meta property="og:url" content="{{ .Permalink }}">
+    <meta property="og:site_name" content="{{ if eq .Title .Site.Title }}{{- .Site.Title -}}{{ else }}{{ with .Title }}{{.}}{{ end }}{{ end }}">
+    <meta property="og:description" content="Try to do my best at opensource scene. PHP, Java, JavaScript, NodeJs, Docker, Go-lang.">
 
     <!-- CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
