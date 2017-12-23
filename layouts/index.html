@@ -3,104 +3,46 @@
 <div class="homepage">
     <div class="welcome">
         <div class="row">
-            <div class="col-md-4">
-
-                <div class="photo">
-                    <img src="{{ .Site.BaseURL }}img/felix.png" title="Hi I'm Milan, do you want to hire me? Nice!" alt="Milan Felix Šulc">
-                </div>
+            <div class="col-md-8 hot">
+                <ul>
+                    <li>
+                        Hi! I am Milan Šulc better known as <strong>Felix</strong> and I <code>code</code> for living.
+                        You can follow my latest activity on Twitter (<a href="https://twitter.com/xf3l1x">@xf3l1x</a>),
+                        on Github (<a href="https://github.com/f3l1x">#f3l1x</a>) or on my <a href="/blog">blog</a>.
+                    </li>
+                    <li>
+                        I am currently quite busy making my best on <a href="https://nette.org">Nette Framework</a>
+                        documentation, taking care of community projects and create some another Github organizations (of course).
+                    </li>
+                    <li>
+                        Unfortunately, I can't work only on opensource. So you can find me working for <a href="https://tlapnet.cz">Tlapnet</a>,
+                        <a href="https://ders.cz">DERS</a>, <a href="http://econea.cz">Econea</a> and some other projects.
+                        At the end I work day and night for my own geek company <a href="https://nx1.cz">NX1</a>.
+                    </li>
+                    <li>
+                        Anyway, you can reach me on <a href="https://gitter.com/f3l1x">Gitter</a> or <a href="https://pehapkari.cz">Pehapkari.cz's</a> <a href="https://pehapkari.slack.com/messages">Slack</a>.
+                    </li>
+                </ul>
             </div>
-            <div class="col-md-8">
-                <div class="headline">
-                    <div class="name">Milan Felix Šulc</div>
-                </div>
-
-                <div class="attributes">
-                    <div>
-                        <span class="label label-default">dev-ninja</span>
-                        <span class="label label-default">freelancer</span>
-                        <span class="label label-default">workaholic</span>
-                        <span class="label label-default">perfectionist</span>
-                        <span class="label label-default">open-source</span>
-                    </div>
-                    <br>
-                    <p>
-                        I'm from Czech Republic and I have more then 10 years of professional experience with web/desktop application development.
-                        I'm <span class="danger" data-toggle="tooltip" data-placement="top" title="I'll prepare, help, create, clarify, teach, review, hack for 800 CZK per hour">open</span> for new challenges!
-                    </p>
-                    <div class="social-buttons">
-                        <a title="CV/Resume" href="https://cv.jfx.cz">
-                            <div class="resume"><i class="fa fa-tasks"></i></div>
-                        </a>
-                        <a title="My GitHub profile" href="https://github.com/f3l1x">
-                            <div class="github"><i class="fa fa-github"></i></div>
-                        </a>
-                        <a title="My Facebook profile" href="https://www.facebook.com/xfelix">
-                            <div class="facebook"><i class="fa fa-facebook"></i></div>
-                        </a>
-                        <a title="My Twitter stream" href="https://twitter.com/xf3l1x">
-                            <div class="twitter"><i class="fa fa-twitter"></i></div>
-                        </a>
-                        <a title="My LinkedIn professional profile" href="https://www.linkedin.com/in/milansulc">
-                            <div class="linkedin"><i class="fa fa-linkedin"></i></div>
-                        </a>
-                        <a title="Call me on skype (rkfelix)" href="skype:rkfelix">
-                            <div class="skype"><i class="fa fa-skype"></i></div>
-                        </a>
-                        <a title="Write me a message (hack@f3l1x.io)" href="mailto:hack@f3l1x.io?subject=I would like to hack..">
-                            <div class="envelope"><i class="fa fa-envelope"></i></div>
-                        </a>
-                        <a title="Call me maybe (777 211 300)" href="tel:+420777211300">
-                            <div class="mobile"><i class="fa fa-mobile"></i></div>
-                        </a>
-                        <a title="Show skills"  data-toggle="collapse" href="#my-skills">
-                            <div class="skill"><i class="fa fa-code"></i></div>
-                            +
-                            <div class="skill"><i class="fa fa-terminal"></i></div>
-                        </a>
-                    </div>
+            <div class="col-md-4">
+                <div class="photo img-rounded text-center">
+                    <img src="/img/f3l1x.png" width="200" title="Hi I'm Milan, do you want to hire me? Nice!" alt="Milan Felix Šulc">
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="skills collapse" id="my-skills">
-        <ul>
-            {{ range $skills := $.Site.Data.skills }}
-                {{ range $skill := $skills }}
-                <li>
-                    <div class="skill-title">{{ if $skill.abbr }}<abbr title="{{ $skill.abbr }}">{{ $skill.name }}</abbr>{{ else }}{{ $skill.name }}{{ end }}</div>
-                    <div class="skill-size skill-size-x skill-size-{{ $skill.skill }} skill-color-1"></div>
-                </li>
-                {{ end }}
-            {{ end }}
-        </ul>
-    </div>
-
-    <div class="posts">
+    <div class="latests-posts">
         <div class="row">
             <div class="col-md-12">
                 <div>
-                    <h2>Latest blogposts</h2>
-                    {{ range first 5 (where .Data.Pages.ByDate "Type" "blog").Reverse }}
+                    <h2>Latests blogposts</h2>
+                    {{ range first 5 (where .Page.Site.Pages.ByDate "Type" "blog").Reverse }}
                     <div class="post-item">
                         <h3 class="title">
                             <a href="{{ .RelPermalink }}">{{ .Date.Format "02/01/2006" }} | {{ .Title }}</a>
                         </h3>
                     </div>
-                    {{ end }}
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="opensource">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="opensource">
-                    {{ range $vendors := $.Site.Data.github.vendors }}
-                    {{ range $vendor := $vendors }}
-                    <a href="https://github.com/{{ $vendor.name }}"><img alt="" title="{{ $vendor.description }}" src="https://github.com/{{ $vendor.name }}.png?v=3&s=100"></a>
-                    {{ end }}
                     {{ end }}
                 </div>
             </div>

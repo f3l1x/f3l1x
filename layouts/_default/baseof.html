@@ -9,11 +9,11 @@
     <link rel="shortcut icon" href="{{ .Site.BaseURL }}favicon.png" type="image/x-icon">
     <meta name="google-site-verification" content="XsOAmV1gT-Y3458pKxdVRR0mHQ719UiZOf7_p6T4nyU">
 
-    <title>{{ if eq .Title .Site.Title }}{{- .Site.Title -}}{{ else }}{{ with .Title }}{{.}}{{ end }}{{ end }}</title>
+    <title>Milan Felix Šulc - hack for living</title>
 
     <!-- SEO -->
-    <meta name="keywords" content="Milan Felix Šulc, f3l1x, blog, devblog, nette, java, javascript, nodejs, docker, golang">
-    <meta name="description" content="Try to do my best at opensource scene. PHP, Java, JavaScript, NodeJs, Docker, Go-lang.">
+    <meta name="keywords" content="milan šulc, f3l1x, developer, php, nette, java, javascript">
+    <meta name="description" content="I am Milan Šulc and I develop for living.">
     <meta name="googlebot" content="snippet,archive">
     <meta name="robots" content="index, follow">
     <meta name="author" content="Felix <hack@f3l1x.io>">
@@ -21,19 +21,20 @@
     <!-- FACEBOOK -->
     <meta property="og:image" content="{{ .Site.BaseURL }}img/fb-logo.png">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="{{ if eq .Title .Site.Title }}{{- .Site.Title -}}{{ else }}{{ with .Title }}{{.}}{{ end }}{{ end }}">
-    <meta property="og:url" content="{{ .Permalink }}">
-    <meta property="og:site_name" content="{{ if eq .Title .Site.Title }}{{- .Site.Title -}}{{ else }}{{ with .Title }}{{.}}{{ end }}{{ end }}">
-    <meta property="og:description" content="Try to do my best at opensource scene. PHP, Java, JavaScript, NodeJs, Docker, Go-lang.">
+    <meta property="og:title" content="Milan Felix Šulc - Developer">
+    <meta property="og:url" content="{{ .Site.BaseURL }}">
+    <meta property="og:site_name" content="Felix">
+    <meta property="og:description" content="I am Milan Šulc and I develop for living.">
 
     <!-- CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/agate.min.css">
-    <link rel="stylesheet" href="{{ .Site.BaseURL }}dist/dist.css?hash=v1">
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}dist/dist.css?v={{ readFile "/static/dist/dist.css" | md5}}">
 
     {{ if eq .Type "blog" }}
     {{ if .RSSLink }}
+    <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
     <link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
     {{ end }}
     {{ end }}
@@ -41,75 +42,38 @@
     <!-- Monitoring -->
     {{ partial "smartlook" }}
 </head>
-<body> 
-<div id="header">
-    <div class="container">
+<body>
+
+<div class="container">
+    <div id="header">
         <nav>
             <ul>
-                <li><a href="/" class="logo"><img title="Milan Felix Sulc" src="{{ .Site.BaseURL }}img/f3l1x2.png"></a></li>
+                <li><a href="/" class="logo"><img title="Milan Felix Sulc" src="{{ .Site.BaseURL }}img/f3l1x2.png"></a>
+                </li>
                 <li><a href="/blog">Blog</a></li>
                 <li><a href="/projects">Projects</a></li>
-                <li><a href="/resume">CV</a></li>
                 <li><a href="https://github.com/f3l1x">Github</a></li>
-            </ul>   
+                <li><a href="/about">About</a></li>
+            </ul>
         </nav>
         <div class="buttons hidden-sm hidden-xs">
             <a class="button" href="https://twitter.com/xf3l1x"><i class="fa fa-twitter" aria-hidden="true"></i> @xf3l1x</a>
             <a class="button" href="/blog/feed.xml"><i class="fa fa-rss-square" aria-hidden="true"></i> RSS</a>
-            <a class="button" href="https://github.com/f3l1x/f3l1x"><i class="fa fa-code-fork" aria-hidden="true"></i> Fork</a>
+            <a class="button" href="https://github.com/f3l1x/f3l1x"><i class="fa fa-code-fork" aria-hidden="true"></i>
+                Fork</a>
         </div>
     </div>
-</div>
 
-<div class="container">
     <div id="content">
         {{ block "main" .}}{{ end }}
     </div>
+
+    <footer>
+        At the freetime rewritten by <a href="/">Milan Felix Šulc</a>.
+        <br>
+        This page is generated with <a href="https://gohugo.io" title="Hugo">Hugo</a>.
+    </footer>
 </div>
-
-<footer>
-    <div class="container">
-        {{ if eq .Type "blog" }}
-        <section class="articles">
-            <div class="container">
-                <div class="row">
-                    {{ if .PrevInSection }}
-                    <article class="post-prev col-md-6 col-sm-6">
-                        <i>PŘEDCHOZÍ</i>
-                        <h2>
-                            <a href="{{ .PrevInSection.RelPermalink }}">{{ .PrevInSection.Title }}</a>
-                        </h2>
-                        <small>{{ .PrevInSection.Date.Format "02/01/2006" }}</small>
-                    </article>
-                    {{ end }}
-                    {{ if .NextInSection }}
-                    <article class="post-next col-md-6 col-sm-6">
-                        <i>PŘEDCHOZÍ</i>
-                        <h2>
-                            <a href="{{ .NextInSection.RelPermalink }}">{{ .NextInSection.Title }}</a>
-                        </h2>
-                        <small>{{ .NextInSection.Date.Format "02/01/2006" }}</small>
-                    </article>
-                    {{ end }}
-                </div>
-            </div>
-        </section>
-        {{ end }}
-
-        <section class="end">
-            <p>
-                © <a href="/">Milan Felix Šulc</a> |
-                @<a href="http://twitter.com/xf3l1x">twitter</a> |
-                #<a href="http://github.com/f3l1x">github</a>
-            </p>
-
-            <p>
-                Generated by <a href="https://gohugo.io" title="Hugo">Hugo</a>
-            </p>
-        </section>
-    </div>
-</footer>
-
 {{ partial "qa.html" }}
 
 <!-- JS -->
@@ -119,6 +83,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/dockerfile.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="{{ .Site.BaseURL }}dist/bundle.js?v=v1" type="text/javascript"></script>
+<script src="{{ .Site.BaseURL }}dist/bundle.js?v={{ readFile "/static/dist/bundle.js" | md5}}" type="text/javascript"></script>
 </body>
 </html>

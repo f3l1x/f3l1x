@@ -1,12 +1,32 @@
 /* Article list */
-section.post-list {
+.post-list {
+  margin: 20px 0 0 0;
+
   h2 {
     margin-top: 0;
   }
 
   article {
-    .date {
-      color: #808080;
+    padding: 0 0 20px;
+    line-height: 1.5em;
+
+    .title {
+      color: #3A4145;
+      line-height: 20px;
+      font-size: 20px;
+      font-weight: 700;
+      margin: 0 5px 0 0;
+      padding-bottom: 5px;
+      border-bottom: 1px dotted #ddd;
+
+      .date {
+        color: #808080;
+        font-size: 17px;
+      }
+    }
+
+    a {
+      text-decoration: none;
     }
   }
 }

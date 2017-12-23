@@ -2,7 +2,8 @@
 date = "2017-06-04T15:44:57+02:00"
 draft = false
 title = "My CV / Resume"
-type = "fullpage"
+type = "static"
+layout = "resume"
 +++
 
 <!DOCTYPE html>
@@ -13,22 +14,22 @@ type = "fullpage"
     <link rel="shortcut icon" href="/favicon.png" type="image/x-icon">
     <meta name="google-site-verification" content="XsOAmV1gT-Y3458pKxdVRR0mHQ719UiZOf7_p6T4nyU">
 
-    <title>Milan Felix Šulc - Resume/CV</title>
+    <title>Milan Šulc - Resume / CV</title>
 
     <!-- SEO -->
-    <meta name="keywords" content="milan felix sulc, milan sulc, resume, cv, developer, web developer, programator, nette">
-    <meta name="description" content="I'm a web developer. Aimed at backend - PHP, MySQL, JavaScript, Nette Framwork, Nginx.">
+    <meta name="keywords" content="milan šulc, f3l1x, developer, php, nette, java, javascript">
+    <meta name="description" content="I am Milan Šulc and I develop for living.">
     <meta name="googlebot" content="snippet,archive">
     <meta name="robots" content="index, follow">
-    <meta name="author" content="Felix">
+    <meta name="author" content="Felix <hack@f3l1x.io>">
 
     <!-- FACEBOOK -->
-    <meta property="og:image" content="https://cv.jfx.cz/assets/img/fb-logo.png">
+    <meta property="og:image" content="{{ .Site.BaseURL }}img/fb-logo.png">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Milan Felix Šulc - Resume/CV">
-    <meta property="og:url" content="https://cv.jfx.cz">
+    <meta property="og:title" content="Milan Felix Šulc - Developer">
+    <meta property="og:url" content="{{ .Site.BaseURL }}">
     <meta property="og:site_name" content="Felix">
-    <meta property="og:description" content="Hello! I'm Milan Felix Šulc and this is my resume.">
+    <meta property="og:description" content="I am Milan Šulc and I develop for living.">
 
     <!-- Stylesheets -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
@@ -45,7 +46,7 @@ type = "fullpage"
                     <a href="/"><img src="/img/felix.png" alt="Milan Felix Šulc"></a>
                 </div>
                 <div id="text-header">
-                    <h1>Welcome<br> I'm Milan<span>Felix</span> Šulc<sup>25yo</sup> and this is my resume.</h1>
+                    <h1>Welcome<br> I'm Milan<span>Felix</span> Šulc<sup>26yo</sup> and this is my resume.</h1>
                 </div>
             </div>
         </div>
@@ -304,23 +305,41 @@ type = "fullpage"
             </div>
             <!-- SKILLS -->
             <div class="box">
-                <h2>Skills</h2>
+                <h2>Hardskills (languages)</h2>
                 <div class="skills">
-                    <div class="item-skills" data-percent="0.75">HTML 5 / CSS 3</div>
                     <div class="item-skills" data-percent="0.99">PHP</div>
+                    <div class="item-skills" data-percent="0.70">HTML 5 / CSS 3</div>
+                    <div class="item-skills" data-percent="0.75">JavaScript</div>
+                    <div class="item-skills" data-percent="0.85">Java</div>
+                </div>
+
+                <h2>Hardskills (tools)</h2>
+                <div class="skills">
                     <div class="item-skills" data-percent="0.98">Nette Framework</div>
-                    <div class="item-skills" data-percent="0.75">Symfony</div>
-                    <div class="item-skills" data-percent="0.75">Phalcon</div>
-                    <div class="item-skills" data-percent="0.60">JavaScript (ES5/6/7)</div>
-                    <div class="item-skills" data-percent="0.75">MySQL</div>
+                    <div class="item-skills" data-percent="0.80">Symfony</div>
+                    <div class="item-skills" data-percent="0.60">Phalcon</div>
+                    <div class="item-skills" data-percent="0.30">Slim</div>
+                    <div class="item-skills" data-percent="0.30">Silex</div>
+                    <div class="item-skills" data-percent="0.30">Kohana</div>
+                    <div class="item-skills" data-percent="0.30">Zend Framework</div>
+                </div>
+
+                <h2>Hardskills (databases)</h2>
+                <div class="skills">
+                    <div class="item-skills" data-percent="0.75">MySQL / MariaDB</div>
                     <div class="item-skills" data-percent="0.70">PostgreSQL</div>
                     <div class="item-skills" data-percent="0.55">MongoDB</div>
+                    <div class="item-skills" data-percent="0.55">H2</div>
                     <div class="item-skills" data-percent="0.35">Redis</div>
-                    <div class="item-skills" data-percent="0.85">Java</div>
-                    <div class="item-skills" data-percent="0.70">Java EE</div>
-                    <div class="item-skills" data-percent="0.80">Docker</div>
+                    <div class="item-skills" data-percent="0.30">Neo4j</div>
+                    <div class="item-skills" data-percent="0.20">Oracle</div>
+                </div>
+
+                <h2>Hardskills (other)</h2>
+                <div class="skills">
+                    <div class="item-skills" data-percent="0.70">Docker</div>
                     <div class="item-skills" data-percent="0.99">Git</div>
-                    <div class="item-skills" data-percent="0.60">Unix</div>
+                    <div class="item-skills" data-percent="0.80">Unix</div>
                 </div>
             </div>
             <!-- LANGUAGES -->

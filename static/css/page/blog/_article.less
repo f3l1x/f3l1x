@@ -1,5 +1,5 @@
 /* Article */
-article.post {
+.post-detail {
   padding: 0 0 40px 0;
   line-height: 1.5em;
 
@@ -7,6 +7,9 @@ article.post {
     border-bottom: none;
   }
 
+  h1 {
+    margin-top: 0;
+  }
   h2 {
     border-bottom: 1px dotted #dddddd;
   }
@@ -28,6 +31,7 @@ article.post {
     color: #007998;
     font-weight: 600;
   }
+
   .content, .perex {
     p {
       color: #000;
@@ -47,9 +51,7 @@ article.post {
   .disqus {
     margin-top: 70px;
   }
-}
 
-article.post-detail {
   .hero {
     background: #f5e5c0;
     color: #2f3440;
@@ -77,10 +79,30 @@ article.post-detail {
       }
     }
   }
+}
 
-  h1 {
-    margin-top: 0;
+.post-related {
+  color: #fff;
+  background-color: #2f3440;
+  padding: 40px;
+
+  a, a:hover, a:visited {
+    color: #fff;
   }
+
+  i {
+    color: #f5e5c0;
+  }
+
+  div.row {
+    margin: 0;
+  }
+
+  h2 {
+    font-size: 20px;
+    margin: 0;
+  }
+
 }
 
 article.error {

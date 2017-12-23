@@ -2,22 +2,16 @@
 
 <section id="main">
     <div>
-        <h1 id="title">Felix DevBlog</h1>
-        <hr>
         <section class="post-list">
             {{ range .Data.Pages.ByDate.Reverse }}
             <article class="post">
 
                 <h2 class="title">
-                    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                    <span class="date">{{ .Date.Format "02/01/2006" }}</span> <a href="{{ .RelPermalink }}">{{ .Title }}</a>
                 </h2>
 
                 <div class="perex">
                     {{ .Summary }}
-                </div>
-
-                <div class="date">
-                    {{ .Date.Format "02/01/2006" }}
                 </div>
             </article>
             {{ end }}

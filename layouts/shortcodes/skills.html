@@ -1,0 +1,10 @@
+<ul>
+    {{ range $skills := $.Page.Site.Data.skills }}
+    {{ range $skill := $skills }}
+    <li>
+        <div class="skill-title">{{ if $skill.abbr }}<abbr title="{{ $skill.abbr }}">{{ $skill.name }}</abbr>{{ else }}{{ $skill.name }}{{ end }}</div>
+        <div class="skill-size skill-size-x skill-size-{{ $skill.skill }} skill-color-1"></div>
+    </li>
+    {{ end }}
+    {{ end }}
+</ul>

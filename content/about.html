@@ -1,0 +1,67 @@
++++
+date = "2017-01-01T00:00:00+02:00"
+draft = false
+title = "About Felix"
+type = "static"
+layout = "about"
++++
+<div class="about">
+    <div class="about-me">
+        <div class="row">
+            <div class="col-md-4">
+
+                <div class="photo">
+                    <img src="/img/felix.png" title="Hi I'm Milan, do you want to hire me? Nice!" alt="Milan Felix Šulc">
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="headline">
+                    <div class="name">Milan <code>Felix</code> Šulc</div>
+                </div>
+                <div class="attributes">
+                    <p>
+                        I'm from Czech Republic and I have more then 10 years of professional experience with web/desktop application development.
+                        I'm <span class="danger" data-toggle="tooltip" data-placement="top" title="I'll prepare, help, create, clarify, teach, review, hack for 800 CZK per hour">open</span> for new challenges!
+                    </p>
+
+                    <p>
+                        Are you looking for my CV? <a href="/resume" class="bold">Take a look <i class="fa fa-tasks"></i></a>.
+                    </p>
+
+                    <p>
+                        Feel free to contact me <a href="mailto:hack@f3l1x.io?subject=Thanks" class="bold"><i class="fa fa-envelope"></i> hack[at]f3l1x.io</a>.
+                    </p>
+
+                    <div class="social-buttons">
+                        <a title="My GitHub profile" href="https://github.com/f3l1x">
+                            <div class="github"><i class="fa fa-github"></i></div>
+                        </a>
+                        <a title="My Facebook profile" href="https://www.facebook.com/xfelix">
+                            <div class="facebook"><i class="fa fa-facebook"></i></div>
+                        </a>
+                        <a title="My Twitter stream" href="https://twitter.com/xf3l1x">
+                            <div class="twitter"><i class="fa fa-twitter"></i></div>
+                        </a>
+                        <a title="My LinkedIn professional profile" href="https://www.linkedin.com/in/milansulc">
+                            <div class="linkedin"><i class="fa fa-linkedin"></i></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="skills">
+        {{< skills >}}
+    </div>
+
+    <div class="latests-posts">
+        <div class="row">
+            <div class="col-md-12">
+                <div>
+                    <h2>Latests blogposts</h2>
+                    {{< latestsPosts count="5" >}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
