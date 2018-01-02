@@ -1,6 +1,6 @@
 baseurl = "https://f3l1x.surge.sh/"
 languageCode = "en-us"
-title = "Milan Felix Šulc - Open source ninja"
+title = "Milan Felix Šulc - hack for living"
 enableGitInfo = true
 disableKinds = ["taxonomyTerm"]
 

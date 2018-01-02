@@ -9,7 +9,7 @@
     <link rel="shortcut icon" href="{{ .Site.BaseURL }}favicon.png" type="image/x-icon">
     <meta name="google-site-verification" content="XsOAmV1gT-Y3458pKxdVRR0mHQ719UiZOf7_p6T4nyU">
 
-    <title>Milan Felix Šulc - hack for living</title>
+    <title>{{ if eq .Title .Site.Title }}{{- .Site.Title -}}{{ else }}{{ with .Title }}{{.}}{{ end }}{{ end }}</title>
 
     <!-- SEO -->
     <meta name="keywords" content="milan šulc, f3l1x, developer, php, nette, java, javascript">
