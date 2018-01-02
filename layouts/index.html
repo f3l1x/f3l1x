@@ -36,7 +36,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div>
-                    <h2><a href="/blog">Latests blogpost</a></h2>
+                    <h2><a href="/blog">Latest Blog Posts</a></h2>
                     {{ range first 5 (where .Page.Site.Pages.ByDate "Type" "blog").Reverse }}
                     <div class="post-item">
                         <h3 class="title">
