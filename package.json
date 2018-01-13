@@ -12,7 +12,7 @@
     "gulp-watch": "^4.3.5"
   },
   "scripts": {
-    "build": "gulp css && gulp js",
+    "build": "gulp deploy",
     "watch": "gulp watch"
   }
 }

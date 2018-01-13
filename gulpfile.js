@@ -33,6 +33,13 @@ gulp.task('js-resume', function () {
 		.pipe(gulp.dest('./static/dist'));
 });
 
+gulp.task('deploy', [
+	'css', 
+	'css-resume', 
+	'js', 
+	'js-resume'
+]);
+
 gulp.task('watch', function() {
     gulp.watch(['./static/css/**/*.less'], ['css']);
     gulp.watch(['./static/js/**/*.js'], ['js']);
