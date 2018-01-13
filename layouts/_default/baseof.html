@@ -11,20 +11,28 @@
 
     <title>{{ if eq .Title .Site.Title }}{{- .Site.Title -}}{{ else }}{{ with .Title }}{{.}}{{ end }}{{ end }}</title>
 
-    <!-- SEO -->
-    <meta name="keywords" content="milan šulc, f3l1x, developer, php, nette, java, javascript">
-    <meta name="description" content="I am Milan Šulc and I develop for living.">
+    {{ if ne .Type "blog" }}
+    <meta name="description" content="{{- .Site.Params.description -}}">
+    <meta name="keywords" content="{{- .Site.Params.keywords -}}">
+    <meta property="og:image" content="{{ .Site.BaseURL }}img/fb-logo.png">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ if eq .Title .Site.Title }}{{- .Site.Title -}}{{ else }}{{ with .Title }}{{.}}{{ end }}{{ end }}">
+    <meta property="og:url" content="{{ .Site.BaseURL }}">
+    <meta property="og:site_name" content="Felix">
+    <meta property="og:description" content="{{ .Site.Params.description }}">
+    {{ else }}
+    <meta name="description" content="{{- trim (plainify .Page.Summary) "\n" -}}">
+    <meta name="keywords" content="{{ delimit .Page.Params.tags ", " }}">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ with .Title }}{{.}}{{ end }}">
+    <meta property="og:url" content="{{ .Site.BaseURL }}">
+    <meta property="og:site_name" content="Felix">
+    <meta property="og:description" content="{{- trim (plainify .Page.Summary) "\n" -}}">
+    {{ end }}
+
     <meta name="googlebot" content="snippet,archive">
     <meta name="robots" content="index, follow">
     <meta name="author" content="Felix <hack@f3l1x.io>">
-
-    <!-- FACEBOOK -->
-    <meta property="og:image" content="{{ .Site.BaseURL }}img/fb-logo.png">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Milan Felix Šulc - Developer">
-    <meta property="og:url" content="{{ .Site.BaseURL }}">
-    <meta property="og:site_name" content="Felix">
-    <meta property="og:description" content="I am Milan Šulc and I develop for living.">
 
     <!-- CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
