@@ -1,26 +1,26 @@
 {{ define "main" }}
 
 <section id="main">
-    {{ range .Data.Pages.GroupByDate "2006" }}
-    <h2>{{ .Key }}</h2>
-    <div>
-        <section class="post-list">
-            {{ range .Pages }}
-            <article class="post">
+	{{ range .Data.Pages.GroupByDate "2006" }}
+	<h2>{{ .Key }}</h2>
+	<div>
+		<section class="post-list">
+			{{ range .Pages }}
+			<article class="post">
 
-                <h2 class="title">
-                    <span class="date">{{ .Date.Format "02/01/2006" }}</span>
-                    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-                </h2>
+				<h2 class="title">
+					<span class="date">{{ .Date.Format "02/01/2006" }}</span>
+					<a href="{{ .RelPermalink }}">{{ .Title }}</a>
+				</h2>
 
-                <div class="perex">
-                    {{ .Summary }}
-                </div>
-            </article>
-            {{ end }}
-        </section>
-    </div>
-    {{ end }}
+				<div class="perex">
+					{{ .Summary }}
+				</div>
+			</article>
+			{{ end }}
+		</section>
+	</div>
+	{{ end }}
 </section>
 
 {{ end }}

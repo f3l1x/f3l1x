@@ -4,88 +4,88 @@
 <html class="ie9" lang="en"><![endif]--><!--[if IE 8]>
 <html class="ie8" lang="en"><![endif]-->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="{{ .Site.BaseURL }}favicon.png" type="image/x-icon">
-    <meta name="google-site-verification" content="XsOAmV1gT-Y3458pKxdVRR0mHQ719UiZOf7_p6T4nyU">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="{{ .Site.BaseURL }}favicon.png" type="image/x-icon">
+	<meta name="google-site-verification" content="XsOAmV1gT-Y3458pKxdVRR0mHQ719UiZOf7_p6T4nyU">
 
-    <title>{{ if eq .Title .Site.Title }}{{- .Site.Title -}}{{ else }}{{ with .Title }}{{.}}{{ end }}{{ end }}</title>
+	<title>{{ if eq .Title .Site.Title }}{{- .Site.Title -}}{{ else }}{{ with .Title }}{{.}}{{ end }}{{ end }}</title>
 
-    {{ if ne .Type "blog" }}
-    <meta name="description" content="{{- .Site.Params.description -}}">
-    <meta name="keywords" content="{{- .Site.Params.keywords -}}">
-    <meta property="og:image" content="{{ .Site.BaseURL }}img/fb-logo.png">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="{{ if eq .Title .Site.Title }}{{- .Site.Title -}}{{ else }}{{ with .Title }}{{.}}{{ end }}{{ end }}">
-    <meta property="og:url" content="{{ .Permalink }}">
-    <meta property="og:site_name" content="Felix">
-    <meta property="og:description" content="{{ .Site.Params.description }}">
-    {{ else }}
-    <meta name="description" content="{{- trim (plainify .Page.Summary) "\n" -}}">
-    <meta name="keywords" content="{{ delimit .Page.Params.tags ", " }}">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="{{ with .Title }}{{.}}{{ end }}">
-    <meta property="og:url" content="{{ .Permalink }}">
-    <meta property="og:site_name" content="Felix">
-    <meta property="og:description" content="{{- trim (plainify .Page.Summary) "\n" -}}">
-    {{ end }}
+	{{ if ne .Type "blog" }}
+	<meta name="description" content="{{- .Site.Params.description -}}">
+	<meta name="keywords" content="{{- .Site.Params.keywords -}}">
+	<meta property="og:image" content="{{ .Site.BaseURL }}img/fb-logo.png">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="{{ if eq .Title .Site.Title }}{{- .Site.Title -}}{{ else }}{{ with .Title }}{{.}}{{ end }}{{ end }}">
+	<meta property="og:url" content="{{ .Permalink }}">
+	<meta property="og:site_name" content="Felix">
+	<meta property="og:description" content="{{ .Site.Params.description }}">
+	{{ else }}
+	<meta name="description" content="{{- trim (plainify .Page.Summary) "\n" -}}">
+	<meta name="keywords" content="{{ delimit .Page.Params.tags ", " }}">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="{{ with .Title }}{{.}}{{ end }}">
+	<meta property="og:url" content="{{ .Permalink }}">
+	<meta property="og:site_name" content="Felix">
+	<meta property="og:description" content="{{- trim (plainify .Page.Summary) "\n" -}}">
+	{{ end }}
 
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="@xf3l1x">
-    <meta name="twitter:creator" content="@xf3l1x">
-    <meta property="fb:admins" content="1187401846">
-    <meta name="googlebot" content="snippet,archive">
-    <meta name="googlebot" content="snippet,archive">
-    <meta name="robots" content="index, follow">
-    <meta name="author" content="Felix <hack@f3l1x.io>">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="@xf3l1x">
+	<meta name="twitter:creator" content="@xf3l1x">
+	<meta property="fb:admins" content="1187401846">
+	<meta name="googlebot" content="snippet,archive">
+	<meta name="googlebot" content="snippet,archive">
+	<meta name="robots" content="index, follow">
+	<meta name="author" content="Felix <hack@f3l1x.io>">
 
-    <!-- CSS -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/agate.min.css">
-    <link rel="stylesheet" href="{{ .Site.BaseURL }}dist/dist.css?v={{ readFile "/static/dist/dist.css" | md5}}">
+	<!-- CSS -->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/agate.min.css">
+	<link rel="stylesheet" href="{{ .Site.BaseURL }}dist/dist.css?v={{ readFile "/static/dist/dist.css" | md5}}">
 
-    {{ if eq .Type "blog" }}
-    {{ if .RSSLink }}
-    <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
-    <link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
-    {{ end }}
-    {{ end }}
+	{{ if eq .Type "blog" }}
+	{{ if .RSSLink }}
+	<link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+	<link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
+	{{ end }}
+	{{ end }}
 
-    <!-- Monitoring -->
-    {{ partial "smartlook" }}
+	<!-- Monitoring -->
+	{{ partial "smartlook" }}
 </head>
 <body>
 
 <div class="container">
-    <div id="header">
-        <nav>
-            <ul>
-                <li><a href="/" class="logo"><img title="Milan Felix Sulc" src="{{ .Site.BaseURL }}img/f3l1x2.png"></a>
-                </li>
-                <li><a href="/blog">Blog</a></li>
-                <li><a href="/projects">Projects</a></li>
-                <li><a href="https://github.com/f3l1x">Github</a></li>
-                <li><a href="/about">About</a></li>
-            </ul>
-        </nav>
-        <div class="buttons hidden-sm hidden-xs">
-            <a class="button" href="https://twitter.com/xf3l1x"><i class="fa fa-twitter" aria-hidden="true"></i> @xf3l1x</a>
-            <a class="button" type="application/rss+xml" href="/blog/feed.xml"><i class="fa fa-rss-square" aria-hidden="true"></i> RSS</a>
-            <a class="button" href="https://github.com/f3l1x/f3l1x"><i class="fa fa-code-fork" aria-hidden="true"></i>
-                Fork</a>
-        </div>
-    </div>
+	<div id="header">
+		<nav>
+			<ul>
+				<li><a href="/" class="logo"><img title="Milan Felix Sulc" src="{{ .Site.BaseURL }}img/f3l1x2.png"></a>
+				</li>
+				<li><a href="/blog">Blog</a></li>
+				<li><a href="/projects">Projects</a></li>
+				<li><a href="https://github.com/f3l1x">Github</a></li>
+				<li><a href="/about">About</a></li>
+			</ul>
+		</nav>
+		<div class="buttons hidden-sm hidden-xs">
+			<a class="button" href="https://twitter.com/xf3l1x"><i class="fa fa-twitter" aria-hidden="true"></i> @xf3l1x</a>
+			<a class="button" type="application/rss+xml" href="/blog/feed.xml"><i class="fa fa-rss-square" aria-hidden="true"></i> RSS</a>
+			<a class="button" href="https://github.com/f3l1x/f3l1x"><i class="fa fa-code-fork" aria-hidden="true"></i>
+				Fork</a>
+		</div>
+	</div>
 
-    <div id="content">
-        {{ block "main" .}}{{ end }}
-    </div>
+	<div id="content">
+		{{ block "main" .}}{{ end }}
+	</div>
 
-    <footer>
-        At the freetime rewritten by <a href="/">Milan Felix Šulc</a>.
-        <br>
-        This page is generated with <a href="https://gohugo.io" title="Hugo">Hugo</a>.
-    </footer>
+	<footer>
+		At the freetime rewritten by <a href="/">Milan Felix Šulc</a>.
+		<br>
+		This page is generated with <a href="https://gohugo.io" title="Hugo">Hugo</a>.
+	</footer>
 </div>
 {{ partial "qa.html" }}
 
