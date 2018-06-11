@@ -4,6 +4,7 @@ title = "Milan Felix Šulc - hack for living"
 enableGitInfo = true
 disableKinds = ["taxonomyTerm"]
 disableHugoGeneratorInject = true
+enableEmoji = true
 
 [outputFormats]
 [outputFormats.RSS]
@@ -11,7 +12,8 @@ mediatype = "application/rss"
 baseName = "feed"
 
 [params]
-    github = "https://github.com/f3l1x/f3l1x/"
-    github_content = "https://github.com/f3l1x/f3l1x/blob/master/content/"
-    description = "I am Milan Šulc and I develop for living."
-    keywords = "milan šulc, f3l1x, developer, php, nette, java, javascript, go"
+	github = "https://github.com/f3l1x/f3l1x/"
+	github_content = "https://github.com/f3l1x/f3l1x/blob/master/content/"
+	description = "I am Milan Šulc and I develop for living."
+	keywords = "milan šulc, f3l1x, developer, php, nette, java, javascript, go"
+	twitterEmoji=true
