@@ -5,7 +5,7 @@
       "description": "My (Milan Felix Šulc) personal GitHub profile."
     },
     {
-      "name": "contributte",
+      "name": "Contributte",
       "description": "Extra contribution to Nette Framework"
     },
     {
@@ -17,20 +17,12 @@
       "description": "Nette-land"
     },
     {
-      "name": "nette101",
-      "description": "The Nette Cookbook for the Beginners"
-    },
-    {
       "name": "mockista",
       "description": "Mockista: tiny PHP mocking tool with adjustable API"
     },
     {
       "name": "nettrine",
       "description": "Easy & smart integration of Doctrine2 to Nette Framework"
-    },
-    {
-      "name": "FriendsOfNette",
-      "description": "Practises and projects from Nette Comunnity"
     },
     {
       "name": "dockette",
@@ -57,16 +49,8 @@
       "description": "Czech PHP community"
     },
     {
-      "name": "dckrfile",
-      "description": "Czech Docker Point"
-    },
-    {
       "name": "trainit",
       "description": "Tutorials, Hints, Tips, Practices, Samples to IT world"
-    },
-    {
-      "name": "minetro",
-      "description": "Collection of plugins and extensions for Nette Framework"
     }
   ]
 }

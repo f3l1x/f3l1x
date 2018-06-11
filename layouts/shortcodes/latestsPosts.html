@@ -1,8 +1,16 @@
-{{ $count := .Get "count" }}
-{{ range first $count (where .Page.Site.Pages.ByDate "Type" "blog").Reverse }}
-<div class="post-item">
-	<h3 class="title">
-		<a href="{{ .RelPermalink }}">{{ .Date.Format "02/01/2006" }} | {{ .Title }}</a>
-	</h3>
+<div class="latests-posts">
+	<div class="row">
+		<div class="col-md-12">
+			<div>
+				{{ range first .Params.count (where .Page.Site.Pages.ByDate "Type" "blog").Reverse }}
+				<div class="post-item">
+					<h3 class="title">
+						<a href="{{ .RelPermalink }}">{{ .Date.Format "02/01/2006" }} | {{ .Title }}</a>
+					</h3>
+					{{ .Summary }}
+				</div>
+				{{ end }}
+			</div>
+		</div>
+	</div>
 </div>
-{{ end }}
