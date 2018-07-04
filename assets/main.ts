@@ -9,4 +9,9 @@ import 'font-awesome/scss/font-awesome.scss';
 import './main/js/hljs';
 
 // CSS theme
-import './main/css/theme.less';
+import "./main/css/theme.less";
+
+// Vue apps
+if (document.getElementById('app-tools')) {
+    import('./main/vue/app-tools');
+}

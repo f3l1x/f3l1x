@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+        "outDir": "./static/dist/",
+        "sourceMap": true,
+        "strict": true,
+        "noImplicitReturns": true,
+        "noImplicitAny": true,
+        "module": "esnext",
+        "moduleResolution": "node",
+        "target": "es6",
+        "lib": [
+            "es6",
+            "dom",
+            "dom.iterable"
+        ],
+        "experimentalDecorators": true
+    },
+    "include": [
+        "./assets/**/*"
+    ]
+}

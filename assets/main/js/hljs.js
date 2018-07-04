@@ -14,7 +14,7 @@ hljs.registerLanguage('sql', sql);
 
 window.addEventListener('DOMContentLoaded', () => {
     // Code highlightinÎg
-    document.querySelectorAll('pre code').forEach((block) => {
+    document.querySelectorAll('pre code').forEach(block => {
         // Clear markdown classes
         block.classList = [];
         hljs.highlightBlock(block);

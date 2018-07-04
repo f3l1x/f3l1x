@@ -40,7 +40,7 @@
 	<meta name="author" content="Felix <hack@f3l1x.io>">
 
 	<!-- CSS -->
-	<link rel="stylesheet" href="{{ .Site.BaseURL }}dist/main.css?rev={{ .GitInfo.Hash }}">
+	<link rel="stylesheet" href="{{ .Site.BaseURL }}dist/main.css?rev={{ with .GitInfo }}{{ .Hash }}{{ end }}">
 
 	{{ if eq .Type "blog" }}
 	{{ if .RSSLink }}
