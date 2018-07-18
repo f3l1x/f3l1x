@@ -1,11 +1,17 @@
+// Webpack
+const webpack = require("webpack");
+
 // Plugins
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
-const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 // Node
 const path = require('path');
+
+// Utils
+const isDev = process.env.NODE_ENV !== 'production';
 
 module.exports = {
     entry: {
@@ -38,7 +44,7 @@ module.exports = {
             },
             {
                 test: /\.js$/,
-                exclude: /node_modules/,
+                exclude: /(node_modules|bower_components)/,
                 use: {
                     loader: "babel-loader"
                 }
@@ -137,7 +143,7 @@ module.exports = {
     ],
 };
 
-if (process.env.NODE_ENV === 'production') {
+if (!isDev) {
     module.exports.devtool = '#source-map'
     // http://vue-loader.vuejs.org/en/workflow/production.html
     module.exports.plugins = (module.exports.plugins || []).concat([
@@ -151,7 +157,6 @@ if (process.env.NODE_ENV === 'production') {
         }),
         new OptimizeCSSAssetsPlugin({
             cssProcessorOptions: {
-                safe: true,
                 discardComments: {
                     removeAll: true,
                 },

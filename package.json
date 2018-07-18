@@ -11,19 +11,21 @@
     "moment": "^2.22.2"
   },
   "devDependencies": {
-    "@babel/preset-env": "^7.0.0-beta.51",
+    "@babel/core": "^7.0.0-beta.54",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0-beta.54",
+    "@babel/preset-env": "^7.0.0-beta.54",
     "@types/highlight.js": "^9.12.3",
     "@types/node": "^10.5.1",
-    "babel-core": "^6.26.3",
-    "babel-loader": "^7.1.4",
+    "babel-loader": "^8.0.0-beta.4",
     "babel-preset-env": "^1.7.0",
-    "css-loader": "^0.28.11",
+    "cross-env": "^5.2.0",
+    "css-loader": "^1.0.0",
     "file-loader": "^1.1.11",
     "less": "^3.0.4",
     "less-loader": "^4.1.0",
     "mini-css-extract-plugin": "^0.4.0",
     "node-sass": "^4.9.0",
-    "optimize-css-assets-webpack-plugin": "^4.0.3",
+    "optimize-css-assets-webpack-plugin": "^5.0.0",
     "sass-loader": "^7.0.3",
     "ts-loader": "^4.4.2",
     "typescript": "^2.9.2",
@@ -32,14 +34,14 @@
     "vue": "^2.5.16",
     "vue-loader": "^15.2.4",
     "vue-template-compiler": "^2.5.16",
-    "webpack": "^4.14.0",
+    "webpack": "^4.16.1",
     "webpack-cli": "^3.0.8",
     "webpack-dev-server": "^3.1.4"
   },
   "scripts": {
-    "start": "webpack-dev-server --mode development --colors --progress",
-    "watch": "webpack --mode development --watch --colors --progress",
-    "dev": "webpack --mode development",
-    "build": "webpack --mode production"
+    "start": "cross-env NODE_ENV=development webpack-dev-server --mode development --colors --progress",
+    "watch": "cross-env NODE_ENV=development webpack --mode development --watch --colors --progress",
+    "dev": "cross-env NODE_ENV=development webpack --mode development --colors --progress",
+    "build": "cross-env NODE_ENV=production webpack --mode production --colors --progress"
   }
 }
