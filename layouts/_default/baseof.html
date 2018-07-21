@@ -89,6 +89,6 @@
 
 <!-- JS -->
 <script src="https://www.google-analytics.com/analytics.js" async defer></script>
-<script src="{{ .Site.BaseURL }}dist/main.js?rev={{ .GitInfo.Hash }}" type="text/javascript"></script>
+<script src="{{ .Site.BaseURL }}dist/main.js?rev={{ with .GitInfo }}{{ .Hash }}{{ end }}" type="text/javascript"></script>
 </body>
 </html>
