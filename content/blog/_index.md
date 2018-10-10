@@ -1,4 +1,5 @@
 ---
+date: "2016-05-06T00:00:00+02:00"
 title: "Felix DevBlog"
 tags: ["nette", "blog"]
 ---
