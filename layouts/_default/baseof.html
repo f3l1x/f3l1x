@@ -40,7 +40,7 @@
 	<meta name="author" content="Felix <hack@f3l1x.io>">
 
 	<!-- CSS -->
-	<link rel="stylesheet" href="{{ .Site.BaseURL }}dist/main.css?rev={{ with .GitInfo }}{{ .Hash }}{{ end }}">
+	<link rel="stylesheet" href="/dist/main.css?rev={{ with .GitInfo }}{{ .Hash }}{{ end }}">
 
 	{{ if eq .Type "blog" }}
 	{{ if .RSSLink }}
@@ -50,8 +50,8 @@
 	{{ end }}
 
 	<!-- JS -->
+	<script src="/dist/main.js?rev={{ with .GitInfo }}{{ .Hash }}{{ end }}" defer></script>
 	<script src="https://www.google-analytics.com/analytics.js" async defer></script>
-	<script src="{{ .Site.BaseURL }}dist/main.js?rev={{ with .GitInfo }}{{ .Hash }}{{ end }}" defer></script>
 
 	<!-- Monitoring -->
 	{{ partial "smartlook" }}
