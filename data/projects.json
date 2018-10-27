@@ -5,6 +5,40 @@
       "webalize": "contributte",
       "description": "Extra contribution to Nette Framework",
       "avatar": "22681157"
+    },
+    {
+      "name": "Apitte",
+      "webalize": "apitte",
+      "description": "Great PHP/PSR7 API for Nette Framework",
+      "avatar": "31967234"
+    },
+    {
+      "name": "Nettrine",
+      "webalize": "nettrine",
+      "description": "Easy & smart integration of Doctrine2 to Nette Framework",
+      "avatar": "26110973"
+    },
+    {
+      "name": "Ninjify",
+      "webalize": "ninjify",
+      "description": "PHP nunchucks for you coding dojo",
+      "avatar": "20489795"
+    }
+  ],
+  "Docker": [
+    {
+      "name": "Dockette",
+      "webalize": "dockette",
+      "description": "Useful Docker Images",
+      "avatar": "15856518"
+    }
+  ],
+  "Education": [
+    {
+      "name": "Train+it",
+      "webalize": "trainit",
+      "description": "Tutorials, Hints, Tips, Practices, Samples to IT world",
+      "avatar": "17249862"
     }
   ]
 }

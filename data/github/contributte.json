@@ -2,271 +2,368 @@
   "repos": [
     {
       "name": "contributte/datagrid",
-      "description": ":muscle: DataGrid for Nette Framework: filtering, sorting, pagination, tree view, table view, translator, etc"
+      "description": ":muscle: DataGrid for Nette Framework: filtering, sorting, pagination, tree view, table view, translator, etc",
+      "stars": "149"
     },
     {
       "name": "contributte/live-form-validation",
-      "description": ":no_entry: Nice client-side live form validation for Nette Forms."
+      "description": ":no_entry: Nice client-side live form validation for Nette Forms.",
+      "stars": "44"
     },
     {
       "name": "contributte/console",
-      "description": ":boom: Best minimal console (symfony/console) to Nette Framework (@nette)"
+      "description": ":boom: Best minimal console (symfony/console) to Nette Framework (@nette)",
+      "stars": "30"
     },
     {
       "name": "contributte/codeception",
-      "description": ":arrow_forward: Integration of Nette Framework to Codeception."
-    },
-    {
-      "name": "contributte/generator-nette",
-      "description": ":man: Yeoman & Nette Framework"
+      "description": ":arrow_forward: Integration of Nette Framework to Codeception.",
+      "stars": "27"
     },
     {
       "name": "contributte/reCAPTCHA",
-      "description": ":bangbang: Google reCAPTCHA (security) for Nette Framework \\ Forms"
+      "description": ":bangbang: Google reCAPTCHA (security) for Nette Framework \\ Forms",
+      "stars": "18"
+    },
+    {
+      "name": "contributte/generator-nette",
+      "description": ":man: Yeoman & Nette Framework",
+      "stars": "18"
     },
     {
       "name": "contributte/scheduler",
-      "description": ":hourglass: PHP job scheduler (cron) with locking for Nette Framework"
-    },
-    {
-      "name": "contributte/psr7-http-message",
-      "description": ":dizzy: PSR #7 [HTTP Message Interface] to Nette Framework (@nette)"
+      "description": ":hourglass: PHP job scheduler (cron) with locking for Nette Framework",
+      "stars": "16"
     },
     {
       "name": "contributte/image-storage",
-      "description": "Image storage for Nette framework"
+      "description": ":stars: Image storage for Nette framework",
+      "stars": "15"
+    },
+    {
+      "name": "contributte/psr7-http-message",
+      "description": ":dizzy: PSR #7 [HTTP Message Interface] to Nette Framework (@nette)",
+      "stars": "15"
     },
     {
       "name": "contributte/api-router",
-      "description": "RESTful Router for your Apis in Nette Framework - created either directly or via annotation"
+      "description": ":man: RESTful router for your API in Nette Framework - created either directly or via annotation",
+      "stars": "11"
     },
     {
       "name": "contributte/api",
-      "description": "[Moved to @apitte] Powerful API to Nette Framework"
-    },
-    {
-      "name": "contributte/nextras-orm-generator",
-      "description": ":wolf: [experimental] Nextras\\ORM entity generator"
-    },
-    {
-      "name": "contributte/neonizer",
-      "description": ":wrench: Collection of useful scripts for manipulaton with NEON files. Support composer pre-install / post-install events. Set/get parameters, validate files."
-    },
-    {
-      "name": "contributte/middlewares",
-      "description": ":boom: Middlewares / Relay / PSR-7 support to Nette Framework (@nette)"
-    },
-    {
-      "name": "contributte/deployer-extension",
-      "description": ":horse_racing: FTP deployment (by @dg) extension for Nette Framework"
-    },
-    {
-      "name": "contributte/event-dispatcher",
-      "description": ":boom: Best events support (symfony/event-dispatcher) to Nette Framework (@nette)"
-    },
-    {
-      "name": "contributte/di",
-      "description": ":sparkles: Extra contrib to nette/di (@nette)"
-    },
-    {
-      "name": "contributte/latte-email",
-      "description": ":point_right: Email protection for emails in Latte templates"
-    },
-    {
-      "name": "contributte/latte-parsedown-extra",
-      "description": ":tractor: Parsedown (markdown) template parser for Nette \\ Latte (@nette)"
-    },
-    {
-      "name": "contributte/mobilni-platby",
-      "description": ":moneybag: MobilniPlatby.cz for Nette Framework"
-    },
-    {
-      "name": "contributte/social",
-      "description": ":fries: Social plugins  (facebook, twitter, google) for Nette Framework"
-    },
-    {
-      "name": "contributte/nextras-orm-events",
-      "description": ":wolf: Doctrine-like events for Nextras ORM"
-    },
-    {
-      "name": "contributte/mail",
-      "description": ":sparkles: Extra contrib to nette/mail (@nette)"
+      "description": "[Moved to @apitte] Powerful API to Nette Framework",
+      "stars": "11"
     },
     {
       "name": "contributte/anabelle",
-      "description": "Api documentation generator (JSON-RPC / REST)"
+      "description": ":princess: API documentation generator (JSON-RPC / REST)",
+      "stars": "11"
     },
     {
-      "name": "contributte/dummy-events",
-      "description": ":repeat: Ultra simple events system for Nette Framework"
+      "name": "contributte/event-dispatcher",
+      "description": ":boom: Best events support (symfony/event-dispatcher) to Nette Framework (@nette)",
+      "stars": "9"
     },
     {
-      "name": "contributte/utils",
-      "description": ":sparkles: Extra contrib to nette/utils (@nette)"
-    },
-    {
-      "name": "contributte/application",
-      "description": ":sparkles: Extra contrib to nette/application (@nette)"
-    },
-    {
-      "name": "contributte/security",
-      "description": ":sparkles: Extra contrib to nette/security (@nette)"
-    },
-    {
-      "name": "contributte/bootstrap",
-      "description": ":sparkles: Extra contrib to nette/bootstrap (@nette)"
-    },
-    {
-      "name": "contributte/api-router-project",
-      "description": "Example starter project for ublaboo/api-router"
+      "name": "contributte/neonizer",
+      "description": ":wrench: Collection of useful scripts for manipulaton with NEON files. Support composer pre-install / post-install events. Set/get parameters, validate files.",
+      "stars": "9"
     },
     {
       "name": "contributte/console-extra",
-      "description": ":recycle: Nette-based console commands for latte, DIC, MVC, security, utils and many others.  "
+      "description": ":recycle: Nette-based console commands for latte, DIC, MVC, security, utils and many others.  ",
+      "stars": "9"
     },
     {
-      "name": "contributte/mailing",
-      "description": ":mailbox_with_mail: Sending emails with pleasure and prepared templates."
+      "name": "contributte/deployer-extension",
+      "description": ":horse_racing: FTP deployment (by @dg) extension for Nette Framework",
+      "stars": "8"
     },
     {
-      "name": "contributte/api-docu",
-      "description": "Documentation generating for ApiRouter routes - awesome runtime documentation"
+      "name": "contributte/guzzlette",
+      "description": ":cyclone: Guzzle integration into Nette Framework",
+      "stars": "8"
     },
     {
-      "name": "contributte/datagrid-nette-database-data-source",
-      "description": ":feet: Nette\\Database data source for datagrid"
+      "name": "contributte/di",
+      "description": ":sparkles: Extra contrib to nette/di (@nette)",
+      "stars": "8"
     },
     {
-      "name": "contributte/logging",
-      "description": ":boom: Universal logging support to Tracy / Nette Framework (@nette)"
+      "name": "contributte/middlewares",
+      "description": ":boom: Middlewares / Relay / PSR-7 support to Nette Framework (@nette)",
+      "stars": "8"
     },
     {
-      "name": "contributte/forms",
-      "description": ":sparkles: Extra contrib to nette/forms (@nette)"
+      "name": "contributte/nextras-orm-generator",
+      "description": ":wolf: [experimental] Nextras\\ORM entity generator",
+      "stars": "7"
     },
     {
-      "name": "contributte/tracy",
-      "description": ":sunglasses: Tuned Tracy Bars/Panels/BlueScreens for easy-developing"
+      "name": "contributte/social",
+      "description": ":fries: Social plugins  (facebook, twitter, google) for Nette Framework",
+      "stars": "6"
     },
     {
-      "name": "contributte/facebook",
-      "description": ":yum: Tiny Facebook SDK 5.x integration to Nette Framework"
+      "name": "contributte/latte-email",
+      "description": ":point_right: Email protection for emails in Latte templates",
+      "stars": "6"
     },
     {
-      "name": "contributte/nextras-criteria",
-      "description": "Criteria Expression for Nextras\\ORM + Nextras\\DBAL (@nextras)"
+      "name": "contributte/latte-parsedown-extra",
+      "description": ":tractor: Parsedown (markdown) template parser for Nette \\ Latte (@nette)",
+      "stars": "6"
     },
     {
-      "name": "contributte/nextras-orm-query-object",
-      "description": ":wolf: Query-objects for Nextras ORM"
+      "name": "contributte/bootstrap",
+      "description": ":sparkles: Extra contrib to nette/bootstrap (@nette)",
+      "stars": "6"
+    },
+    {
+      "name": "contributte/mobilni-platby",
+      "description": ":moneybag: MobilniPlatby.cz for Nette Framework",
+      "stars": "5"
+    },
+    {
+      "name": "contributte/nextras-orm-events",
+      "description": ":wolf: Doctrine-like events for Nextras ORM",
+      "stars": "5"
+    },
+    {
+      "name": "contributte/utils",
+      "description": ":sparkles: Extra contrib to nette/utils (@nette)",
+      "stars": "5"
+    },
+    {
+      "name": "contributte/application",
+      "description": ":sparkles: Extra contrib to nette/application (@nette)",
+      "stars": "5"
+    },
+    {
+      "name": "contributte/mail",
+      "description": ":sparkles: Extra contrib to nette/mail (@nette)",
+      "stars": "5"
+    },
+    {
+      "name": "contributte/dummy-events",
+      "description": ":repeat: Ultra simple events system for Nette Framework",
+      "stars": "4"
     },
     {
       "name": "contributte/latte",
-      "description": ":sparkles: Extra contrib to nette/latte (@nette)"
+      "description": ":sparkles: Extra contrib to nette/latte (@nette)",
+      "stars": "4"
     },
     {
-      "name": "contributte/cache",
-      "description": ":sparkles: Extra contrib to nette/caching (@nette)"
+      "name": "contributte/security",
+      "description": ":sparkles: Extra contrib to nette/security (@nette)",
+      "stars": "4"
     },
     {
-      "name": "contributte/event-application-bridge",
-      "description": "[ARCHIVED] :recycle: Bridge between event dispatcher & nette application "
+      "name": "contributte/logging",
+      "description": ":boom: Universal logging support to Tracy / Nette Framework (@nette)",
+      "stars": "4"
     },
     {
-      "name": "contributte/event-security-bridge",
-      "description": "[ARCHIVED] :recycle: Bridge between event dispatcher & nette security"
-    },
-    {
-      "name": "contributte/contributte",
-      "description": ":heart: Contributte organization structure / RFC / Team"
-    },
-    {
-      "name": "contributte/event-dispatcher-extra",
-      "description": ":recycle: Nette-based Symfony events for application, presenter, form, latte, templates, security and many others."
-    },
-    {
-      "name": "contributte/blogette",
-      "description": ":postbox: Blogging platform"
-    },
-    {
-      "name": "contributte/wordcha",
-      "description": ":exclamation: Word based captcha (security) for Nette Framework \\ Forms (@nette)"
-    },
-    {
-      "name": "contributte/seznamcaptcha",
-      "description": ":exclamation: Seznam captcha (security) for Nette Framework \\ Forms"
-    },
-    {
-      "name": "contributte/dev",
-      "description": ":godmode: Set of tools for development / debugging (@nette)"
-    },
-    {
-      "name": "contributte/http",
-      "description": ":sparkles: Extra contrib to nette/http (@nette)"
-    },
-    {
-      "name": "contributte/database",
-      "description": ":sparkles: Extra contrib to nette/database (@nette)"
-    },
-    {
-      "name": "contributte/routing",
-      "description": ":sparkles: Extra contrib to nette/routing (@nette)"
-    },
-    {
-      "name": "contributte/psr3-logging",
-      "description": ":dizzy: PSR #3 [Logger Interface] to Nette Framework (@nette)"
-    },
-    {
-      "name": "contributte/psr6-caching",
-      "description": ":dizzy: PSR #6 [Caching Interface] to Nette Framework (@nette)"
+      "name": "contributte/forms",
+      "description": ":sparkles: Extra contrib to nette/forms (@nette)",
+      "stars": "4"
     },
     {
       "name": "contributte/playground",
-      "description": ":books: Examples / tutorials / tips / samples | sandbox for @contributte"
+      "description": ":books: Examples / tutorials / tips / samples | sandbox for @contributte",
+      "stars": "4"
     },
     {
-      "name": "contributte/event-bridges",
-      "description": "[ARCHIVED] :package: Collection of all event dispatcher bridges (:recycle:) to nette at one place "
+      "name": "contributte/tracy",
+      "description": ":sunglasses: Tuned Tracy Bars/Panels/BlueScreens for easy-developing",
+      "stars": "4"
     },
     {
-      "name": "contributte/model",
-      "description": ":boom: View-Model + Model-View layer to Nette Framework (@nette)"
+      "name": "contributte/api-router-project",
+      "description": "[ARCHIVED] Example starter project for contributte/api-router",
+      "stars": "4"
+    },
+    {
+      "name": "contributte/mailing",
+      "description": ":mailbox_with_mail: Sending emails with pleasure and prepared templates.",
+      "stars": "4"
+    },
+    {
+      "name": "contributte/event-dispatcher-extra",
+      "description": ":recycle: Nette-based Symfony events for application, presenter, form, latte, templates, security and many others.",
+      "stars": "4"
+    },
+    {
+      "name": "contributte/oauth2-client",
+      "description": ":lock: OAuth2 client for Nette Framework  ",
+      "stars": "4"
+    },
+    {
+      "name": "contributte/api-docu",
+      "description": ":woman: Document generator for ApiRouter routes - awesome runtime documentation",
+      "stars": "3"
+    },
+    {
+      "name": "contributte/datagrid-nette-database-data-source",
+      "description": ":feet: Nette\\Database data source for datagrid",
+      "stars": "3"
+    },
+    {
+      "name": "contributte/nextras-orm-query-object",
+      "description": ":wolf: Query-objects for Nextras ORM",
+      "stars": "3"
+    },
+    {
+      "name": "contributte/cache",
+      "description": ":sparkles: Extra contrib to nette/caching (@nette)",
+      "stars": "3"
     },
     {
       "name": "contributte/psr11-container-interface",
-      "description": ":dizzy: PSR #11 [Container Interface] to Nette Framework (@nette)"
+      "description": ":dizzy: PSR #11 [Container Interface] to Nette Framework (@nette)",
+      "stars": "3"
+    },
+    {
+      "name": "contributte/contributte",
+      "description": ":heart: Contributte organization structure / RFC / Team",
+      "stars": "3"
+    },
+    {
+      "name": "contributte/facebook",
+      "description": ":yum: Tiny Facebook SDK 5.x integration to Nette Framework",
+      "stars": "3"
+    },
+    {
+      "name": "contributte/flysystem",
+      "description": ":airplane: Smart integration of Flysystem into Nette Framework",
+      "stars": "3"
+    },
+    {
+      "name": "contributte/monolog",
+      "description": ":memo: Best logging support into Nette Framework (@nette)",
+      "stars": "3"
+    },
+    {
+      "name": "contributte/thepay-api",
+      "description": ":dollar: Port of ThePay library",
+      "stars": "2"
+    },
+    {
+      "name": "contributte/thepay",
+      "description": ":dollar: ThePay integration for Nette Framework",
+      "stars": "2"
+    },
+    {
+      "name": "contributte/nextras-criteria",
+      "description": "Criteria Expression for Nextras\\ORM + Nextras\\DBAL (@nextras)",
+      "stars": "2"
+    },
+    {
+      "name": "contributte/http",
+      "description": ":sparkles: Extra contrib to nette/http (@nette)",
+      "stars": "2"
+    },
+    {
+      "name": "contributte/event-application-bridge",
+      "description": "[ARCHIVED] :recycle: Bridge between event dispatcher & nette application ",
+      "stars": "2"
+    },
+    {
+      "name": "contributte/event-security-bridge",
+      "description": "[ARCHIVED] :recycle: Bridge between event dispatcher & nette security",
+      "stars": "2"
     },
     {
       "name": "contributte/phpdoc",
-      "description": ":boom: Enhanced PHPdoc to Nette Framework with annotations (@nette)"
+      "description": ":boom: Enhanced PHPdoc to Nette Framework with annotations (@nette)",
+      "stars": "2"
+    },
+    {
+      "name": "contributte/blogette",
+      "description": ":postbox: Blogging platform [proof of concept]",
+      "stars": "1"
+    },
+    {
+      "name": "contributte/wordcha",
+      "description": ":exclamation: Word based captcha (security) for Nette Framework \\ Forms (@nette)",
+      "stars": "1"
+    },
+    {
+      "name": "contributte/seznamcaptcha",
+      "description": ":exclamation: Seznam captcha (security) for Nette Framework \\ Forms",
+      "stars": "1"
+    },
+    {
+      "name": "contributte/dev",
+      "description": ":godmode: Set of tools for development / debugging (@nette)",
+      "stars": "1"
+    },
+    {
+      "name": "contributte/database",
+      "description": ":sparkles: Extra contrib to nette/database (@nette)",
+      "stars": "1"
+    },
+    {
+      "name": "contributte/routing",
+      "description": ":sparkles: Extra contrib to nette/routing (@nette)",
+      "stars": "1"
+    },
+    {
+      "name": "contributte/psr3-logging",
+      "description": ":dizzy: PSR #3 [Logger Interface] to Nette Framework (@nette)",
+      "stars": "1"
+    },
+    {
+      "name": "contributte/psr6-caching",
+      "description": ":dizzy: PSR #6 [Caching Interface] to Nette Framework (@nette)",
+      "stars": "1"
+    },
+    {
+      "name": "contributte/event-bridges",
+      "description": "[ARCHIVED] :package: Collection of all event dispatcher bridges (:recycle:) to nette at one place ",
+      "stars": "1"
+    },
+    {
+      "name": "contributte/model",
+      "description": ":boom: View-Model + Model-View layer to Nette Framework (@nette)",
+      "stars": "1"
     },
     {
       "name": "contributte/fio",
-      "description": ":euro: Fio API integration for Nette Framework"
-    },
-    {
-      "name": "contributte/website",
-      "description": ":squirrel: Contributte Website & Docs"
-    },
-    {
-      "name": "contributte/elasticsearch",
-      "description": ":mag: Tiny Elasticsearch integration into Nette Framework"
+      "description": ":euro: Fio API integration for Nette Framework",
+      "stars": "1"
     },
     {
       "name": "contributte/datagrid-elasticsearch-data-source",
-      "description": ":feet: ElasticSearch data source for datagrid"
+      "description": ":feet: ElasticSearch data source for datagrid",
+      "stars": "1"
+    },
+    {
+      "name": "contributte/website",
+      "description": ":squirrel: Contributte Website & Docs",
+      "stars": "1"
+    },
+    {
+      "name": "contributte/elasticsearch",
+      "description": ":mag: Tiny Elasticsearch integration into Nette Framework",
+      "stars": "1"
     },
     {
       "name": "contributte/advisories",
-      "description": ":punch: Collection of Contributte/Nette advisories"
+      "description": ":punch: Collection of Contributte/Nette advisories",
+      "stars": "0"
     },
     {
       "name": "contributte/server-timing",
-      "description": ":watch: Server Timing API profiling for Nette Framework "
+      "description": ":watch: Server Timing API profiling for Nette Framework ",
+      "stars": "0"
     },
     {
       "name": "contributte/datagrid-dibi2-data-source",
-      "description": ":feet: Dibi 2 datasource for datagrid"
+      "description": ":feet: Dibi 2 datasource for datagrid",
+      "stars": "0"
     }
   ]
 }
