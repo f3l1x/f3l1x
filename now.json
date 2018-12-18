@@ -1,0 +1,7 @@
+{
+    "version": 2,
+    "name": "f3l1x",
+    "builds": [
+        { "src": "package.json", "use": "@now/static-build", "config": { "distDir": "public" } }
+    ]
+}
