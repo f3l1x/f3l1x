@@ -24,6 +24,7 @@ const isDev = process.env.NODE_ENV !== 'production';
 const ROOT_PATH = __dirname;
 const CACHE_PATH = ROOT_PATH + '/temp/webpack';
 
+
 module.exports = {
     entry: {
         main: './assets/main.ts',
@@ -69,7 +70,7 @@ module.exports = {
                 },
             },
             {
-                test: /\.css$/,
+                test: /\.(css|sass|scss)$/,
                 use: [
                     MiniCssExtractPlugin.loader,
                     {
@@ -77,10 +78,9 @@ module.exports = {
                         options: {
                             importLoaders: 1,
                             sourceMap: true,
-                            minimize: true,
-                            discardComments: {removeAll: true},
                         }
-                    }
+                    },
+                    {loader: 'sass-loader'},
                 ]
             },
             {
@@ -92,8 +92,6 @@ module.exports = {
                         options: {
                             importLoaders: 1,
                             sourceMap: true,
-                            minimize: true,
-                            discardComments: {removeAll: true},
                         }
                     },
                     {
@@ -104,22 +102,6 @@ module.exports = {
                         }
                     }
                 ],
-            },
-            {
-                test: /\.(sass|scss)$/,
-                use: [
-                    MiniCssExtractPlugin.loader,
-                    {
-                        loader: 'css-loader',
-                        options: {
-                            importLoaders: 1,
-                            sourceMap: true,
-                            minimize: true,
-                            discardComments: {removeAll: true},
-                        }
-                    },
-                    {loader: 'sass-loader'},
-                ]
             },
             {
 
