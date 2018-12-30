@@ -1,1 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="/favicon.png" type="image/x-icon">
+	<meta name="google-site-verification" content="XsOAmV1gT-Y3458pKxdVRR0mHQ719UiZOf7_p6T4nyU">
+
+	<title>Milan Šulc - Resume / CV</title>
+
+	<!-- SEO -->
+	<meta name="keywords" content="milan šulc, f3l1x, developer, php, nette, java, javascript">
+	<meta name="description" content="I am Milan Šulc and I develop for living.">
+	<meta name="googlebot" content="snippet,archive">
+	<meta name="robots" content="index, follow">
+	<meta name="author" content="Felix <hack@f3l1x.io>">
+
+	<!-- FACEBOOK -->
+	<meta property="og:image" content="{{ .Site.BaseURL }}img/fb-logo.png">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Milan Felix Šulc - Developer">
+	<meta property="og:url" content="{{ .Site.BaseURL }}">
+	<meta property="og:site_name" content="Felix">
+	<meta property="og:description" content="I am Milan Šulc and I develop for living.">
+
+	<!-- Stylesheets -->
+	{{- $stylesheet := .Site.Data.webpack.resume }}{{ with $stylesheet.css }}<link href="{{ relURL . }}" rel="stylesheet">{{ end -}}
+	{{- $script := .Site.Data.webpack.resume }}{{ with $script.js }}<script src="{{ relURL . }}" defer></script>{{ end -}}
+</head>
+<body>
 {{ .Content }}
+{{ partial "smartlook" }}
+{{ partial "qa.html" }}
+</body>
+</html>
