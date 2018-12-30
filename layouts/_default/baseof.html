@@ -43,6 +43,9 @@
 	{{ end -}}
 
 	{{ partial "webpack" (dict "ctx" . "asset" "blog") }}
+	{{ range $asset := .Page.Params.assets }}
+	{{ partial "webpack" (dict "ctx" $ "asset" $asset) }}
+	{{ end -}}
 </head>
 <body>
 
