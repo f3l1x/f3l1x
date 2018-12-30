@@ -23,13 +23,11 @@
 	<meta property="og:site_name" content="Felix">
 	<meta property="og:description" content="I am Milan Šulc and I develop for living.">
 
-	<!-- Stylesheets -->
-	{{- $stylesheet := .Site.Data.webpack.resume }}{{ with $stylesheet.css }}<link href="{{ relURL . }}" rel="stylesheet">{{ end -}}
-	{{- $script := .Site.Data.webpack.resume }}{{ with $script.js }}<script src="{{ relURL . }}" defer></script>{{ end -}}
+	{{ partial "webpack" (dict "ctx" . "asset" "resume") }}
 </head>
 <body>
 {{ .Content }}
 {{ partial "smartlook" }}
-{{ partial "qa.html" }}
+{{ partial "qa" }}
 </body>
 </html>

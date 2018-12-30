@@ -42,8 +42,7 @@
 	{{ end }}
 	{{ end -}}
 
-	{{- $stylesheet := .Site.Data.webpack.blog }}{{ with $stylesheet.css }}<link href="{{ relURL . }}" rel="stylesheet">{{ end -}}
-	{{- $script := .Site.Data.webpack.blog }}{{ with $script.js }}<script src="{{ relURL . }}" defer></script>{{ end -}}
+	{{ partial "webpack" (dict "ctx" . "asset" "blog") }}
 </head>
 <body>
 
@@ -80,6 +79,6 @@
 	</footer>
 </div>
 {{ partial "smartlook" }}
-{{ partial "qa.html" }}
+{{ partial "qa" }}
 </body>
 </html>
