@@ -2,7 +2,7 @@ baseurl = "https://f3l1x.io/"
 languageCode = "en-us"
 title = "Milan Felix Šulc - hack for living"
 enableGitInfo = true
-disableKinds = ["taxonomyTerm"]
+disableKinds = ["taxonomyTerm", "taxonomy"]
 disableHugoGeneratorInject = true
 enableEmoji = true
 
