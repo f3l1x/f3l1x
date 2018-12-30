@@ -1,6 +1,7 @@
 {
     "version": 2,
     "name": "f3l1x",
+    "regions": ["bru"],
     "builds": [
         { "src": "package.json", "use": "@now/static-build", "config": { "distDir": "public" } }
     ]
