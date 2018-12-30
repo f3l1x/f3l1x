@@ -1,13 +1,15 @@
 // Webpack
 const webpack = require("webpack");
+const webpackMerge = require('webpack-merge');
 
 // Webpack plugins
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
+const AssetsPlugin = require("assets-webpack-plugin");
 
-// Webpack abilities
+// Webpack abilities / addons
 const WEBPACK_REPORT = process.env.WEBPACK_REPORT || false;
 
 // Vue
@@ -16,20 +18,38 @@ const VUE_LOADER_VERSION = require('vue-loader/package.json').version;
 
 // Node
 const path = require('path');
+const glob = require('glob');
 
 // Utils
 const isDev = process.env.NODE_ENV !== 'production';
 
 // Config
-const ROOT_PATH = __dirname;
-const CACHE_PATH = ROOT_PATH + '/temp/webpack';
+const CACHE_PATH = __dirname + '/temp/webpack';
 
+// ===========================
+// Entrypoints ===============
+// ===========================
+
+function getEntrypoints() {
+    const entrypoints = {};
+
+    const cwd = path.join(__dirname, 'assets/pages');
+    glob.sync("*/index.*(js|ts)", {
+        cwd
+    }).forEach(entry => {
+        const page = entry.substr(0, entry.indexOf('/'));
+        entrypoints[page] = `${cwd}/${entry}`;
+    });
+
+    return entrypoints;
+}
+
+// ===========================
+// Default ===================
+// ===========================
 
 module.exports = {
-    entry: {
-        main: './assets/main.ts',
-        resume: './assets/resume.js',
-    },
+    entry: getEntrypoints(),
     output: {
         path: path.resolve(__dirname, "static/dist"),
         publicPath: "/dist/"
@@ -129,13 +149,12 @@ module.exports = {
         extensions: ['.ts', '.js', '.vue', '.json'],
         alias: {
             'vue$': 'vue/dist/vue.esm.js',
-            '@': path.resolve(__dirname, 'assests/main/vue'),
+            '@': path.resolve(__dirname, 'assets/sites/f3l1x'),
         },
     },
     performance: {
         hints: false
     },
-    node: {fs: 'empty'},
     devtool: '#eval-source-map',
     plugins: [
         // prevent pikaday from including moment.js
@@ -149,60 +168,93 @@ module.exports = {
             filename: "[name].css",
             chunkFilename: "[id].css"
         }),
+
+        // create manifest to connect with Hugo
+        new AssetsPlugin({
+            filename: "webpack.json",
+            path: path.join(process.cwd(), "data"),
+            prettyPrint: true
+        }),
     ],
 };
 
-if (WEBPACK_REPORT) {
-    module.exports.plugins.push(
-        new BundleAnalyzerPlugin({
-            analyzerMode: 'static',
-            generateStatsFile: true,
-            openAnalyzer: false,
-            reportFilename: path.join(CACHE_PATH, 'webpack-report/index.html'),
-            statsFilename: path.join(CACHE_PATH, 'webpack-report/stats.json'),
-        })
-    );
+// ===========================
+// Development ===============
+// ===========================
+
+if (isDev) {
+    module.exports = webpackMerge(module.exports, {
+        devServer: {
+            port: process.env.PORT || 3000,
+            contentBase: path.join(process.cwd(), "public"),
+            disableHostCheck: true,
+            stats: "none",
+            quiet: false,
+            open: true,
+            hot: true,
+            inline: true,
+            proxy: {
+                '/': `http://${process.env.PROXY_HOST || '0.0.0.0'}:${process.env.PROXY_PORT || 1313}`
+            }
+        },
+    });
 }
 
+// ===========================
+// Production ================
+// ===========================
+
 if (!isDev) {
-    module.exports.devtool = '#source-map';
-    module.exports.optimization = {
-        minimizer: [
-            new TerserPlugin({
-                terserOptions: {
-                    cache: `${CACHE_PATH}/webpack/terser`,
-                    parallel: true,
-                    ecma: 8,
-                    warnings: false,
-                    parse: {},
-                    compress: {},
-                    mangle: true, // Note `mangle.properties` is `false` by default.
-                    module: false,
-                    output: null,
-                    toplevel: false,
-                    nameCache: null,
-                    ie8: false,
-                    keep_classnames: undefined,
-                    keep_fnames: false,
-                    safari10: false
-                }
+    module.exports = webpackMerge(module.exports, {
+        devtool: '#source-map',
+        optimization: {
+            minimizer: [
+                new TerserPlugin({
+                    terserOptions: {
+                        cache: `${CACHE_PATH}/webpack/terser`,
+                        parallel: true,
+                        ecma: 8,
+                        warnings: false,
+                        parse: {},
+                        compress: {},
+                        mangle: true, // Note `mangle.properties` is `false` by default.
+                        module: false,
+                        output: null,
+                        toplevel: false,
+                        nameCache: null,
+                        ie8: false,
+                        keep_classnames: undefined,
+                        keep_fnames: false,
+                        safari10: false
+                    }
+                })
+            ]
+        },
+        plugins: [
+            new OptimizeCSSAssetsPlugin({
+                cssProcessorOptions: {
+                    discardComments: {
+                        removeAll: true,
+                    },
+                },
+            }),
+        ]
+    });
+}
+
+// ===========================
+// Addons ====================
+// ===========================
+if (WEBPACK_REPORT) {
+    module.exports = webpackMerge(module.exports, {
+        plugins: [
+            new BundleAnalyzerPlugin({
+                analyzerMode: 'static',
+                generateStatsFile: true,
+                openAnalyzer: false,
+                reportFilename: path.join(CACHE_PATH, 'webpack-report/index.html'),
+                statsFilename: path.join(CACHE_PATH, 'webpack-report/stats.json'),
             })
         ]
-    };
-
-    // http://vue-loader.vuejs.org/en/workflow/production.html
-    module.exports.plugins = (module.exports.plugins || []).concat([
-        new webpack.DefinePlugin({
-            'process.env': {
-                NODE_ENV: '"production"'
-            }
-        }),
-        new OptimizeCSSAssetsPlugin({
-            cssProcessorOptions: {
-                discardComments: {
-                    removeAll: true,
-                },
-            },
-        }),
-    ])
+    });
 }

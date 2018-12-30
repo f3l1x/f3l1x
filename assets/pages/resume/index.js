@@ -1,4 +1,4 @@
-import './resume/resume.css';
+import './resume.css';
 import $ from 'jquery';
 
 $(function () {

@@ -1,0 +1,26 @@
+{
+  "blog": {
+    "css": "/dist/blog.css",
+    "js": "/dist/blog.js"
+  },
+  "resume": {
+    "css": "/dist/resume.css",
+    "js": "/dist/resume.js"
+  },
+  "tools": {
+    "css": "/dist/tools.css",
+    "js": "/dist/tools.js"
+  },
+  "": {
+    "eot": "/dist/./fonts/fontawesome-webfont.eot",
+    "svg": "/dist/./fonts/fontawesome-webfont.svg",
+    "ttf": "/dist/./fonts/fontawesome-webfont.ttf",
+    "woff": "/dist/./fonts/fontawesome-webfont.woff",
+    "woff2": "/dist/./fonts/fontawesome-webfont.woff2",
+    "png": [
+      "/dist/52d2a59a2c2a304e7a261c9940490944.png",
+      "/dist/d51ff4fe2d19d66997a68da8584b524b.png",
+      "/dist/eb0a106a66bc1d8cad92123c66fcded8.png"
+    ]
+  }
+}

@@ -1,8 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--[if IE 9]>
-<html class="ie9" lang="en"><![endif]--><!--[if IE 8]>
-<html class="ie8" lang="en"><![endif]-->
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,14 +8,14 @@
 
 	<title>{{ if eq .Title .Site.Title }}{{- .Site.Title -}}{{ else }}{{ with .Title }}{{.}}{{ end }}{{ end }}</title>
 
-	{{ if ne .Type "blog" }}
+	{{- if ne .Type "blog" }}
 	<meta name="description" content="{{- .Site.Params.description -}}">
 	<meta name="keywords" content="{{- .Site.Params.keywords -}}">
 	<meta property="og:image" content="{{ .Site.BaseURL }}img/fb-logo.png">
 	<meta property="og:type" content="website">
 	<meta property="og:title" content="{{ if eq .Title .Site.Title }}{{- .Site.Title -}}{{ else }}{{ with .Title }}{{.}}{{ end }}{{ end }}">
 	<meta property="og:url" content="{{ .Permalink }}">
-	<meta property="og:site_name" content="Felix">
+	<meta property="og:site_name" content="f3l1x">
 	<meta property="og:description" content="{{ .Site.Params.description }}">
 	{{ else }}
 	<meta name="description" content="{{- trim (plainify .Page.Summary) "\n" -}}">
@@ -26,35 +23,27 @@
 	<meta property="og:type" content="website">
 	<meta property="og:title" content="{{ with .Title }}{{.}}{{ end }}">
 	<meta property="og:url" content="{{ .Permalink }}">
-	<meta property="og:site_name" content="Felix">
+	<meta property="og:site_name" content="f3l1x">
 	<meta property="og:description" content="{{- trim (plainify .Page.Summary) "\n" -}}">
-	{{ end }}
+	{{ end -}}
 
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:site" content="@xf3l1x">
 	<meta name="twitter:creator" content="@xf3l1x">
 	<meta property="fb:admins" content="1187401846">
 	<meta name="googlebot" content="snippet,archive">
-	<meta name="googlebot" content="snippet,archive">
 	<meta name="robots" content="index, follow">
 	<meta name="author" content="Felix <hack@f3l1x.io>">
 
-	<!-- CSS -->
-	<link rel="stylesheet" href="/dist/main.css?rev={{ with .GitInfo }}{{ .Hash }}{{ end }}">
-
-	{{ if eq .Type "blog" }}
+	{{- if eq .Type "blog" }}
 	{{ if .RSSLink }}
 	<link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
 	<link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
 	{{ end }}
-	{{ end }}
+	{{ end -}}
 
-	<!-- JS -->
-	<script src="/dist/main.js?rev={{ with .GitInfo }}{{ .Hash }}{{ end }}" defer></script>
-	<script src="https://www.google-analytics.com/analytics.js" async defer></script>
-
-	<!-- Monitoring -->
-	{{ partial "smartlook" }}
+	{{- $stylesheet := .Site.Data.webpack.blog }}{{ with $stylesheet.css }}<link href="{{ relURL . }}" rel="stylesheet">{{ end -}}
+	{{- $script := .Site.Data.webpack.blog }}{{ with $script.js }}<script src="{{ relURL . }}" defer></script>{{ end -}}
 </head>
 <body>
 
@@ -75,7 +64,8 @@
 			<a class="button" href="https://twitter.com/xf3l1x"><i class="fa fa-twitter" aria-hidden="true"></i> @xf3l1x</a>
 			<a class="button" type="application/rss+xml" href="/blog/feed.xml"><i class="fa fa-rss-square" aria-hidden="true"></i> RSS</a>
 			<a class="button" href="https://github.com/f3l1x/f3l1x"><i class="fa fa-code-fork" aria-hidden="true"></i>
-				Fork</a>
+				Fork
+			</a>
 		</div>
 	</div>
 
@@ -89,6 +79,7 @@
 		This page is generated with <a href="https://gohugo.io" title="Hugo">Hugo</a>.
 	</footer>
 </div>
+{{ partial "smartlook" }}
 {{ partial "qa.html" }}
 </body>
 </html>

@@ -1,19 +1,22 @@
 {
-    "presets": [
-        [
-            "@babel/preset-env",
-            {
-                "targets": {
-                    "node": "current"
-                }
-            }
-        ]
-    ],
-    "plugins": [
-        "@babel/plugin-proposal-object-rest-spread"
-    ],
-    "ignore": [
-        "node_modules",
-        "public"
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "browsers": [
+            "last 2 versions",
+            "IE >= 10"
+          ]
+        }
+      }
     ]
+  ],
+  "plugins": [
+    "@babel/plugin-proposal-object-rest-spread"
+  ],
+  "ignore": [
+    "node_modules",
+    "public"
+  ]
 }
