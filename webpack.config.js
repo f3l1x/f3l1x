@@ -52,7 +52,9 @@ module.exports = {
     entry: getEntrypoints(),
     output: {
         path: path.resolve(__dirname, "static/dist"),
-        publicPath: "/dist/"
+        publicPath: "/dist/",
+        filename: !isDev ? '[name].[chunkhash:8].js' : '[name].js',
+        chunkFilename: !isDev ? '[id].[chunkhash:8].js' : '[name].js',
     },
     module: {
         rules: [
@@ -165,8 +167,8 @@ module.exports = {
 
         // extract css
         new MiniCssExtractPlugin({
-            filename: "[name].css",
-            chunkFilename: "[id].css"
+            filename: !isDev ? '[name].[chunkhash:8].css' : '[name].css',
+            chunkFilename: !isDev ? '[id].[chunkhash:8].css' : '[id].css',
         }),
 
         // create manifest to connect with Hugo
