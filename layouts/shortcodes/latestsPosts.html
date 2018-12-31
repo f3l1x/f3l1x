@@ -1,12 +1,13 @@
 <div class="latests-posts">
-	<div>
-		{{ range first .Params.count (where .Page.Site.Pages.ByDate "Type" "blog").Reverse }}
-		<div class="post-item">
-			<h3 class="title">
-				<a href="{{ .RelPermalink }}">{{ .Date.Format "02/01/2006" }} | {{ .Title }}</a>
-			</h3>
-			{{ .Summary }}
-		</div>
-		{{ end }}
+	{{ range first .Params.count (where .Page.Site.Pages.ByDate "Type" "blog").Reverse }}
+	<div class="post-item">
+		<h3 class="title">
+			<a href="{{ .RelPermalink }}">{{ .Date.Format "02/01/2006" }} | {{ .Title }}</a>
+		</h3>
+		{{ .Summary }}
+	</div>
+	{{ end }}
+	<div class="more">
+		<a href="/blog">Show me all <strong>{{ len (where .Page.Site.Pages.ByDate "Type" "blog") }}</strong> posts</a>
 	</div>
 </div>

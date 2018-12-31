@@ -32,6 +32,7 @@
         display: inline-block;
         margin-right: 15px;
         list-style-type: none;
+
         a {
           color: #fff;
         }
@@ -54,7 +55,43 @@
       &:hover {
         border: 2px solid #cdcdcd;
       }
+
+      &.twitter:hover {
+        border: 2px solid #08a0e9;
+
+        i {
+          color: #08a0e9;
+        }
+      }
+
+      &.rss:hover {
+        border: 2px solid orange;
+
+        i {
+          color: orange;
+        }
+      }
+
+      &.github:hover {
+        border: 2px solid #959595;
+
+        i {
+          color: #959595;
+        }
+      }
     }
   }
 }
 
+/* Response max-375 */
+@media (max-width: 375px) {
+  #header {
+    nav {
+      ul {
+        li {
+          margin-right: 3px;
+        }
+      }
+    }
+  }
+}
