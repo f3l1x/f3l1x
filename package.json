@@ -45,9 +45,8 @@
     "glob": "latest"
   },
   "scripts": {
-    "start": "cross-env NODE_ENV=development webpack-dev-server --mode development --hot --colors --progress",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --mode development --hot --colors --progress",
     "watch": "cross-env NODE_ENV=development webpack --mode development --watch --colors --progress",
-    "dev": "cross-env NODE_ENV=development webpack --mode development --colors --progress",
     "build": "cross-env NODE_ENV=production webpack --mode production --colors --progress",
     "now-build": "npm run build && hugo"
   }
