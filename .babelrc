@@ -5,15 +5,15 @@
       {
         "targets": {
           "browsers": [
-            "last 2 versions",
-            "IE >= 10"
+            "last 2 Chrome versions"
           ]
         }
       }
     ]
   ],
   "plugins": [
-    "@babel/plugin-proposal-object-rest-spread"
+    "@babel/plugin-proposal-object-rest-spread",
+    "@babel/syntax-dynamic-import"
   ],
   "ignore": [
     "node_modules",
