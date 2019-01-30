@@ -23,6 +23,12 @@
       "webalize": "ninjify",
       "description": "PHP nunchucks for you coding dojo",
       "avatar": "20489795"
+    },
+    {
+      "name": "Planette",
+      "webalize": "planette",
+      "description": "Nette-land and community projects",
+      "avatar": "25814367"
     }
   ],
   "Docker": [
