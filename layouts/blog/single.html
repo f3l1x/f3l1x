@@ -1,3 +1,16 @@
+{{ define "head" }}
+	{{- if .RSSLink }}
+	<link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+	<link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
+	{{ end -}}
+
+	<meta property="og:image" content="https://meta.jfx.cz/{{- replace (plainify .Page.Title) " " "%20" -}}.png?images=https://f3l1x.io/img/f3l1x.png&fontSize=75px">
+
+	{{- range $key, $value := .Page.Params.meta }}
+	<meta property="{{ $key }}" content="{{ $value }}">
+	{{ end -}}
+{{ end }}
+
 {{ define "main" }}
 
 <section id="main">
