@@ -1,12 +1,12 @@
 // Bootstrap 4 (CSS + JS)
-import 'bootstrap/js/src/tab';
-import './css/bootstrap.scss';
+import "bootstrap/js/src/tab";
+import "./css/bootstrap.scss";
 
 // Font-awesome 4 (FTW)
-import 'font-awesome/scss/font-awesome.scss';
+import "font-awesome/scss/font-awesome.scss";
 
 // Highlight.js
-import './js/hljs';
+import "./js/hljs";
 
 // CSS theme
 import "./css/theme.less";
