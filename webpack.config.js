@@ -8,6 +8,7 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const AssetsPlugin = require("assets-webpack-plugin");
+const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 
 // Webpack abilities / addons
 const WEBPACK_REPORT = process.env.WEBPACK_REPORT || false;
@@ -77,19 +78,46 @@ module.exports = {
             },
             {
                 test: /\.tsx?$/,
-                loader: 'ts-loader',
                 exclude: /node_modules/,
-                options: {
-                    appendTsSuffixTo: [/\.vue$/],
-                }
+                use: [
+                    ...!isDev ? [] : [
+                        {
+                            loader: 'cache-loader',
+                            options: {
+                                cacheDirectory: path.join(CACHE_PATH, "ts-loader"),
+                            }
+                        },
+                    ],
+                    ...[{
+                        loader: 'awesome-typescript-loader',
+                    }],
+                ]
             },
             {
                 test: /\.js$/,
-                exclude: path => /node_modules/.test(path) && !/\.vue\.js/.test(path),
-                loader: 'babel-loader',
-                options: {
-                    cacheDirectory: path.join(CACHE_PATH, 'babel-loader'),
-                },
+                exclude: file => (
+                    /node_modules/.test(file) &&
+                    !/\.vue\.js/.test(file)
+                ),
+                use: [
+                    ...!isDev ? [] : [
+                        {
+                            loader: 'cache-loader',
+                            options: {
+                                cacheDirectory: path.join(CACHE_PATH, "babel-loader"),
+                            }
+                        },
+                        {
+                            loader: 'thread-loader',
+                            options: {
+                                workers: require('os').cpus().length - 1,
+                            },
+                        },
+                    ],
+                    ...[{
+                        loader: 'babel-loader',
+                    }],
+                ]
             },
             {
                 test: /\.(css|sass|scss)$/,
@@ -98,11 +126,20 @@ module.exports = {
                     {
                         loader: 'css-loader',
                         options: {
-                            importLoaders: 1,
                             sourceMap: true,
+                            importLoaders: 2,
+                            modules: false,
+                            localIdentName: '[name]_[local]_[hash:base64:5]'
                         }
                     },
-                    {loader: 'sass-loader'},
+                    {
+                        loader: "postcss-loader",
+                        options: {
+                            ident: "postcss",
+                            plugins: [require("autoprefixer")]
+                        }
+                    },
+                    { loader: 'sass-loader' },
                 ]
             },
             {
@@ -112,8 +149,17 @@ module.exports = {
                     {
                         loader: 'css-loader',
                         options: {
-                            importLoaders: 1,
-                            sourceMap: true,
+                            sourceMap: false,
+                            importLoaders: 2,
+                            modules: false,
+                            localIdentName: '[name]_[local]_[hash:base64:5]'
+                        }
+                    },
+                    {
+                        loader: "postcss-loader",
+                        options: {
+                            ident: "postcss",
+                            plugins: [require("autoprefixer")]
                         }
                     },
                     {
@@ -126,32 +172,60 @@ module.exports = {
                 ],
             },
             {
-
-                test: /\.(eot|svg|ttf|woff|woff2)(\?v=\d+\.\d+\.\d+)?$/,
-                use: {
-                    loader: "url-loader",
-                    options: {
-                        limit: 50000,
-                        name: "./fonts/[name].[ext]",
+                test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/i,
+                use: [
+                    {
+                        loader: 'url-loader',
+                        options: {
+                            limit: 4096,
+                            fallback: {
+                                loader: 'file-loader',
+                                options: {
+                                    name: 'fonts/[name].[hash:8].[ext]'
+                                }
+                            }
+                        }
                     }
-                },
+                ]
             },
             {
-                test: /\.(png|jpg|gif)$/,
+                test: /\.(svg)(\?.*)?$/,
                 use: [
                     {
                         loader: 'file-loader',
-                        options: {}
+                        options: {
+                            name: 'imgs/[name].[hash:8].[ext]'
+                        }
                     }
                 ]
-            }
+            },
+            {
+                test: /\.(png|jpe?g|gif|webp|ico)(\?.*)?$/,
+                use: [
+                    {
+                        loader: 'url-loader',
+                        options: {
+                            limit: 4096,
+                            fallback: {
+                                loader: 'file-loader',
+                                options: {
+                                    name: 'imgs/[name].[hash:8].[ext]'
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
         ]
     },
     resolve: {
         extensions: ['.ts', '.js', '.vue', '.json'],
+        modules: [
+            'node_modules',
+        ],
         alias: {
             'vue$': 'vue/dist/vue.esm.js',
-            '@': path.resolve(__dirname, 'assets/sites/f3l1x'),
+            '@': path.resolve(__dirname, 'assets/pages'),
         },
     },
     performance: {
@@ -177,6 +251,9 @@ module.exports = {
             path: path.join(process.cwd(), "data"),
             prettyPrint: true
         }),
+
+        // human webpack errors
+        new FriendlyErrorsWebpackPlugin(),
     ],
 };
 
@@ -212,25 +289,52 @@ if (!isDev) {
         optimization: {
             minimizer: [
                 new TerserPlugin({
+                    test: /\.m?js(\?.*)?$/i,
+                    chunkFilter: () => true,
+                    warningsFilter: () => true,
+                    extractComments: false,
+                    sourceMap: true,
+                    cache: true,
+                    cacheKeys: defaultCacheKeys => defaultCacheKeys,
+                    parallel: true,
+                    include: undefined,
+                    exclude: undefined,
+                    minify: undefined,
                     terserOptions: {
-                        cache: `${CACHE_PATH}/webpack/terser`,
-                        parallel: true,
-                        ecma: 8,
-                        warnings: false,
-                        parse: {},
-                        compress: {},
-                        mangle: true, // Note `mangle.properties` is `false` by default.
-                        module: false,
-                        output: null,
-                        toplevel: false,
-                        nameCache: null,
-                        ie8: false,
-                        keep_classnames: undefined,
-                        keep_fnames: false,
-                        safari10: false
+                        output: {
+                            comments: /^\**!|@preserve|@license|@cc_on/i
+                        },
+                        compress: {
+                            arrows: false,
+                            collapse_vars: false,
+                            comparisons: false,
+                            computed_props: false,
+                            hoist_funs: false,
+                            hoist_props: false,
+                            hoist_vars: false,
+                            inline: false,
+                            loops: false,
+                            negate_iife: false,
+                            properties: false,
+                            reduce_funcs: false,
+                            reduce_vars: false,
+                            switches: false,
+                            toplevel: false,
+                            typeofs: false,
+                            booleans: true,
+                            if_return: true,
+                            sequences: true,
+                            unused: true,
+                            conditionals: true,
+                            dead_code: true,
+                            evaluate: true
+                        },
+                        mangle: {
+                            safari10: true
+                        }
                     }
                 })
-            ]
+            ],
         },
         plugins: [
             new OptimizeCSSAssetsPlugin({

@@ -7,7 +7,7 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 import Vue from "vue";
 import Datetime from "./Datetime.vue"
 
@@ -17,6 +17,3 @@ export default Vue.extend({
   }
 });
 </script>
-
-<style>
-</style>
