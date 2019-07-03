@@ -1,32 +1,36 @@
 {
-    "repos": {
-      "coding-standard": {
-        "name": "ninjify/coding-standard",
-        "description": ":pig_nose: Tuned & very strict coding standards for PHP projects"
-      },
-      "qa": {
-        "name": "ninjify/qa",
-        "description": ":clap: Quality assurance for your PHP projects"
-      },
-      "imap": {
-        "name": "ninjify/imap",
-        "description": ":mailbox: Simple PHP IMAP wrapper"
-      },
-      "nunjuck": {
-        "name": "ninjify/nunjuck",
-        "description": ":muscle: Special tuned version of @nette tester called nunjuck!"
-      },
-      "criteria": {
-        "name": "ninjify/criteria",
-        "description": ":clapper: Criteria API - specification/expression pattern for common usage in PHP"
-      },
-      "command-bus": {
-        "name": "ninjify/command-bus",
-        "description": ":bus: Command Bus - useful implementation in PHP"
-      },
-      "pipero": {
-        "name": "ninjify/pipero",
-        "description": ":shower: Manage multiple PHP processes using built-in process pipes (proc)."
-      }
+  "repos": [
+    {
+      "name": "ninjify/apio",
+      "description": "Online PHP API generator"
+    },
+    {
+      "name": "ninjify/coding-standard",
+      "description": ":pig_nose: Tuned & very strict coding standards for PHP projects"
+    },
+    {
+      "name": "ninjify/command-bus",
+      "description": ":bus: Command Bus - useful implementation in PHP"
+    },
+    {
+      "name": "ninjify/criteria",
+      "description": ":clapper: Criteria API - specification/expression pattern for common usage in PHP"
+    },
+    {
+      "name": "ninjify/imap",
+      "description": ":mailbox: Simple PHP IMAP wrapper"
+    },
+    {
+      "name": "ninjify/nunjuck",
+      "description": ":muscle: Special tuned version of @nette tester called nunjuck!"
+    },
+    {
+      "name": "ninjify/pipero",
+      "description": ":shower: Manage multiple PHP processes using built-in process pipes (proc)."
+    },
+    {
+      "name": "ninjify/qa",
+      "description": ":clap: Quality assurance for your PHP projects"
     }
-  }
+  ]
+}

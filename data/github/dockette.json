@@ -1,144 +1,152 @@
 {
-  "repos": {
-    "devstack": {
-      "name": "dockette/devstack",
-      "description": ":whale: Dockette dockerized web devstack (@f3l1x)"
-    },
-    "packagist": {
-      "name": "dockette/packagist",
-      "description": ":whale: Dockette out-of-box Packagist (Nginx / Solr 6 / PHP 7.1+FPM)"
-    },
-    "php": {
-      "name": "dockette/php",
-      "description": ":whale: Dockette Debian based PHP 5.6 / 7.0 / 7.1 / 7.2 + FPM + Composer (Prestissimo)"
-    },
-    "adminer": {
+  "repos": [
+    {
       "name": "dockette/adminer",
       "description": ":whale: Tiniest boxed dockerized Adminer (MySQL/PostgreSQL,SQLite,Mongo,Oracle) Dockerfiles"
     },
-    "ci": {
-      "name": "dockette/ci",
-      "description": ":whale: Dockette dockerized Alpine linux continuous integration [CI] Dockerfiles for web application"
-    },
-    "web": {
-      "name": "dockette/web",
-      "description": ":whale: Dockette full modern web container (Nginx / PHP72+FPM / Supervisor)"
-    },
-    "letsencrypt": {
-      "name": "dockette/letsencrypt",
-      "description": ":whale: Dockette #LetsEncrypt Automatic Robot Dockerfile"
-    },
-    "phuml": {
-      "name": "dockette/phuml",
-      "description": ":whale: Generate UML from PHP via phUML"
-    },
-    "factorio": {
-      "name": "dockette/factorio",
-      "description": ":factory: :factory: :factory: Run Factorio in isolated docker container"
-    },
-    "playground": {
-      "name": "dockette/playground",
-      "description": ":whale: Demonstration of dockette images / containers"
-    },
-    "nette-tester": {
-      "name": "dockette/nette-tester",
-      "description": "My Nette\\Tester Dockerfile"
-    },
-    "nginx": {
-      "name": "dockette/nginx",
-      "description": ":whale: Dockette Nginx SSL / HSTS / HTTP2 Dockerfile"
-    },
-    "debian": {
-      "name": "dockette/debian",
-      "description": ":whale: Dockette Debian Dockerfiles"
-    },
-    "haproxy": {
-      "name": "dockette/haproxy",
-      "description": ":whale: Dockette Haproxy Dockerfile"
-    },
-    "alpine": {
+    {
       "name": "dockette/alpine",
       "description": ":whale: Dockette Alpine Linux Dockerfiles"
     },
-    "nodejs": {
-      "name": "dockette/nodejs",
-      "description": ":whale: Dockette NodeJS (Debian/Alpine) Dockerfiles"
-    },
-    "varnish": {
-      "name": "dockette/varnish",
-      "description": ":whale: Dockette Varnish Dockerfile"
-    },
-    "pound": {
-      "name": "dockette/pound",
-      "description": ":whale: Dockette My Pound Dockerfile"
-    },
-    "gruntz": {
-      "name": "dockette/gruntz",
-      "description": ":octopus: Run Gruntz in isolated wine docker container"
-    },
-    "java": {
-      "name": "dockette/java",
-      "description": ":whale: Dockette Oracle Java / OpenJDK / Maven Dockerfiles"
-    },
-    "deploy": {
-      "name": "dockette/deploy",
-      "description": ":whale: Dockette deployment tools (Deployer / Ansible)"
-    },
-    "hugo": {
-      "name": "dockette/hugo",
-      "description": ":whale: Dockette dockerized Hugo - Static Generator"
-    },
-    "ssh": {
-      "name": "dockette/ssh",
-      "description": ":whale: Dockette image with openssh"
-    },
-    "docker": {
-      "name": "dockette/docker",
-      "description": ":whale: Dockerized Docker + Docker Compose"
-    },
-    "phpmailer": {
-      "name": "dockette/phpmailer",
-      "description": "My custom PHP mailer script for Docker containers"
-    },
-    "apache": {
+    {
       "name": "dockette/apache",
       "description": ":whale: Dockette Apache Dockerfiles"
     },
-    "plantuml": {
-      "name": "dockette/plantuml",
-      "description": ":whale: Dockerized PlantUML"
+    {
+      "name": "dockette/apigen",
+      "description": ":whale: Dockerized tool for generate PHP documentation - Apigen"
     },
-    "perl": {
-      "name": "dockette/perl",
-      "description": ":whale: Dockette Perl Dockerfiles"
-    },
-    "centos": {
-      "name": "dockette/centos",
-      "description": ":whale: Dockette CentOS Dockerfiles"
-    },
-    "dump": {
-      "name": "dockette/dump",
-      "description": ":whale: Dockette database (MySQL/PostgreSQL/MongoDB) backup images/tools "
-    },
-    "upstream": {
-      "name": "dockette/upstream",
-      "description": ":whale: Dockette latests images based on official Docker Hub images"
-    },
-    "oracle": {
-      "name": "dockette/oracle",
-      "description": ":whale: Oracle / Oracle instantclient Images"
-    },
-    "candoo": {
+    {
       "name": "dockette/candoo",
       "description": ":whale: Caddy server with PHP 7.2 for local development"
     },
-    "phabricator": {
+    {
+      "name": "dockette/centos",
+      "description": ":whale: Dockette CentOS Dockerfiles"
+    },
+    {
+      "name": "dockette/ci",
+      "description": ":whale: Dockette dockerized Alpine linux Dockerfiles for PHP 5.6 / 7.0 / 7.1 / 7.2 / 7.3 + Composer (Prestissimo) and NodeJS 6 / 7 / 8 / 9 / 10 / 11."
+    },
+    {
+      "name": "dockette/debian",
+      "description": ":whale: Dockette Debian Dockerfiles"
+    },
+    {
+      "name": "dockette/deploy",
+      "description": ":whale: Dockette deployment tools (Deployer / Ansible)"
+    },
+    {
+      "name": "dockette/devstack",
+      "description": ":whale: Dockette dockerized web devstack (@f3l1x)"
+    },
+    {
+      "name": "dockette/docker",
+      "description": ":whale: Dockerized Docker + Docker Compose"
+    },
+    {
+      "name": "dockette/dump",
+      "description": ":whale: Dockette database (MySQL/PostgreSQL/MongoDB) backup images/tools "
+    },
+    {
+      "name": "dockette/factorio",
+      "description": ":factory: :factory: :factory: Run Factorio in isolated docker container"
+    },
+    {
+      "name": "dockette/gruntz",
+      "description": ":octopus: Run Gruntz in isolated wine docker container"
+    },
+    {
+      "name": "dockette/haproxy",
+      "description": ":whale: Dockette Haproxy Dockerfile"
+    },
+    {
+      "name": "dockette/hugo",
+      "description": ":whale: Dockette dockerized Hugo - Static Generator"
+    },
+    {
+      "name": "dockette/java",
+      "description": ":whale: Dockette Oracle Java / OpenJDK / Maven Dockerfiles"
+    },
+    {
+      "name": "dockette/letsencrypt",
+      "description": ":whale: Dockette #LetsEncrypt Automatic Robot Dockerfile"
+    },
+    {
+      "name": "dockette/nette-tester",
+      "description": "My Nette\\Tester Dockerfile"
+    },
+    {
+      "name": "dockette/nginx",
+      "description": ":whale: Dockette Nginx SSL / HSTS / HTTP2 Dockerfile"
+    },
+    {
+      "name": "dockette/nodejs",
+      "description": ":whale: Dockette NodeJS (Debian/Alpine) Dockerfiles"
+    },
+    {
+      "name": "dockette/oracle",
+      "description": ":whale: Oracle / Oracle instantclient Images"
+    },
+    {
+      "name": "dockette/packagist",
+      "description": ":whale: Dockette out-of-box Packagist (Nginx / Solr 6 / PHP 7.1+FPM)"
+    },
+    {
+      "name": "dockette/perl",
+      "description": ":whale: Dockette Perl Dockerfiles"
+    },
+    {
       "name": "dockette/phabricator",
       "description": "Phabricator - packed production-ready & easy-to-use phacility "
     },
-    "apigen": {
-      "name": "dockette/apigen",
-      "description": ":whale: Dockerized tool for generate PHP documentation - Apigen"
+    {
+      "name": "dockette/php",
+      "description": ":whale: Dockette Debian based PHP 5.6 / 7.0 / 7.1 / 7.2 / 7.3 + FPM + Composer (Prestissimo)"
+    },
+    {
+      "name": "dockette/phpmailer",
+      "description": "My custom PHP mailer script for Docker containers"
+    },
+    {
+      "name": "dockette/phuml",
+      "description": ":whale: Generate UML from PHP via phUML"
+    },
+    {
+      "name": "dockette/plantuml",
+      "description": ":whale: Dockerized PlantUML"
+    },
+    {
+      "name": "dockette/playground",
+      "description": ":whale: Demonstration of dockette images / containers"
+    },
+    {
+      "name": "dockette/postgres",
+      "description": ":whale: Dockette PostgreSQL image with tunning and preinstalled extensions (unaccent)"
+    },
+    {
+      "name": "dockette/pound",
+      "description": ":whale: Dockette My Pound Dockerfile"
+    },
+    {
+      "name": "dockette/rendertron",
+      "description": ":whale: Google Rendertron Dockerfile"
+    },
+    {
+      "name": "dockette/ssh",
+      "description": ":whale: Dockette image with openssh"
+    },
+    {
+      "name": "dockette/upstream",
+      "description": ":whale: Dockette latests images based on official Docker Hub images"
+    },
+    {
+      "name": "dockette/varnish",
+      "description": ":whale: Dockette Varnish Dockerfile"
+    },
+    {
+      "name": "dockette/web",
+      "description": ":whale: Dockette full modern web container (Nginx / PHP72+FPM / Supervisor)"
     }
-  }
+  ]
 }

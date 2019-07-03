@@ -1,40 +1,40 @@
 {
-    "repos": {
-      "orm": {
-        "name": "nettrine/orm",
-        "description": ":fire: Well-integrated Doctrine2 ORM for Nette Framework"
-      },
-      "migrations": {
-        "name": "nettrine/migrations",
-        "description": ":running: Doctrine Migrations for Nette Framework"
-      },
-      "dbal": {
-        "name": "nettrine/dbal",
-        "description": ":bulb: Well-integrated Doctrine2 DBAL for Nette Framework"
-      },
-      "fixtures": {
-        "name": "nettrine/fixtures",
-        "description": ":wrench: Doctrine Fixtures for Nette Framework"
-      },
-      "annotations": {
-        "name": "nettrine/annotations",
-        "description": ":memo: Standalone Doctrine Annotations for Nette Framework"
-      },
-      "extensions": {
-        "name": "nettrine/extensions",
-        "description": ":mag: Doctrine2 behavioral extensions for Nette Framework"
-      },
-      "playground": {
-        "name": "nettrine/playground",
-        "description": ":shipit: Examples of @nettrine packages"
-      },
-      "cache": {
-        "name": "nettrine/cache",
-        "description": ":arrows_clockwise: Doctrine Cache adapter for Nette Framework "
-      },
-      "microtrine": {
-        "name": "nettrine/microtrine",
-        "description": ":hatching_chick: Most tiniest integration of Doctrine2 for Nette Framework"
-      }
+  "repos": [
+    {
+      "name": "nettrine/annotations",
+      "description": ":memo: Standalone Doctrine Annotations for Nette Framework"
+    },
+    {
+      "name": "nettrine/cache",
+      "description": ":arrows_clockwise: Doctrine Cache adapter for Nette Framework "
+    },
+    {
+      "name": "nettrine/dbal",
+      "description": ":bulb: Well-integrated Doctrine2 DBAL for Nette Framework"
+    },
+    {
+      "name": "nettrine/extensions",
+      "description": ":mag: Doctrine2 behavioral extensions for Nette Framework"
+    },
+    {
+      "name": "nettrine/fixtures",
+      "description": ":wrench: Doctrine Fixtures for Nette Framework"
+    },
+    {
+      "name": "nettrine/hydrator",
+      "description": ":arrow_left: :arrow_right: Convert Doctrine entity to array and conversely"
+    },
+    {
+      "name": "nettrine/microtrine",
+      "description": ":hatching_chick: Most tiniest integration of Doctrine2 for Nette Framework"
+    },
+    {
+      "name": "nettrine/migrations",
+      "description": ":running: Doctrine Migrations for Nette Framework"
+    },
+    {
+      "name": "nettrine/orm",
+      "description": ":fire: Well-integrated Doctrine2 ORM for Nette Framework"
     }
-  }
+  ]
+}

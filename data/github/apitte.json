@@ -1,52 +1,52 @@
 {
-    "repos": {
-      "core": {
-        "name": "apitte/core",
-        "description": ":wrench: PSR-7 based API framework. Heart of the apitte stack. Suitable to use with Nette Framework."
-      },
-      "playground": {
-        "name": "apitte/playground",
-        "description": ":baby: Apitte playground with examples"
-      },
-      "openapi": {
-        "name": "apitte/openapi",
-        "description": ":family: OpenAPI specification for Apitte stack"
-      },
-      "fullstack": {
-        "name": "apitte/fullstack",
-        "description": ":thumbsup: Apitte meta package with all features"
-      },
-      "middlewares": {
-        "name": "apitte/middlewares",
-        "description": ":speedboat: Middlewares support for Apitte stack"
-      },
-      "presenter": {
-        "name": "apitte/presenter",
-        "description": ":sunflower: PSR-7 for Nette\\Presenters with Apitte stack"
-      },
-      "negotiation": {
-        "name": "apitte/negotiation",
-        "description": ":art: Content-Negotiation support for Apitte stack"
-      },
-      "debug": {
-        "name": "apitte/debug",
-        "description": ":interrobang: Debugging tools for Apitte stack"
-      },
-      "console": {
-        "name": "apitte/console",
-        "description": ":pill: Symfony\\Console bridge for Apitte stack"
-      },
-      "openapi-toolkit": {
-        "name": "apitte/openapi-toolkit",
-        "description": ":diamonds: Simple and intuitive OpenApi/Swagger compatible UI toolkit"
-      },
-      "events": {
-        "name": "apitte/events",
-        "description": ":loop: [WIP] Symfony\\EventDispatcher for Apitte stack"
-      },
-      "mapping": {
-        "name": "apitte/mapping",
-        "description": "[DEPRECATED] :pig: Request mappers, transformers and decorators  for Apitte stack"
-      }
+  "repos": [
+    {
+      "name": "apitte/apitte-org",
+      "description": ":fireworks: Apitte website"
+    },
+    {
+      "name": "apitte/console",
+      "description": ":pill: Symfony\\Console bridge for Apitte stack"
+    },
+    {
+      "name": "apitte/core",
+      "description": ":wrench: PSR-7 based API framework. Heart of the apitte stack. Suitable to use with Nette Framework."
+    },
+    {
+      "name": "apitte/debug",
+      "description": ":interrobang: Debugging tools for Apitte stack"
+    },
+    {
+      "name": "apitte/events",
+      "description": ":loop: [WIP] Symfony\\EventDispatcher for Apitte stack"
+    },
+    {
+      "name": "apitte/fullstack",
+      "description": ":thumbsup: Apitte meta package with all features"
+    },
+    {
+      "name": "apitte/mapping",
+      "description": "[DEPRECATED] :pig: Request mappers, transformers and decorators  for Apitte stack"
+    },
+    {
+      "name": "apitte/middlewares",
+      "description": ":speedboat: Middlewares support for Apitte stack"
+    },
+    {
+      "name": "apitte/negotiation",
+      "description": ":art: Content-Negotiation support for Apitte stack"
+    },
+    {
+      "name": "apitte/openapi",
+      "description": ":family: OpenAPI specification for Apitte stack"
+    },
+    {
+      "name": "apitte/openapi-toolkit",
+      "description": ":diamonds: Simple and intuitive OpenApi/Swagger compatible UI toolkit"
+    },
+    {
+      "name": "apitte/presenter",
+      "description": ":sunflower: PSR-7 for Nette\\Presenters with Apitte stack"
     }
-  }
+  ]
+}
