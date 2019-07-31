@@ -9,6 +9,7 @@ const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const AssetsPlugin = require("assets-webpack-plugin");
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 // Webpack abilities / addons
 const WEBPACK_REPORT = process.env.WEBPACK_REPORT || false;
@@ -32,16 +33,24 @@ const CACHE_PATH = __dirname + '/temp/webpack';
 // ===========================
 
 function getEntrypoints() {
-    const entrypoints = {};
+    const entrypoints = {
+        "resume": path.join(__dirname, 'assets/resume/index.js'),
+        "blog": path.join(__dirname, 'assets/blog/app.ts'),
+    };
 
-    const cwd = path.join(__dirname, 'assets/pages');
-    glob.sync("*/index.*(js|ts)", {
-        cwd
-    }).forEach(entry => {
-        const page = entry.substr(0, entry.indexOf('/'));
-        entrypoints[page] = `${cwd}/${entry}`;
-    });
+    const blogCwd = path.join(__dirname, 'assets/blog/pages');
+    glob.sync("*/index.*(js|ts)", { cwd: blogCwd })
+        .forEach(entry => {
+            const page = entry.substr(0, entry.indexOf('/'));
+            entrypoints['blog-' + page] = `${blogCwd}/${entry}`;
+        });
 
+    const blabsCwd = path.join(__dirname, 'assets/blog/pages/blabs');
+    glob.sync("*/index.*(js|ts)", { cwd: blabsCwd })
+        .forEach(entry => {
+            const page = entry.substr(0, entry.indexOf('/'));
+            entrypoints['blog-blabs-' + page] = `${blabsCwd}/${entry}`;
+        });
     return entrypoints;
 }
 
@@ -57,24 +66,52 @@ module.exports = {
         filename: !isDev ? '[name].[chunkhash:8].js' : '[name].js',
         chunkFilename: !isDev ? '[id].[chunkhash:8].js' : '[name].js',
     },
+    devtool: '#eval-source-map',
+    node: {
+        setImmediate: false,
+        process: 'mock',
+        dgram: 'empty',
+        fs: 'empty',
+        net: 'empty',
+        tls: 'empty',
+        child_process: 'empty'
+    },
     module: {
+        noParse: /^(vue|vue-router|vuex|vuex-router-sync)$/,
         rules: [
             {
                 test: /\.vue$/,
-                loader: 'vue-loader',
-                options: {
-                    loaders: {
-                        'scss': 'vue-style-loader!css-loader!sass-loader',
-                        'sass': 'vue-style-loader!css-loader!sass-loader?indentedSyntax',
-                    },
-                    cacheDirectory: path.join(CACHE_PATH, 'vue-loader'),
-                    cacheIdentifier: [
-                        process.env.NODE_ENV || 'development',
-                        webpack.version,
-                        VUE_VERSION,
-                        VUE_LOADER_VERSION,
-                    ].join('|'),
-                },
+                use: [
+                    ...!isDev ? [] : [
+                        {
+                            loader: 'cache-loader',
+                            options: {
+                                cacheDirectory: path.join(CACHE_PATH, "vue-loader"),
+                                cacheIdentifier: [
+                                    process.env.NODE_ENV || 'development',
+                                    webpack.version,
+                                    VUE_VERSION,
+                                    VUE_LOADER_VERSION,
+                                ].join('|'),
+                            }
+                        }
+                    ],
+                    ...[{
+                        loader: 'vue-loader',
+                        options: {
+                            compilerOptions: {
+                                preserveWhitespace: false
+                            },
+                            cacheDirectory: path.join(CACHE_PATH, "vue-loader"),
+                            cacheIdentifier: [
+                                process.env.NODE_ENV || 'development',
+                                webpack.version,
+                                VUE_VERSION,
+                                VUE_LOADER_VERSION,
+                            ].join('|'),
+                        }
+                    }],
+                ]
             },
             {
                 test: /\.tsx?$/,
@@ -129,7 +166,6 @@ module.exports = {
                             sourceMap: true,
                             importLoaders: 2,
                             modules: false,
-                            localIdentName: '[name]_[local]_[hash:base64:5]'
                         }
                     },
                     {
@@ -141,35 +177,6 @@ module.exports = {
                     },
                     { loader: 'sass-loader' },
                 ]
-            },
-            {
-                test: /\.less$/,
-                use: [
-                    MiniCssExtractPlugin.loader,
-                    {
-                        loader: 'css-loader',
-                        options: {
-                            sourceMap: false,
-                            importLoaders: 2,
-                            modules: false,
-                            localIdentName: '[name]_[local]_[hash:base64:5]'
-                        }
-                    },
-                    {
-                        loader: "postcss-loader",
-                        options: {
-                            ident: "postcss",
-                            plugins: [require("autoprefixer")]
-                        }
-                    },
-                    {
-                        loader: 'less-loader',
-                        options: {
-                            strictMath: true,
-                            noIeCompat: true
-                        }
-                    }
-                ],
             },
             {
                 test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/i,
@@ -231,7 +238,6 @@ module.exports = {
     performance: {
         hints: false
     },
-    devtool: '#eval-source-map',
     plugins: [
         // prevent pikaday from including moment.js
         new webpack.IgnorePlugin(/moment/, /pikaday/),
