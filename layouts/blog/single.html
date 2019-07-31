@@ -11,6 +11,11 @@
 	{{- range $key, $value := .Page.Params.meta }}
 	<meta property="{{ $key }}" content="{{ $value }}" />
 	{{ end -}}
+
+{{ end }}
+
+{{ define "assets" }}
+	{{ partial "webpack" (dict "ctx" . "asset" "pages-blog") }}
 {{ end }}
 
 {{ define "main" }}

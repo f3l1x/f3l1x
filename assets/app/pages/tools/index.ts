@@ -1,5 +1,5 @@
-import Vue from 'vue'
-import Tools from './Tools.vue'
+import Vue from 'vue';
+import Tools from './Tools.vue';
 
 Vue.config.productionTip = false;
 

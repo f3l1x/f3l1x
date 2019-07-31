@@ -38,7 +38,10 @@
 
 	{{ block "head" .}}{{ end }}
 
-	{{ partial "webpack" (dict "ctx" . "asset" "blog") }}
+	{{ partial "webpack" (dict "ctx" . "asset" "app") }}
+
+	{{ block "assets" .}}{{ end }}
+
 	{{ range $asset := .Page.Params.assets }}
 	{{ partial "webpack" (dict "ctx" $ "asset" $asset) }}
 	{{ end -}}

@@ -35,22 +35,23 @@ const CACHE_PATH = __dirname + '/temp/webpack';
 function getEntrypoints() {
     const entrypoints = {
         "resume": path.join(__dirname, 'assets/resume/index.js'),
-        "blog": path.join(__dirname, 'assets/blog/app.ts'),
+        "app": path.join(__dirname, 'assets/app/app.ts'),
     };
 
-    const blogCwd = path.join(__dirname, 'assets/blog/pages');
-    glob.sync("*/index.*(js|ts)", { cwd: blogCwd })
+    const appCwd = path.join(__dirname, 'assets/app/pages');
+    glob.sync("*/index.*(js|ts)", { cwd: appCwd })
         .forEach(entry => {
             const page = entry.substr(0, entry.indexOf('/'));
-            entrypoints['blog-' + page] = `${blogCwd}/${entry}`;
+            entrypoints['pages-' + page] = `${appCwd}/${entry}`;
         });
 
-    const blabsCwd = path.join(__dirname, 'assets/blog/pages/blabs');
+    const blabsCwd = path.join(__dirname, 'assets/app/blabs');
     glob.sync("*/index.*(js|ts)", { cwd: blabsCwd })
         .forEach(entry => {
             const page = entry.substr(0, entry.indexOf('/'));
-            entrypoints['blog-blabs-' + page] = `${blabsCwd}/${entry}`;
+            entrypoints['blabs-' + page] = `${blabsCwd}/${entry}`;
         });
+
     return entrypoints;
 }
 
