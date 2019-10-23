@@ -10,7 +10,7 @@
     },
     {
       "name": "apitte/core",
-      "description": ":wrench: PSR-7 based API framework. Heart of the apitte stack. Suitable to use with Nette Framework."
+      "description": ":wrench: Enjoyable [PSR-7 based] API framework for Nette Framework. Heart of the apitte stack."
     },
     {
       "name": "apitte/debug",

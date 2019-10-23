@@ -1,0 +1,28 @@
+{
+  "repos": [
+    {
+      "name": "pwnlabs/dub",
+      "description": ":whale: Docker Hub front-end API wrapper written in Vue.js"
+    },
+    {
+      "name": "pwnlabs/gapi",
+      "description": ":microscope: GitLab front-end API wrapper written in Vue.JS"
+    },
+    {
+      "name": "pwnlabs/gitlab2trello",
+      "description": ":ok_hand: Export Gitlab project and importit in Trello board. Gitlab2Trello migration tool."
+    },
+    {
+      "name": "pwnlabs/php-hostinfo",
+      "description": "Simple PHP tool to quickly check for sane webhosting setup   "
+    },
+    {
+      "name": "pwnlabs/webhosting-tools",
+      "description": ":ghost: Hosting Apps"
+    },
+    {
+      "name": "pwnlabs/webmaster-tools",
+      "description": ":neckbeard: Webmaster Tools"
+    }
+  ]
+}

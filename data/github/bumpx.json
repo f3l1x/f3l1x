@@ -1,0 +1,12 @@
+{
+  "repos": [
+    {
+      "name": "bumpx/oracle-instantclient",
+      "description": ":minidisc: Oracle InstantClient"
+    },
+    {
+      "name": "bumpx/postgresql-czech",
+      "description": ":green_book: Czech Dictionary for  PostgreSQL"
+    }
+  ]
+}

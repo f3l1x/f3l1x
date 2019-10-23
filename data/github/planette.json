@@ -42,7 +42,7 @@
     },
     {
       "name": "planette/planette.io",
-      "description": ":metal: planette.io website"
+      "description": ":metal: https://planette.io website"
     },
     {
       "name": "planette/playground",
@@ -50,7 +50,11 @@
     },
     {
       "name": "planette/posobota.cz",
-      "description": "www.posobota.cz website"
+      "description": "https://posobota.cz website"
+    },
+    {
+      "name": "planette/skynette",
+      "description": "small brewery homepage"
     }
   ]
 }

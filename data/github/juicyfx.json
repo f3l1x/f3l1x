@@ -1,0 +1,24 @@
+{
+  "repos": [
+    {
+      "name": "juicyfx/juicy",
+      "description": ":tangerine: Awesome juicy lambdas for generating PDF, taking screenshots, transform XML to JSON. Running on @zeit's cloud."
+    },
+    {
+      "name": "juicyfx/now-bref",
+      "description": "ZEIT Now bref builder • now-bref"
+    },
+    {
+      "name": "juicyfx/now-builders",
+      "description": "Experimental ZEIT Now Builders by @f3l1x"
+    },
+    {
+      "name": "juicyfx/now-client",
+      "description": "ZEIT PHP API client "
+    },
+    {
+      "name": "juicyfx/now-php",
+      "description": "ZEIT Now PHP builder  •  now-php  •  🐘+ λ = ❤"
+    }
+  ]
+}

@@ -1,16 +1,18 @@
-{{ range $project := index .Site.Data.projects .Params.type }}
+{{ $project := index .Site.Data.projects .Params.type }}
 <div class="organization">
 	<div class="row">
 		<div class="col-md-1 col-sm-1 col-xs-2 text-right organization__logo">
 			<a href="https://github.com/{{$project.webalize}}">
-				<img class="media-object" src="https://avatars0.githubusercontent.com/u/{{$project.avatar}}?v=3&amp;s=64" title="{{$project.name}}" alt="{{$project.name}}">
+				<img class="media-object" src="https://avatars0.githubusercontent.com/u/{{ int $project.id }}?v=3&amp;s=64" title="{{$project.name}}" alt="{{$project.name}}">
 			</a>
 		</div>
 		<div class="col-md-11 col-sm-11 col-xs-10 organization__headline">
 			<h3 class="media-heading">
 				<a href="https://github.com/{{$project.webalize}}">{{$project.name}}</a> <i class="fa fa-github"></i>
 			</h3>
-			<p>{{ $project.description }}</p>
+			{{ if isset $project "description" }}
+				<p>{{ $project.description }}</p>
+			{{ end }}
 		</div>
 	</div>
 	<div class="row">
@@ -30,4 +32,3 @@
 		</div>
 	</div>
 </div>
-{{end}}

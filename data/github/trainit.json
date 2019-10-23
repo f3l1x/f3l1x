@@ -57,6 +57,18 @@
       "description": ":rocket: Example of ZEIT Now deployment"
     },
     {
+      "name": "trainit/2019-08-serverless-zeit-now",
+      "description": "🤘Example of ZEIT Now and PHP "
+    },
+    {
+      "name": "trainit/2019-09-docker",
+      "description": ":whale: Docker Brief (03.09.2019)"
+    },
+    {
+      "name": "trainit/2019-10-hubbr-zeit",
+      "description": "🎁 Hubbr Coworking - ZEIT deployment"
+    },
+    {
       "name": "trainit/tools",
       "description": "Tools"
     }

@@ -1,0 +1,20 @@
+{
+  "repos": [
+    {
+      "name": "ispalliance/adminus-process-http-client",
+      "description": "Adminus Process basic HTTP client for easy integration"
+    },
+    {
+      "name": "ispalliance/api-clients",
+      "description": ":key: PHP API clients for ISPA applications"
+    },
+    {
+      "name": "ispalliance/codi-integration",
+      "description": "Basic Classes, Entities and API documentation for CODI integration"
+    },
+    {
+      "name": "ispalliance/icons",
+      "description": "Most used images/icons with tiny integration into Latte template engine."
+    }
+  ]
+}

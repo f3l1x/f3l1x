@@ -1,6 +1,10 @@
 {
   "repos": [
     {
+      "name": "ninjify/apiguy",
+      "description": null
+    },
+    {
       "name": "ninjify/apio",
       "description": "Online PHP API generator"
     },
@@ -27,6 +31,10 @@
     {
       "name": "ninjify/pipero",
       "description": ":shower: Manage multiple PHP processes using built-in process pipes (proc)."
+    },
+    {
+      "name": "ninjify/portainer",
+      "description": "PHP API client for Portainer"
     },
     {
       "name": "ninjify/qa",

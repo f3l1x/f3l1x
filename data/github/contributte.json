@@ -21,10 +21,6 @@
       "description": ":man: RESTful router for your API in Nette Framework - created either directly or via annotation"
     },
     {
-      "name": "contributte/api-router-project",
-      "description": "[ARCHIVED] Example starter project for contributte/api-router"
-    },
-    {
       "name": "contributte/application",
       "description": ":sparkles: Extra contrib to nette/application (@nette)"
     },
@@ -39,6 +35,10 @@
     {
       "name": "contributte/cache",
       "description": ":sparkles: Extra contrib to nette/caching (@nette)"
+    },
+    {
+      "name": "contributte/cnb",
+      "description": null
     },
     {
       "name": "contributte/codeception",
@@ -113,16 +113,12 @@
       "description": ":repeat: Ultra simple events system for Nette Framework"
     },
     {
+      "name": "contributte/eet",
+      "description": "💵 EET integration into Nette"
+    },
+    {
       "name": "contributte/elasticsearch",
       "description": ":mag: Tiny Elasticsearch integration into Nette Framework"
-    },
-    {
-      "name": "contributte/event-application-bridge",
-      "description": "[ARCHIVED] :recycle: Bridge between event dispatcher & nette application "
-    },
-    {
-      "name": "contributte/event-bridges",
-      "description": "[ARCHIVED] :package: Collection of all event dispatcher bridges (:recycle:) to nette at one place "
     },
     {
       "name": "contributte/event-dispatcher",
@@ -134,7 +130,7 @@
     },
     {
       "name": "contributte/event-security-bridge",
-      "description": "[ARCHIVED] :recycle: Bridge between event dispatcher & nette security"
+      "description": "[DEPRECATED] :recycle: Bridge between event dispatcher & nette security"
     },
     {
       "name": "contributte/facebook",
@@ -165,6 +161,18 @@
       "description": ":man: Yeoman & Nette Framework"
     },
     {
+      "name": "contributte/gopay",
+      "description": ":moneybag: Integrace Gopay pro Nette Framework"
+    },
+    {
+      "name": "contributte/gopay-api",
+      "description": "GopayAPI SDK [Unofficial]"
+    },
+    {
+      "name": "contributte/gopay-inline",
+      "description": ":credit_card: GoPay Inline Payment for Nette Framework"
+    },
+    {
       "name": "contributte/gosms",
       "description": ":speech_balloon: GoSMS.cz HTTP client for Nette "
     },
@@ -187,10 +195,6 @@
     {
       "name": "contributte/latte",
       "description": ":sparkles: Extra contrib to nette/latte (@nette)"
-    },
-    {
-      "name": "contributte/latte-email",
-      "description": ":point_right: Email protection for emails in Latte templates"
     },
     {
       "name": "contributte/latte-parsedown-extra",
@@ -314,7 +318,7 @@
     },
     {
       "name": "contributte/translation",
-      "description": ":gb: :de: :it: Translations (symfony/translation) to Nette Framework (@nette)"
+      "description": ":tongue: Translations (symfony/translation) to Nette Framework (@nette)"
     },
     {
       "name": "contributte/utils",

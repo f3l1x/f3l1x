@@ -1,0 +1,84 @@
+{
+  "repos": [
+    {
+      "name": "tlapnet/chart",
+      "description": ":chart: Graphs and charts based on C3.js for PHP"
+    },
+    {
+      "name": "tlapnet/cli-project",
+      "description": ":black_large_square: Tlapnet Console Project"
+    },
+    {
+      "name": "tlapnet/datus",
+      "description": ":1234: :capital_abcd: Schema-based driven forms for Nette Framework"
+    },
+    {
+      "name": "tlapnet/doxen",
+      "description": ":memo: Simple, extended, easy-to-use, markdown-based documentation generator for PHP"
+    },
+    {
+      "name": "tlapnet/forge",
+      "description": ":hatching_chick: Ideas and prototypes"
+    },
+    {
+      "name": "tlapnet/githubber",
+      "description": ":octocat: Configure GitHub repositories via CLI commands"
+    },
+    {
+      "name": "tlapnet/modalus",
+      "description": ":stars: Modal-based component system for Nette Framework"
+    },
+    {
+      "name": "tlapnet/notifications",
+      "description": "⚠Queued & mail & instant notifications for Nette Framework"
+    },
+    {
+      "name": "tlapnet/panelus",
+      "description": ":package: Dashboard panel-based component system for Nette Framework"
+    },
+    {
+      "name": "tlapnet/pedef",
+      "description": ":ledger: Portablus Documentus Formatus (PDF)"
+    },
+    {
+      "name": "tlapnet/playground",
+      "description": ":books:  Examples and skeletons for @tlapnet projects and libraries"
+    },
+    {
+      "name": "tlapnet/react-datagrid",
+      "description": "[ARCHIVED] Simple datagrid in react"
+    },
+    {
+      "name": "tlapnet/report",
+      "description": ":bar_chart: Report library for creating custom manager reports in PHP with prepared Nette Framework support"
+    },
+    {
+      "name": "tlapnet/report-mailing",
+      "description": "📩  Configurable library for periodic email sending"
+    },
+    {
+      "name": "tlapnet/report-project",
+      "description": ":bar_chart: Demo project of the tlapnet/report library based on Nette Framework "
+    },
+    {
+      "name": "tlapnet/searcher",
+      "description": "🕵️‍♂️Basic searching abstraction"
+    },
+    {
+      "name": "tlapnet/settus",
+      "description": ":guardsman: Manage settings in your app easily. "
+    },
+    {
+      "name": "tlapnet/snow-project",
+      "description": ":ok_hand: Tlapnet Simple Web Project"
+    },
+    {
+      "name": "tlapnet/stamus",
+      "description": ":arrows_counterclockwise: State machine"
+    },
+    {
+      "name": "tlapnet/timy-project",
+      "description": ":metal: Tlapnet Tiny Web Project"
+    }
+  ]
+}

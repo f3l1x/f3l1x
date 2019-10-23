@@ -1,50 +1,92 @@
 {
-  "PHP": [
-    {
-      "name": "Contributte",
-      "webalize": "contributte",
-      "description": "Extra contribution to Nette Framework",
-      "avatar": "22681157"
-    },
-    {
-      "name": "Apitte",
-      "webalize": "apitte",
-      "description": "Great PHP/PSR7 API for Nette Framework",
-      "avatar": "31967234"
-    },
-    {
-      "name": "Nettrine",
-      "webalize": "nettrine",
-      "description": "Easy & smart integration of Doctrine2 to Nette Framework",
-      "avatar": "26110973"
-    },
-    {
-      "name": "Ninjify",
-      "webalize": "ninjify",
-      "description": "PHP nunchucks for you coding dojo",
-      "avatar": "20489795"
-    },
-    {
-      "name": "Planette",
-      "webalize": "planette",
-      "description": "Nette-land and community projects",
-      "avatar": "25814367"
-    }
-  ],
-  "Docker": [
-    {
-      "name": "Dockette",
-      "webalize": "dockette",
-      "description": "Useful Docker Images",
-      "avatar": "15856518"
-    }
-  ],
-  "Education": [
-    {
-      "name": "Train+it",
-      "webalize": "trainit",
-      "description": "Tutorials, Hints, Tips, Practices, Samples to IT world",
-      "avatar": "17249862"
-    }
-  ]
+  "contributte": {
+    "name": "Contributte",
+    "webalize": "contributte",
+    "description": "Extra Contribution to Nette Framework",
+    "id": 22681157
+  },
+  "nettrine": {
+    "name": "Nettrine",
+    "webalize": "nettrine",
+    "description": "Easy & smart integration of Doctrine2 to Nette Framework",
+    "id": 26110973
+  },
+  "apitte": {
+    "name": "Apitte",
+    "webalize": "apitte",
+    "description": "Great PHP/PSR7 API for Nette Framework",
+    "id": 31967234
+  },
+  "planette": {
+    "name": "Planette",
+    "webalize": "planette",
+    "description": "Nette-land and community projects",
+    "id": 25814367
+  },
+  "ninjify": {
+    "name": "Ninjify",
+    "webalize": "ninjify",
+    "description": " PHP nunchucks for you coding dojo",
+    "id": 20489795
+  },
+  "dockette": {
+    "name": "Dockette",
+    "webalize": "dockette",
+    "description": "Useful Docker Images",
+    "id": 15856518
+  },
+  "trainit": {
+    "name": "Train+it",
+    "webalize": "trainit",
+    "description": "Tutorials, Hints, Tips, Practices, Samples to IT world",
+    "id": 17249862
+  },
+  "webkitty": {
+    "name": "WebKitty",
+    "webalize": "webkitty",
+    "description": "JS • TS • NW.js • Electron • WebKit",
+    "id": 31770177
+  },
+  "juicyfx": {
+    "name": "Juicy(fx)",
+    "webalize": "juicyfx",
+    "description": "Incredible serverless juicy functions (lambdas)",
+    "id": 46406334
+  },
+  "pwnlabs": {
+    "name": "Pwned Labs",
+    "webalize": "pwnlabs",
+    "description": "Awesome!",
+    "id": 35178455
+  },
+  "bumpx": {
+    "name": "BumpX",
+    "webalize": "bumpx",
+    "description": "Bumped Extremely",
+    "id": 25138328
+  },
+  "tlapnet": {
+    "name": "Tlapnet",
+    "webalize": "tlapnet",
+    "description": "",
+    "id": 22914186
+  },
+  "ispalliance": {
+    "name": "ISP Alliance",
+    "webalize": "ispalliance",
+    "description": "",
+    "id": 24393707
+  },
+  "phalette": {
+    "name": "Phalette",
+    "webalize": "phalette",
+    "description": "Phalcon & Nette",
+    "id": 13978584
+  },
+  "econea": {
+    "name": "Econea",
+    "webalize": "econea",
+    "description": "Eco-dev place ",
+    "id": 15905321
+  }
 }
