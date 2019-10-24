@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "name": "f3l1x-cv",
+  "scope": "milansulc",
+  "alias": [
+    "cv.f3l1x.io"
+  ],
+  "regions": [
+    "all"
+  ],
+  "builds": [
+    {
+      "src": "assets/**/*.{css,js,png,jpg}",
+      "use": "@now/static"
+    },
+    {
+      "src": "index.html",
+      "use": "@now/static"
+    }
+  ]
+}

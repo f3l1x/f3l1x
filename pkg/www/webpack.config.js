@@ -34,7 +34,6 @@ const CACHE_PATH = __dirname + '/temp/webpack';
 
 function getEntrypoints() {
     const entrypoints = {
-        "resume": path.join(__dirname, 'assets/resume/index.js'),
         "app": path.join(__dirname, 'assets/app/app.ts'),
     };
 

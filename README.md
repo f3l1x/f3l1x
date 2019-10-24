@@ -1,14 +1,16 @@
 # f3l1x.io
 
-This is source of my personal geek website. Welcome!
+This is monorepo of f3l1x.io domain. Welcome! 
 
------
+It consists of these packages:
 
-[![Build Status](https://img.shields.io/travis/f3l1x/f3l1x.svg?style=flat-square)](https://travis-ci.org/f3l1x/f3l1x)
+- [www](/pkg/www/) - https://f3l1x.io 
+- [wiki](/pkg/wiki/) - https://wiki.f3l1x.io 
+- [cv](/pkg/cv/) - https://cv.f3l1x.io 
 
------
+## Www
 
-## Development
+### Development
 
 - clone this repo (`git@github.com:f3l1x/f3l1x.git`)
 - install hugo (https://gohugo.io/)
@@ -16,7 +18,7 @@ This is source of my personal geek website. Welcome!
 - compile assets `npm run build` (or watch `npm run watch`)
 - start Hugo webserver `hugo server -D -v`
 
-## Deploy
+### Deploy
 
 - generate static content by calling `hugo`
 - yes that's all :tada:
