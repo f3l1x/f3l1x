@@ -1,3 +1,13 @@
+.PHONY: deploy install build
+
+### ENV
+
+NOW?=now
+
+##################################################
+### COMMON #######################################
+##################################################
+
 deploy: deploy-www deploy-wiki deploy-cv
 
 install: install-www
@@ -9,7 +19,7 @@ build: build-www
 ##################################################
 
 deploy-www:
-	cd pkg/www && now
+	cd pkg/www && ${NOW}
 
 install-www:
 	cd pkg/www && npm install
@@ -29,11 +39,11 @@ dev-www-npm:
 ##################################################
 
 deploy-wiki:
-	cd pkg/wiki && now
+	cd pkg/wiki && ${NOW}
 
 ##################################################
 ### CV ###########################################
 ##################################################
 
 deploy-cv:
-	cd pkg/cv && now
+	cd pkg/cv && ${NOW}
