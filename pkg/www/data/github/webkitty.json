@@ -2,11 +2,13 @@
   "repos": [
     {
       "name": "webkitty/playground",
-      "description": ":facepunch: NW.js application playground"
+      "description": ":facepunch: NW.js application playground",
+      "stars": 2
     },
     {
       "name": "webkitty/searchbox",
-      "description": "Text input augmented with Lexer magic✨ to support advanced search features."
+      "description": "Text input augmented with Lexer magic✨ to support advanced search features.",
+      "stars": 4
     }
   ]
 }

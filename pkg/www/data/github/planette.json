@@ -1,60 +1,79 @@
 {
   "repos": [
     {
+      "name": "planette/cindy-project",
+      "description": ":black_large_square: Cindy Project is a CLI starter kit project for Nette Framework with Symfony Console and many useful libraries.",
+      "stars": 4
+    },
+    {
       "name": "planette/commits",
-      "description": ":octocat: All @nette commits in one place"
+      "description": ":octocat: All @nette commits in one place",
+      "stars": 6
     },
     {
       "name": "planette/componette.com",
-      "description": ":loop: Addons, plugins, components and extensions (@componette :heart: @nette)"
+      "description": ":loop: Addons, plugins, components and extensions (@componette :heart: @nette)",
+      "stars": 57
     },
     {
       "name": "planette/cookbook-dependency-injection",
-      "description": ":notes: Nette Dependency Injection (DI) extensions & NEON syntax overview in examples"
+      "description": ":notes: Nette Dependency Injection (DI) extensions & NEON syntax overview in examples",
+      "stars": 25
     },
     {
       "name": "planette/dockerfiles",
-      "description": ":whale: Prepared Dockerfiles for Nette projects"
+      "description": ":whale: Prepared Dockerfiles for Nette projects",
+      "stars": 12
     },
     {
       "name": "planette/forest-project",
-      "description": ":skull: REST API/PSR-7 project skeleton based on @nette @apitte @contributte @nettrine"
-    },
-    {
-      "name": "planette/forge",
-      "description": "Nette-based projects and examples. Also deployed to cloud (now.sh)."
+      "description": ":skull: REST API/PSR-7 project skeleton based on @nette @apitte @contributte @nettrine",
+      "stars": 13
     },
     {
       "name": "planette/megaplanette",
-      "description": "[DISCONTINUED] :fire: Dynamic Planette Portal"
+      "description": "[DISCONTINUED] :fire: Dynamic Planette Portal",
+      "stars": 9
     },
     {
       "name": "planette/nettecamp.cz",
-      "description": "website nettecamp.cz"
+      "description": "website nettecamp.cz",
+      "stars": 8
     },
     {
       "name": "planette/nutella-project",
-      "description": ":skull: Web project skeleton based on @nette @contributte @nettrine"
+      "description": ":skull: Web project skeleton based on @nette @contributte @nettrine",
+      "stars": 27
     },
     {
       "name": "planette/planette",
-      "description": "[DISCONTINUED] :globe_with_meridians: All the roads go through the Planette "
+      "description": "[DISCONTINUED] :globe_with_meridians: All the roads go through the Planette ",
+      "stars": 8
     },
     {
       "name": "planette/planette.io",
-      "description": ":metal: https://planette.io website"
+      "description": ":metal: https://planette.io website",
+      "stars": 0
     },
     {
       "name": "planette/playground",
-      "description": ":books: Examples / tutorials / tips / samples | sandbox for @contributte"
+      "description": ":books: Examples / tutorials / tips / samples | sandbox for @contributte",
+      "stars": 11
     },
     {
       "name": "planette/posobota.cz",
-      "description": "https://posobota.cz website"
+      "description": ":beer: https://posobota.cz website",
+      "stars": 1
     },
     {
       "name": "planette/skynette",
-      "description": "small brewery homepage"
+      "description": "small brewery homepage",
+      "stars": 14
+    },
+    {
+      "name": "planette/snow-project",
+      "description": ":ok_hand: Snow Project is a web starter kit project for Nette Framework with many useful libraries.",
+      "stars": 3
     }
   ]
 }

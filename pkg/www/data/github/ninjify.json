@@ -2,43 +2,53 @@
   "repos": [
     {
       "name": "ninjify/apiguy",
-      "description": null
+      "description": null,
+      "stars": 1
     },
     {
       "name": "ninjify/apio",
-      "description": "Online PHP API generator"
+      "description": "Online PHP API generator",
+      "stars": 1
     },
     {
       "name": "ninjify/coding-standard",
-      "description": ":pig_nose: Tuned & very strict coding standards for PHP projects"
+      "description": ":pig_nose: Tuned & very strict coding standards for PHP projects",
+      "stars": 9
     },
     {
       "name": "ninjify/command-bus",
-      "description": ":bus: Command Bus - useful implementation in PHP"
+      "description": ":bus: Command Bus - useful implementation in PHP",
+      "stars": 1
     },
     {
       "name": "ninjify/criteria",
-      "description": ":clapper: Criteria API - specification/expression pattern for common usage in PHP"
+      "description": ":clapper: Criteria API - specification/expression pattern for common usage in PHP",
+      "stars": 1
     },
     {
       "name": "ninjify/imap",
-      "description": ":mailbox: Simple PHP IMAP wrapper"
+      "description": ":mailbox: Simple PHP IMAP wrapper",
+      "stars": 5
     },
     {
       "name": "ninjify/nunjuck",
-      "description": ":muscle: Special tuned version of @nette tester called nunjuck!"
+      "description": ":muscle: Special tuned version of @nette tester called nunjuck!",
+      "stars": 3
     },
     {
       "name": "ninjify/pipero",
-      "description": ":shower: Manage multiple PHP processes using built-in process pipes (proc)."
+      "description": ":shower: Manage multiple PHP processes using built-in process pipes (proc).",
+      "stars": 0
     },
     {
       "name": "ninjify/portainer",
-      "description": "PHP API client for Portainer"
+      "description": "PHP API client for Portainer",
+      "stars": 1
     },
     {
       "name": "ninjify/qa",
-      "description": ":clap: Quality assurance for your PHP projects"
+      "description": ":clap: Quality assurance for your PHP projects",
+      "stars": 6
     }
   ]
 }

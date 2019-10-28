@@ -2,75 +2,93 @@
   "repos": [
     {
       "name": "trainit/2012-CVUT",
-      "description": ":mortar_board: Collection of sources for CVUT"
+      "description": ":mortar_board: Collection of sources for CVUT",
+      "stars": 1
     },
     {
       "name": "trainit/2016-codecamp",
-      "description": ":phone: CodeCamp 2016 - Hybrid Application (Ionic / React Native)"
+      "description": ":phone: CodeCamp 2016 - Hybrid Application (Ionic / React Native)",
+      "stars": 2
     },
     {
       "name": "trainit/2016-docker-workshop",
-      "description": ":whale: Docker Workshop :briefcase: for Symfony Meeting :date: 22/09/2016"
+      "description": ":whale: Docker Workshop :briefcase: for Symfony Meeting :date: 22/09/2016",
+      "stars": 15
     },
     {
       "name": "trainit/2016-python-class-1",
-      "description": ":bowtie: Introduction to Python, Curses and PyGames"
+      "description": ":bowtie: Introduction to Python, Curses and PyGames",
+      "stars": 6
     },
     {
       "name": "trainit/2017-10-25-docker-meetup",
-      "description": ":whale: Docker Meetup (25.10.2017)"
+      "description": ":whale: Docker Meetup (25.10.2017)",
+      "stars": 2
     },
     {
       "name": "trainit/2017-nettecamp-contributte-api",
-      "description": ":rocket: Contributte\\API presentation at NetteCamp 2017 (www.nettecamp.cz)"
+      "description": ":rocket: Contributte\\API presentation at NetteCamp 2017 (www.nettecamp.cz)",
+      "stars": 1
     },
     {
       "name": "trainit/2017-nettecamp-dockette-devstack",
-      "description": ":whale: Dockette\\Devstack presentation at NetteCamp 2017 (www.nettecamp.cz)  "
+      "description": ":whale: Dockette\\Devstack presentation at NetteCamp 2017 (www.nettecamp.cz)  ",
+      "stars": 1
     },
     {
       "name": "trainit/2018-01-vuejs-grid",
-      "description": ":rocket: VueJS component example"
+      "description": ":rocket: VueJS component example",
+      "stars": 1
     },
     {
       "name": "trainit/2018-03-nette-webpack",
-      "description": ":fire: Example of Nette Framework + Webpack 4"
+      "description": ":fire: Example of Nette Framework + Webpack 4",
+      "stars": 32
     },
     {
       "name": "trainit/2018-06-vue-nuxt-vuepress",
-      "description": ":rocket: Example of Vue / Vuex / Vue CLI / Nuxt.js / VuePress"
+      "description": ":rocket: Example of Vue / Vuex / Vue CLI / Nuxt.js / VuePress",
+      "stars": 0
     },
     {
       "name": "trainit/2018-08-vue-nette-camp",
-      "description": ":fire: Vue examples on Nette Camp 2018"
+      "description": ":fire: Vue examples on Nette Camp 2018",
+      "stars": 8
     },
     {
       "name": "trainit/2018-09-vue-bundlers",
-      "description": ":fire: Vue application built by Brunch.js, Neutrino, Vue CLI"
+      "description": ":fire: Vue application built by Brunch.js, Neutrino, Vue CLI",
+      "stars": 0
     },
     {
       "name": "trainit/2018-11-akademie-42-vuejs",
-      "description": ":mortar_board: Akademie42 => Vue.js"
+      "description": ":mortar_board: Akademie42 => Vue.js",
+      "stars": 6
     },
     {
       "name": "trainit/2019-06-zeit-now",
-      "description": ":rocket: Example of ZEIT Now deployment"
+      "description": ":rocket: Example of ZEIT Now deployment",
+      "stars": 7
     },
     {
       "name": "trainit/2019-08-serverless-zeit-now",
-      "description": "🤘Example of ZEIT Now and PHP "
+      "description": "🤘Example of ZEIT Now and PHP ",
+      "stars": 2
     },
     {
       "name": "trainit/2019-09-docker",
-      "description": ":whale: Docker Brief (03.09.2019)"
+      "description": ":whale: Docker Brief (03.09.2019)",
+      "stars": 0
     },
     {
       "name": "trainit/2019-10-hubbr-zeit",
-      "description": "🎁 Hubbr Coworking - ZEIT deployment"
+      "description": "🎁 Hubbr Coworking - ZEIT deployment",
+      "stars": 1
     },
     {
       "name": "trainit/tools",
-      "description": "Tools"
+      "description": "Tools",
+      "stars": 5
     }
   ]
 }

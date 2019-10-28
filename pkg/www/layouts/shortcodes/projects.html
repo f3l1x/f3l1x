@@ -24,6 +24,15 @@
 					<td>
 						<a href="https://github.com/{{ $repository.name }}">{{ $repository.name }}</a>
 					</td>
+					<td>
+						{{ if gt $repository.stars 2 }}
+							🌟&nbsp;{{ $repository.stars }}
+						{{ else if gt $repository.stars 1 }}
+							⭐️
+						{{ else }}
+							🐥
+						{{ end }}
+					</td>
 					<td>{{ $repository.description | emojify }}</td>
 				</tr>
 				{{ end }}

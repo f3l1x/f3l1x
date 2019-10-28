@@ -2,39 +2,48 @@
   "repos": [
     {
       "name": "nettrine/annotations",
-      "description": ":memo: Standalone Doctrine Annotations for Nette Framework"
+      "description": ":memo: Standalone Doctrine Annotations for Nette Framework",
+      "stars": 3
     },
     {
       "name": "nettrine/cache",
-      "description": ":arrows_clockwise: Doctrine Cache adapter for Nette Framework "
+      "description": ":arrows_clockwise: Doctrine Cache adapter for Nette Framework ",
+      "stars": 3
     },
     {
       "name": "nettrine/dbal",
-      "description": ":bulb: Well-integrated Doctrine2 DBAL for Nette Framework"
+      "description": ":bulb: Well-integrated Doctrine2 DBAL for Nette Framework",
+      "stars": 9
     },
     {
       "name": "nettrine/extensions",
-      "description": ":mag: Doctrine2 behavioral extensions for Nette Framework"
+      "description": ":mag: Doctrine2 behavioral extensions for Nette Framework",
+      "stars": 7
     },
     {
       "name": "nettrine/fixtures",
-      "description": ":wrench: Doctrine Fixtures for Nette Framework"
+      "description": ":wrench: Doctrine Fixtures for Nette Framework",
+      "stars": 6
     },
     {
       "name": "nettrine/hydrator",
-      "description": ":arrow_left: :arrow_right: Convert Doctrine entity to array and conversely"
+      "description": ":arrow_left: :arrow_right: Convert Doctrine entity to array and conversely",
+      "stars": 2
     },
     {
       "name": "nettrine/microtrine",
-      "description": ":hatching_chick: Most tiniest integration of Doctrine2 for Nette Framework"
+      "description": ":hatching_chick: Most tiniest integration of Doctrine2 for Nette Framework",
+      "stars": 0
     },
     {
       "name": "nettrine/migrations",
-      "description": ":running: Doctrine Migrations for Nette Framework"
+      "description": ":running: Doctrine Migrations for Nette Framework",
+      "stars": 23
     },
     {
       "name": "nettrine/orm",
-      "description": ":fire: Well-integrated Doctrine2 ORM for Nette Framework"
+      "description": ":fire: Well-integrated Doctrine2 ORM for Nette Framework",
+      "stars": 32
     }
   ]
 }

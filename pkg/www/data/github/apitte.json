@@ -2,51 +2,63 @@
   "repos": [
     {
       "name": "apitte/apitte-org",
-      "description": ":fireworks: Apitte website"
+      "description": ":fireworks: Apitte website",
+      "stars": 1
     },
     {
       "name": "apitte/console",
-      "description": ":pill: Symfony\\Console bridge for Apitte stack"
+      "description": ":pill: Symfony\\Console bridge for Apitte stack",
+      "stars": 3
     },
     {
       "name": "apitte/core",
-      "description": ":wrench: Enjoyable [PSR-7 based] API framework for Nette Framework. Heart of the apitte stack."
+      "description": ":wrench: Enjoyable [PSR-7 based] API framework for Nette Framework. Heart of the apitte stack.",
+      "stars": 28
     },
     {
       "name": "apitte/debug",
-      "description": ":interrobang: Debugging tools for Apitte stack"
+      "description": ":interrobang: Debugging tools for Apitte stack",
+      "stars": 3
     },
     {
       "name": "apitte/events",
-      "description": ":loop: [WIP] Symfony\\EventDispatcher for Apitte stack"
+      "description": ":loop: [WIP] Symfony\\EventDispatcher for Apitte stack",
+      "stars": 1
     },
     {
       "name": "apitte/fullstack",
-      "description": ":thumbsup: Apitte meta package with all features"
+      "description": ":thumbsup: Apitte meta package with all features",
+      "stars": 4
     },
     {
       "name": "apitte/mapping",
-      "description": "[DEPRECATED] :pig: Request mappers, transformers and decorators  for Apitte stack"
+      "description": "[DEPRECATED] :pig: Request mappers, transformers and decorators  for Apitte stack",
+      "stars": 1
     },
     {
       "name": "apitte/middlewares",
-      "description": ":speedboat: Middlewares support for Apitte stack"
+      "description": ":speedboat: Middlewares support for Apitte stack",
+      "stars": 5
     },
     {
       "name": "apitte/negotiation",
-      "description": ":art: Content-Negotiation support for Apitte stack"
+      "description": ":art: Content-Negotiation support for Apitte stack",
+      "stars": 3
     },
     {
       "name": "apitte/openapi",
-      "description": ":family: OpenAPI specification for Apitte stack"
+      "description": ":family: OpenAPI specification for Apitte stack",
+      "stars": 7
     },
     {
       "name": "apitte/openapi-toolkit",
-      "description": ":diamonds: Simple and intuitive OpenApi/Swagger compatible UI toolkit"
+      "description": ":diamonds: Simple and intuitive OpenApi/Swagger compatible UI toolkit",
+      "stars": 3
     },
     {
       "name": "apitte/presenter",
-      "description": ":sunflower: PSR-7 for Nette\\Presenters with Apitte stack"
+      "description": ":sunflower: PSR-7 for Nette\\Presenters with Apitte stack",
+      "stars": 5
     }
   ]
 }

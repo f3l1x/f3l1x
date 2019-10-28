@@ -2,83 +2,83 @@
   "repos": [
     {
       "name": "tlapnet/chart",
-      "description": ":chart: Graphs and charts based on C3.js for PHP"
-    },
-    {
-      "name": "tlapnet/cli-project",
-      "description": ":black_large_square: Tlapnet Console Project"
+      "description": ":chart: Graphs and charts based on C3.js for PHP",
+      "stars": 3
     },
     {
       "name": "tlapnet/datus",
-      "description": ":1234: :capital_abcd: Schema-based driven forms for Nette Framework"
+      "description": ":1234: :capital_abcd: Schema-based driven forms for Nette Framework",
+      "stars": 1
     },
     {
       "name": "tlapnet/doxen",
-      "description": ":memo: Simple, extended, easy-to-use, markdown-based documentation generator for PHP"
+      "description": ":memo: Simple, extended, easy-to-use, markdown-based documentation generator for PHP",
+      "stars": 4
     },
     {
       "name": "tlapnet/forge",
-      "description": ":hatching_chick: Ideas and prototypes"
+      "description": ":hatching_chick: Ideas and prototypes",
+      "stars": 0
     },
     {
       "name": "tlapnet/githubber",
-      "description": ":octocat: Configure GitHub repositories via CLI commands"
+      "description": ":octocat: Configure GitHub repositories via CLI commands",
+      "stars": 0
     },
     {
       "name": "tlapnet/modalus",
-      "description": ":stars: Modal-based component system for Nette Framework"
+      "description": ":stars: Modal-based component system for Nette Framework",
+      "stars": 1
     },
     {
       "name": "tlapnet/notifications",
-      "description": "⚠Queued & mail & instant notifications for Nette Framework"
+      "description": "⚠Queued & mail & instant notifications for Nette Framework",
+      "stars": 1
     },
     {
       "name": "tlapnet/panelus",
-      "description": ":package: Dashboard panel-based component system for Nette Framework"
+      "description": ":package: Dashboard panel-based component system for Nette Framework",
+      "stars": 1
     },
     {
       "name": "tlapnet/pedef",
-      "description": ":ledger: Portablus Documentus Formatus (PDF)"
-    },
-    {
-      "name": "tlapnet/playground",
-      "description": ":books:  Examples and skeletons for @tlapnet projects and libraries"
+      "description": ":ledger: Portablus Documentus Formatus (PDF)",
+      "stars": 0
     },
     {
       "name": "tlapnet/react-datagrid",
-      "description": "[ARCHIVED] Simple datagrid in react"
+      "description": "[ARCHIVED] Simple datagrid in react",
+      "stars": 1
     },
     {
       "name": "tlapnet/report",
-      "description": ":bar_chart: Report library for creating custom manager reports in PHP with prepared Nette Framework support"
+      "description": ":bar_chart: Report library for creating custom manager reports in PHP with prepared Nette Framework support",
+      "stars": 3
     },
     {
       "name": "tlapnet/report-mailing",
-      "description": "📩  Configurable library for periodic email sending"
+      "description": "📩  Configurable library for periodic email sending",
+      "stars": 1
     },
     {
       "name": "tlapnet/report-project",
-      "description": ":bar_chart: Demo project of the tlapnet/report library based on Nette Framework "
+      "description": ":bar_chart: Demo project of the tlapnet/report library based on Nette Framework ",
+      "stars": 1
     },
     {
       "name": "tlapnet/searcher",
-      "description": "🕵️‍♂️Basic searching abstraction"
+      "description": "🕵️‍♂️Basic searching abstraction",
+      "stars": 0
     },
     {
       "name": "tlapnet/settus",
-      "description": ":guardsman: Manage settings in your app easily. "
-    },
-    {
-      "name": "tlapnet/snow-project",
-      "description": ":ok_hand: Tlapnet Simple Web Project"
+      "description": ":guardsman: Manage settings in your app easily. ",
+      "stars": 0
     },
     {
       "name": "tlapnet/stamus",
-      "description": ":arrows_counterclockwise: State machine"
-    },
-    {
-      "name": "tlapnet/timy-project",
-      "description": ":metal: Tlapnet Tiny Web Project"
+      "description": ":arrows_counterclockwise: State machine",
+      "stars": 1
     }
   ]
 }

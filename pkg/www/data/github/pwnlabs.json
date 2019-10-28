@@ -1,28 +1,129 @@
 {
   "repos": [
     {
+      "name": "pwnlabs/code-analyser",
+      "description": "🚧Application written in Java to analyse your codebase.",
+      "stars": 1
+    },
+    {
+      "name": "pwnlabs/dataql",
+      "description": "✍️GraphQL-inspired micro alternative (WIP).",
+      "stars": 0
+    },
+    {
+      "name": "pwnlabs/digitalpaint",
+      "description": "💦 Digital Paint: Paintball 2.0",
+      "stars": 1
+    },
+    {
       "name": "pwnlabs/dub",
-      "description": ":whale: Docker Hub front-end API wrapper written in Vue.js"
+      "description": ":whale: Docker Hub front-end API wrapper written in Vue.js",
+      "stars": 1
+    },
+    {
+      "name": "pwnlabs/game-of-life",
+      "description": "🕹 Ramake of Game of Life by Conway",
+      "stars": 1
+    },
+    {
+      "name": "pwnlabs/game-snippets",
+      "description": "🕹Collection of small games written in Java.",
+      "stars": 1
     },
     {
       "name": "pwnlabs/gapi",
-      "description": ":microscope: GitLab front-end API wrapper written in Vue.JS"
+      "description": ":microscope: GitLab front-end API wrapper written in Vue.JS",
+      "stars": 1
     },
     {
       "name": "pwnlabs/gitlab2trello",
-      "description": ":ok_hand: Export Gitlab project and importit in Trello board. Gitlab2Trello migration tool."
+      "description": ":ok_hand: Export Gitlab project and importit in Trello board. Gitlab2Trello migration tool.",
+      "stars": 2
+    },
+    {
+      "name": "pwnlabs/j2048",
+      "description": "2️⃣0️⃣4️⃣8️⃣ Remake of 2048 in JavaFX",
+      "stars": 1
+    },
+    {
+      "name": "pwnlabs/jHeadmet",
+      "description": "🤯HTML Meta tags generator",
+      "stars": 1
+    },
+    {
+      "name": "pwnlabs/karel",
+      "description": "🕹 Example of Karel game.",
+      "stars": 1
+    },
+    {
+      "name": "pwnlabs/millionaire",
+      "description": "🕹 Example of famouse Millionaire game, based on JAXB.",
+      "stars": 1
+    },
+    {
+      "name": "pwnlabs/mines",
+      "description": "🕹 Example of Mines game.",
+      "stars": 1
+    },
+    {
+      "name": "pwnlabs/netrobot",
+      "description": "🤖 UDP Chat Robot",
+      "stars": 2
+    },
+    {
+      "name": "pwnlabs/notefw",
+      "description": "🛠Alternative Nette-inspired micro-tiny framework.",
+      "stars": 0
+    },
+    {
+      "name": "pwnlabs/nxj",
+      "description": "💡Noblexity Java Framework by @stuchl4n3k and @f3l1x",
+      "stars": 2
+    },
+    {
+      "name": "pwnlabs/oracle-instantclient",
+      "description": ":minidisc: Oracle InstantClient",
+      "stars": 65
+    },
+    {
+      "name": "pwnlabs/pexeso",
+      "description": "🕹 Example of Pexeso game. ",
+      "stars": 1
     },
     {
       "name": "pwnlabs/php-hostinfo",
-      "description": "Simple PHP tool to quickly check for sane webhosting setup   "
+      "description": "Simple PHP tool to quickly check for sane webhosting setup   ",
+      "stars": 0
+    },
+    {
+      "name": "pwnlabs/postgresql-czech",
+      "description": ":green_book: Czech Dictionary for  PostgreSQL",
+      "stars": 1
+    },
+    {
+      "name": "pwnlabs/projectte",
+      "description": ":dart: Install many @nette projects easily with projectte manager. ",
+      "stars": 0
+    },
+    {
+      "name": "pwnlabs/rankface",
+      "description": "🐘 Simple PHP library to collect page ranks",
+      "stars": 1
+    },
+    {
+      "name": "pwnlabs/timy",
+      "description": ":metal: Timy is experimental skeleton for really micro Nette projects.",
+      "stars": 0
     },
     {
       "name": "pwnlabs/webhosting-tools",
-      "description": ":ghost: Hosting Apps"
+      "description": ":ghost: Hosting Apps",
+      "stars": 1
     },
     {
       "name": "pwnlabs/webmaster-tools",
-      "description": ":neckbeard: Webmaster Tools"
+      "description": ":neckbeard: Webmaster Tools",
+      "stars": 1
     }
   ]
 }

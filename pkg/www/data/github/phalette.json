@@ -2,15 +2,18 @@
   "repos": [
     {
       "name": "phalette/bootstrap",
-      "description": null
+      "description": null,
+      "stars": 0
     },
     {
       "name": "phalette/pidic",
-      "description": "Nette Dependency Injection/Container for Phalcon"
+      "description": "Nette Dependency Injection/Container for Phalcon",
+      "stars": 4
     },
     {
       "name": "phalette/platte",
-      "description": "Latte template engine for Phalcon"
+      "description": "Latte template engine for Phalcon",
+      "stars": 6
     }
   ]
 }

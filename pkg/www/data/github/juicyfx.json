@@ -1,24 +1,34 @@
 {
   "repos": [
     {
+      "name": "juicyfx/forge",
+      "description": "🔥 Juicy(fx) project forge. Incubator of promising pet projects and testing tools. Watch the evolution.",
+      "stars": 2
+    },
+    {
       "name": "juicyfx/juicy",
-      "description": ":tangerine: Awesome juicy lambdas for generating PDF, taking screenshots, transform XML to JSON. Running on @zeit's cloud."
+      "description": ":tangerine: Awesome juicy lambdas for generating PDF, taking screenshots, transform XML to JSON. Running on @zeit's cloud.",
+      "stars": 5
     },
     {
       "name": "juicyfx/now-bref",
-      "description": "ZEIT Now bref builder • now-bref"
+      "description": "ZEIT Now bref builder • now-bref",
+      "stars": 4
     },
     {
       "name": "juicyfx/now-builders",
-      "description": "Experimental ZEIT Now Builders by @f3l1x"
+      "description": "🏋️‍♂️ Experimental ZEIT Now Builders by @f3l1x",
+      "stars": 12
     },
     {
       "name": "juicyfx/now-client",
-      "description": "ZEIT PHP API client "
+      "description": "⏫ZEIT PHP API client ",
+      "stars": 2
     },
     {
       "name": "juicyfx/now-php",
-      "description": "ZEIT Now PHP builder  •  now-php  •  🐘+ λ = ❤"
+      "description": "ZEIT Now PHP builder  •  now-php  •  🐘+ λ = ❤",
+      "stars": 67
     }
   ]
 }
