@@ -2,9 +2,6 @@
   "version": 2,
   "name": "f3l1x-wiki",
   "scope": "milansulc",
-  "alias": [
-    "wiki.f3l1x.io"
-  ],
   "regions": [
     "all"
   ],

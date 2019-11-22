@@ -2,7 +2,6 @@
     "version": 2,
     "name": "f3l1x",
     "scope": "milansulc",
-    "alias": ["f3l1x.io"],
     "regions": ["all"],
     "builds": [
         { "src": "package.json", "use": "@now/static-build", "config": { "distDir": "public" } }
