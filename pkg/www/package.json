@@ -4,16 +4,14 @@
   "engines": {
     "node": "10.x"
   },
-  "dependencies": {
+  "devDependencies": {
     "bootstrap": "^4.3.1",
     "crypto": "^1.0.1",
     "dayjs": "^1.8.15",
     "font-awesome": "^4.7.0",
     "highlight.js": "^9.15.8",
     "jquery": "^3.4.1",
-    "moment": "^2.24.0"
-  },
-  "devDependencies": {
+    "moment": "^2.24.0",
     "@babel/core": "^7.5.5",
     "@babel/plugin-proposal-object-rest-spread": "^7.5.5",
     "@babel/plugin-syntax-dynamic-import": "^7.2.0",
@@ -34,7 +32,7 @@
     "less": "^3.9.0",
     "less-loader": "^5.0.0",
     "mini-css-extract-plugin": "^0.8.0",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.13.0",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
     "postcss-loader": "^3.0.0",
     "sass-loader": "^7.1.0",
