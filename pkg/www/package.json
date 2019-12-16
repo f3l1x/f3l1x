@@ -9,7 +9,7 @@
     "crypto": "^1.0.1",
     "dayjs": "^1.8.17",
     "font-awesome": "^4.7.0",
-    "highlight.js": "^9.15.8",
+    "highlight.js": "^9.17.1",
     "jquery": "^3.4.1",
     "moment": "^2.24.0",
     "@babel/core": "^7.7.5",
