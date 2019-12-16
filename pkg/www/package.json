@@ -41,7 +41,7 @@
     "typescript": "^3.7.3",
     "url-loader": "^2.1.0",
     "vue": "^2.6.10",
-    "vue-loader": "^15.7.1",
+    "vue-loader": "^15.8.1",
     "vue-template-compiler": "^2.6.10",
     "webpack": "^4.41.2",
     "webpack-bundle-analyzer": "^3.4.1",
