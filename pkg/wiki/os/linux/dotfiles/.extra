@@ -1,0 +1,29 @@
+###
+### Git credentials
+###
+
+GIT_AUTHOR_NAME="Milan Felix Šulc"
+GIT_COMMITTER_NAME="$GIT_AUTHOR_NAME"
+git config --global user.name "$GIT_AUTHOR_NAME"
+GIT_AUTHOR_EMAIL="rkfelix@gmail.com"
+GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
+git config --global user.email "$GIT_AUTHOR_EMAIL"
+GH_USER="f3l1x"
+git config --global github.user "$GH_USER"
+
+###
+### Gmail credentials for mutt
+###
+export GMAIL=rkfelix@gmail.com
+export GMAIL_NAME="Milan Felix Šulc"
+export GMAIL_FROM=rkfelix@gmail.com
+
+###
+### Docker composer
+###
+#export COMPOSE_API_VERSION=1.18
+
+###
+### PhpStorm
+###
+export PHP_IDE_CONFIG="serverName=felix"
