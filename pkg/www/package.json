@@ -7,7 +7,7 @@
   "devDependencies": {
     "bootstrap": "^4.4.1",
     "crypto": "^1.0.1",
-    "dayjs": "^1.8.18",
+    "dayjs": "^1.8.19",
     "font-awesome": "^4.7.0",
     "highlight.js": "^9.17.1",
     "jquery": "^3.4.1",
