@@ -1,52 +1,38 @@
 {
   "repos": [
     {
-      "name": "ninjify/apiguy",
-      "description": null,
-      "stars": 1
+      "org": "ninjify",
+      "name": "checker",
+      "description": "🤮Tuned Code Checker",
+      "stars": 2
     },
     {
-      "name": "ninjify/apio",
-      "description": "Online PHP API generator",
-      "stars": 1
-    },
-    {
-      "name": "ninjify/coding-standard",
+      "org": "ninjify",
+      "name": "coding-standard",
       "description": ":pig_nose: Tuned & very strict coding standards for PHP projects",
-      "stars": 9
+      "stars": 10
     },
     {
-      "name": "ninjify/command-bus",
-      "description": ":bus: Command Bus - useful implementation in PHP",
-      "stars": 1
+      "org": "ninjify",
+      "name": "dag",
+      "description": ":running: Dag is opinionated expression data generator written in PHP to fake your API.",
+      "stars": 3
     },
     {
-      "name": "ninjify/criteria",
-      "description": ":clapper: Criteria API - specification/expression pattern for common usage in PHP",
-      "stars": 1
-    },
-    {
-      "name": "ninjify/imap",
+      "org": "ninjify",
+      "name": "imap",
       "description": ":mailbox: Simple PHP IMAP wrapper",
       "stars": 5
     },
     {
-      "name": "ninjify/nunjuck",
+      "org": "ninjify",
+      "name": "nunjuck",
       "description": ":muscle: Special tuned version of @nette tester called nunjuck!",
       "stars": 3
     },
     {
-      "name": "ninjify/pipero",
-      "description": ":shower: Manage multiple PHP processes using built-in process pipes (proc).",
-      "stars": 0
-    },
-    {
-      "name": "ninjify/portainer",
-      "description": "PHP API client for Portainer",
-      "stars": 1
-    },
-    {
-      "name": "ninjify/qa",
+      "org": "ninjify",
+      "name": "qa",
       "description": ":clap: Quality assurance for your PHP projects",
       "stars": 6
     }

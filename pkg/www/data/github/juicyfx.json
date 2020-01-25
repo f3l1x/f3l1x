@@ -1,34 +1,46 @@
 {
   "repos": [
     {
-      "name": "juicyfx/forge",
+      "org": "juicyfx",
+      "name": "forge",
       "description": "🔥 Juicy(fx) project forge. Incubator of promising pet projects and testing tools. Watch the evolution.",
-      "stars": 2
+      "stars": 3
     },
     {
-      "name": "juicyfx/juicy",
+      "org": "juicyfx",
+      "name": "juicy",
       "description": ":tangerine: Awesome juicy lambdas for generating PDF, taking screenshots, transform XML to JSON. Running on @zeit's cloud.",
-      "stars": 5
+      "stars": 8
     },
     {
-      "name": "juicyfx/now-bref",
+      "org": "juicyfx",
+      "name": "now-bref",
       "description": "ZEIT Now bref builder • now-bref",
-      "stars": 4
+      "stars": 7
     },
     {
-      "name": "juicyfx/now-builders",
+      "org": "juicyfx",
+      "name": "now-builders",
       "description": "🏋️‍♂️ Experimental ZEIT Now Builders by @f3l1x",
-      "stars": 12
+      "stars": 13
     },
     {
-      "name": "juicyfx/now-client",
+      "org": "juicyfx",
+      "name": "now-client",
       "description": "⏫ZEIT PHP API client ",
       "stars": 2
     },
     {
-      "name": "juicyfx/now-php",
+      "org": "juicyfx",
+      "name": "now-examples",
+      "description": "📦Examples of Juicy(fx) runtimes for ZEIT Now",
+      "stars": 1
+    },
+    {
+      "org": "juicyfx",
+      "name": "now-php",
       "description": "ZEIT Now PHP builder  •  now-php  •  🐘+ λ = ❤",
-      "stars": 67
+      "stars": 142
     }
   ]
 }

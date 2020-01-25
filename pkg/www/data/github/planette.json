@@ -1,79 +1,112 @@
 {
   "repos": [
     {
-      "name": "planette/cindy-project",
+      "org": "planette",
+      "name": "awesome-nette",
+      "description": "A curated list of awesome Nette extensions, plugins, addons etc.",
+      "stars": 5
+    },
+    {
+      "org": "planette",
+      "name": "cindy-project",
       "description": ":black_large_square: Cindy Project is a CLI starter kit project for Nette Framework with Symfony Console and many useful libraries.",
       "stars": 4
     },
     {
-      "name": "planette/commits",
+      "org": "planette",
+      "name": "commits",
       "description": ":octocat: All @nette commits in one place",
       "stars": 6
     },
     {
-      "name": "planette/componette.com",
+      "org": "planette",
+      "name": "componette.com",
       "description": ":loop: Addons, plugins, components and extensions (@componette :heart: @nette)",
-      "stars": 57
+      "stars": 56
     },
     {
-      "name": "planette/cookbook-dependency-injection",
+      "org": "planette",
+      "name": "cookbook-dependency-injection",
       "description": ":notes: Nette Dependency Injection (DI) extensions & NEON syntax overview in examples",
-      "stars": 25
+      "stars": 29
     },
     {
-      "name": "planette/dockerfiles",
+      "org": "planette",
+      "name": "dockerfiles",
       "description": ":whale: Prepared Dockerfiles for Nette projects",
-      "stars": 12
-    },
-    {
-      "name": "planette/forest-project",
-      "description": ":skull: REST API/PSR-7 project skeleton based on @nette @apitte @contributte @nettrine",
       "stars": 13
     },
     {
-      "name": "planette/megaplanette",
+      "org": "planette",
+      "name": "forest-project",
+      "description": ":skull: REST API/PSR-7 project skeleton based on @nette @apitte @contributte @nettrine",
+      "stars": 12
+    },
+    {
+      "org": "planette",
+      "name": "generator-nette",
+      "description": ":man: Yeoman & Nette Framework",
+      "stars": 18
+    },
+    {
+      "org": "planette",
+      "name": "megaplanette",
       "description": "[DISCONTINUED] :fire: Dynamic Planette Portal",
       "stars": 9
     },
     {
-      "name": "planette/nettecamp.cz",
-      "description": "website nettecamp.cz",
-      "stars": 8
+      "org": "planette",
+      "name": "nettecamp.cz",
+      "description": "🌲 nettecamp.cz",
+      "stars": 10
     },
     {
-      "name": "planette/nutella-project",
+      "org": "planette",
+      "name": "nutella-project",
       "description": ":skull: Web project skeleton based on @nette @contributte @nettrine",
       "stars": 27
     },
     {
-      "name": "planette/planette",
+      "org": "planette",
+      "name": "planette",
       "description": "[DISCONTINUED] :globe_with_meridians: All the roads go through the Planette ",
       "stars": 8
     },
     {
-      "name": "planette/planette.io",
+      "org": "planette",
+      "name": "planette.io",
       "description": ":metal: https://planette.io website",
       "stars": 0
     },
     {
-      "name": "planette/playground",
+      "org": "planette",
+      "name": "playground",
       "description": ":books: Examples / tutorials / tips / samples | sandbox for @contributte",
-      "stars": 11
+      "stars": 10
     },
     {
-      "name": "planette/posobota.cz",
+      "org": "planette",
+      "name": "posobota.cz",
       "description": ":beer: https://posobota.cz website",
       "stars": 1
     },
     {
-      "name": "planette/skynette",
+      "org": "planette",
+      "name": "skynette",
       "description": "small brewery homepage",
-      "stars": 14
+      "stars": 12
     },
     {
-      "name": "planette/snow-project",
+      "org": "planette",
+      "name": "snow-project",
       "description": ":ok_hand: Snow Project is a web starter kit project for Nette Framework with many useful libraries.",
       "stars": 3
+    },
+    {
+      "org": "planette",
+      "name": "timy-project",
+      "description": ":metal: Timy is experimental skeleton for really micro Nette projects.",
+      "stars": 1
     }
   ]
 }

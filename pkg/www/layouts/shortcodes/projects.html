@@ -22,7 +22,7 @@
 				{{ range $repository := sort (index $.Site.Data.github $project.webalize "repos") "name" "asc" }}
 				<tr>
 					<td>
-						<a href="https://github.com/{{ $repository.name }}">{{ $repository.name }}</a>
+						<a href="https://github.com/{{ $repository.org }}/{{ $repository.name }}">{{ $repository.org }}/{{ $repository.name }}</a>
 					</td>
 					<td>
 						{{ if gt $repository.stars 2 }}
