@@ -1,7 +1,7 @@
 {{ define "head" }}
-	{{- if .RSSLink }}
-	<link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
-	<link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
+	{{- with .OutputFormats.Get "RSS" }}
+	<link href="{{ .RelPermalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
+	<link href="{{ .RelPermalink }}" rel="feed" type="application/rss+xml" title="{{ $.Site.Title }}" />
 	{{ end -}}
 
 	<meta property="og:image" content="https://oggy.jfx.cz/{{- replace (plainify .Page.Title) " " "%20" -}}.png?images=https://f3l1x.io/img/f3l1x.png&fontSize=75px" />
