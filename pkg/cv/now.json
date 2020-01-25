@@ -2,9 +2,6 @@
   "version": 2,
   "name": "f3l1x-cv",
   "scope": "milansulc",
-  "regions": [
-    "all"
-  ],
   "builds": [
     {
       "src": "assets/**/*.{css,js,png,jpg}",
