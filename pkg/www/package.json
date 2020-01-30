@@ -26,7 +26,7 @@
     "font-awesome": "^4.7.0",
     "friendly-errors-webpack-plugin": "^1.7.0",
     "glob": "^7.1.6",
-    "highlight.js": "^9.17.1",
+    "highlight.js": "^9.18.0",
     "jquery": "^3.4.1",
     "less": "^3.10.3",
     "less-loader": "^5.0.0",
