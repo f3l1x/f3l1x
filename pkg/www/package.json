@@ -20,7 +20,7 @@
     "cache-loader": "^4.1.0",
     "cross-env": "^7.0.2",
     "crypto": "^1.0.1",
-    "css-loader": "^3.5.0",
+    "css-loader": "^3.5.1",
     "dayjs": "^1.8.23",
     "file-loader": "^6.0.0",
     "font-awesome": "^4.7.0",
