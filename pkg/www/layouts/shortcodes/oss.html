@@ -1,0 +1,14 @@
+<div class="grid grid-cols-projects row-gap-4">
+	{{ range $repository := sort (index $.Site.Data.projects "repos") "stars" "desc" }}
+	<div class="w-56 truncate">
+		<a class="underline hover:no-underline" href="https://github.com/{{ $repository.org }}/{{ $repository.name }}">{{ $repository.org }}/{{ $repository.name }}</a>
+	</div>
+	<div class="truncate px-4">
+		{{ $repository.description | emojify }}
+	</div>
+	<div class="w-12 flex items-center self-start justify-end">
+		{{ $repository.stars }}
+		<img class="inline ml-1 w-4" src="https://obr.now.sh/remixicon/system/star-fill/24/000000">
+	</div>
+	{{ end }}
+</div>

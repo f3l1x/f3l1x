@@ -1,50 +1,49 @@
 +++
-date = "2017-06-04T15:44:57+02:00"
-draft = false
-title = "Opensource projects"
-type = "static"
-layout = "page"
-assets = ["pages-projects"]
+title = "Felix's Projects"
 +++
-
-<div class="page">
-	<h1>Opensource projects</h1>
-
-	<div class="hot m-3">
-		<ul>
-			<li>
-				<strong>My vision is to create useful libraries to solve my (and possibly your) problems.</strong>
-			</li>
-		</ul>
-	</div>
-
-	<p>My humble opensource life is divided into many organizations, each has it's own purpose.</p>
-	<ul class="unstyled">
-		<li>PHP (<a href="https://github.com/contributte">contributte</a>, <a href="https://github.com/apitte">apitte</a>, <a href="https://github.com/nettrine">nettrine</a>, <a href="https://github.com/ninjify">ninjify</a>, <a href="https://github.com/phalette">phalette</a>, <a href="https://github.com/planette">planette</a>, <a href="https://github.com/DeprecatedPackages">deprecatedpackages</a>)</li>
-		<li>JS/Node.js (<a href="https://github.com/webkitty">webkitty</a>)</li>
-		<li>Docker (<a href="https://github.com/dockette">dockette</a>)</li>
-		<li>Cloud (<a href="https://github.com/juicyfx">juicyfx</a>)</li>
-		<li>Education (<a href="https://github.com/trainit">trainit</a>, <a href="https://github.com/akademie42">akademie42</a>)</li>
-		<li>R&D (<a href="https://github.com/pwnlabs">pwnlabs</a>)</li>
-		<li>Company (<a href="https://github.com/netrixone">netrixone</a>, <a href="https://github.com/tlapnet">tlapnet</a>, <a href="https://github.com/ispalliance">ispalliance</a>, <a href="https://github.com/econea">econea</a>)</li>
-	</ul>
-
-	<div class="marketing projects">
-		<div class="tab-content">
-			{{< projects type="contributte" >}}
-			{{< projects type="nettrine" >}}
-			{{< projects type="apitte" >}}
-			{{< projects type="planette" >}}
-			{{< projects type="ninjify" >}}
-			{{< projects type="dockette" >}}
-			{{< projects type="trainit" >}}
-			{{< projects type="webkitty" >}}
-			{{< projects type="juicyfx" >}}
-			{{< projects type="pwnlabs" >}}
-			{{< projects type="phalette" >}}
-			{{< projects type="netrixone" >}}
-			{{< projects type="tlapnet" >}}
-			{{< projects type="ispalliance" >}}
+<div class="max-w-4xl px-4 py-8 mx-auto text-center sm:px-8 md:py-24 sm:py-12">
+	<h1 class="text-xl font-mono font-black md:text-2xl xl:text-3xl">
+		Projects
+	</h1>
+</div>
+<div class="bg-gray-100">
+	<div class="flex flex-col max-w-4xl px-4 py-8 mx-auto md:py-16 sm:px-8">
+		<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2">
+			<div class="bg-white shadow-md m-4 hover:shadow-xl">
+				<div class="flex flex-col min-h-full">
+					<div class="flex items-center flex-grow px-6 pt-6">
+						<div class="text-gray-700 text-3xl flex-grow">Juicy(fx)</div>
+						<a target="_blank" href="https://github.com/juicyfx"><img src="https://avatars.githubusercontent.com/juicyfx" alt="" lazy="loading" class="w-12"></a>
+					</div>
+					<div class="px-6 flex-grow text-center py-6">
+						<p class="text-gray-600 text-sm">
+							Simple, isolated and still useful serverless lambdas for day-to-day usage. Generate images (badges, github), PDFs, Gravatar, OG tags or QR codes.
+						</p>
+					</div>
+					<div class="px-5 py-3 border-t bg-gray-100 flex justify-center">
+						<a class="rounded-full bg-gray-600 text-white shadow-sm px-4 py-1 leading-3 inline-flex mr-2 text-xs" href="https://github.com/juicyfx/juicy">juicy</a>
+						<a class="rounded-full bg-gray-600 text-white shadow-sm px-4 py-1 leading-3 inline-flex mr-2 text-xs" href="https://github.com/juicyfx/now-php">now-php</a>
+						<a class="rounded-full bg-gray-600 text-white shadow-sm px-4 py-1 leading-3 inline-flex mr-2 text-xs" href="https://github.com/juicyfx/now-examples">now-examples</a>
+					</div>
+				</div>
+			</div>
+			<div class="bg-white shadow-md m-4 hover:shadow-xl">
+				<div class="flex flex-col min-h-full">
+					<div class="flex items-center flex-grow px-6 pt-6">
+						<div class="text-gray-700 text-3xl flex-grow">Dockette</div>
+						<a target="_blank" href="https://github.com/dockette"><img src="https://avatars.githubusercontent.com/dockette" alt="" lazy="loading" class="w-12"></a>
+					</div>
+					<div class="px-6 flex-grow text-center py-6">
+						<p class="text-gray-600 text-sm">
+							Production ready Docker images for web development. Heavilly used in continuous integrations. Support PHP 5.5-7.4 & Node.js 8-13.
+						</p>
+					</div>
+					<div class="px-5 py-3 border-t bg-gray-100 flex justify-center">
+						<a class="rounded-full bg-gray-600 text-white shadow-sm px-4 py-1 leading-3 inline-flex mr-2 text-xs" href="https://github.com/dockette/php">dockette/php</a>
+						<a class="rounded-full bg-gray-600 text-white shadow-sm px-4 py-1 leading-3 inline-flex mr-2 text-xs" href="https://github.com/dockette/ci">dockette/ci</a>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>

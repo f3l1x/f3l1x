@@ -1,6 +1,3 @@
-import './resume.css';
-import $ from 'jquery';
-
 $(function () {
     var callback = function () {
         $('.item-skills').each(function () {

@@ -11,12 +11,9 @@
       }
     ]
   ],
-  "plugins": [
-    "@babel/plugin-proposal-object-rest-spread",
-    "@babel/syntax-dynamic-import"
-  ],
+  "plugins": [],
   "ignore": [
-    "node_modules",
-    "public"
+    "public",
+    "static"
   ]
 }

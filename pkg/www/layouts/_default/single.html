@@ -1,12 +1,12 @@
+{{ define "assets" }}
+	{{ partial "assets" "/dist/index.css" -}}
+	{{ partial "assets" "/dist/index.js" -}}
+
+	{{ range $asset := .Page.Params.assets }}
+		{{ partial "assets" $asset -}}
+	{{ end }}
+{{ end }}
+
 {{ define "main" }}
-
-<section id="main">
-	<h2>{{ .Title }}</h2>
-	<div>
-		<article id="content">
-			{{ .Content }}
-		</article>
-	</div>
-</section>
-
+	{{ .Content }}
 {{ end }}

@@ -1,14 +1,20 @@
 {
-    "version": 2,
-    "name": "f3l1x",
-    "scope": "milansulc",
-    "builds": [
-        { "src": "package.json", "use": "@now/static-build", "config": { "distDir": "public" } }
-    ],
-    "routes": [
-        {"src": "^/dist/(.*)", "headers": {"cache-control": "public,max-age=31536000,immutable"} },
-        {"src": "^/misc/(.*)", "headers": {"cache-control": "public,max-age=31536000,immutable"} },
-        {"src": "^/img/(.*)", "headers": {"cache-control": "max-age=31536000,immutable"} },
-        {"src": "^/(.*).html", "headers": {"cache-control": "public,max-age=0,must-revalidate"} }
-    ]
+  "version": 2,
+  "name": "f3l1x",
+  "scope": "milansulc",
+  "builds": [
+    { "src": "package.json", "use": "@now/static-build", "config": { "distDir": "public" } }
+  ],
+  "routes": [
+    {"src": "^/dist/(.*)", "headers": {"cache-control": "public,max-age=31536000,immutable"} },
+    {"src": "^/misc/(.*)", "headers": {"cache-control": "public,max-age=31536000,immutable"} },
+    {"src": "^/img/(.*)", "headers": {"cache-control": "max-age=31536000,immutable"} },
+    { "handle": "filesystem" },
+    { "src": "/.*", "status": 404, "dest": "404.html" }
+  ],
+  "build": {
+    "env": {
+      "HUGO_VERSION": "0.69.0"
+    }
+  }
 }

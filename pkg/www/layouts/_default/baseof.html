@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 	<link rel="shortcut icon" href="{{ .Site.BaseURL }}favicon.png" type="image/x-icon">
-	<meta name="google-site-verification" content="XsOAmV1gT-Y3458pKxdVRR0mHQ719UiZOf7_p6T4nyU">
 
-	<title>{{ if eq .Title .Site.Title }}{{- .Site.Title -}}{{ else }}{{ with .Title }}{{.}}{{ end }}{{ end }}</title>
-
-	{{- if ne .Type "blog" }}
+	{{ if ne .Type "blog" -}}
 	<meta name="description" content="{{- .Site.Params.description -}}">
 	<meta name="keywords" content="{{- .Site.Params.keywords -}}">
-	<meta property="og:image" content="{{ .Site.BaseURL }}img/fb-logo.png">
+	<meta property="og:image" content="{{ .Site.BaseURL }}img/felix.jpg">
 	<meta property="og:type" content="website">
-	<meta property="og:title" content="{{ if eq .Title .Site.Title }}{{- .Site.Title -}}{{ else }}{{ with .Title }}{{.}}{{ end }}{{ end }}">
+	<meta property="og:title" content="{{ if .Title }}{{- .Title -}}{{ else }}{{ .Site.Title }}{{ end }}">
 	<meta property="og:url" content="{{ .Permalink }}">
 	<meta property="og:site_name" content="f3l1x">
 	<meta property="og:description" content="{{ .Site.Params.description }}">
@@ -34,52 +32,109 @@
 	<meta property="fb:app_id" content="1187401846">
 	<meta name="googlebot" content="snippet,archive">
 	<meta name="robots" content="index, follow">
-	<meta name="author" content="Felix <hack@f3l1x.io>">
+	<meta name="author" content="Felix">
 
-	{{ block "head" .}}{{ end }}
+	<title>{{ block "title" . }}{{ if .Title }}{{- .Title -}}{{ else }}{{ .Site.Title }}{{ end }}{{ end }}</title>
 
-	{{ partial "webpack" (dict "ctx" . "asset" "app") }}
+	{{ block "head" . -}}{{- end }}
 
-	{{ block "assets" .}}{{ end }}
-
-	{{ range $asset := .Page.Params.assets }}
-	{{ partial "webpack" (dict "ctx" $ "asset" $asset) }}
+	{{- block "assets" . }}
+	{{- partial "assets" "/dist/index.css" -}}
+	{{- partial "assets" "/dist/index.js" -}}
 	{{ end -}}
 </head>
+
 <body>
-
-<div class="container">
-	<div id="header">
-		<nav>
-			<ul>
-				<li><a href="/" class="logo"><img title="Milan Felix Sulc" src="{{ .Site.BaseURL }}img/f3l1x2.png"></a>
-				</li>
-				<li><a href="/blog">Blog</a></li>
-				<li><a href="/projects">Projects</a></li>
-				<li><a href="/talks">Talks</a></li>
-				<li><a href="/about">About</a></li>
-			</ul>
-		</nav>
-		<div class="buttons d-none d-md-block">
-			<a class="button twitter" href="https://twitter.com/xf3l1x"><i class="fa fa-twitter" aria-hidden="true"></i> @xf3l1x</a>
-			<a class="button rss" type="application/rss+xml" href="/blog/feed.xml"><i class="fa fa-rss-square" aria-hidden="true"></i> RSS</a>
-			<a class="button github" href="https://github.com/f3l1x/f3l1x"><i class="fa fa-code-fork" aria-hidden="true"></i>
-				Fork
-			</a>
+	<header class="relative z-20" x-data="{ closed: true }">
+		<div class="relative z-40 flex items-stretch justify-between max-w-4xl mx-auto">
+			<div class="relative z-40 flex justify-between w-full bg-white md:bg-transparent md:w-auto">
+				<a href="/" class="flex-grow-0 w-12 py-2 pl-4 sm:pl-8 sm:w-16 md:w-20 md:py-4"><img src="https://f3l1x.io/img/f3l1x.png" lazy="loading" alt="Milan Felix Šulc"></a>
+			</div>
+			<button aria-label="Menu trigger" class="relative z-50 flex items-center px-4 py-3 text-gray-700 bg-white outline-none sm:px-8 md:hidden focus:outline-none hover:text-blue-500" @click="closed = !closed">
+				<img src="https://obr.now.sh/remixicon/system/menu-line/32/4a5568" alt="" lazy="loading" class="w-6" :class="{ 'hidden': !closed }">
+				<img src="https://obr.now.sh/remixicon/system/close-line/32/4a5568" alt="" lazy="loading" class="w-6" :class="{ 'hidden': closed }">
+			</button>
+			<div class="absolute bottom-0 left-0 z-30 flex-1 w-full h-0 md:relative md:w-auto md:h-auto md:flex">
+				<div class="flex flex-col w-full bg-white shadow md:bg-transparent -translate-y-full md:flex-row transform transition transition-all duration-300 md:translate-y-0 md:shadow-none" :class="{ '-translate-y-full': closed }">
+					<ul class="flex flex-col items-center justify-between flex-1 px-4 text-xs uppercase lg:text-sm md:flex-row md:px-24">
+						<li><a href="/blog/" class="block p-2">Blog</a></li>
+						<li><a href="/oss/" class="block p-2">OSS</a></li>
+						<li><a href="/projects/" class="block p-2">Projects</a></li>
+						<li><a href="/talks/" class="block p-2">Talks</a></li>
+						<li><a href="/about/" class="block p-2">About</a></li>
+					</ul>
+					<div class="flex items-center justify-center flex-grow-0 px-4 py-2">
+						<a target="_blank" href="https://twitter.com/xf3l1x" class="inline-flex px-4 py-2 opacity-50 hover:opacity-100"><img src="https://obr.now.sh/remixicon/logos/twitter-fill/24/718096" lazy="loading" class="w-4 md:w-6"></a>
+						<a target="_blank" href="/blog/feed.xml" class="inline-flex px-4 py-2 opacity-50 hover:opacity-100"><img src="https://obr.now.sh/remixicon/system/rss-fill/24/718096" lazy="loading" class="w-4 md:w-6"></a>
+						<a target="_blank" href="https://github.com/f3l1x" class="inline-flex px-4 py-2 opacity-50 hover:opacity-100"><img src="https://obr.now.sh/remixicon/logos/github-fill/24/718096" lazy="loading" class="w-4 md:w-6"></a>
+					</div>
+				</div>
+			</div>
 		</div>
-	</div>
+		<div aria-label="hidden" class="absolute bottom-0 left-0 z-20 hidden w-full border-b md:block"></div>
+		<div aria-label="hidden" class="fixed left-0 hidden w-full h-screen md:hidden z-60" @click="closed = !closed" :class="{ 'hidden': closed }">
+	</header>
 
-	<div id="content">
-		{{ block "main" .}}{{ end }}
-	</div>
+	{{- block "main" . }}{{ end -}}
 
-	<footer>
-		At the freetime rewritten by <a href="/">Milan Felix Šulc</a>.
-		<br>
-		This page is generated with <a href="https://gohugo.io" title="Hugo">Hugo</a>.
+	{{- partial "working-current" . -}}
+
+	<footer class="bg-gray-900 text-gray-600">
+		<div class="flex flex-col items-stretch max-w-4xl px-4 py-12 mx-auto md:py-16 sm:px-8 overflow-hidden text-xs md:text-sm">
+			<div class="xl:grid xl:grid-cols-2 xl:gap-8">
+				<div class="md:grid md:grid-cols-3 md:gap-8">
+					<div>
+						<h4 class="text-sm leading-5 font-semibold tracking-wider text-gray-600 uppercase">OSS</h4>
+						<ul class="mt-4">
+							<li> <a target="_blank" href="https://github.com/juicyfx" class="text-base leading-6 text-gray-600 hover:text-gray-300">JuicyFx</a> </li>
+							<li class="mt-4"> <a target="_blank" href="https://github.com/dockette" class="text-base leading-6 text-gray-600 hover:text-gray-300">Dockette</a> </li>
+							<li class="mt-4"> <a target="_blank" href="https://github.com/webkitty" class="text-base leading-6 text-gray-600 hover:text-gray-300">Webkitty</a> </li>
+							<li class="mt-4"> <a target="_blank" href="https://github.com/pwnlabs" class="text-base leading-6 text-gray-600 hover:text-gray-300">Pwnlabs</a> </li>
+						</ul>
+					</div>
+					<div class="mt-12 md:mt-0">
+						<h4 class="text-sm leading-5 font-semibold tracking-wider text-gray-600 uppercase">Nette</h4>
+						<ul class="mt-4">
+							<li> <a target="_blank" href="https://contributte.org" class="text-base leading-6 text-gray-600 hover:text-gray-300">Contributte</a></li>
+							<li class="mt-4"> <a target="_blank" href="https://contributte.org/nettrine" class="text-base leading-6 text-gray-600 hover:text-gray-300">Nettrine</a> </li>
+							<li class="mt-4"> <a target="_blank" href="https://contributte.org/apitte" class="text-base leading-6 text-gray-600 hover:text-gray-300">Apitte</a> </li>
+							<li class="mt-4"> <a target="_blank" href="https://contributte.org/ninjify" class="text-base leading-6 text-gray-600 hover:text-gray-300">Ninjify</a> </li>
+						</ul>
+					</div>
+					<div class="mt-12 md:mt-0">
+						<h4 class="text-sm leading-5 font-semibold tracking-wider text-gray-600 uppercase">Resources</h4>
+						<ul class="mt-4">
+							<li> <a target="_blank" href="https://wiki.f3l1x.io" class="text-base leading-6 text-gray-600 hover:text-gray-300">Wiki</a> </li>
+							<li class="mt-4"> <a target="_blank" href="https://cv.f3l1x.io" class="text-base leading-6 text-gray-600 hover:text-gray-300">Resume / CV</a> </li>
+							<li class="mt-4"> <a target="_blank" href="https://linkedin.com/in/milansulc" class="text-base leading-6 text-gray-600 hover:text-gray-300">Facebook</a> </li>
+							<li class="mt-4"> <a target="_blank" href="https://facebook/com/xf3l1x" class="text-base leading-6 text-gray-600 hover:text-gray-300">LinkedIn</a> </li>
+						</ul>
+					</div>
+				</div>
+				<div class="mt-8 xl:mt-0">
+					<h4 class="text-sm leading-5 font-semibold tracking-wider text-gray-600 uppercase">Subscribe to my tech newsletter</h4>
+					<p class="mt-4 text-gray-600 text-base leading-6">Very occasionally receive my humble newsletter.</p>
+					<form action="https://f3l1x.us4.list-manage.com/subscribe/post?u=7207f2543ed43156f473e11f0&amp;id=0185f5988c" target="_blank" method="post" class="mt-4 sm:flex sm:max-w-md">
+						<input aria-label="Email address" type="email" name="EMAIL" required="" class="appearance-none w-full px-5 py-2 border border-gray-300 text-base leading-6 rounded text-gray-900 bg-white placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 focus:border-blue-300 focus:shadow-outline transition duration-150 ease-in-out" placeholder="Your e-mail">
+						<div class="hidden"><input type="text" name="b_7207f2543ed43156f473e11f0_0185f5988c" tabindex="-1" value=""></div>
+						<div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3 sm:flex-shrink-0">
+							<button name="subscribe" class="w-full flex items-center justify-center px-6 py-2 border border-transparent text-base leading-6 font-medium rounded text-white bg-blue-600 hover:bg-blue-800 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out"> Subscribe </button>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="mt-8 border-t pt-4 border-gray-700 md:flex md:items-center md:justify-between">
+				<div class="flex md:order-2 justify-center">
+					<a target="_blank" href="https://twitter.com/xf3l1x" class="inline-flex px-4 py-2 opacity-50 hover:opacity-100"><img src="https://obr.now.sh/remixicon/logos/twitter-fill/24/718096" lazy="loading" class="w-6"></a>
+					<a target="_blank" href="/blog/feed.xml" class="inline-flex px-4 py-2 opacity-50 hover:opacity-100"><img src="https://obr.now.sh/remixicon/system/rss-fill/24/718096" lazy="loading" class="w-6"></a>
+					<a target="_blank" href="https://github.com/f3l1x" class="inline-flex px-4 py-2 opacity-50 hover:opacity-100"><img src="https://obr.now.sh/remixicon/logos/github-fill/24/718096" lazy="loading" class="w-6"></a>
+				</div>
+				<div class="flex flex-wrap items-center mt-8 md:mt-0 md:order-1 mb-8 md:mb-0">
+					<p class="text-base leading-6">Rewritten by <a class="font-bold hover:underline" href="https://f3l1x.io">f3l1x</a>. Generated with <a class="font-bold hover:underline" href="https://gohugo.io/">Hugo</a>. Hosted on <a class="font-bold hover:underline" href="https://zeit.co">ZEIT Now</a></p>
+				</div>
+			</div>
+		</div>
 	</footer>
-</div>
-{{ partial "smartlook" }}
-{{ partial "qa" }}
 </body>
+
 </html>

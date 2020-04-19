@@ -1,3 +1,5 @@
+{{ define "title" }}{{ .Title }} | {{ .Site.Params.title_postfix }} {{ end }}
+
 {{ define "head" }}
 	{{- with .OutputFormats.Get "RSS" }}
 	<link href="{{ .RelPermalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
@@ -11,63 +13,57 @@
 	{{- range $key, $value := .Page.Params.meta }}
 	<meta property="{{ $key }}" content="{{ $value }}" />
 	{{ end -}}
-
 {{ end }}
 
 {{ define "assets" }}
-	{{ partial "webpack" (dict "ctx" . "asset" "pages-blog") }}
+	{{ partial "assets" "/dist/index.css" -}}
+	{{ partial "assets" "/dist/blog/entry.css" -}}
+	{{ partial "assets" "/dist/index.js" -}}
+	{{ partial "assets" "/dist/blog/entry.js" -}}
+
+	{{ range $asset := .Page.Params.assets }}
+		{{ partial "assets" (printf "/dist/blogposts/%s/%s" (dateFormat "2006-01-02" $.Page.Date) $asset) -}}
+	{{ end }}
 {{ end }}
 
 {{ define "main" }}
-
-<section id="main">
-	<article class="post-detail">
-		<div class="hero">
-			<div class="hero-inner">
-				<h1 class="title">
-					{{ .Title }}
-				</h1>
-				<div class="date">🗓 {{ .Date.Format "02/01/2006" }}&nbsp;&nbsp;⏳ {{ .ReadingTime }} min read&nbsp;&nbsp;💬 {{ .FuzzyWordCount }} words</div>
-
-				<div class="perex">
-					{{ .Summary }}
-				</div>
+<div class="max-w-4xl px-4 py-8 mx-auto text-center sm:px-8 md:py-32 sm:py-16">
+	<h1 class="text-xl font-bold md:text-2xl xl:text-3xl">
+		{{ .Title }}
+	</h1>
+	<span class="text-xs md:text-sm">{{ .Summary }}</span>
+</div>
+<div class="max-w-4xl px-4 mx-auto text-center sm:px-8">
+	<div class="flex w-full">
+		<div aria-label="hidden" class="flex items-center flex-1 pr-2">
+			<div class="w-full h-0 border-t border-gray-300"></div>
+		</div>
+		<div class="flex flex-wrap justify-center items-center flex-grow-0">
+			<div class="inline-flex items-center py-1 px-3 text-xs md:text-base">
+				<img src="https://obr.now.sh/remixicon/business/calendar-2-fill/24/4299e1" class="mr-2 flex-grow-0">
+				{{ .Date.Format "02/01/2006" }}
+			</div>
+			<div class="inline-flex items-center py-1 px-3 text-xs md:text-base">
+				<img src="https://obr.now.sh/remixicon/system/time-line/24/4299e1" class="mr-2 flex-grow-0">
+				{{ .ReadingTime }} min read
+			</div>
+			<div class="inline-flex items-center py-1 px-3 text-xs md:text-base">
+				<img src="https://obr.now.sh/remixicon/communication/message-2-line/24/4299e1" class="mr-2 flex-grow-0">
+				{{ .FuzzyWordCount }} words
 			</div>
 		</div>
-		<div class="body">
-			<div class="content">
-				{{ $body := replace .Content .Summary "" }}
-				{{ $body | safeHTML }}
-			</div>
+		<div aria-label="hidden" class="flex items-center flex-1 pl-2">
+			<div class="w-full h-0 border-t border-gray-300"></div>
 		</div>
-		<div class="disqus">
-			<div id="disqus_thread" data-disqus-url="{{ .Permalink }}"></div>
-		</div>
-	</article>
+	</div>
+</div>
 
-	<section class="post-related">
-		<div class="row">
-			{{ if .PrevInSection }}
-			<article class="post-prev col-md-6 col-sm-6">
-				<i>PŘEDCHOZÍ</i>
-				<h2>
-					<a href="{{ .PrevInSection.RelPermalink }}">{{ .PrevInSection.Title }}</a>
-				</h2>
-				<small>{{ .PrevInSection.Date.Format "02/01/2006" }}</small>
-			</article>
-			{{ end }}
-			{{ if .NextInSection }}
-			<article class="post-next col-md-6 col-sm-6">
-				<i>NÁSLEDUJÍCÍ</i>
-				<h2>
-					<a href="{{ .NextInSection.RelPermalink }}">{{ .NextInSection.Title }}</a>
-				</h2>
-				<small>{{ .NextInSection.Date.Format "02/01/2006" }}</small>
-			</article>
-			{{ end }}
-		</div>
-	</section>
-</section>
+<div class="max-w-4xl px-4 py-8 mx-auto md:py-16 sm:px-8">
+	<div class="richtext">
+		{{ $body := replace .Content .Summary "" }}
+		{{ $body | safeHTML }}
+	</div>
+</div>
 
 {{ partial "comments.html" }}
 

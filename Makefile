@@ -2,51 +2,68 @@
 
 ### ENV
 
-NOW?=now
+ifeq ($(NOW),)
+  ifeq ($(PRODUCTION),)
+    NOW := now
+  else
+    NOW := now -c --prod
+  endif
+endif
+
+##################################################
+### ALL ##########################################
+##################################################
+
+all:
+	@echo "At your service, my lord!"
 
 ##################################################
 ### COMMON #######################################
 ##################################################
 
-deploy: deploy-www deploy-wiki deploy-cv
+deploy: www-deploy wiki-deploy cv-deploy
 
-install: install-www
+install: www-install
 
-build: build-www
+build: www-build
 
 ##################################################
 ### WWW ##########################################
 ##################################################
 
-deploy-www:
+www-deploy:
 	cd pkg/www && ${NOW}
 
-install-www:
+www-install:
 	cd pkg/www && npm install
 
-build-www:
+www-build: www-build-parcel www-build-hugo
+
+www-build-parcel:
 	cd pkg/www && npm run build
+
+www-build-hugo:
 	cd pkg/www && hugo
 
-dev-www-hugo:
+www-dev-hugo:
 	cd pkg/www && hugo server -D -v -w
 
-dev-www-npm:
+www-dev-parcel:
 	cd pkg/www && npm run dev
 
-build-www-dev:
-	cd pkg/www && npm run build-dev
+www-new-post:
+	cd pkg/www && hugo new blog/$(shell date '+%Y')/$(shell date '+%Y-%m-%d').md
 
 ##################################################
 ### WIKI #########################################
 ##################################################
 
-deploy-wiki:
+wiki-deploy:
 	cd pkg/wiki && ${NOW}
 
 ##################################################
 ### CV ###########################################
 ##################################################
 
-deploy-cv:
+cv-deploy:
 	cd pkg/cv && ${NOW}

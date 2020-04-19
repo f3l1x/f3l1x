@@ -1,16 +1,8 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-	<title>
-	  {{- if eq  .Title  .Site.Title -}}
-		{{- .Site.Title -}}
-	  {{ else }}
-		{{- with .Title -}}
-		  {{- . -}}
-		{{- end -}}
-	  {{- end -}}
-	</title>
+	<title>{{ if .Title }}{{- .Title -}}{{ else }}{{ .Site.Title }}{{ end }}</title>
 	<link>{{ .Permalink }}</link>
-	<description>{{ if ne  .Title  .Site.Title }}{{ with .Title }}{{.}}{{ end }}{{ end }}</description>
+	<description>{{ if .Title }}{{- .Title -}}{{ else }}{{ .Site.Title }}{{ end }}</description>
 	<generator>Hugo -- gohugo.io</generator>
 	{{ with .Site.LanguageCode }}
 	<language>{{.}}</language>

@@ -1,0 +1,8 @@
+<div class="flex flex-wrap">
+	{{ range $organization := sort $.Site.Data.organizations }}
+		<div class="m-4">
+			<img loading="lazy" src="https://avatars.githubusercontent.com/{{ $organization.webalize }}" class="w-20 md:w-24">
+		</div>
+	{{ end }}
+</div>
+

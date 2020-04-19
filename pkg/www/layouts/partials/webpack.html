@@ -1,4 +1,0 @@
-{{- with .ctx.Site.Data.webpack }}
-{{ $stylesheet := index . $.asset }}{{ with $stylesheet.css }}<link href="{{ relURL . }}" rel="stylesheet">{{ end }}
-{{ $script := index . $.asset }}{{ with $script.js }}<script src="{{ relURL . }}" defer></script>{{ end }}
-{{ end -}}

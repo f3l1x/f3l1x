@@ -9,4 +9,11 @@
 
 # Hugo
 /public
-/data/webpack.json
+/resources
+
+# Parcel
+/.cache
+/.parcel-cache
+
+# ZEIT
+.now

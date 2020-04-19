@@ -1,0 +1,9 @@
+@tailwind base;
+
+@tailwind components;
+
+html {
+  @apply font-body;
+}
+
+@tailwind utilities;
