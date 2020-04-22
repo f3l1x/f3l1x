@@ -1,5 +1,5 @@
 // @ts-ignore
-import hljs from "highlight.js/lib/highlight";
+import hljs from "highlight.js/lib/core";
 // @ts-ignore
 import yaml from "highlight.js/lib/languages/yaml";
 // @ts-ignore
