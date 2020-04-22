@@ -6,6 +6,9 @@
 {{ end }}
 
 {{ define "main" }}
+
+{{ .Content }}
+
 <section id="main" class="page">
 	{{ range .Data.Pages.GroupByDate "2006" }}
 
