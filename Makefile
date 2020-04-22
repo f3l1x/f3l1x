@@ -35,7 +35,7 @@ www-deploy:
 	cd pkg/www && ${NOW}
 
 www-install:
-	cd pkg/www && npm install
+	cd pkg/www && npm install --production
 
 www-build: www-build-parcel www-build-hugo
 
