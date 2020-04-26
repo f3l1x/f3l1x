@@ -1,0 +1,10 @@
+<div class="rounded bg-yellow-300 border border-yellow-500 shadow-lg  mx-auto m-8 p-4 ">
+	{{ with .Get "title"}}
+	<div class="text-black pb-2">
+		{{ . }}
+	</div>
+	{{ end }}
+	<div class="text-black tracking-tight ">
+		{{ .Inner }}
+	</div>
+</div>
