@@ -13,14 +13,15 @@
 It consists of these packages:
 
 - [www](/pkg/www/) - https://f3l1x.io
-- [wiki](/pkg/wiki/) - https://wiki.f3l1x.io
-- [cv](/pkg/cv/) - https://cv.f3l1x.io
+- [wiki](/pkg/wiki/) - https://sulc.dev
+- [cv](/pkg/cv/) - https://milan.works
+- [cdn](/pkg/cdn/) - https://milan.network
 
 ## Development
 
 - clone this repo (`git@github.com:f3l1x/f3l1x.git`)
 - install hugo (https://gohugo.io/)
-- install node modules `make install`
+- install deps `make install`
 
 **Www**
 
