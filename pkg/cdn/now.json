@@ -1,0 +1,8 @@
+{
+  "version": 2,
+  "name": "cdn",
+  "scope": "milansulc",
+  "routes": [
+    { "src": "/(.*)", "dest": "https://ik.imagekit.io/felix/$1" }
+  ]
+}
