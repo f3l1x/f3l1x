@@ -12,10 +12,10 @@
 
 It consists of these packages:
 
-- [www](/pkg/www/) - https://f3l1x.io
-- [wiki](/pkg/wiki/) - https://sulc.dev
-- [cv](/pkg/cv/) - https://milan.works
-- [cdn](/pkg/cdn/) - https://milan.network
+- [www](/pkg/www/) - [f3l1x.io](https://f3l1x.io)
+- [wiki](/pkg/wiki/) - [sulc.dev](https://sulc.dev)
+- [cv](/pkg/cv/) - [milan.works](https://milan.works)
+- [cdn](/pkg/cdn/) - [milan.network](https://milan.network)
 
 ## Development
 
