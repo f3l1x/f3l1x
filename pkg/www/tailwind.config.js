@@ -1,4 +1,13 @@
 module.exports = {
+  purge: {
+    enabled: true,
+    content: [
+      './content/**/*.md',
+      './content/**/*.html',
+      './layouts/**/*.html',
+      './assets/**/*.vue',
+    ],
+  },
   theme: {
     extend: {
       inset: {
