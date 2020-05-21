@@ -12,6 +12,9 @@ module.exports = {
       },
       gridTemplateColumns: {
         'projects': 'min-content auto min-content',
+      },
+      width: {
+        "96": "24rem"
       }
     }
   },

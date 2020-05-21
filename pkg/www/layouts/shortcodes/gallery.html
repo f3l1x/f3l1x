@@ -1,0 +1,11 @@
+<div class="w-full flex flex-wrap items-stretch justify-center">
+	{{ $id := cond .IsNamedParams (.Get "id") ((.Get 0)) }}
+	{{ $size := default "64" (.Get "size") }}
+	{{ range $image := index $.Site.Data.gallery $id }}
+	<div class="md:w-{{ $size }} md:h-{{ $size }} border-2 rounded-lg flex items-center justify-center mx-2 my-4 p-2">
+		<a href="{{ $image.img }}" target="_blank">
+			<img loading="lazy" title="{{ $image.title }}" src="{{ $image.img }}" class="max-h-full rounded">
+		</a>
+	</div>
+	{{ end }}
+</div>
