@@ -13,7 +13,7 @@
 It consists of these packages:
 
 - [www](/pkg/www/) - [f3l1x.io](https://f3l1x.io)
-- [wiki](/pkg/wiki/) - [sulc.dev](https://sulc.dev)
+- [wiki](/pkg/wiki/) - [sulc.dev](https://f3l1x.wiki)
 - [cv](/pkg/cv/) - [milan.works](https://milan.works)
 - [cdn](/pkg/cdn/) - [milan.network](https://milan.network)
 
