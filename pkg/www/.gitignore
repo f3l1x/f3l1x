@@ -15,5 +15,6 @@
 /.cache
 /.parcel-cache
 
-# ZEIT
-.now
+# Vercel
+.vercel
+
