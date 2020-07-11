@@ -21,7 +21,7 @@ all:
 ### COMMON #######################################
 ##################################################
 
-deploy: www-deploy wiki-deploy cv-deploy
+deploy: www-deploy wiki-deploy cv-deploy cdn-deploy
 
 install: www-install
 
@@ -32,38 +32,44 @@ build: www-build
 ##################################################
 
 www-deploy:
-	cd pkg/www && ${NOW}
+	cd www && ${NOW}
 
 www-install:
-	cd pkg/www && npm ci
+	cd www && npm ci
 
 www-build: www-build-parcel www-build-hugo
 
 www-build-parcel:
-	cd pkg/www && npm run build
+	cd www && npm run build
 
 www-build-hugo:
-	cd pkg/www && hugo
+	cd www && hugo
 
-www-dev-hugo:
-	cd pkg/www && hugo server -D -v -w
+www-dev: www-build-parcel www-dev-hugo
 
 www-dev-parcel:
-	cd pkg/www && npm run dev
+	cd www && npm run dev
 
 www-new-post:
-	cd pkg/www && hugo new blog/$(shell date '+%Y')/$(shell date '+%Y-%m-%d').md
+	cd www && hugo new blog/$(shell date '+%Y')/$(shell date '+%Y-%m-%d').md
 
 ##################################################
 ### WIKI #########################################
 ##################################################
 
 wiki-deploy:
-	cd pkg/wiki && ${NOW}
+	cd wiki && ${NOW}
 
 ##################################################
 ### CV ###########################################
 ##################################################
 
 cv-deploy:
-	cd pkg/cv && ${NOW}
+	cd cv && ${NOW}
+
+##################################################
+### CDN ##########################################
+##################################################
+
+cdn-deploy:
+	cd cdn && ${NOW}
