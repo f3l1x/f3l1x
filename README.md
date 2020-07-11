@@ -1,35 +1,25 @@
-<h1 align=center>f3l1x</h1>
+## Milan [Felix](https://f3l1x.io) Šulc 👋
 
-<p align=center>
-   🏃‍♂️ This is monorepo of my websites. Welcome!
-</p>
+<img src="https://avatars.githubusercontent.com/f3l1x" align="right" width="256">
 
-<p align=center>
-🕹 <a href="https://f3l1x.io">f3l1x.io</a> | 💻 <a href="https://github.com/f3l1x">f3l1x</a> | 🐦 <a href="https://twitter.com/xf3l1x">@xf3l1x</a>
-</p>
+Hi! I'm Milan Šulc a.k.a Felix, developer advocate 👨🏻‍💻 and open source enthusiast. I'm creating libs & breaking apps 📦. I am also part of or involved in Nette ([@nette](https://github.com/nette)) as core member, [@contributte](https://github.com/contributte) as organization leader, [@vercel](https://github.com/vercel) PHP runtime creator.
 
------
+You can reach me about anything on my twitter [@xf3l1x](https://twitter.com/xf3l1x).
 
-It consists of these packages:
+## [Sponsor](https://github.com/sponsors/f3l1x) 💖
 
-- [www](/pkg/www/) - [f3l1x.io](https://f3l1x.io)
-- [wiki](/pkg/wiki/) - [sulc.dev](https://f3l1x.wiki)
-- [cv](/pkg/cv/) - [milan.works](https://milan.works)
-- [cdn](/pkg/cdn/) - [milan.network](https://milan.network)
+My daily job is to build web/desktop applications where one needs a lot of tools and packages these days.
+It makes me so happy to see that my pet projects interest someone else and together we are building something special.
+If you like my work you can [sponsor me](https://github.com/sponsors/f3l1x). Thank you.
 
-## Development
+<!--
+## Stats 📊
 
-- clone this repo (`git@github.com:f3l1x/f3l1x.git`)
-- install hugo (https://gohugo.io/)
-- install deps `make install`
-
-**Www**
-
-- compile assets `make www-dev-parcel`
-- start Hugo webserver `make www-dev-hugo`
-
-## Deploy
-
-- `make build`
-- `make deploy`
-- yes that's all :tada:
+![](https://badgen.net/badge/projects/240+/blue)
+![](https://badgen.net/badge/PHP%20projects/240+/orange?list=|)
+![](https://badgen.net/badge/PHP%20installs/240M+,downloads/orange?list=|)
+![](https://badgen.net/badge/NPM%20projects/5+/red?list=|)
+![](https://badgen.net/badge/NPM%20installs/240M+,downloads/red?list=|)
+![](https://badgen.net/badge/docker%20images/1.5M,downloads/blue?list=|)
+![](https://badgen.net/badge/docker%20pulls/1.5M,downloads/blue?list=|)
+-->
