@@ -1,6 +1,6 @@
 ## Milan [Felix](https://f3l1x.io) Šulc 👋 
 
-![](https://hitx.vercel.app/?id=https://github.com/f3l1x/f3l1x&t=github%20views)
+![](https://hitx.vercel.app/counter/?id=https://github.com/f3l1x/f3l1x&t=github%20views)
 ![](https://badgen.net/badge/repositories/250+)
 
 <img src="https://avatars.githubusercontent.com/f3l1x" align="right" width="256">
