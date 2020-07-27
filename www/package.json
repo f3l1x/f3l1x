@@ -19,7 +19,7 @@
     "@babel/preset-env": "^7.10.4",
     "@babel/preset-typescript": "^7.10.4",
     "@types/highlight.js": "^9.12.4",
-    "@types/node": "^14.0.24",
+    "@types/node": "^14.0.26",
     "@vue/component-compiler-utils": "^3.1.2",
     "autoprefixer": "^9.8.5",
     "parcel-bundler": "^1.12.3",
