@@ -47,6 +47,9 @@ www-build-hugo:
 
 www-dev: www-build-parcel www-dev-hugo
 
+www-dev-hugo:
+	cd www && hugo server -D -v -w
+
 www-dev-parcel:
 	cd www && npm run dev
 
