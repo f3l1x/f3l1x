@@ -8,7 +8,7 @@
     "alpinejs": "^2.6.0",
     "dayjs": "^1.8.33",
     "highlight.js": "^10.1.2",
-    "vue": "^2.6.11"
+    "vue": "^2.6.12"
   },
   "devDependencies": {
     "@babel/cli": "^7.10.5",
@@ -27,7 +27,7 @@
     "tailwindcss": "^1.6.2",
     "typescript": "^3.9.7",
     "vue-hot-reload-api": "^2.3.3",
-    "vue-template-compiler": "^2.6.10"
+    "vue-template-compiler": "^2.6.12"
   },
   "browserslist": [
     "last 2 Chrome versions"
