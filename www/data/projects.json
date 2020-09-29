@@ -3,31 +3,31 @@
     "org": "juicyfx",
     "name": "vercel-php",
     "description": "▲ Vercel PHP runtime  •  vercel-php •  now-php  •  🐘+ λ = ❤",
-    "stars": 213
+    "stars": 288
   },
   {
     "org": "contributte",
     "name": "datagrid",
     "description": ":muscle: DataGrid for Nette Framework: filtering, sorting, pagination, tree view, table view, translator, etc",
-    "stars": 200
+    "stars": 208
   },
   {
     "org": "pwnlabs",
     "name": "nusoap",
     "description": ":smirk: Fixed NuSOAP for PHP 5.6 - 7.4",
-    "stars": 186
+    "stars": 202
   },
   {
     "org": "pwnlabs",
     "name": "oracle-instantclient",
     "description": ":minidisc: Oracle InstantClient",
-    "stars": 71
+    "stars": 74
   },
   {
     "org": "contributte",
     "name": "gopay",
     "description": ":moneybag: Integrace Gopay pro Nette Framework",
-    "stars": 66
+    "stars": 68
   },
   {
     "org": "planette",
@@ -37,51 +37,69 @@
   },
   {
     "org": "contributte",
+    "name": "invoice",
+    "description": ":memo: PDF invoice generator ",
+    "stars": 55
+  },
+  {
+    "org": "contributte",
     "name": "console",
     "description": ":boom: Best minimal console (symfony/console) to Nette Framework (@nette)",
-    "stars": 54
+    "stars": 55
   },
   {
     "org": "contributte",
     "name": "live-form-validation",
     "description": ":no_entry: Nice client-side live form validation for Nette Forms.",
-    "stars": 52
+    "stars": 53
   },
   {
-    "org": "contributte",
-    "name": "invoice",
-    "description": ":memo: PDF invoice generator ",
-    "stars": 52
-  },
-  {
-    "org": "nettrine",
-    "name": "orm",
-    "description": ":fire: Well-integrated Doctrine2 ORM for Nette Framework",
-    "stars": 42
-  },
-  {
-    "org": "dockette",
-    "name": "devstack",
-    "description": ":whale: Dockette dockerized web devstack (@f3l1x)",
-    "stars": 40
+    "org": "juicyfx",
+    "name": "vercel-examples",
+    "description": "📦 Examples and sample projects using Vercel platform (ZEIT Now)",
+    "stars": 50
   },
   {
     "org": "dockette",
     "name": "php",
     "description": ":whale: Dockette Debian based PHP 5.6 / 7.0 / 7.1 / 7.2 / 7.3 / 7.4 + FPM + Composer (Prestissimo)",
-    "stars": 39
+    "stars": 43
   },
   {
-    "org": "trainit",
-    "name": "2018-03-nette-webpack",
-    "description": ":fire: Example of Nette Framework 3 + Webpack 4",
-    "stars": 38
+    "org": "nettrine",
+    "name": "orm",
+    "description": ":fire: Well-integrated Doctrine2 ORM for Nette Framework",
+    "stars": 41
+  },
+  {
+    "org": "dockette",
+    "name": "devstack",
+    "description": ":whale: Dockette dockerized web devstack (@f3l1x)",
+    "stars": 41
   },
   {
     "org": "apitte",
     "name": "core",
     "description": ":wrench: Enjoyable [PSR-7 based] API framework for Nette Framework. Heart of the apitte stack.",
-    "stars": 36
+    "stars": 38
+  },
+  {
+    "org": "trainit",
+    "name": "2018-03-nette-webpack",
+    "description": ":fire: Example of Nette Framework 3 + Webpack 4",
+    "stars": 37
+  },
+  {
+    "org": "dockette",
+    "name": "adminer",
+    "description": ":whale: Tiniest boxed dockerized Adminer (MySQL, PostgreSQL, SQLite, Mongo, Oracle) Dockerfiles",
+    "stars": 34
+  },
+  {
+    "org": "planette",
+    "name": "nutella-project",
+    "description": "🎁 Web project skeleton based on @nette @contributte @nettrine",
+    "stars": 33
   },
   {
     "org": "dockette",
@@ -96,12 +114,6 @@
     "stars": 32
   },
   {
-    "org": "planette",
-    "name": "nutella-project",
-    "description": "🎁 Web project skeleton based on @nette @contributte @nettrine",
-    "stars": 32
-  },
-  {
     "org": "contributte",
     "name": "translation",
     "description": ":tongue: Translations (symfony/translation) to Nette Framework (@nette)",
@@ -111,18 +123,18 @@
     "org": "planette",
     "name": "cookbook-dependency-injection",
     "description": ":notes: Nette Dependency Injection (DI) extensions & NEON syntax overview in examples",
-    "stars": 31
+    "stars": 30
+  },
+  {
+    "org": "juicyfx",
+    "name": "juicy",
+    "description": ":tangerine: Awesome juicy lambdas for generating PDF, taking screenshots, transform XML to JSON, generate images from github readme, generate SVG icons. Running on @vercel platform.",
+    "stars": 28
   },
   {
     "org": "nettrine",
     "name": "migrations",
     "description": ":running: Doctrine Migrations for Nette Framework",
-    "stars": 28
-  },
-  {
-    "org": "dockette",
-    "name": "adminer",
-    "description": ":whale: Tiniest boxed dockerized Adminer (MySQL, PostgreSQL, SQLite, Mongo, Oracle) Dockerfiles",
     "stars": 27
   },
   {
@@ -132,10 +144,10 @@
     "stars": 26
   },
   {
-    "org": "juicyfx",
-    "name": "vercel-examples",
-    "description": "📦 Examples and sample projects using Vercel platform (ZEIT Now)",
-    "stars": 25
+    "org": "contributte",
+    "name": "image-storage",
+    "description": ":stars: Image storage for Nette framework",
+    "stars": 24
   },
   {
     "org": "contributte",
@@ -145,32 +157,26 @@
   },
   {
     "org": "contributte",
-    "name": "image-storage",
-    "description": ":stars: Image storage for Nette framework",
-    "stars": 23
-  },
-  {
-    "org": "contributte",
-    "name": "scheduler",
-    "description": ":hourglass: PHP job scheduler (cron) with locking for Nette Framework",
+    "name": "anabelle",
+    "description": ":princess: API documentation generator (JSON-RPC / REST)",
     "stars": 20
-  },
-  {
-    "org": "contributte",
-    "name": "guzzlette",
-    "description": ":cyclone: Guzzle integration into Nette Framework",
-    "stars": 19
-  },
-  {
-    "org": "contributte",
-    "name": "rabbitmq",
-    "description": "🐰 Nette extension for RabbitMQ (using BunnyPHP)",
-    "stars": 19
   },
   {
     "org": "contributte",
     "name": "console-extra",
     "description": ":recycle: Nette-based console commands for latte, DIC, MVC, security, utils and many others.  ",
+    "stars": 19
+  },
+  {
+    "org": "contributte",
+    "name": "scheduler",
+    "description": ":hourglass: PHP job scheduler (cron) with locking for Nette Framework",
+    "stars": 19
+  },
+  {
+    "org": "planette",
+    "name": "forest-project",
+    "description": "🎁 REST API/PSR-7 project skeleton based on @nette @apitte @contributte @nettrine",
     "stars": 19
   },
   {
@@ -181,8 +187,8 @@
   },
   {
     "org": "contributte",
-    "name": "psr7-http-message",
-    "description": ":dizzy: PSR #7 [HTTP Message Interface] to Nette Framework (@nette)",
+    "name": "rabbitmq",
+    "description": "🐰 Nette extension for RabbitMQ (using BunnyPHP)",
     "stars": 18
   },
   {
@@ -199,20 +205,20 @@
   },
   {
     "org": "contributte",
+    "name": "guzzlette",
+    "description": ":cyclone: Guzzle integration into Nette Framework",
+    "stars": 17
+  },
+  {
+    "org": "contributte",
     "name": "event-dispatcher",
     "description": ":boom: Best events support (symfony/event-dispatcher) to Nette Framework (@nette)",
     "stars": 17
   },
   {
     "org": "contributte",
-    "name": "anabelle",
-    "description": ":princess: API documentation generator (JSON-RPC / REST)",
-    "stars": 17
-  },
-  {
-    "org": "planette",
-    "name": "forest-project",
-    "description": "🎁 REST API/PSR-7 project skeleton based on @nette @apitte @contributte @nettrine",
+    "name": "psr7-http-message",
+    "description": ":dizzy: PSR #7 [HTTP Message Interface] to Nette Framework (@nette)",
     "stars": 17
   },
   {
@@ -222,15 +228,15 @@
     "stars": 16
   },
   {
-    "org": "juicyfx",
-    "name": "juicy",
-    "description": ":tangerine: Awesome juicy lambdas for generating PDF, taking screenshots, transform XML to JSON, generate images from github readme, generate SVG icons. Running on @vercel platform.",
-    "stars": 16
-  },
-  {
     "org": "contributte",
     "name": "forms-multiplier",
     "description": ":repeat: Form multiplier & replicator for Nette Framework",
+    "stars": 15
+  },
+  {
+    "org": "contributte",
+    "name": "di",
+    "description": ":sparkles: Extra contrib to nette/di (@nette)",
     "stars": 15
   },
   {
@@ -244,12 +250,6 @@
     "name": "2016-docker-workshop",
     "description": ":whale: Docker Workshop :briefcase: for Symfony Meeting :date: 22/09/2016",
     "stars": 15
-  },
-  {
-    "org": "contributte",
-    "name": "di",
-    "description": ":sparkles: Extra contrib to nette/di (@nette)",
-    "stars": 14
   },
   {
     "org": "contributte",
@@ -271,8 +271,20 @@
   },
   {
     "org": "contributte",
+    "name": "nextras-orm-generator",
+    "description": ":wolf: Rich Nextras\\ORM entity generator for fast prototyping your new project.",
+    "stars": 13
+  },
+  {
+    "org": "contributte",
     "name": "api-router",
     "description": ":man: RESTful router for your API in Nette Framework - created either directly or via annotation",
+    "stars": 13
+  },
+  {
+    "org": "contributte",
+    "name": "middlewares",
+    "description": ":boom: Middlewares / Relay / PSR-7 support to Nette Framework (@nette)",
     "stars": 13
   },
   {
@@ -282,34 +294,16 @@
     "stars": 13
   },
   {
+    "org": "planette",
+    "name": "skynette",
+    "description": "small brewery homepage",
+    "stars": 13
+  },
+  {
     "org": "dockette",
     "name": "ci",
     "description": ":whale: Dockette dockerized Alpine linux Dockerfiles for PHP 5.6 / 7.0 / 7.1 / 7.2 / 7.3 / 7.4 + Composer (Prestissimo) and NodeJS 6 / 7 / 8 / 9 / 10 / 11. / 12 / 13",
     "stars": 13
-  },
-  {
-    "org": "contributte",
-    "name": "middlewares",
-    "description": ":boom: Middlewares / Relay / PSR-7 support to Nette Framework (@nette)",
-    "stars": 12
-  },
-  {
-    "org": "planette",
-    "name": "skynette",
-    "description": "small brewery homepage",
-    "stars": 12
-  },
-  {
-    "org": "ninjify",
-    "name": "coding-standard",
-    "description": ":pig_nose: Tuned & very strict coding standards for PHP projects",
-    "stars": 12
-  },
-  {
-    "org": "contributte",
-    "name": "nextras-orm-generator",
-    "description": ":wolf: Rich Nextras\\ORM entity generator for fast prototyping your new project.",
-    "stars": 11
   },
   {
     "org": "contributte",
@@ -324,10 +318,22 @@
     "stars": 11
   },
   {
-    "org": "contributte",
-    "name": "utils",
-    "description": ":sparkles: Extra contrib to nette/utils (@nette)",
-    "stars": 10
+    "org": "apitte",
+    "name": "openapi",
+    "description": ":family: OpenAPI specification for Apitte stack",
+    "stars": 11
+  },
+  {
+    "org": "ninjify",
+    "name": "coding-standard",
+    "description": ":pig_nose: Tuned & very strict coding standards for PHP projects",
+    "stars": 11
+  },
+  {
+    "org": "juicyfx",
+    "name": "vercel-bref",
+    "description": "▲ Vercel bref runtime • brefphp • vercel-bref",
+    "stars": 11
   },
   {
     "org": "contributte",
@@ -343,14 +349,20 @@
   },
   {
     "org": "contributte",
+    "name": "facebook",
+    "description": ":yum: Tiny Facebook SDK 5.x integration to Nette Framework",
+    "stars": 10
+  },
+  {
+    "org": "contributte",
     "name": "redis",
     "description": ":floppy_disk: Redis (predis) for Nette Framework (@nette)",
     "stars": 10
   },
   {
-    "org": "apitte",
-    "name": "openapi",
-    "description": ":family: OpenAPI specification for Apitte stack",
+    "org": "contributte",
+    "name": "comgate",
+    "description": ":euro: Comgate Payment Gateway implementation for Nette Framework",
     "stars": 10
   },
   {
@@ -360,21 +372,15 @@
     "stars": 10
   },
   {
-    "org": "juicyfx",
-    "name": "vercel-bref",
-    "description": "▲ Vercel bref runtime • brefphp • vercel-bref",
-    "stars": 10
-  },
-  {
     "org": "contributte",
-    "name": "latte-parsedown-extra",
-    "description": ":tractor: Parsedown (markdown) template parser for Nette \\ Latte (@nette)",
+    "name": "deployer-extension",
+    "description": ":horse_racing: FTP deployment (by @dg) extension for Nette Framework",
     "stars": 9
   },
   {
     "org": "contributte",
-    "name": "deployer-extension",
-    "description": ":horse_racing: FTP deployment (by @dg) extension for Nette Framework",
+    "name": "utils",
+    "description": ":sparkles: Extra contrib to nette/utils (@nette)",
     "stars": 9
   },
   {
@@ -384,21 +390,15 @@
     "stars": 9
   },
   {
-    "org": "contributte",
-    "name": "bootstrap",
-    "description": ":sparkles: Extra contrib to nette/bootstrap (@nette)",
-    "stars": 9
-  },
-  {
-    "org": "contributte",
-    "name": "comgate",
-    "description": ":euro: Comgate Payment Gateway implementation for Nette Framework",
-    "stars": 9
-  },
-  {
     "org": "planette",
     "name": "megaplanette",
     "description": "[DISCONTINUED] :fire: Dynamic Planette Portal",
+    "stars": 9
+  },
+  {
+    "org": "dockette",
+    "name": "rendertron",
+    "description": ":whale: Google Rendertron Dockerfile",
     "stars": 9
   },
   {
@@ -415,8 +415,8 @@
   },
   {
     "org": "contributte",
-    "name": "facebook",
-    "description": ":yum: Tiny Facebook SDK 5.x integration to Nette Framework",
+    "name": "latte-parsedown-extra",
+    "description": ":tractor: Parsedown (markdown) template parser for Nette \\ Latte (@nette)",
     "stars": 8
   },
   {
@@ -435,12 +435,6 @@
     "org": "nettrine",
     "name": "extensions-atlantic18",
     "description": ":mag: Doctrine (https://github.com/Atlantic18/DoctrineExtensions) extension for Nette Framework",
-    "stars": 8
-  },
-  {
-    "org": "nettrine",
-    "name": "fixtures",
-    "description": ":wrench: Doctrine Fixtures for Nette Framework",
     "stars": 8
   },
   {
@@ -463,8 +457,8 @@
   },
   {
     "org": "contributte",
-    "name": "nextras-orm-events",
-    "description": ":wolf: Doctrine-like events for Nextras ORM",
+    "name": "bootstrap",
+    "description": ":sparkles: Extra contrib to nette/bootstrap (@nette)",
     "stars": 7
   },
   {
@@ -481,20 +475,20 @@
   },
   {
     "org": "contributte",
-    "name": "contributte",
-    "description": ":heart: Contributte organization structure / RFC / Team",
-    "stars": 7
-  },
-  {
-    "org": "contributte",
-    "name": "flysystem",
-    "description": ":airplane: Smart integration of Flysystem into Nette Framework",
+    "name": "elasticsearch",
+    "description": ":mag: Tiny Elasticsearch integration into Nette Framework",
     "stars": 7
   },
   {
     "org": "apitte",
     "name": "middlewares",
     "description": ":speedboat: Middlewares support for Apitte stack",
+    "stars": 7
+  },
+  {
+    "org": "nettrine",
+    "name": "fixtures",
+    "description": ":wrench: Doctrine Fixtures for Nette Framework",
     "stars": 7
   },
   {
@@ -523,32 +517,38 @@
   },
   {
     "org": "contributte",
+    "name": "nextras-orm-events",
+    "description": ":wolf: Doctrine-like events for Nextras ORM",
+    "stars": 6
+  },
+  {
+    "org": "contributte",
     "name": "latte",
     "description": ":sparkles: Extra contrib to nette/latte (@nette)",
     "stars": 6
   },
   {
     "org": "contributte",
-    "name": "psr11-container-interface",
-    "description": ":dizzy: PSR #11 [Container Interface] to Nette Framework (@nette)",
+    "name": "mail",
+    "description": ":sparkles: Extra contrib to nette/mail (@nette)",
     "stars": 6
   },
   {
     "org": "contributte",
-    "name": "elasticsearch",
-    "description": ":mag: Tiny Elasticsearch integration into Nette Framework",
+    "name": "contributte",
+    "description": ":heart: Contributte organization structure / RFC / Team",
+    "stars": 6
+  },
+  {
+    "org": "contributte",
+    "name": "flysystem",
+    "description": ":airplane: Smart integration of Flysystem into Nette Framework",
     "stars": 6
   },
   {
     "org": "apitte",
     "name": "fullstack",
     "description": ":thumbsup: Apitte meta package with all features",
-    "stars": 6
-  },
-  {
-    "org": "apitte",
-    "name": "presenter",
-    "description": ":sunflower: PSR-7 for Nette\\Presenters with Apitte stack",
     "stars": 6
   },
   {
@@ -589,26 +589,26 @@
   },
   {
     "org": "contributte",
-    "name": "security",
-    "description": ":sparkles: Extra contrib to nette/security (@nette)",
+    "name": "psr11-container-interface",
+    "description": ":dizzy: PSR #11 [Container Interface] to Nette Framework (@nette)",
     "stars": 5
   },
   {
-    "org": "contributte",
-    "name": "mail",
-    "description": ":sparkles: Extra contrib to nette/mail (@nette)",
+    "org": "apitte",
+    "name": "negotiation",
+    "description": ":art: Content-Negotiation support for Apitte stack",
     "stars": 5
   },
   {
-    "org": "contributte",
-    "name": "event-dispatcher-extra",
-    "description": ":recycle: Nette-based Symfony events for application, presenter, form, latte, templates, security and many others.",
+    "org": "apitte",
+    "name": "debug",
+    "description": ":interrobang: Debugging tools for Apitte stack",
     "stars": 5
   },
   {
-    "org": "nettrine",
-    "name": "extensions-knplabs",
-    "description": ":mag: Doctrine (https://github.com/KnpLabs/DoctrineBehaviors) extension for Nette Framework",
+    "org": "apitte",
+    "name": "presenter",
+    "description": ":sunflower: PSR-7 for Nette\\Presenters with Apitte stack",
     "stars": 5
   },
   {
@@ -625,14 +625,8 @@
   },
   {
     "org": "dockette",
-    "name": "rendertron",
-    "description": ":whale: Google Rendertron Dockerfile",
-    "stars": 5
-  },
-  {
-    "org": "dockette",
-    "name": "nexus",
-    "description": "🎁 Sonatype Nexus Repository Manager 3 with preinstalled community plugins",
+    "name": "nginx",
+    "description": ":whale: Dockette Nginx SSL / HSTS / HTTP2 Dockerfile",
     "stars": 5
   },
   {
@@ -673,20 +667,20 @@
   },
   {
     "org": "contributte",
+    "name": "security",
+    "description": ":sparkles: Extra contrib to nette/security (@nette)",
+    "stars": 4
+  },
+  {
+    "org": "contributte",
     "name": "cache",
     "description": ":sparkles: Extra contrib to nette/caching (@nette)",
     "stars": 4
   },
   {
     "org": "contributte",
-    "name": "website",
-    "description": "👨‍💻 Contributte Website & Docs",
-    "stars": 4
-  },
-  {
-    "org": "contributte",
-    "name": "jsonrpc",
-    "description": "📞 JSON-RPC toolset build on top of psr-7 (guzzlehttp), league/json-guard, league/json-reference, league/flysystem and nette/di",
+    "name": "event-dispatcher-extra",
+    "description": ":recycle: Nette-based Symfony events for application, presenter, form, latte, templates, security and many others.",
     "stars": 4
   },
   {
@@ -697,26 +691,8 @@
   },
   {
     "org": "apitte",
-    "name": "negotiation",
-    "description": ":art: Content-Negotiation support for Apitte stack",
-    "stars": 4
-  },
-  {
-    "org": "apitte",
-    "name": "debug",
-    "description": ":interrobang: Debugging tools for Apitte stack",
-    "stars": 4
-  },
-  {
-    "org": "apitte",
     "name": "console",
     "description": ":pill: Symfony\\Console bridge for Apitte stack",
-    "stars": 4
-  },
-  {
-    "org": "apitte",
-    "name": "openapi-toolkit",
-    "description": ":diamonds: Simple and intuitive OpenApi/Swagger compatible UI toolkit",
     "stars": 4
   },
   {
@@ -726,21 +702,15 @@
     "stars": 4
   },
   {
+    "org": "nettrine",
+    "name": "extensions-knplabs",
+    "description": ":mag: Doctrine (https://github.com/KnpLabs/DoctrineBehaviors) extension for Nette Framework",
+    "stars": 4
+  },
+  {
     "org": "phalette",
     "name": "pidic",
     "description": "Nette Dependency Injection/Container for Phalcon",
-    "stars": 4
-  },
-  {
-    "org": "ninjify",
-    "name": "nunjuck",
-    "description": ":muscle: Special tuned version of @nette tester called nunjuck!",
-    "stars": 4
-  },
-  {
-    "org": "dockette",
-    "name": "nginx",
-    "description": ":whale: Dockette Nginx SSL / HSTS / HTTP2 Dockerfile",
     "stars": 4
   },
   {
@@ -774,9 +744,27 @@
     "stars": 4
   },
   {
+    "org": "dockette",
+    "name": "nexus",
+    "description": "🎁 Sonatype Nexus Repository Manager 3 with preinstalled community plugins",
+    "stars": 4
+  },
+  {
     "org": "webkitty",
     "name": "searchbox",
     "description": "Text input augmented with Lexer magic✨ to support advanced search features.",
+    "stars": 4
+  },
+  {
+    "org": "pwnlabs",
+    "name": "oakit",
+    "description": ":diamonds: Simple and intuitive OpenApi/Swagger compatible UI toolkit",
+    "stars": 4
+  },
+  {
+    "org": "pwnlabs",
+    "name": "dag",
+    "description": ":running: Dag is opinionated expression data generator written in PHP to fake your API.",
     "stars": 4
   },
   {
@@ -799,6 +787,24 @@
   },
   {
     "org": "contributte",
+    "name": "website",
+    "description": "👨‍💻 Contributte Website & Docs",
+    "stars": 3
+  },
+  {
+    "org": "contributte",
+    "name": "jsonrpc",
+    "description": "📞 JSON-RPC toolset build on top of psr-7 (guzzlehttp), league/json-guard, league/json-reference, league/flysystem and nette/di",
+    "stars": 3
+  },
+  {
+    "org": "contributte",
+    "name": "gosms",
+    "description": ":speech_balloon: GoSMS.cz HTTP client for Nette ",
+    "stars": 3
+  },
+  {
+    "org": "contributte",
     "name": "eet",
     "description": "💵 EET integration into Nette",
     "stars": 3
@@ -810,15 +816,15 @@
     "stars": 3
   },
   {
-    "org": "nettrine",
-    "name": "extensions-beberlei",
-    "description": ":mag: Doctrine (https://github.com/beberlei/DoctrineExtensions) extension for Nette Framework",
-    "stars": 3
-  },
-  {
     "org": "planette",
     "name": "timy-project",
     "description": ":metal: Timy is experimental skeleton for really micro Nette projects.",
+    "stars": 3
+  },
+  {
+    "org": "ninjify",
+    "name": "nunjuck",
+    "description": ":muscle: Special tuned version of @nette tester called nunjuck!",
     "stars": 3
   },
   {
@@ -847,14 +853,14 @@
   },
   {
     "org": "dockette",
-    "name": "hugo",
-    "description": ":whale: Dockette dockerized Hugo - Static Generator",
+    "name": "deploy",
+    "description": ":whale: Dockette deployment tools (Deployer / Ansible)",
     "stars": 3
   },
   {
-    "org": "pwnlabs",
-    "name": "dag",
-    "description": ":running: Dag is opinionated expression data generator written in PHP to fake your API.",
+    "org": "dockette",
+    "name": "hugo",
+    "description": ":whale: Dockette dockerized Hugo - Static Generator",
     "stars": 3
   },
   {
@@ -895,14 +901,8 @@
   },
   {
     "org": "contributte",
-    "name": "czech-post",
-    "description": ":postbox: Czech Post API client",
-    "stars": 2
-  },
-  {
-    "org": "contributte",
-    "name": "gosms",
-    "description": ":speech_balloon: GoSMS.cz HTTP client for Nette ",
+    "name": "datagrid-elasticsearch-data-source",
+    "description": ":feet: ElasticSearch data source for ublaboo/datagrid",
     "stars": 2
   },
   {
@@ -925,20 +925,14 @@
   },
   {
     "org": "nettrine",
-    "name": "extensions-oroinc",
-    "description": ":mag: Doctrine (https://github.com/oroinc/doctrine-extensions) extension for Nette Framework",
+    "name": "extensions-beberlei",
+    "description": ":mag: Doctrine (https://github.com/beberlei/DoctrineExtensions) extension for Nette Framework",
     "stars": 2
   },
   {
     "org": "planette",
     "name": "posobota.cz",
     "description": ":beer: https://posobota.cz website",
-    "stars": 2
-  },
-  {
-    "org": "ninjify",
-    "name": "checker",
-    "description": "🤮Tuned Code Checker",
     "stars": 2
   },
   {
@@ -951,12 +945,6 @@
     "org": "dockette",
     "name": "pound",
     "description": ":whale: Dockette My Pound Dockerfile",
-    "stars": 2
-  },
-  {
-    "org": "dockette",
-    "name": "deploy",
-    "description": ":whale: Dockette deployment tools (Deployer / Ansible)",
     "stars": 2
   },
   {
@@ -1063,14 +1051,8 @@
   },
   {
     "org": "contributte",
-    "name": "datagrid-elasticsearch-data-source",
-    "description": ":feet: ElasticSearch data source for ublaboo/datagrid",
-    "stars": 1
-  },
-  {
-    "org": "contributte",
-    "name": "datagrid-leanmapper-data-source",
-    "description": ":feet: Tharos\\LeanMapper data source for ublaboo/datagrid",
+    "name": "czech-post",
+    "description": ":postbox: Czech Post API client",
     "stars": 1
   },
   {
@@ -1087,6 +1069,12 @@
   },
   {
     "org": "nettrine",
+    "name": "extensions-oroinc",
+    "description": ":mag: Doctrine (https://github.com/oroinc/doctrine-extensions) extension for Nette Framework",
+    "stars": 1
+  },
+  {
+    "org": "nettrine",
     "name": "odm",
     "description": ":collision:  Well-integrated Doctrine2 ODM for Nette Framework",
     "stars": 1
@@ -1095,6 +1083,12 @@
     "org": "nettrine",
     "name": "mongodb",
     "description": ":zap:  Well-integrated MongoDB for Nette Framework",
+    "stars": 1
+  },
+  {
+    "org": "ninjify",
+    "name": "checker",
+    "description": "🤮Tuned Code Checker",
     "stars": 1
   },
   {
@@ -1155,6 +1149,18 @@
     "org": "trainit",
     "name": "2019-10-hubbr-zeit",
     "description": "🎁 Hubbr Coworking - ZEIT deployment",
+    "stars": 1
+  },
+  {
+    "org": "trainit",
+    "name": "2019-11-vue-ts-php-zeit",
+    "description": "🎄PeckaDesign - Pehapkari",
+    "stars": 1
+  },
+  {
+    "org": "juicyfx",
+    "name": "libphp",
+    "description": "🐘 PHP library compiled for many platform and cloud providers, especially for AWS and @vercel.",
     "stars": 1
   },
   {
@@ -1309,24 +1315,6 @@
   },
   {
     "org": "contributte",
-    "name": "datagrid-dibi-data-source",
-    "description": ":feet: Dibi datasource for ublaboo/datagrid",
-    "stars": 0
-  },
-  {
-    "org": "contributte",
-    "name": "datagrid-doctrine-data-source",
-    "description": ":feet: Doctrine data source for ublaboo/datagrid",
-    "stars": 0
-  },
-  {
-    "org": "contributte",
-    "name": "datagrid-nextras-data-source",
-    "description": ":feet: Nextras Dbal/ORM data source for ublaboo/datagrid",
-    "stars": 0
-  },
-  {
-    "org": "contributte",
     "name": "cnb",
     "description": null,
     "stars": 0
@@ -1362,6 +1350,12 @@
     "stars": 0
   },
   {
+    "org": "dockette",
+    "name": "vercel",
+    "description": "🐳 Dockette Node.js + Vercel",
+    "stars": 0
+  },
+  {
     "org": "trainit",
     "name": "2018-06-vue-nuxt-vuepress",
     "description": ":rocket: Example of Vue / Vuex / Vue CLI / Nuxt.js / VuePress",
@@ -1381,20 +1375,14 @@
   },
   {
     "org": "trainit",
-    "name": "2019-11-vue-ts-php-zeit",
-    "description": "🎄PeckaDesign - Pehapkari",
-    "stars": 0
-  },
-  {
-    "org": "trainit",
     "name": "2020-04-akademie-42-vuejs",
     "description": ":mortar_board: Akademie42 => Vue.js",
     "stars": 0
   },
   {
-    "org": "juicyfx",
-    "name": "libphp",
-    "description": "🐘 PHP library compiled for many platform and cloud providers, especially for AWS and @vercel.",
+    "org": "webkitty",
+    "name": "gridsome-plugin-smartlook",
+    "description": "👀 Smartlook tracking plugin for Gridsome",
     "stars": 0
   },
   {
