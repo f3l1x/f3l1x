@@ -7,7 +7,7 @@
   "dependencies": {
     "alpinejs": "^2.7.0",
     "dayjs": "^1.9.3",
-    "highlight.js": "^10.2.1",
+    "highlight.js": "^10.3.1",
     "vue": "^2.6.12"
   },
   "devDependencies": {
