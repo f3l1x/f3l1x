@@ -1,7 +1,6 @@
 {
   "version": 2,
-  "name": "website",
-  "scope": "milansulc",
+  "name": "f3l1x",
   "builds": [
     { "src": "package.json", "use": "@now/static-build", "config": { "distDir": "public" } }
   ],

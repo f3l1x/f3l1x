@@ -1,7 +1,6 @@
 {
   "version": 2,
-  "name": "wiki",
-  "scope": "milansulc",
+  "name": "f3l1x-wiki",
   "builds": [
     {
       "src": "dist/*.{css,js}",

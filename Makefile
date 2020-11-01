@@ -4,9 +4,9 @@
 
 ifeq ($(NOW),)
   ifeq ($(PRODUCTION),)
-    NOW := now
+    NOW := vercel
   else
-    NOW := now -c --prod
+    NOW := vercel -c --prod
   endif
 endif
 

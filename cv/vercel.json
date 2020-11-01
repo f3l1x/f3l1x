@@ -1,7 +1,6 @@
 {
   "version": 2,
-  "name": "cv",
-  "scope": "milansulc",
+  "name": "f3l1x-cv",
   "builds": [
     {
       "src": "assets/**/*.{css,js,png,jpg}",
