@@ -21,7 +21,7 @@ all:
 ### COMMON #######################################
 ##################################################
 
-deploy: www-deploy wiki-deploy cv-deploy cdn-deploy
+deploy: www-deploy cv-deploy cdn-deploy
 
 install: www-install
 
