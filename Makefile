@@ -2,11 +2,11 @@
 
 ### ENV
 
-ifeq ($(NOW),)
+ifeq ($(VERCEL),)
   ifeq ($(PRODUCTION),)
-    NOW := vercel
+    VERCEL := vercel
   else
-    NOW := vercel -c --prod
+    VERCEL := vercel -c --prod
   endif
 endif
 
@@ -32,7 +32,7 @@ build: www-build
 ##################################################
 
 www-deploy:
-	cd www && ${NOW}
+	cd www && ${VERCEL}
 
 www-install:
 	cd www && npm ci
@@ -61,18 +61,18 @@ www-new-post:
 ##################################################
 
 wiki-deploy:
-	cd wiki && ${NOW}
+	cd wiki && ${VERCEL}
 
 ##################################################
 ### CV ###########################################
 ##################################################
 
 cv-deploy:
-	cd cv && ${NOW}
+	cd cv && ${VERCEL}
 
 ##################################################
 ### CDN ##########################################
 ##################################################
 
 cdn-deploy:
-	cd cdn && ${NOW}
+	cd cdn && ${VERCEL}
