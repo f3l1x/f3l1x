@@ -1,0 +1,51 @@
+{{ range $group := $.Site.Data.talks }}
+<div class="flex justify-center relative">
+	<h2 class="bg-gray-100 relative z-10 font-light text-3xl md:text-3xl transform -translate-y-3 md:-translate-y-4 py-4">{{ $group.group }}</h2>
+</div>
+	{{ range $talk := $group.talks }}
+	<ul class="list-none m-0 mb-8 p-0 relative z-10">
+		<li class="mb-8 bg-white shadow-md px-4 py-3 sm:flex sm:space-x-2">
+			<div class="flex-grow space-y-4">
+				<h3 class="text-xl font-bold">{{ $talk.title }}</h3>
+				<div class="flex space-x-4">
+					{{ range $link := $talk.links }}
+					<a class="text-blue-500 font-medium underline hover:no-underline inline-block text-sm md:text-base flex space-x-1" target="_blank" href="{{ $link.url }}">
+						{{ if eq $link.type "slides" }}
+						<img src="https://obr.now.sh/remix/business/slideshow-2-fill/16" loading="lazy">
+						<span>slides</span>
+						{{ else if eq $link.type "code" }}
+						<img src="https://obr.now.sh/remix/development/code-box-line/16" loading="lazy">
+						<span>code</span>
+						{{ else if eq $link.type "event" }}
+						<img src="https://obr.now.sh/remix/business/calendar-event-line/16" loading="lazy">
+						<span>event</span>
+						{{ else if eq $link.type "video" }}
+						<img src="https://obr.now.sh/remix/media/video-line/16" loading="lazy">
+						<span>video</span>
+						{{ else }}
+						<img src="https://obr.now.sh/remix/business/bubble-chart-fill/16" loading="lazy">
+						<span>{{ $link.type }}</span>
+						{{ end }}
+					</a>
+				{{ end }}
+				</div>
+				<div class="flex space-x-2 text-gray-600">
+					<img src="https://obr.now.sh/remix/business/calendar-2-fill/16" loading="lazy">
+					<span>{{ $talk.date }}</span>
+					<span aria-hidden="true">·</span>
+					<a class="underline hover:no-underline" href="{{ $talk.action.url }}" target="_blank">{{ $talk.action.title }}</a>
+					{{ with $talk.label }}
+					<span aria-hidden="true">·</span>
+					<span class="font-bold">{{ $talk.label }}</span>
+					{{ end }}
+				</div>
+			</div>
+			<div class="mt-4 sm:mt-0 flex justify-center items-center">
+				<a target="_blank" href="{{ $talk.cta }}">
+					<img class="w-full sm:w-auto object-contain sm:h-24" src="{{ $talk.cover }}" loading="lazy">
+				</a>
+			</div>
+		</li>
+	</ul>
+	{{ end }}
+{{ end }}
