@@ -20,7 +20,7 @@
     "@babel/preset-typescript": "^7.14.5",
     "@types/highlight.js": "^10.1.0",
     "@types/node": "^15.12.2",
-    "@vue/component-compiler-utils": "^3.2.0",
+    "@vue/component-compiler-utils": "^3.2.1",
     "autoprefixer": "^9.8.6",
     "parcel-bundler": "^1.12.5",
     "sass": "^1.34.1",
