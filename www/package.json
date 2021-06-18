@@ -5,7 +5,7 @@
     "node": "^12.x"
   },
   "dependencies": {
-    "alpinejs": "^3.0.6",
+    "alpinejs": "2.8.2",
     "dayjs": "^1.10.5",
     "highlight.js": "^11.0.1",
     "vue": "^2.6.14"
