@@ -19,7 +19,7 @@
     "@babel/preset-env": "^7.14.7",
     "@babel/preset-typescript": "^7.14.5",
     "@parcel/transformer-sass": "^2.0.0-nightly.751",
-    "@parcel/transformer-vue": "^2.0.0-nightly.2370",
+    "@parcel/transformer-vue": "^2.0.0-nightly.2393",
     "@types/highlight.js": "^10.1.0",
     "@types/node": "^16.0.0",
     "@vue/component-compiler-utils": "^3.2.2",
