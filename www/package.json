@@ -24,7 +24,7 @@
     "@types/node": "^16.3.2",
     "@vue/component-compiler-utils": "^3.2.2",
     "autoprefixer": "^10.3",
-    "parcel": "^2.0.0-nightly.750",
+    "parcel": "^2.0.0-nightly.769",
     "sass": "^1.35.2",
     "tailwindcss": "^2.2.4",
     "typescript": "^4.3.5",
