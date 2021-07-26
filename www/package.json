@@ -26,7 +26,7 @@
     "autoprefixer": "^10.3",
     "parcel": "^2.0.0-nightly.776",
     "sass": "^1.35.2",
-    "tailwindcss": "^2.2.4",
+    "tailwindcss": "^2.2.7",
     "typescript": "^4.3.5",
     "vue-hot-reload-api": "^2.3.3",
     "vue-template-compiler": "^2.6.14"
