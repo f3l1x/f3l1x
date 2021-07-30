@@ -21,7 +21,7 @@
     "@parcel/transformer-sass": "^2.0.0-nightly.778",
     "@parcel/transformer-vue": "^2.0.0-nightly.2400",
     "@types/highlight.js": "^10.1.0",
-    "@types/node": "^16.4.3",
+    "@types/node": "^16.4.7",
     "@vue/component-compiler-utils": "^3.2.2",
     "autoprefixer": "^10.3",
     "parcel": "^2.0.0-nightly.776",
