@@ -1,7 +1,0 @@
-{
-  "version": 2,
-  "name": "f3l1x-cdn",
-  "routes": [
-    { "src": "/(.*)", "dest": "https://ik.imagekit.io/felix/$1" }
-  ]
-}
