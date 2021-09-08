@@ -179,7 +179,21 @@ const config = {
 
 // Production config
 if (ENV.APP_PROD) {
+  // https://google-analytics.nuxtjs.org
+  config.buildModules!.push('@nuxtjs/google-analytics');
+  (config.publicRuntimeConfig as any)['googleAnalytics'] = {
+    id: 'UA-28123999-1'
+  };
+
   // UA-28123999-1
+  // 985f01401b527b16e809a765beb0c127c3d8f50e
+  // https://github.com/f00b4r/nuxt-smartlook
+  config.modules!.push('nuxt-smartlook');
+  config.smartlook = {
+    id: "be0504981ed612259f1b65116dfdb02df7fdc5b6",
+    // enabled: process.env.NODE_ENV === 'production',
+  }
+
   // 985f01401b527b16e809a765beb0c127c3d8f50e
   // https://github.com/f00b4r/nuxt-smartlook
   config.modules!.push('nuxt-smartlook');
