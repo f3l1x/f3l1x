@@ -1,0 +1,8 @@
+{
+  "version": 2,
+  "name": "f3l1x",
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/.*", "status": 404, "dest": "fallback.html" }
+  ]
+}

@@ -13,6 +13,6 @@ indent_style = tab
 indent_size = tab
 tab_width = 4
 
-[*.{js,ts,json,yml,yaml}]
+[*.{js,ts,vue,json,yml,yaml}]
 indent_style = space
 indent_size = 2
