@@ -1,0 +1,255 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@layer base {
+  // Globals
+  html {
+    @apply font-body;
+  }
+
+  // Code
+  pre[class*="language-"] {
+    @apply rounded-md;
+    margin: 0 !important;
+  }
+
+  p > code:not([class]) {
+    @apply text-xs bg-gray-200 rounded-md px-1 py-0.5;
+  }
+
+  a {
+    code:not([class]) {
+      @apply text-black underline;
+    }
+  }
+
+  h1, h2, h3 {
+    code:not([class]) {
+      @apply bg-gray-200 rounded-md px-1 py-0.5;
+    }
+  }
+
+  // Content
+  .nuxt-content {
+    @apply leading-normal;
+    a {
+      @apply underline text-blue-700;
+      &:hover {
+        @apply no-underline;
+      }
+    }
+
+    abbr {
+      @apply border-b border-dotted;
+      cursor: help;
+    }
+
+    cite {
+      @apply italic;
+    }
+
+    hr {
+      @apply bg-gray-300 border-none block h-px my-12;
+    }
+
+    img {
+      vertical-align: text-bottom;
+    }
+
+    ins {
+      @apply bg-green-300 no-underline;
+    }
+
+    mark {
+      @apply bg-yellow-500;
+    }
+
+    small {
+      @apply text-sm;
+    }
+
+    strong {
+      @apply font-bold;
+    }
+
+    sub, sup {
+      @apply text-xs;
+    }
+
+    sub {
+      vertical-align: sub;
+    }
+
+    sup {
+      vertical-align: super;
+    }
+
+    p, dl, ol, ul, blockquote, pre, table {
+      @apply mb-4;
+    }
+
+    p:last-child, dl:last-child, ol:last-child, ul:last-child, blockquote:last-child, pre:last-child, table:last-child {
+      @apply mb-0;
+    }
+
+    p:empty {
+      @apply hidden;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      @apply font-medium leading-tight mb-8 mt-8;
+    }
+
+    h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child {
+      @apply mt-0;
+    }
+
+    h1 {
+      @apply text-3xl leading-none;
+    }
+
+    h2 {
+      @apply text-2xl leading-tight tracking-tight;
+    }
+
+    h3 {
+      @apply text-xl ;
+    }
+
+    h4 {
+      @apply text-lg text-gray-900;
+    }
+
+    h5 {
+      @apply text-base;
+    }
+
+    h6 {
+      @apply text-base;
+    }
+
+    dd {
+      @apply ml-6;
+    }
+
+    ol, ul {
+      @apply ml-6;
+      list-style-position: outside;
+    }
+
+    ol {
+      list-style-type: decimal;
+    }
+
+    ol ol {
+      list-style-type: lower-alpha;
+    }
+
+    ol ol ol {
+      list-style-type: lower-roman;
+    }
+
+    ol ol ol ol {
+      list-style-type: lower-greek;
+    }
+
+    ol ol ol ol ol {
+      list-style-type: decimal;
+    }
+
+    ol ol ol ol ol ol {
+      list-style-type: lower-alpha;
+    }
+
+    ul {
+      list-style-type: disc;
+    }
+
+    ul ul {
+      list-style-type: circle;
+    }
+
+    ul ul ul {
+      list-style-type: square;
+    }
+
+    ul ul ul ul {
+      list-style-type: circle;
+    }
+
+    ul ul ul ul ul {
+      list-style-type: disc;
+    }
+
+    ul ul ul ul ul ul {
+      list-style-type: circle;
+    }
+
+    blockquote {
+      @apply border-l-4 py-3 px-6;
+    }
+
+    blockquote h2:last-of-type, blockquote h3:last-of-type, blockquote h4:last-of-type, blockquote h5:last-of-type, blockquote p:last-of-type, blockquote dl:last-of-type, blockquote ol:last-of-type, blockquote ul:last-of-type, blockquote blockquote:last-of-type, blockquote pre:last-of-type, blockquote table:last-of-type {
+      @apply mb-0;
+    }
+
+    blockquote p {
+      @apply mb-0;
+    }
+
+    figure {
+      @apply mb-10 text-center;
+    }
+
+    figure img {
+      @apply mx-auto;
+    }
+
+    figure:first-child {
+      @apply mt-0;
+    }
+
+    figure:last-child {
+      @apply mb-0;
+    }
+
+    figcaption {
+      @apply text-base mt-3;
+    }
+
+    table {
+      @apply w-full;
+    }
+
+    table pre {
+      @apply whitespace-pre-wrap;
+    }
+
+    th, td {
+      @apply text-base p-3 border leading-normal;
+    }
+
+    thead tr, tfoot tr {
+      @apply bg-gray-100;
+    }
+
+    thead th, thead td, tfoot th, tfoot td {
+      @apply text-base p-3;
+    }
+
+    thead th code, thead td code, tfoot th code, tfoot td code {
+      @apply bg-white;
+    }
+
+    tbody tr {
+      @apply bg-white;
+    }
+
+    .nuxt-content-highlight {
+      @apply shadow-xl my-8 rounded-md border border-gray-300;
+    }
+
+  }
+
+}

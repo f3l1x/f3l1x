@@ -1,9 +1,0 @@
-{{- if strings.HasSuffix . ".css" -}}
-	{{ $css := os.Stat (printf "static/%s" . ) }}
-	<link href="{{ . }}?v={{ $css.ModTime.Unix }}" rel="stylesheet">
-{{- end -}}
-
-{{- if strings.HasSuffix . ".js" -}}
-	{{ $js := os.Stat (printf "static/%s" . ) }}
-	<script src="{{ . }}?v={{ $js.ModTime.Unix }}" defer></script>
-{{- end -}}

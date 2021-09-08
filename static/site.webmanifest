@@ -1,0 +1,14 @@
+{
+    "name": "Milan Felix Šulc - engineering for living",
+    "short_name": "f3l1x.io",
+    "icons": [
+        {
+            "src": "/img/f3l1x.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#48bb78",
+    "background_color": "#ffffff",
+    "display": "standalone"
+}

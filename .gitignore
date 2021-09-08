@@ -1,0 +1,11 @@
+# NPM
+/node_modules
+
+# Nuxt
+/.nuxt
+/public
+/dist
+
+# Vercel
+.vercel
+
