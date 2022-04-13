@@ -31,6 +31,26 @@ export default [
         ]
       },
       {
+        "date": "25.03.2022",
+        "title": "Kralovehradecky kraj - DataKHK",
+        "cover": "https://ik.imagekit.io/felix/talks/2022-03-datakhk.png",
+        "cta": "https://github.com/krhk/opendata/",
+        "action": {
+          "title": "Kralovehradecky kraj",
+          "url": "https://datakhk.cz"
+        },
+        "links": [
+          {
+            "type": "slides",
+            "url": "https://slides.com/f3l1x/2022-03-25-datakhk"
+          },
+          {
+            "type": "code",
+            "url": "https://github.com/krhk/opendata/"
+          }
+        ]
+      },
+      {
         "date": "26.02.2022",
         "title": "Sexy latte widgety 101",
         "cover": "https://img.youtube.com/vi/G-MigprZmzQ/maxresdefault.jpg",
@@ -79,7 +99,7 @@ export default [
           },
           {
             "type": "code",
-            "url": "https://github.com/https://github.com/f00b4r/2021-10-01-phplive"
+            "url": "https://github.com/f00b4r/2021-10-01-phplive"
           },
           {
             "type": "event",
