@@ -1,7 +1,96 @@
 export default [
   {
+    "group": "2022",
+    "talks": [
+      {
+        "date": "26.03.2022",
+        "title": "Serverless Phpstan Playground",
+        "cover": "https://img.youtube.com/vi/oMSX8UXB-mY/maxresdefault.jpg",
+        "cta": "https://www.youtube.com/watch?v=oMSX8UXB-mY",
+        "action": {
+          "title": "#posobota",
+          "url": "https://posobota.cz"
+        },
+        "links": [
+          {
+            "type": "slides",
+            "url": "https://slides.com/f3l1x/2022-03-26-serverless-phpstan-playground"
+          },
+          {
+            "type": "code",
+            "url": "https://github.com/juicyfx/vercel-phpstan"
+          },
+          {
+            "type": "event",
+            "url": "https://www.facebook.com/events/3188451768051952"
+          },
+          {
+            "type": "video",
+            "url": "https://www.youtube.com/watch?v=oMSX8UXB-mY"
+          }
+        ]
+      },
+      {
+        "date": "26.02.2022",
+        "title": "Sexy latte widgety 101",
+        "cover": "https://img.youtube.com/vi/G-MigprZmzQ/maxresdefault.jpg",
+        "cta": "https://www.youtube.com/watch?v=G-MigprZmzQ",
+        "action": {
+          "title": "#posobota",
+          "url": "https://posobota.cz"
+        },
+        "links": [
+          {
+            "type": "slides",
+            "url": "https://slides.com/f3l1x/2022-02-26-sexy-latte-widgety-101"
+          },
+          {
+            "type": "code",
+            "url": "https://github.com/contributte/embedded-skeleton"
+          },
+          {
+            "type": "event",
+            "url": "https://www.facebook.com/events/630120838050034"
+          },
+          {
+            "type": "video",
+            "url": "https://www.youtube.com/watch?v=G-MigprZmzQ"
+          }
+        ]
+      },
+    ],
+  },
+  {
     "group": "2021",
     "talks": [
+      {
+        "date": "01.01.2021",
+        "title": "Deep Dive into Serverless PHP",
+        "cover": "https://img.youtube.com/vi/pE7ChHNWHiA/maxresdefault.jpg",
+        "cta": "https://www.youtube.com/watch?v=pE7ChHNWHiA",
+        "action": {
+          "title": "PHPlive",
+          "url": "https://www.phplive.cz/"
+        },
+        "links": [
+          {
+            "type": "slides",
+            "url": "https://slides.com/f3l1x/2021-10-01-deep-dive-into-serverless-php"
+          },
+          {
+            "type": "code",
+            "url": "https://github.com/https://github.com/f00b4r/2021-10-01-phplive"
+          },
+          {
+            "type": "event",
+            "url": "https://www.facebook.com/pehapelive/"
+          },
+          {
+            "type": "video",
+            "url": "https://www.youtube.com/watch?v=pE7ChHNWHiA"
+          }
+        ]
+      },
       {
         "date": "27.03.2021",
         "title": "Proč je dobré míti Contributte ve vaší aplikaci?",
