@@ -83,8 +83,8 @@
           <p class="text-gray-200 leading-6">
             Rewritten by <a class="font-bold hover:underline" href="https://f3l1x.io">f3l1x</a>.
             Generated with <a class="font-bold hover:underline" href="https://nuxtjs.org">Nuxt.js</a>.
-            Hosted on <a class="font-bold hover:underline" href="https://vercel.com">Vercel</a>.
-            View <a class="font-bold hover:underline" href="https://github.com/f3l1x/f3l1x">source</a>.
+            Powered by <a class="font-bold hover:underline" href="https://vercel.com?utm_source=milansulc&utm_campaign=oss"></a>.
+            <a class="font-bold hover:underline" href="https://github.com/f3l1x/f3l1x">Open source code</a>.
           </p>
         </div>
       </div>
