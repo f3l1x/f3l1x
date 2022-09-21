@@ -1,7 +1,7 @@
 const ENV = process.env.APP_ENV || 'development';
 
 export default {
-  APP_URL: (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : null) || process.env.APP_URL || "http://localhost:3000",
+  APP_URL: process.env.APP_URL || (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : null) || "http://localhost:3000",
   APP_ENV: ENV,
   APP_DEV: ENV === 'development',
   APP_PROD: ENV === 'production',
