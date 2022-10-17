@@ -30,6 +30,7 @@ const config = {
       { hid: 'theme-color', name: 'theme-color', content: '#4299e1' },
       { hid: 'description', name: 'description', content: 'I am Milan Šulc and I engineering for living.' },
       { hid: 'keywords', name: 'keywords', content: 'milan šulc, f3l1x, developer, php, nette, nette framework, javascript, typescript, vue, contributte' },
+      { hid: 'seznam-wmt', name: 'seznam-wmt', content: 'g2ODQtap9keZ3qlncIXU8mcAPVzW8iCs' },
     ],
     link: [
       { rel: 'manifest', href: '/site.webmanifest' },
