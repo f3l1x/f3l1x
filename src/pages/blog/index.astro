@@ -1,0 +1,6 @@
+---
+import { getCollection } from 'astro:content'
+import List from '../../layouts/List.astro'
+const items = (await getCollection('blog')).sort((a, b) => (b.data.date?.getTime() ?? 0) - (a.data.date?.getTime() ?? 0))
+---
+<List title="Blog" items={items} base="/blog" />

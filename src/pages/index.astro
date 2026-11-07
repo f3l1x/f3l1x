@@ -1,0 +1,14 @@
+---
+import { getCollection } from 'astro:content'
+import Base from '../layouts/Base.astro'
+const posts = (await getCollection('blog')).sort((a, b) => (b.data.date?.getTime() ?? 0) - (a.data.date?.getTime() ?? 0)).slice(0, 8)
+---
+<Base title="f3l1x">
+  <h1>Hey! I am Milan Šulc, better known as Felix.</h1>
+  <p>I do code <strong>for a living</strong>. 👨‍💻</p>
+  <h2 style="margin-top:2.5rem">Latest posts</h2>
+  <ul class="list">
+    {posts.map((e) => <li><time>{e.data.date?.toISOString().slice(0, 10)}</time><a href={`/blog/${e.id}`}>{e.data.title}</a></li>)}
+  </ul>
+  <p><a href="/blog">All posts →</a></p>
+</Base>

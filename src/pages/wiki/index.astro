@@ -1,0 +1,6 @@
+---
+import { getCollection } from 'astro:content'
+import List from '../../layouts/List.astro'
+const items = (await getCollection('wiki')).sort((a, b) => a.data.title.localeCompare(b.data.title))
+---
+<List title="Wiki" items={items} base="/wiki" />

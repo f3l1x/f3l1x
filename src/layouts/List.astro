@@ -1,0 +1,15 @@
+---
+import Base from './Base.astro'
+const { title, items, base } = Astro.props
+---
+<Base title={title}>
+  <h1>{title}</h1>
+  <ul class="list" style="margin-top:2rem">
+    {items.map((e: any) => (
+      <li>
+        <time>{e.data.date ? e.data.date.toISOString().slice(0, 10) : ''}</time>
+        <a href={`${base}/${e.id}`}>{e.data.title}</a>
+      </li>
+    ))}
+  </ul>
+</Base>

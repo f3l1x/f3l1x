@@ -1,0 +1,67 @@
+---
+title: "GitHub Sponsors pro Felixe"
+description: "Github v květnu 2019 oznámil podporu pro vývojáře prostřednictvím Github Sponsors. Jak jsem do tohoto vlaku naskočil?"
+tags: ["github","sponsor","donate"]
+date: "2020-08-15"
+source: "https://f3l1x.super.site/blog/2020/github-sponsors-pro-felixe"
+---
+
+Github v [květnu 2019](https://github.blog/2019-05-23-announcing-github-sponsors-a-new-way-to-contribute-to-open-source/) oznámil podporu pro vývojáře prostřednictvím Github Sponsors. Jak jsem do tohoto vlaku naskočil?
+
+![image](./github-sponsors-pro-felixe.assets/github-sponsors1-13bd52e7.png)
+
+Na Githubu jsem od roku 2010. Od té doby jsem vytvořil nebo se zapojil do více než 250 projektů. Můj hlavní programovací jazyk byl a je PHP. Mám ho rád již od začátku, i když ho lidé v dnešní době nepovažují za trendy jazyk. Většina mých aktivit se točí kolem PHP a [balíčků](https://contributte.org/) pro [Nette Framework](https://nette.org/).
+
+V roce 2010 by mě ani nenapadlo, že by OSS mohl generovat peníze. Opravdu. Ani jsem nikoho neznal. Kdo by se tak mohl pyšnit v roce 2010, že vyvíjí OSS, a ještě za to dostáva zaplaceno? Úplně sen. Nejspíš někdo byl, ale určitě jich nebylo tolik jako dnes. Snad se mi podařilo alespoň trochu takovým lidem přiblížit.
+
+Co tedy stálo za mým posunem na Githubu? Bezpochyby velký posun byl, když jsem se připojil k [Nette](https://nette.org/) organizaci.
+
+![image](./github-sponsors-pro-felixe.assets/nette-joined-ca33fe44.png)
+
+Kromě vzrušení jsem cítil i velkou zodpovědnost. Ono zase tolik lídí v organizaci není a být tam po boku [Davida Grudla](https://davidgrudl.com/) a [Jakuba Vrány](https://vrana.cz/) je cool. Výčet ještě nekončí, tým tvoří ještě [Honza Černý](https://honzacerny.com/) a [Miloslav Hůla](https://github.com/milo). Za ty roky se kolem Nette pohybovala celá řádka lidí, na ty nesmíme zapomínat.
+
+![image](./github-sponsors-pro-felixe.assets/nette-team-e0926122.png)
+
+Jedna z mých aktivit (po připojení do Nette) v lettech 2017-2019 byla aktualizace dokumentace - issue s názvem [Big boom update](https://github.com/nette/docs/issues/533), standardizace dokumentace, a jak už název napovídá, byla to celkem jízda. Myslím, že dokumentace celkem prokoukla. Klasicky se vyrojili i hejtři, ale kladný ohlas převládal.
+
+Měsíce plynuly a světlo Github světa spatřila organizace [Contributte](https://contributte.org/), **First::class rozšíření do Nette**, která mě plně zaměstnala (zaměstnává do teď). Pronikl jsem do tajů správy mnoha balíčků, vydávání verzí, přechod na Nette 3, PHP 7.1 až 7.4, sjednocování standardů, rozcházení CI, připojování dalších lídí, vlastní web, support issues, komunikační kanály a spousta dalších vecí, na které jsem zapomněl a jsou pro všechny samozřejmé.
+
+Během contributte boomu se pozakládaly i další organizace, jako je [Apitte](https://github.com/apitte), [Nettrine](https://github.com/nettrine), [Dockette](https://github.com/dockette), [Ninjify](https://github.com/ninjify), [WebKitty](https://github.com/webkitty), [PwnLabs](https://github.com/pwnlabs) a další, které stihly shořet jako Fénix, než si jich někdo všiml.
+
+Myslím si, že dnes už jsem moudřejší nejenom kvůli tomu, že už mi táhne na 30, ale i po těch letech vývoje a publikování kódu na Githubu. Mnohdy jsem si říkal, jestli má vůbec cenu založit ten repozitář, pushnout ty kódy, napsat k tomu to README, vymyslet catchy popisek, vybrat fancy ikonku, nastavit správné topics, uff... něco mě na tom musí hrozně bavit. Hlavně, bylo by mi to líto je tam nedat, když už jsem je jednou napsal.
+
+Dnes už se snažím bezhlavě nezakládat organizace, zjistil jsem, že mnoho organizací lidi spíš mate. Nevědí, co sledovat, a ne každý je takový nadšenec, já vím [Honzo](https://honzacerny.com/), že jsi to říkal. Raději sepisuju roadmapu/vizi, abych si utřídil myšlenky a nastavil tak cíle a očekávání. Něco, na co se lidé mohou spolehnout. A ono to funguje. Postupně se vytvořila základna lidí a firem, které spolehají na **contributte** balíčky. A nejen to. Sada Docker images, které jsem si tvořil spíš pro sebe a firmy, se kterými spolupracuji, mají tisíce stažení.
+
+Takový jednorožec je [dockette/adminer](https://hub.docker.com/r/dockette/adminer), který má už přes 1M stažení.
+
+Další zajímavý projekt je možnost používat PHP na Serverless platformě [Vercel](https://github.com/vercel), kolem toho vznikl celý ekosystém, říkam mu [Juicy Functions](https://github.com/juicyfx).
+
+**Jak teda ten Github Sponsors?**
+
+Sebral jsem veškerou odvahu a v lednu 2020 poslal žádost o založení Github Sponsors účtu. Jen jsem to chtěl zkusit, podobně jako na pracovních pohovorech. Zhruba po 14 dnech, přisel e-mail. Bereme vás!
+
+![image](./github-sponsors-pro-felixe.assets/github-sponsor5-95b46369.png)
+
+Štěstím bez sebe jsem proklikal všechny odkazy, které šlo. V lednu nešlo zvolit žádnou českou banku, tak mi [Ondra Mirtes](https://github.com/ondrejmirtes) doporučil Revolut. Bylo nutné autorizovat Revolut účet přes Stripes. Chvíli to trvalo, ale nakonec se podařilo. Schváleno.
+
+![image](./github-sponsors-pro-felixe.assets/github-sponsor4-d252b18b.png)
+
+A pak ten skvělý pocit, když získáte svého prvního sponzora. Díky [Honzo](https://honzacerny.com/)!
+
+Ty bláho, druhý sponzor. Moc díky [Ondro](https://github.com/ondrejsika).
+
+![image](./github-sponsors-pro-felixe.assets/github-sponsor-chemix1-09dc88a0.png)
+
+Aktuálně se našlo [9 skvělých lidí](https://github.com/sponsors/f3l1x), kterým stojím za to, aby mě podpořili. Za což jsem jim moc vděčný.
+
+![image](./github-sponsors-pro-felixe.assets/github-sponsors-sika-68d72faf.png)
+
+![image](./github-sponsors-pro-felixe.assets/github-sponsor6-2da37e8c.png)
+
+Snad jsem vám alespoň trochu přiblížil můj OSS příběh. Pokud vás moje balíčky inspirovaly nebo vám usnadnily práci, budu rád, když mě podpoříte i vy skrze [Github Sponsors](https://github.com/sponsors/f3l1x). Abych si mohl vyčlenit více času na OSS.
+
+-   Github Sponsors - [https://github.com/sponsors/f3l1x](https://github.com/sponsors/f3l1x)
+-   Contributte Partners - [https://contributte.org/partners.html](https://contributte.org/partners.html)
+-   Článek na Nette Blogu - [https://blog.nette.org/cs/rozhovor-s-milanem-sulcem-o-contributte-a-open-source](https://blog.nette.org/cs/rozhovor-s-milanem-sulcem-o-contributte-a-open-source)
+
+Díky. Felix

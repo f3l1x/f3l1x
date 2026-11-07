@@ -1,11 +1,13 @@
-# NPM
 /node_modules
-
-# Nuxt
-/.nuxt
-/public
 /dist
-
-# Vercel
+/.astro
 .vercel
+.env
+.DS_Store
 
+# Migration scratch (raw snapshots, export, scraper deps, intermediate output)
+/migration/raw
+/migration/content
+/migration/report.json
+/notion-export
+/scripts/scrape/node_modules

@@ -1,0 +1,9 @@
+---
+import { getCollection } from 'astro:content'
+import Entry from '../layouts/Entry.astro'
+export async function getStaticPaths() {
+  return (await getCollection('pages')).map((entry) => ({ params: { page: entry.id }, props: { entry } }))
+}
+const { entry } = Astro.props
+---
+<Entry entry={entry} />

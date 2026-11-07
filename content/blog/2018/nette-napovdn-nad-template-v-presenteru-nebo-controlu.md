@@ -1,0 +1,51 @@
+---
+title: "Nette: napovídání nad template v presenteru nebo controlu"
+description: "Jak na napovídání nad objektem template v presenteru nebo controlu?"
+tags: ["nette","dependency injection"]
+date: "2018-10-19"
+source: "https://f3l1x.super.site/blog/2018/nette-napovdn-nad-template-v-presenteru-nebo-controlu"
+---
+
+Jak na napovídání nad objektem `template` v presenteru nebo controlu?
+
+Každý Nette vývojář se již setkal s proměnnou [`$template`](https://api.nette.org/2.4/Nette.Bridges.ApplicationLatte.Template.html) v presenterech nebo controlech. Data do šablony vkládáme sami, ale objekt template obsahuje pár předdefinovaných properties. Ty se tam dostanou z [TemplateFactory](https://api.nette.org/2.4/source-Bridges.ApplicationLatte.TemplateFactory.php.html#101-128).
+
+No jo, ale PHPStorm nám žadné klíče, kromě definovaných interfacem [`ITemplate`](https://api.nette.org/2.4/Nette.Application.UI.ITemplate.html), nenapovídá. Jak toho tedy docílit?
+
+## TemplateProperty
+
+Vytvořme třídu `TemplateProperty`, která bude obsahovat pouze anotace a budě dědit od `Nette\Bridges\ApplicationLatte\Template`.
+
+## Base{Control, Presenter}
+
+V našem `BaseControl` a `BasePresenter` definujme phpdoc `@property-read`.
+
+```php
+<?php declare(strict_types = 1);
+
+namespace App\UI\Control;
+
+use App\Model\Latte\TemplateProperty;
+
+/**
+ * @property-read TemplateProperty $template
+ */
+abstract class BaseControl extends Control
+{
+}
+```
+
+## PHPStorm
+
+Každá třída dědící od `BaseControl` nebo `BasePresenter` bude nyní PHPStorm správně napovídat.
+
+![image](./nette-napovdn-nad-template-v-presenteru-nebo-controlu.assets/untitled-c1b72de8.png)
+
+## Related
+
+Až po dopsání jsem si všiml, že David vydal podobný článek.
+
+-   [https://blog.nette.org/phpstorm-and-code-completion-for-this-template](https://blog.nette.org/phpstorm-and-code-completion-for-this-template)
+-   [https://phpfashion.com/phpstorm-a-napovidani-nad-this-template](https://phpfashion.com/phpstorm-a-napovidani-nad-this-template)
+
+Jak řešíte napovídání u templates? Podělte se do diskuze.

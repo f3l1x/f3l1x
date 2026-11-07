@@ -1,0 +1,21 @@
+---
+import { render } from 'astro:content'
+import Base from './Base.astro'
+const { entry } = Astro.props
+const { Content } = await render(entry)
+const d = entry.data
+---
+<Base title={d.title} description={d.description}>
+  <article>
+    <h1>{d.title}</h1>
+    <div class="meta">
+      {d.date && <time datetime={d.date.toISOString()}>{d.date.toISOString().slice(0, 10)}</time>}
+      {d.event && <> · {d.event}</>}
+      {d.tags?.map((t: string) => <span class="tag">{t}</span>)}
+    </div>
+    {(d.slides || d.github || d.video || d.meetup) && (
+      <p>{[['Slides', d.slides], ['GitHub', d.github], ['Video', d.video], ['Meetup', d.meetup]].filter(([, u]) => u).map(([l, u]) => <a href={u} rel="noopener" style="margin-right:1rem">{l} ↗</a>)}</p>
+    )}
+    <Content />
+  </article>
+</Base>

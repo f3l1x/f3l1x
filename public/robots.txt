@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://f3l1x.io/sitemap-index.xml

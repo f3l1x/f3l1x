@@ -1,0 +1,52 @@
+---
+interface Props { title: string; description?: string }
+const { title, description } = Astro.props
+const nav = [['Blog', '/blog'], ['Talks', '/talks'], ['Wiki', '/wiki'], ['Notes', '/notes'], ['About', '/about']]
+const path = Astro.url.pathname.replace(/(.)\/$/, '$1')
+---
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title === 'f3l1x' ? 'f3l1x' : `${title} · f3l1x`}</title>
+    {description && <meta name="description" content={description} />}
+    <link rel="canonical" href={new URL(path, Astro.site).href} />
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="/">f3l1x</a>
+      <nav>
+        {nav.map(([label, href]) => <a href={href} aria-current={path.startsWith(href) ? 'page' : undefined}>{label}</a>)}
+      </nav>
+    </header>
+    <main><slot /></main>
+    <footer>© Milan Šulc · <a href="https://github.com/f3l1x">GitHub</a></footer>
+  </body>
+</html>
+<style is:global>
+  :root { color-scheme: light dark; --fg: #1c1c1e; --bg: #fff; --muted: #6b6b70; --line: #e4e4e7; --link: #2563eb; }
+  @media (prefers-color-scheme: dark) { :root { --fg: #e8e8ea; --bg: #111113; --muted: #9a9aa2; --line: #2a2a2e; --link: #7aa2ff; } }
+  * { box-sizing: border-box }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 17px/1.65 system-ui, sans-serif; padding-inline: 1rem }
+  header, main, footer { max-width: 46rem; margin-inline: auto }
+  header { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between; padding-block: 1.5rem; border-bottom: 1px solid var(--line) }
+  .brand { font-weight: 800; font-size: 1.3rem; text-decoration: none; color: var(--fg) }
+  nav { display: flex; gap: 1.1rem; flex-wrap: wrap }
+  nav a { color: var(--muted); text-decoration: none }
+  nav a[aria-current] { color: var(--fg); font-weight: 600 }
+  main { padding-block: 2rem 4rem; overflow-wrap: anywhere }
+  footer { padding-block: 2rem; color: var(--muted); border-top: 1px solid var(--line); font-size: .9rem }
+  a { color: var(--link) }
+  h1 { line-height: 1.2; margin-block: 0 .5rem }
+  img, video, iframe { max-width: 100%; height: auto; border-radius: 6px }
+  pre { overflow-x: auto; padding: 1rem; background: color-mix(in srgb, var(--fg) 6%, transparent); border-radius: 6px; font-size: .9rem }
+  code { font-size: .9em }
+  table { display: block; overflow-x: auto; border-collapse: collapse }
+  td, th { border: 1px solid var(--line); padding: .3rem .6rem }
+  blockquote { margin-inline: 0; padding-inline: 1rem; border-left: 3px solid var(--line); color: var(--muted) }
+  .meta { color: var(--muted); font-size: .9rem; margin-bottom: 2rem }
+  .tag { display: inline-block; padding: 0 .5rem; margin-right: .3rem; border: 1px solid var(--line); border-radius: 99px; font-size: .8rem }
+  ul.list { list-style: none; padding: 0 } ul.list li { display: flex; gap: 1rem; padding-block: .35rem; border-bottom: 1px solid var(--line) }
+  ul.list time { color: var(--muted); min-width: 5.5rem; font-variant-numeric: tabular-nums }
+</style>
