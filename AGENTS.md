@@ -17,6 +17,8 @@ npm run build      # static build to dist/
 npm run preview    # serve the built site
 ```
 
+The `Makefile` wraps these (`make install`, `dev`, `build`, `preview`, `clean`, `distclean`) and adds `make deploy`: a clean build uploaded to Cloudflare Pages with `npx wrangler@4` (project `f3l1x`, branch `master`; override with `CF_PROJECT=` / `CF_BRANCH=`).
+
 There is no test suite: `npm run build` is the gate (type-checks the content schema and renders every page). After changing config files, restart the dev server; a stale cache can be cleared with `rm -rf .astro`.
 
 Do not edit generated or ignored output: `dist/`, `.astro/`, `node_modules/`.
