@@ -1,0 +1,35 @@
+<script>
+  // Wrap each highlighted block: language label + copy button.
+  document.querySelectorAll<HTMLPreElement>('article pre.astro-code').forEach((pre) => {
+    const wrap = document.createElement('div')
+    wrap.className = 'codeblock'
+    pre.replaceWith(wrap)
+    wrap.append(pre)
+
+    const bar = document.createElement('div')
+    bar.className = 'code-bar'
+    const lang = pre.dataset.language
+    if (lang && lang !== 'text' && lang !== 'plaintext') {
+      const l = document.createElement('span')
+      l.className = 'code-lang'
+      l.textContent = lang
+      bar.append(l)
+    }
+    const btn = document.createElement('button')
+    btn.type = 'button'
+    btn.className = 'code-copy'
+    btn.textContent = 'Copy'
+    btn.setAttribute('aria-label', 'Copy code to clipboard')
+    btn.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(pre.textContent ?? '')
+        btn.textContent = 'Copied'
+      } catch {
+        btn.textContent = 'Failed'
+      }
+      setTimeout(() => (btn.textContent = 'Copy'), 1600)
+    })
+    bar.append(btn)
+    wrap.append(bar)
+  })
+</script>

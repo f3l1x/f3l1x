@@ -1,0 +1,12 @@
+# Cloudflare Pages: https://developers.cloudflare.com/pages/configuration/redirects/
+# Junk pages that existed on super.site
+/wiki/test /wiki 301
+/wiki/undefined /wiki 301
+# Old Notion index page, duplicated the /wiki list (subpages under /wiki/index/* still exist)
+/wiki/index /wiki 301
+
+# Conventional locations
+/sitemap.xml /sitemap-index.xml 301
+/security.txt /.well-known/security.txt 301
+/feed /rss.xml 301
+/feed.xml /rss.xml 301

@@ -1,0 +1,143 @@
+<dialog id="ui-search" aria-label="Search">
+  <form method="dialog" class="s-box">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <button type="button" class="s-scope" id="ui-search-scope" hidden aria-label="Remove scope, search the whole site" title="Search the whole site (Backspace)"><span></span> <span aria-hidden="true">×</span></button>
+    <input type="search" id="ui-search-input" placeholder="Search blog, talks, wiki, notes…" autocomplete="off" spellcheck="false" aria-label="Search" aria-controls="ui-search-results" />
+    <kbd>esc</kbd>
+  </form>
+  <ul id="ui-search-results" role="listbox"></ul>
+  <p class="s-hint" id="ui-search-hint">Type to search. <kbd>↑</kbd> <kbd>↓</kbd> to move, <kbd>↵</kbd> to open.</p>
+</dialog>
+
+<script>
+  type Doc = { t: string; u: string; s: string; d: string; g: string[]; b: string }
+  type Indexed = Doc & { nt: string; nd: string; ng: string; nb: string }
+
+  const dlg = document.getElementById('ui-search') as HTMLDialogElement | null
+  const input = document.getElementById('ui-search-input') as HTMLInputElement | null
+  const list = document.getElementById('ui-search-results') as HTMLUListElement | null
+  const hint = document.getElementById('ui-search-hint') as HTMLElement | null
+  if (dlg && input && list && hint) {
+    // lower-case and strip diacritics without changing string length (so snippet offsets stay valid)
+    const norm = (s: string) => Array.from(s, (c) => (c.length === 1 ? c.normalize('NFD')[0] : c)).join('').toLowerCase()
+    const LABEL: Record<string, string> = { blog: 'Blog', talks: 'Talk', wiki: 'Wiki', notes: 'Note', pages: 'Page' }
+
+    let index: Promise<Indexed[]> | null = null
+    const load = () =>
+      (index ??= fetch('/search.json')
+        .then((r) => r.json() as Promise<Doc[]>)
+        .then((docs) => docs.map((d) => ({ ...d, nt: norm(d.t), nd: norm(d.d), ng: norm(d.g.join(' ')), nb: norm(d.b) }))))
+
+    let results: { doc: Indexed; snippet: string }[] = []
+    let active = 0
+
+    const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]!)
+
+    function snippetOf(doc: Indexed, tokens: string[]) {
+      // title or description hit: the description reads better than a slice of page text
+      if (doc.d && tokens.every((tok) => doc.nt.includes(tok) || doc.nd.includes(tok))) return doc.d
+      for (const tok of tokens) {
+        const i = doc.nb.indexOf(tok)
+        if (i >= 0) {
+          const from = Math.max(0, i - 40)
+          return (from > 0 ? '…' : '') + doc.b.slice(from, i + 110).trim() + '…'
+        }
+      }
+      return doc.d || doc.b.slice(0, 120)
+    }
+
+    async function run(q: string) {
+      const tokens = norm(q).split(/[\s-]+/).filter(Boolean) // the index has hyphens as spaces
+      if (!tokens.length) { results = []; render(); return }
+      const docs = await load()
+      const scored: { doc: Indexed; score: number }[] = []
+      for (const doc of docs) {
+        if (scope && doc.s !== scope) continue
+        let score = 0
+        let all = true
+        for (const tok of tokens) {
+          let s = 0
+          if (doc.nt.includes(tok)) {
+            s += doc.nt.startsWith(tok) || doc.nt.includes(' ' + tok) ? 14 : 10
+            if (doc.nt === tok) s += 20 // exact title
+            else if (doc.nt.split(/[^a-z0-9]+/).includes(tok)) s += 6 // whole word in title
+          }
+          if (doc.ng.includes(tok)) s += 6
+          if (doc.nd.includes(tok)) s += 3
+          if (doc.nb.includes(tok)) s += 1
+          if (!s) { all = false; break }
+          score += s
+        }
+        if (all) scored.push({ doc, score })
+      }
+      scored.sort((a, b) => b.score - a.score) // stable: ties keep newest-first order of the index
+      results = scored.slice(0, 8).map(({ doc }) => ({ doc, snippet: snippetOf(doc, tokens) }))
+      active = 0
+      render()
+    }
+
+    function render() {
+      const q = input!.value.trim()
+      hint!.hidden = !!results.length
+      hint!.textContent = !q
+        ? 'Type to search. ↑ ↓ to move, Enter to open.'
+        : scope
+          ? `No results for “${q}” in the ${LABEL[scope].toLowerCase()}. Remove the ${LABEL[scope]} filter to search everything.`
+          : `No results for “${q}”.`
+      list!.innerHTML = results
+        .map((r, i) => `<li role="option" id="s-${i}" aria-selected="${i === active}"><a href="${r.doc.u}" tabindex="-1"><span class="s-title">${esc(r.doc.t)}</span><span class="s-meta"><b>${LABEL[r.doc.s] ?? ''}</b> ${esc(r.snippet)}</span></a></li>`)
+        .join('')
+    }
+
+    function mark() {
+      list!.querySelectorAll('li').forEach((li, i) => li.setAttribute('aria-selected', String(i === active)))
+      list!.children[active]?.scrollIntoView({ block: 'nearest' })
+    }
+
+    // Optional scope: a section key ("wiki") limits results; shown as a removable chip.
+    let scope: string | null = null
+    const chip = document.getElementById('ui-search-scope') as HTMLButtonElement
+    const PLACEHOLDER = input.placeholder
+    function setScope(s: string | null) {
+      scope = s && LABEL[s] ? s : null
+      chip.hidden = !scope
+      chip.firstElementChild!.textContent = scope ? LABEL[scope] : ''
+      input.placeholder = scope ? `Search the ${LABEL[scope].toLowerCase()}…` : PLACEHOLDER
+      if (input.value.trim()) run(input.value)
+    }
+    chip.addEventListener('click', () => { setScope(null); input.focus() })
+    input.addEventListener('keydown', (e) => {
+      if (e.key === 'Backspace' && scope && input.selectionStart === 0 && input.selectionEnd === 0) { e.preventDefault(); setScope(null) }
+    })
+
+    const open = (s?: string | null) => { setScope(s ?? null); if (!dlg.open) dlg.showModal(); input.focus(); input.select(); load() }
+    // a page can set a default scope for the "/" shortcut (wiki pages do)
+    const pageScope = (document.querySelector('[data-search-open][data-search-scope]') as HTMLElement | null)?.dataset.searchScope ?? null
+
+    document.querySelectorAll<HTMLElement>('[data-search-open]').forEach((b) => {
+      b.addEventListener('click', () => open(b.dataset.searchScope))
+      b.addEventListener('pointerenter', () => load(), { once: true })
+    })
+    document.addEventListener('keydown', (e) => {
+      const t = e.target as HTMLElement
+      const typing = t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA' || t.isContentEditable)
+      if ((e.key === 'k' && (e.metaKey || e.ctrlKey)) || (e.key === '/' && !typing && !e.metaKey && !e.ctrlKey && !e.altKey)) {
+        e.preventDefault()
+        open(e.key === '/' ? pageScope : null) // "/" respects the page's scope, Ctrl/Cmd+K is always site-wide
+      }
+    })
+
+    input.addEventListener('input', () => run(input.value))
+    input.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowDown') { e.preventDefault(); if (results.length) { active = (active + 1) % results.length; mark() } }
+      else if (e.key === 'ArrowUp') { e.preventDefault(); if (results.length) { active = (active - 1 + results.length) % results.length; mark() } }
+      else if (e.key === 'Enter') { e.preventDefault(); const r = results[active]; if (r) location.href = r.doc.u }
+    })
+    list.addEventListener('pointermove', (e) => {
+      const li = (e.target as HTMLElement).closest('li')
+      if (li) { const i = [...list.children].indexOf(li); if (i !== active) { active = i; mark() } }
+    })
+    dlg.addEventListener('click', (e) => { if (e.target === dlg) dlg.close() })
+    dlg.addEventListener('close', () => { input.value = ''; results = []; render() })
+  }
+</script>

@@ -1,15 +1,98 @@
 ---
 import Base from './Base.astro'
-const { title, items, base } = Astro.props
+const { title, items, base, compact = false, description, filter = false } = Astro.props
+const blurbs: Record<string, string> = {
+  Blog: 'Blog posts by Milan Šulc on PHP, Nette, Docker, TypeScript, tooling and open source.',
+  Notes: 'Short notes and snippets by Milan Šulc: tools, fixes and things worth remembering.',
+  Wiki: 'Personal wiki by Milan Šulc: curated tools, links and snippets by topic, from Ansible to Vercel.',
+}
+const blurb = description ?? blurbs[title] ?? `${title}: all posts from this year on f3l1x, by Milan Šulc.`
+// lower-case, no diacritics; the client normalizes the query the same way
+const norm = (s: string) => s.normalize('NFD').replace(/\p{M}/gu, '').toLowerCase()
+const haystack = (e: any) => norm([e.data.title, e.data.description ?? '', ...(e.data.tags ?? [])].join(' ').replace(/\s+/g, ' '))
 ---
-<Base title={title}>
+<Base title={title} description={blurb}>
   <h1>{title}</h1>
-  <ul class="list" style="margin-top:2rem">
+  {filter && (
+    <div class="filter">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input type="search" id="ui-filter" placeholder={`Filter ${items.length} pages…`} autocomplete="off" spellcheck="false" aria-label={`Filter ${title.toLowerCase()} pages`} aria-controls="ui-filter-list" />
+    </div>
+  )}
+  <ul id={filter ? 'ui-filter-list' : undefined} class:list={['list', { cols: compact }]}>
     {items.map((e: any) => (
-      <li>
-        <time>{e.data.date ? e.data.date.toISOString().slice(0, 10) : ''}</time>
-        <a href={`${base}/${e.id}`}>{e.data.title}</a>
-      </li>
+      <li data-q={filter ? haystack(e) : undefined}>
+        {!compact && <time>{e.data.date ? e.data.date.toISOString().slice(0, 10) : ''}</time>}
+        <a href={`${base}/${e.id}`}>{e.data.title}</a>      </li>
     ))}
   </ul>
+  {filter && (
+    <p class="filter-empty" id="ui-filter-empty" aria-live="polite" hidden>
+      Nothing here matches. <button type="button" class="linklike" id="ui-filter-all">Search the whole site</button>
+    </p>
+  )}
 </Base>
+
+{filter && (
+  <script is:inline>
+    (function () {
+      var input = document.getElementById('ui-filter'), list = document.getElementById('ui-filter-list')
+      var empty = document.getElementById('ui-filter-empty'), all = document.getElementById('ui-filter-all')
+      if (!input || !list) return
+      var rows = Array.prototype.slice.call(list.children)
+      var norm = function (s) { return s.normalize('NFD').replace(/\p{M}/gu, '').toLowerCase() }
+      // page text comes from the site search index, fetched once on first use; until then only titles/descriptions/tags match
+      var bodies = null, loading = false
+      function loadBodies() {
+        if (bodies || loading) return
+        loading = true
+        fetch('/search.json').then(function (r) { return r.json() }).then(function (docs) {
+          bodies = {}
+          docs.forEach(function (d) { bodies[d.u] = norm(d.b || '') })
+          if (input.value.trim()) apply()
+        }).catch(function () { loading = false })
+      }
+      input.addEventListener('focus', loadBodies)
+      var meta = rows.map(function (li, i) {
+        var a = li.querySelector('a')
+        return { li: li, i: i, href: a.getAttribute('href'), title: norm(a.textContent), q: li.getAttribute('data-q') || '' }
+      })
+      // per token: title beats description/tags beats page text; an exact or leading title match ranks highest
+      function score(m, t) {
+        var body = bodies ? bodies[m.href] || '' : ''
+        return m.title.indexOf(t) >= 0 ? 10 : m.q.indexOf(t) >= 0 ? 4 : body.indexOf(t) >= 0 ? 1 : 0
+      }
+      function apply() {
+        var phrase = norm(input.value.trim()), tokens = phrase.split(/[\s-]+/).filter(Boolean), shown = 0
+        meta.forEach(function (m) {
+          var total = 0
+          for (var k = 0; k < tokens.length; k++) { var s = score(m, tokens[k]); if (!s) { total = 0; break } total += s }
+          if (tokens.length && total) total += m.title === phrase ? 50 : m.title.indexOf(phrase) === 0 ? 20 : 0
+          m.score = tokens.length ? total : 1
+          m.li.hidden = !m.score
+          if (m.score) shown++
+        })
+        // relevance order while filtering, alphabetical (original order) when empty
+        meta.slice().sort(function (a, b) { return (b.score - a.score) || (a.i - b.i) }).forEach(function (m) { list.appendChild(m.li) })
+        empty.hidden = shown > 0
+      }
+      input.addEventListener('input', apply)
+      input.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter') {
+          e.preventDefault()
+          var first = Array.prototype.find.call(list.children, function (li) { return !li.hidden })
+          if (first) location.href = first.querySelector('a').href
+        } else if (e.key === 'Escape' && input.value) {
+          input.value = ''; apply()
+        }
+      })
+      // hand the query over to the full-text site search
+      all.addEventListener('click', function () {
+        var q = input.value, btn = document.querySelector('[data-search-open]'), s = document.getElementById('ui-search-input')
+        if (!btn || !s) return
+        btn.click(); s.value = q; s.dispatchEvent(new Event('input'))
+      })
+      if (input.value) { loadBodies(); apply() } // the browser may restore the input value on back navigation
+    })()
+  </script>
+)}

@@ -1,0 +1,10 @@
+/* TEAM */
+Author: Milan Šulc (Felix)
+Site: https://f3l1x.io
+Contact: milan@sulc.dev
+GitHub: https://github.com/f3l1x
+X: @xf3l1x
+
+/* SITE */
+Built with: Astro, plain Markdown, no client framework
+Source: https://github.com/f3l1x/f3l1x

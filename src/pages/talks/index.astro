@@ -1,6 +1,26 @@
 ---
 import { getCollection } from 'astro:content'
-import List from '../../layouts/List.astro'
+import { Image } from 'astro:assets'
+import Base from '../../layouts/Base.astro'
 const items = (await getCollection('talks')).sort((a, b) => (b.data.date?.getTime() ?? 0) - (a.data.date?.getTime() ?? 0))
+const years = Map.groupBy(items, (e) => e.data.date?.getUTCFullYear() ?? 'Undated')
 ---
-<List title="Talks" items={items} base="/talks" />
+<Base title="Talks" description="Conference and meetup talks by Milan Šulc on Nette, Contributte, Docker, serverless PHP and more, with slides and video.">
+  <h1>Talks</h1>
+  {[...years].map(([year, talks]) => (
+    <section aria-labelledby={`y${year}`}>
+      <h2 class="section" id={`y${year}`}>{year} · {talks.length} {talks.length === 1 ? 'talk' : 'talks'}</h2>
+      <ul class="cards">
+        {talks.map((e) => (
+          <li>
+            <a href={`/talks/${e.id}`}>
+              {e.data.cover ? <Image src={e.data.cover} alt="" widths={[320, 640]} sizes="14rem" loading="lazy" /> : <div style="aspect-ratio:16/9" />}
+              <span>{e.data.title}</span>
+              <small>{e.data.date?.toISOString().slice(0, 7)}</small>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </section>
+  ))}
+</Base>

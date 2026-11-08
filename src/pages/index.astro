@@ -1,14 +1,52 @@
 ---
 import { getCollection } from 'astro:content'
+import { Image } from 'astro:assets'
 import Base from '../layouts/Base.astro'
-const posts = (await getCollection('blog')).sort((a, b) => (b.data.date?.getTime() ?? 0) - (a.data.date?.getTime() ?? 0)).slice(0, 8)
+import { thumbnail } from '../lib/thumb'
+import { websiteLd } from '../lib/seo'
+
+const byDate = (a: any, b: any) => (b.data.date?.getTime() ?? 0) - (a.data.date?.getTime() ?? 0)
+const posts = await Promise.all((await getCollection('blog')).sort(byDate).map(async (e) => ({ e, img: await thumbnail(e) })))
+const featured = posts.filter((p) => p.img).slice(0, 4)
+const more = posts.filter((p) => !featured.includes(p)).slice(0, 5).map((p) => p.e)
+const talks = (await getCollection('talks')).filter((t) => t.data.cover).sort(byDate).slice(0, 3)
+const ym = (d?: Date) => d?.toISOString().slice(0, 7)
 ---
-<Base title="f3l1x">
-  <h1>Hey! I am Milan Šulc, better known as Felix.</h1>
-  <p>I do code <strong>for a living</strong>. 👨‍💻</p>
-  <h2 style="margin-top:2.5rem">Latest posts</h2>
-  <ul class="list">
-    {posts.map((e) => <li><time>{e.data.date?.toISOString().slice(0, 10)}</time><a href={`/blog/${e.id}`}>{e.data.title}</a></li>)}
+<Base title="f3l1x" jsonld={websiteLd} description="Milan Šulc, better known as Felix. I do code for a living: PHP, Docker, TypeScript, open source and Nette.">
+  <section class="hero">
+    <h1 class="lead">Hey, I'm <strong>Milan Šulc</strong>, better known as Felix.</h1>
+    <p>I do code for a living. Open source, PHP, Docker, TypeScript, and whatever I'm tinkering with.</p>
+    <p class="hero-links"><a href="/about">About me</a><a href="/oss">Open source</a><a href="https://github.com/f3l1x">GitHub</a></p>
+  </section>
+
+  <h2 class="section">Latest posts</h2>
+  <ul class="cards">
+    {featured.map(({ e, img }) => (
+      <li>
+        <a href={`/blog/${e.id}`}>
+          <Image src={img!} alt="" widths={[320, 640]} sizes="(max-width: 40rem) 100vw, 19rem" loading="eager" />
+          <span>{e.data.title}</span>
+          <small>{ym(e.data.date)}</small>
+        </a>
+      </li>
+    ))}
   </ul>
-  <p><a href="/blog">All posts →</a></p>
+  <ul class="list" style="margin-top:1rem">
+    {more.map((e) => <li><time>{e.data.date?.toISOString().slice(0, 10)}</time><a href={`/blog/${e.id}`}>{e.data.title}</a></li>)}
+  </ul>
+  <a class="more" href="/blog">All posts →</a>
+
+  <h2 class="section">Recent talks</h2>
+  <ul class="cards cards-3">
+    {talks.map((e) => (
+      <li>
+        <a href={`/talks/${e.id}`}>
+          <Image src={e.data.cover!} alt="" widths={[240, 480]} sizes="(max-width: 40rem) 100vw, 12rem" loading="lazy" />
+          <span>{e.data.title}</span>
+          <small>{ym(e.data.date)}</small>
+        </a>
+      </li>
+    ))}
+  </ul>
+  <a class="more" href="/talks">All talks →</a>
 </Base>

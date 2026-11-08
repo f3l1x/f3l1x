@@ -2,12 +2,16 @@
 import { defineConfig } from 'astro/config'
 import sitemap from '@astrojs/sitemap'
 import rehypeDemoteHeadings from './src/plugins/rehype-demote-headings.mjs'
+import rehypeGallery from './src/plugins/rehype-gallery.mjs'
 
 export default defineConfig({
   site: 'https://f3l1x.io',
   trailingSlash: 'never',
-  // URLs that existed on super.site but were junk pages
-  redirects: { '/wiki/test': '/wiki', '/wiki/undefined': '/wiki' },
+  // Cloudflare Pages serves about.html at /about (about/index.html would be /about/), matching the old URLs.
+  build: { format: 'file' },
   integrations: [sitemap()],
-  markdown: { rehypePlugins: [rehypeDemoteHeadings] },
+  markdown: {
+    rehypePlugins: [rehypeDemoteHeadings, rehypeGallery],
+    shikiConfig: { themes: { light: 'github-light', dark: 'github-dark' }, defaultColor: false },
+  },
 })

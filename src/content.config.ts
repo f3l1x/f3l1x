@@ -2,18 +2,20 @@ import { defineCollection } from 'astro:content'
 import { glob } from 'astro/loaders'
 import { z } from 'astro/zod'
 
-const base = z.object({
+const base = ({ image }: { image: () => z.ZodTypeAny }) => z.object({
+  cover: image().optional(),
   title: z.string(),
   description: z.string().optional(),
   tags: z.array(z.string()).optional(),
   date: z.coerce.date().optional(),
+  updated: z.coerce.date().optional(),
   source: z.string().optional(),
 })
 
 const make = (dir: string, extra: z.ZodRawShape = {}) =>
   defineCollection({
     loader: glob({ pattern: '**/*.md', base: `./content/${dir}` }),
-    schema: base.extend(extra),
+    schema: (ctx) => base(ctx as any).extend(extra),
   })
 
 export const collections = {

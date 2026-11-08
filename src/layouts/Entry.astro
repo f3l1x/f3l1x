@@ -1,21 +1,122 @@
 ---
 import { render } from 'astro:content'
+import { Image, getImage } from 'astro:assets'
 import Base from './Base.astro'
+import Lightbox from '../components/Lightbox.astro'
+import Persona from '../components/Persona.astro'
+import CodeBlocks from '../components/CodeBlocks.astro'
+import { SITE, SECTION_LABEL, breadcrumbLd, detectLang } from '../lib/seo'
+import { usableDescription } from '../lib/content'
 const { entry } = Astro.props
 const { Content } = await render(entry)
 const d = entry.data
+const section: string = entry.collection
+const urlPath = section === 'pages' ? `/${entry.id}` : `/${section}/${entry.id}`
+const isArticle = section === 'blog' || section === 'notes'
+const lang = detectLang(`${d.title}\n${entry.body ?? ''}`)
+const og = d.cover
+  ? (await getImage({ src: d.cover, width: 1200, height: 630, format: 'jpeg', fit: 'cover' })).src
+  : `/og${urlPath}.png`
+const description = usableDescription(d.description) ?? (entry.body ?? '').replace(/!?\[([^\]]*)\]\([^)]*\)/g, '$1').replace(/[#>*`|_-]+/g, ' ').trim()
+const crumbs = [{ name: 'Home', path: '/' }, ...(section === 'pages' ? [] : [{ name: SECTION_LABEL[section] === 'Page' ? 'Pages' : section[0].toUpperCase() + section.slice(1), path: `/${section}` }]), { name: d.title, path: urlPath }]
+const ld: any[] = [breadcrumbLd(crumbs)]
+if (isArticle) ld.push({ '@type': 'BlogPosting', headline: d.title, description: usableDescription(d.description), datePublished: d.date?.toISOString(), dateModified: (d.updated ?? d.date)?.toISOString(), url: `${SITE}${urlPath}`, mainEntityOfPage: `${SITE}${urlPath}`, inLanguage: lang, keywords: d.tags?.join(', '), author: { '@id': `${SITE}/#person` }, publisher: { '@id': `${SITE}/#person` } })
+else if (section === 'talks') ld.push({ '@type': 'CreativeWork', name: d.title, description: usableDescription(d.description), datePublished: d.date?.toISOString(), url: `${SITE}${urlPath}`, inLanguage: lang, creator: { '@id': `${SITE}/#person` }, ...(d.video ? { video: { '@type': 'VideoObject', name: d.title, url: d.video, uploadDate: d.date?.toISOString(), thumbnailUrl: `${SITE}${og}` } } : {}) })
+else ld.push({ '@type': 'WebPage', name: d.title, description: usableDescription(d.description), url: `${SITE}${urlPath}`, inLanguage: lang, datePublished: d.date?.toISOString(), dateModified: (d.updated ?? d.date)?.toISOString() })
+const date = d.date?.toISOString().slice(0, 10)
+const updated = d.updated?.toISOString().slice(0, 10)
+// Wiki pages are living documents: show only when they were last touched.
+const isWiki = section === 'wiki'
+const isTalk = section === 'talks'
+const human = (x: Date) => x.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' })
+const lastTouched: Date | undefined = isWiki ? (d.updated ?? d.date) : undefined
+function youtube(u?: string) {
+  try {
+    const x = new URL(u ?? '')
+    const id = x.hostname.endsWith('youtu.be') ? x.pathname.slice(1) : /youtube\.com$/.test(x.hostname) ? x.searchParams.get('v') : null
+    const t = parseInt(x.searchParams.get('t') ?? x.searchParams.get('start') ?? '0') || 0
+    return id ? `https://www.youtube-nocookie.com/embed/${id}${t ? `?start=${t}` : ''}` : null
+  } catch { return null }
+}
+const videoEmbed = youtube(d.video)
+function slides(u?: string) {
+  try {
+    const x = new URL(u ?? '')
+    const path = x.pathname.replace(/\/$/, '')
+    if (x.hostname === 'slides.com') return `https://slides.com${path}/embed`
+    const gdoc = x.hostname === 'docs.google.com' && path.match(/^\/presentation\/d\/([\w-]+)/)
+    if (gdoc) return `https://docs.google.com/presentation/d/${gdoc[1]}/embed`
+    const prezi = x.hostname === 'prezi.com' && path.match(/^\/(p\/)?([\w-]+)/)
+    if (prezi) return prezi[1] ? `https://prezi.com/p/${prezi[2]}/embed/` : `https://prezi.com/embed/${prezi[2]}/`
+    if (x.hostname === 'nowdoc.github.io') return x.href
+    return null
+  } catch { return null }
+}
+const slidesEmbed = slides(d.slides)
+const links = [['Slides', d.slides], ['GitHub', d.github], ['Video', videoEmbed ? null : d.video], ['Meetup', d.meetup]].filter(([, u]) => u)
+const event = d.event && !/^https?:/.test(d.event) ? d.event : undefined
 ---
-<Base title={d.title} description={d.description}>
+<Base title={d.title} description={description} image={og} type={isArticle ? 'article' : 'website'} published={d.date} tags={d.tags} lang={lang} jsonld={ld}>
   <article>
+    {isWiki && (
+      <div class="wiki-bar">
+        <a href="/wiki" class="wiki-back">← Wiki</a>
+        <button type="button" class="wiki-search" data-search-open data-search-scope="wiki" aria-label="Search the wiki">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <span>Search the wiki…</span>
+          <kbd>/</kbd>
+        </button>
+      </div>
+    )}
+    {entry.id === 'about' && <Persona />}
+    {isTalk ? <>
+      <header class="talk-head">
+        {d.cover && <Image class="talk-cover" src={d.cover} alt="" widths={[240, 480]} sizes="11rem" loading="eager" />}
+        <div>
+          <h1>{d.title}</h1>
+          <div class="meta">
+            {date && <time datetime={date}>{date}</time>}
+            {event && <span>{event}</span>}
+          </div>
+          {links.length > 0 && <div class="links">{links.map(([l, u]) => <a href={u} rel="noopener">{l} ↗</a>)}</div>}
+        </div>
+      </header>
+      {videoEmbed && <h2>Video</h2>}
+      {videoEmbed && <iframe class="embed" src={videoEmbed} title={`${d.title} (video)`} loading="lazy" allow="accelerometer; encrypted-media; picture-in-picture; fullscreen" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>}
+      {slidesEmbed && <h2>Slides</h2>}
+      {slidesEmbed && <iframe class="embed" src={slidesEmbed} title={`${d.title} (slides)`} loading="lazy" allowfullscreen></iframe>}
+    </> : <>
     <h1>{d.title}</h1>
     <div class="meta">
-      {d.date && <time datetime={d.date.toISOString()}>{d.date.toISOString().slice(0, 10)}</time>}
-      {d.event && <> · {d.event}</>}
-      {d.tags?.map((t: string) => <span class="tag">{t}</span>)}
+      {isWiki
+        ? lastTouched && <span class="updated">Last updated <time datetime={lastTouched.toISOString().slice(0, 10)} title={d.date ? `Created ${human(d.date)}` : undefined} data-ago>{human(lastTouched)}</time></span>
+        : <>
+            {date && <time datetime={date}>{date}</time>}
+            {updated && updated !== date && <span>Updated <time datetime={updated}>{updated}</time></span>}
+          </>}
+      {event && <span>{event}</span>}
+      {d.tags?.length ? <span class="tags">{d.tags.map((t: string) => <span>{t} </span>)}</span> : null}
     </div>
-    {(d.slides || d.github || d.video || d.meetup) && (
-      <p>{[['Slides', d.slides], ['GitHub', d.github], ['Video', d.video], ['Meetup', d.meetup]].filter(([, u]) => u).map(([l, u]) => <a href={u} rel="noopener" style="margin-right:1rem">{l} ↗</a>)}</p>
-    )}
+    {d.cover && <Image class="cover" src={d.cover} alt="" widths={[640, 1280]} sizes="(max-width: 40rem) 100vw, 40rem" loading="eager" />}
+    {links.length > 0 && <div class="links">{links.map(([l, u]) => <a href={u} rel="noopener">{l} ↗</a>)}</div>}
+    </>}
     <Content />
   </article>
+  {isWiki && (
+    <script is:inline>
+      // Enhance the absolute date with a relative age ("· 6 months ago"); the date itself works without JS.
+      document.querySelectorAll('time[data-ago]').forEach(function (t) {
+        var days = (Date.now() - new Date(t.dateTime).getTime()) / 864e5
+        if (!(days >= 0) || !window.Intl || !Intl.RelativeTimeFormat) return
+        var rtf = new Intl.RelativeTimeFormat('en', { numeric: 'always' })
+        var s = days < 1 ? 'today' : days < 31 ? rtf.format(-Math.round(days), 'day') : days < 730 ? rtf.format(-Math.round(days / 30.44), 'month') : rtf.format(-Math.floor(days / 365.25), 'year')
+        var el = document.createElement('span')
+        el.className = 'ago'
+        el.textContent = ' · ' + s
+        t.after(el)
+      })
+    </script>
+  )}
+  <Lightbox />
+  <CodeBlocks />
 </Base>

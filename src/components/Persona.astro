@@ -1,0 +1,24 @@
+---
+import { Image } from 'astro:assets'
+import anderson from '../assets/about/anderson.png'
+import neo from '../assets/about/neo.png'
+---
+<div class="persona" role="group" aria-label="Mr. Anderson and Neo">
+  <figure>
+    <Image src={anderson} alt="Milan Šulc" width={128} height={128} densities={[1, 2]} loading="eager" />
+    <figcaption><strong>Milan Šulc</strong><span>by day</span></figcaption>
+  </figure>
+  <span class="vs" aria-hidden="true">/</span>
+  <figure>
+    <Image src={neo} alt="f3l1x avatar" width={128} height={128} densities={[1, 2]} loading="eager" />
+    <figcaption><strong>f3l1x</strong><span>online</span></figcaption>
+  </figure>
+</div>
+<style>
+  .persona { display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem }
+  figure { margin: 0; display: flex; flex-direction: column; align-items: center; gap: .5rem; text-align: center }
+  img { width: 6.5rem; height: 6.5rem; border-radius: 50%; object-fit: cover; border: 1px solid var(--line) }
+  figcaption { display: flex; flex-direction: column; line-height: 1.25; font-size: .9rem }
+  figcaption span { color: var(--muted); font-size: .8rem }
+  .vs { color: var(--muted); font-size: 1.5rem; font-weight: 300; align-self: flex-start; margin-top: 2.5rem }
+</style>
