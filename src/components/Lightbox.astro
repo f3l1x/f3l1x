@@ -11,15 +11,17 @@
 
 <script>
   const dlg = document.getElementById('ui-lightbox') as HTMLDialogElement | null
-  const article = document.querySelector('article')
-  if (dlg && article) {
+  // Only images from the Markdown body: not the avatars, covers or talk thumbnails around it.
+  const body = document.querySelector('article .entry-body')
+  if (dlg && body) {
     const view = dlg.querySelector('img')!
     const BLANK = view.src
     const cap = dlg.querySelector('figcaption')!
     const count = dlg.querySelector('.lb-count') as HTMLElement
     const prev = dlg.querySelector('.lb-prev') as HTMLElement
     const next = dlg.querySelector('.lb-next') as HTMLElement
-    const imgs = [...article.querySelectorAll('img')].filter((i) => !i.closest('a')) as HTMLImageElement[]
+    // Skip linked images and small ones (icons, badges) where zooming shows nothing new.
+    const imgs = [...body.querySelectorAll('img')].filter((i) => !i.closest('a') && !(Number(i.getAttribute('width')) < 400)) as HTMLImageElement[]
     let idx = 0
 
     const show = (i: number) => {

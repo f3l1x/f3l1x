@@ -100,7 +100,7 @@ const event = d.event && !/^https?:/.test(d.event) ? d.event : undefined
     {d.cover && <Image class="cover" src={d.cover} alt="" widths={[640, 1280]} sizes="(max-width: 40rem) 100vw, 40rem" loading="eager" />}
     {links.length > 0 && <div class="links">{links.map(([l, u]) => <a href={u} rel="noopener">{l} ↗</a>)}</div>}
     </>}
-    <Content />
+    <div class="entry-body"><Content /></div>
   </article>
   {isWiki && (
     <script is:inline>
