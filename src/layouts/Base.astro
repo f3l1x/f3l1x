@@ -249,6 +249,10 @@ const ld = jsonld ? (Array.isArray(jsonld) ? jsonld : [jsonld]) : []
   .cards img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; background: var(--code); border: 1px solid var(--line); margin-bottom: .5rem; transition: opacity .15s }
   .cards a:hover img { opacity: .85 } .cards a:hover span { color: var(--accent) }
   .cards small { display: block; color: var(--muted); font-size: .8rem }
+  .card-meta { display: flex; flex-wrap: wrap; align-items: center; gap: .35rem }
+  .card-meta small { margin-right: .25rem }
+  .badge { font-size: .72rem; line-height: 1; padding: .2rem .45rem; border: 1px solid var(--line); border-radius: 999px; color: var(--muted); text-decoration: none; transition: color .15s, border-color .15s }
+  .badge:hover, .badge:focus-visible { color: var(--accent); border-color: var(--accent) }
   .hero { margin-bottom: 3rem }
   .hero p { color: var(--muted); margin-bottom: .75rem }
   .hero .hero-links { display: flex; flex-wrap: wrap; gap: .4rem 1.25rem; font-size: .95rem; margin-top: 1rem }

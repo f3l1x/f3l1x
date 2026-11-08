@@ -3,7 +3,9 @@ import { getCollection } from 'astro:content'
 import { Image } from 'astro:assets'
 import Base from '../../layouts/Base.astro'
 const items = (await getCollection('talks')).sort((a, b) => (b.data.date?.getTime() ?? 0) - (a.data.date?.getTime() ?? 0))
-const years = Map.groupBy(items, (e) => e.data.date?.getUTCFullYear() ?? 'Undated')
+// Videos the talk page embeds (see Entry.astro); others link out directly.
+const embeddable = (u: string) => /^https:\/\/(www\.youtube\.com|youtu\.be|slideslive\.com)\//.test(u)
+const years =Map.groupBy(items, (e) => e.data.date?.getUTCFullYear() ?? 'Undated')
 ---
 <Base title="Talks" description="Conference and meetup talks by Milan Šulc on Nette, Contributte, Docker, serverless PHP and more, with slides and video.">
   <h1>Talks</h1>
@@ -16,8 +18,12 @@ const years = Map.groupBy(items, (e) => e.data.date?.getUTCFullYear() ?? 'Undate
             <a href={`/talks/${e.id}`}>
               {e.data.cover ? <Image src={e.data.cover} alt="" widths={[320, 640]} sizes="14rem" loading="lazy" /> : <div style="aspect-ratio:16/9" />}
               <span>{e.data.title}</span>
-              <small>{e.data.date?.toISOString().slice(0, 7)}</small>
             </a>
+            <div class="card-meta">
+              <small>{e.data.date?.toISOString().slice(0, 7)}</small>
+              {e.data.video && <a class="badge" href={embeddable(e.data.video) ? `/talks/${e.id}#video` : e.data.video} rel={embeddable(e.data.video) ? undefined : 'noopener'} aria-label={`${e.data.title}: video`}>Video</a>}
+              {e.data.slides && <a class="badge" href={`/talks/${e.id}#slides`} aria-label={`${e.data.title}: slides`}>Slides</a>}
+            </div>
           </li>
         ))}
       </ul>

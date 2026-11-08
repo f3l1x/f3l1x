@@ -24,7 +24,7 @@ Do not edit generated or ignored output: `dist/`, `.astro/`, `node_modules/`.
 ## Rules
 
 - **URLs are a public contract.** A page URL is its path under `content/` without `.md`. Never rename or move a file without adding a redirect in `public/_redirects` (`source destination 301`; real 301s on Cloudflare Pages). No trailing slashes: `build.format: 'file'` emits `about.html`, which Pages serves at `/about`. The old `/wiki/index` page was removed (301 to `/wiki`); its subpages under `content/wiki/index/` are still live.
-- **Everything is local.** Images live in the repo next to their Markdown file, no hotlinking. Only YouTube and slide embeds (slides.com, Google Slides, Prezi, nowdoc.github.io) are allowed (CSP in `public/_headers`; add new embed hosts there).
+- **Everything is local.** Images live in the repo next to their Markdown file, no hotlinking. Only YouTube, SlidesLive and slide embeds (slides.com, Google Slides, Prezi, nowdoc.github.io) are allowed (CSP in `public/_headers`; add new embed hosts there).
 - **Every page needs a real `description`** (90 to 155 characters, plain prose). See [CONTENT.md](CONTENT.md).
 - **No client framework, no trackers.** Interactivity is a few small vanilla scripts (search, theme toggle, lightbox, copy button). Keep dependencies minimal; prefer a few lines of code over a new package.
 

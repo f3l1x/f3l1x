@@ -38,7 +38,11 @@ function youtube(u?: string) {
     return id ? `https://www.youtube-nocookie.com/embed/${id}${t ? `?start=${t}` : ''}` : null
   } catch { return null }
 }
-const videoEmbed = youtube(d.video)
+function slideslive(u?: string) {
+  const id = (u ?? '').match(/^https:\/\/slideslive\.com\/(\d+)/)?.[1]
+  return id ? `https://slideslive.com/embed/presentation/${id}` : null
+}
+const videoEmbed = youtube(d.video) ?? slideslive(d.video)
 function slides(u?: string) {
   try {
     const x = new URL(u ?? '')
@@ -81,9 +85,9 @@ const event = d.event && !/^https?:/.test(d.event) ? d.event : undefined
           {links.length > 0 && <div class="links">{links.map(([l, u]) => <a href={u} rel="noopener">{l} ↗</a>)}</div>}
         </div>
       </header>
-      {videoEmbed && <h2>Video</h2>}
+      {videoEmbed && <h2 id="video">Video</h2>}
       {videoEmbed && <iframe class="embed" src={videoEmbed} title={`${d.title} (video)`} loading="lazy" allow="accelerometer; encrypted-media; picture-in-picture; fullscreen" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>}
-      {slidesEmbed && <h2>Slides</h2>}
+      {slidesEmbed && <h2 id="slides">Slides</h2>}
       {slidesEmbed && <iframe class="embed" src={slidesEmbed} title={`${d.title} (slides)`} loading="lazy" allowfullscreen></iframe>}
     </> : <>
     <h1>{d.title}</h1>
