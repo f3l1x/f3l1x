@@ -23,7 +23,7 @@ const haystack = (e: any) => norm([e.data.title, e.data.description ?? '', ...(e
     {items.map((e: any) => (
       <li data-q={filter ? haystack(e) : undefined}>
         {!compact && <time>{e.data.date ? e.data.date.toISOString().slice(0, 10) : ''}</time>}
-        <a href={`${base}/${e.id}`}>{e.data.title}</a>      </li>
+        <a href={`${base}/${e.id}`}>{e.data.title}</a></li>
     ))}
   </ul>
   {filter && (

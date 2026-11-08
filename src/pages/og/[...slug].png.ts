@@ -6,14 +6,15 @@ import path from 'node:path'
 import { allItems } from '../../lib/content'
 import { clip, SECTION_LABEL, SITE_TAGLINE } from '../../lib/seo'
 
-const font = (file: string) => readFileSync(path.join(process.cwd(), 'node_modules/@fontsource/inter/files', `inter-${file}-normal.woff`))
 // Inter ships as separate unicode subsets; Satori falls back by family name, so latin-ext (Š, ř, ž, ...) gets its own family.
-const fonts = [
-  { name: 'Inter', data: font('latin-700'), weight: 700 as const, style: 'normal' as const },
-  { name: 'Inter', data: font('latin-400'), weight: 400 as const, style: 'normal' as const },
-  { name: 'InterExt', data: font('latin-ext-700'), weight: 700 as const, style: 'normal' as const },
-  { name: 'InterExt', data: font('latin-ext-400'), weight: 400 as const, style: 'normal' as const },
-]
+const fonts = [['Inter', 'latin'], ['InterExt', 'latin-ext']].flatMap(([name, subset]) =>
+  ([700, 400] as const).map((weight) => ({
+    name,
+    data: readFileSync(path.join(process.cwd(), 'node_modules/@fontsource/inter/files', `inter-${subset}-${weight}-normal.woff`)),
+    weight,
+    style: 'normal' as const,
+  })),
+)
 
 type Card = { title: string; kicker: string; meta: string }
 

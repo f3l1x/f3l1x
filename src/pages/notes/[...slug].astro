@@ -1,9 +1,7 @@
 ---
-import { getCollection } from 'astro:content'
 import Entry from '../../layouts/Entry.astro'
-export async function getStaticPaths() {
-  return (await getCollection('notes')).map((entry) => ({ params: { slug: entry.id }, props: { entry } }))
-}
+import { entryPaths } from '../../lib/content'
+export const getStaticPaths = () => entryPaths('notes')
 const { entry } = Astro.props
 ---
 <Entry entry={entry} />

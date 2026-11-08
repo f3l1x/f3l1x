@@ -1,14 +1,7 @@
 ---
-import { getCollection } from 'astro:content'
 import List from '../../layouts/List.astro'
-export async function getStaticPaths() {
-  const all = await getCollection('notes')
-  const years = [...new Set(all.map((e) => e.id.split('/')[0]))].filter((y) => /^\d{4}$/.test(y))
-  return years.map((year) => ({
-    params: { year },
-    props: { items: all.filter((e) => e.id.startsWith(year + '/')).sort((a, b) => (b.data.date?.getTime() ?? 0) - (a.data.date?.getTime() ?? 0)) },
-  }))
-}
+import { yearPaths } from '../../lib/content'
+export const getStaticPaths = () => yearPaths('notes')
 const { year } = Astro.params
 const { items } = Astro.props
 ---

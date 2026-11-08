@@ -34,7 +34,7 @@
       prev.hidden = next.hidden = !many
       count.textContent = many ? `${idx + 1} / ${imgs.length}` : ''
       // warm the neighbours
-      for (const n of [idx - 1, idx + 1]) if (imgs[(n + imgs.length) % imgs.length]) new Image().src = imgs[(n + imgs.length) % imgs.length].src
+      for (const n of [idx - 1, idx + 1]) new Image().src = imgs[(n + imgs.length) % imgs.length].src
     }
 
     imgs.forEach((img, i) => {

@@ -4,12 +4,12 @@ import { Image } from 'astro:assets'
 import Base from '../layouts/Base.astro'
 import { thumbnail } from '../lib/thumb'
 import { websiteLd } from '../lib/seo'
+import { newestFirst } from '../lib/content'
 
-const byDate = (a: any, b: any) => (b.data.date?.getTime() ?? 0) - (a.data.date?.getTime() ?? 0)
-const posts = await Promise.all((await getCollection('blog')).sort(byDate).map(async (e) => ({ e, img: await thumbnail(e) })))
+const posts = await Promise.all((await getCollection('blog')).sort(newestFirst).map(async (e) => ({ e, img: await thumbnail(e) })))
 const featured = posts.filter((p) => p.img).slice(0, 4)
 const more = posts.filter((p) => !featured.includes(p)).slice(0, 5).map((p) => p.e)
-const talks = (await getCollection('talks')).filter((t) => t.data.cover).sort(byDate).slice(0, 3)
+const talks = (await getCollection('talks')).filter((t) => t.data.cover).sort(newestFirst).slice(0, 3)
 const ym = (d?: Date) => d?.toISOString().slice(0, 7)
 ---
 <Base title="f3l1x" jsonld={websiteLd} description="Milan Šulc, better known as Felix. I do code for a living: PHP, Docker, TypeScript, open source and Nette.">

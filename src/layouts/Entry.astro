@@ -5,58 +5,43 @@ import Base from './Base.astro'
 import Lightbox from '../components/Lightbox.astro'
 import Persona from '../components/Persona.astro'
 import CodeBlocks from '../components/CodeBlocks.astro'
-import { SITE, SECTION_LABEL, breadcrumbLd, detectLang } from '../lib/seo'
-import { usableDescription } from '../lib/content'
+import { SITE, breadcrumbLd, detectLang } from '../lib/seo'
+import { entryUrl, usableDescription } from '../lib/content'
+import { slidesEmbed as toSlidesEmbed, videoEmbed as toVideoEmbed } from '../lib/embed'
 const { entry } = Astro.props
 const { Content } = await render(entry)
 const d = entry.data
 const section: string = entry.collection
-const urlPath = section === 'pages' ? `/${entry.id}` : `/${section}/${entry.id}`
 const isArticle = section === 'blog' || section === 'notes'
+const isWiki = section === 'wiki'
+const isTalk = section === 'talks'
+const urlPath = entryUrl(section, entry.id)
+const url = `${SITE}${urlPath}`
 const lang = detectLang(`${d.title}\n${entry.body ?? ''}`)
 const og = d.cover
   ? (await getImage({ src: d.cover, width: 1200, height: 630, format: 'jpeg', fit: 'cover' })).src
   : `/og${urlPath}.png`
-const description = usableDescription(d.description) ?? (entry.body ?? '').replace(/!?\[([^\]]*)\]\([^)]*\)/g, '$1').replace(/[#>*`|_-]+/g, ' ').trim()
-const crumbs = [{ name: 'Home', path: '/' }, ...(section === 'pages' ? [] : [{ name: SECTION_LABEL[section] === 'Page' ? 'Pages' : section[0].toUpperCase() + section.slice(1), path: `/${section}` }]), { name: d.title, path: urlPath }]
-const ld: any[] = [breadcrumbLd(crumbs)]
-if (isArticle) ld.push({ '@type': 'BlogPosting', headline: d.title, description: usableDescription(d.description), datePublished: d.date?.toISOString(), dateModified: (d.updated ?? d.date)?.toISOString(), url: `${SITE}${urlPath}`, mainEntityOfPage: `${SITE}${urlPath}`, inLanguage: lang, keywords: d.tags?.join(', '), author: { '@id': `${SITE}/#person` }, publisher: { '@id': `${SITE}/#person` } })
-else if (section === 'talks') ld.push({ '@type': 'CreativeWork', name: d.title, description: usableDescription(d.description), datePublished: d.date?.toISOString(), url: `${SITE}${urlPath}`, inLanguage: lang, creator: { '@id': `${SITE}/#person` }, ...(d.video ? { video: { '@type': 'VideoObject', name: d.title, url: d.video, uploadDate: d.date?.toISOString(), thumbnailUrl: `${SITE}${og}` } } : {}) })
-else ld.push({ '@type': 'WebPage', name: d.title, description: usableDescription(d.description), url: `${SITE}${urlPath}`, inLanguage: lang, datePublished: d.date?.toISOString(), dateModified: (d.updated ?? d.date)?.toISOString() })
+const summary = usableDescription(d.description)
+const description = summary ?? (entry.body ?? '').replace(/!?\[([^\]]*)\]\([^)]*\)/g, '$1').replace(/[#>*`|_-]+/g, ' ').trim()
 const date = d.date?.toISOString().slice(0, 10)
 const updated = d.updated?.toISOString().slice(0, 10)
+const published = d.date?.toISOString()
+const modified = (d.updated ?? d.date)?.toISOString()
+const me = { '@id': `${SITE}/#person` }
+
+const crumbs = [{ name: 'Home', path: '/' }, ...(section === 'pages' ? [] : [{ name: section[0].toUpperCase() + section.slice(1), path: `/${section}` }]), { name: d.title, path: urlPath }]
+const ld: any[] = [breadcrumbLd(crumbs)]
+if (isArticle) ld.push({ '@type': 'BlogPosting', headline: d.title, description: summary, datePublished: published, dateModified: modified, url, mainEntityOfPage: url, inLanguage: lang, keywords: d.tags?.join(', '), author: me, publisher: me })
+else if (isTalk) ld.push({ '@type': 'CreativeWork', name: d.title, description: summary, datePublished: published, url, inLanguage: lang, creator: me, ...(d.video ? { video: { '@type': 'VideoObject', name: d.title, url: d.video, uploadDate: published, thumbnailUrl: `${SITE}${og}` } } : {}) })
+else ld.push({ '@type': 'WebPage', name: d.title, description: summary, url, inLanguage: lang, datePublished: published, dateModified: modified })
+
 // Wiki pages are living documents: show only when they were last touched.
-const isWiki = section === 'wiki'
-const isTalk = section === 'talks'
 const human = (x: Date) => x.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' })
 const lastTouched: Date | undefined = isWiki ? (d.updated ?? d.date) : undefined
-function youtube(u?: string) {
-  try {
-    const x = new URL(u ?? '')
-    const id = x.hostname.endsWith('youtu.be') ? x.pathname.slice(1) : /youtube\.com$/.test(x.hostname) ? x.searchParams.get('v') : null
-    const t = parseInt(x.searchParams.get('t') ?? x.searchParams.get('start') ?? '0') || 0
-    return id ? `https://www.youtube-nocookie.com/embed/${id}${t ? `?start=${t}` : ''}` : null
-  } catch { return null }
-}
-function slideslive(u?: string) {
-  const id = (u ?? '').match(/^https:\/\/slideslive\.com\/(\d+)/)?.[1]
-  return id ? `https://slideslive.com/embed/presentation/${id}` : null
-}
-const videoEmbed = youtube(d.video) ?? slideslive(d.video)
-function slides(u?: string) {
-  try {
-    const x = new URL(u ?? '')
-    const path = x.pathname.replace(/\/$/, '')
-    if (x.hostname === 'slides.com') return `https://slides.com${path}/embed`
-    const gdoc = x.hostname === 'docs.google.com' && path.match(/^\/presentation\/d\/([\w-]+)/)
-    if (gdoc) return `https://docs.google.com/presentation/d/${gdoc[1]}/embed`
-    const prezi = x.hostname === 'prezi.com' && path.match(/^\/(p\/)?([\w-]+)/)
-    if (prezi) return prezi[1] ? `https://prezi.com/p/${prezi[2]}/embed/` : `https://prezi.com/embed/${prezi[2]}/`
-    if (x.hostname === 'nowdoc.github.io') return x.href
-    return null
-  } catch { return null }
-}
-const slidesEmbed = slides(d.slides)
+
+// Talk-only fields
+const videoEmbed = toVideoEmbed(d.video)
+const slidesEmbed = toSlidesEmbed(d.slides)
 const links = [['Slides', d.slides], ['GitHub', d.github], ['Video', videoEmbed ? null : d.video], ['Meetup', d.meetup]].filter(([, u]) => u)
 const event = d.event && !/^https?:/.test(d.event) ? d.event : undefined
 ---
@@ -98,11 +83,9 @@ const event = d.event && !/^https?:/.test(d.event) ? d.event : undefined
             {date && <time datetime={date}>{date}</time>}
             {updated && updated !== date && <span>Updated <time datetime={updated}>{updated}</time></span>}
           </>}
-      {event && <span>{event}</span>}
       {d.tags?.length ? <span class="tags">{d.tags.map((t: string) => <span>{t} </span>)}</span> : null}
     </div>
     {d.cover && <Image class="cover" src={d.cover} alt="" widths={[640, 1280]} sizes="(max-width: 40rem) 100vw, 40rem" loading="eager" />}
-    {links.length > 0 && <div class="links">{links.map(([l, u]) => <a href={u} rel="noopener">{l} ↗</a>)}</div>}
     </>}
     <div class="entry-body"><Content /></div>
   </article>
