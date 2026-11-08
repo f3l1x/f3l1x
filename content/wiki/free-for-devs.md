@@ -1,6 +1,8 @@
 ---
 title: "Free For Devs"
-description: "Free open source alternatives https://www.btw.so/open-source-alternatives?ref=producthunt"
+date: "2022-09-28"
+updated: "2024-11-07"
+description: "Links to free developer resources: the free-for.dev list, open source alternatives to paid software, and a Startup Stash tool directory."
 status: ["Not started"]
 source: "https://f3l1x.super.site/wiki/free-for-devs"
 ---

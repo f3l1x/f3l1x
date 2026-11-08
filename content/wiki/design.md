@@ -1,6 +1,8 @@
 ---
 title: "Design"
-description: "http://getskeleton.com/"
+date: "2024-11-08"
+updated: "2024-11-08"
+description: "Lightweight CSS frameworks and design inspiration: Skeleton, Milligram, Mini.css, Pure.css, Picnic CSS, Tailwind CSS and Bourbon."
 status: ["Not started"]
 source: "https://f3l1x.super.site/wiki/design"
 ---

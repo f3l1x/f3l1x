@@ -1,6 +1,8 @@
 ---
 title: "Development"
-description: "https://abseil.io/resources/swe-book/html/ch24.html"
+date: "2024-04-09"
+updated: "2024-11-07"
+description: "Software development reading: release train articles from the Google SWE book and Runway, plus essays on rewrites and discipline."
 status: ["Not started"]
 source: "https://f3l1x.super.site/wiki/development"
 ---

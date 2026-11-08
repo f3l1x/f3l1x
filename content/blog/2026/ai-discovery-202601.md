@@ -1,8 +1,9 @@
 ---
 title: "AI discovery: 2026/01"
-description: "Product"
+description: "Weekly AI news for January 2026: OpenAI education and health launches, Codex in JetBrains and Copilot, Figma updates, and Anthropic Git MCP CVEs."
 date: "2026-01-31"
 tags: ["ai","discovery"]
+cover: "./ai-discovery-202601.assets/cover.jpg"
 source: "https://f3l1x.super.site/blog/2026/ai-discovery-202601"
 ---
 

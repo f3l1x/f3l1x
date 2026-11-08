@@ -3,6 +3,7 @@ title: "Google Docs Markdown"
 description: "If you like writing in Markdown, Google Docs has you covered. You can turn on native Markdown support in just a few clicks."
 date: "January 13, 2026"
 tags: ["google","docs","markdown"]
+cover: "./google-docs-markdown.assets/cover.png"
 source: "https://f3l1x.super.site/notes/2026/google-docs-markdown"
 ---
 

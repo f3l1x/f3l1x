@@ -1,6 +1,8 @@
 ---
 title: "API"
-description: "https://ritza.co/articles/gen-articles/keycloak-vs-okta-vs-auth0-vs-authelia-vs-cognito-vs-authentik/"
+date: "2022-05-16"
+updated: "2024-11-07"
+description: "API links covering JSON-RPC schemas, auth options like GoTrue and FusionAuth, and testing tools such as Hoppscotch and Insomnia."
 status: ["Not started"]
 source: "https://f3l1x.super.site/wiki/api"
 ---

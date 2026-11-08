@@ -2,6 +2,7 @@
 title: "Disabling FortiVPN Auto-Start on macOS"
 description: "Modify the following launch agents to stop FortiClient from starting at boot:"
 date: "November 30, 2025"
+cover: "./disabling-fortivpn-auto-start-on-macos.assets/cover.jpg"
 source: "https://f3l1x.super.site/notes/2025/disabling-fortivpn-auto-start-on-macos"
 ---
 

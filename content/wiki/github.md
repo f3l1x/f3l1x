@@ -1,6 +1,8 @@
 ---
 title: "Github"
-description: "Github umi v URL zvolit taby https://www.reddit.com/r/javascript/comments/c8drjo/nobody_talks_about_the_real_reason_to_use_tabs/"
+date: "2022-08-13"
+updated: "2024-11-07"
+description: "GitHub notes: setting tabs in URLs, how to contribute to open source, and a ternary-style expression trick for GitHub Actions workflows."
 status: ["Not started"]
 source: "https://f3l1x.super.site/wiki/github"
 ---

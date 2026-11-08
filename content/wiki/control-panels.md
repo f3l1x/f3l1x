@@ -1,6 +1,8 @@
 ---
 title: "Control Panels"
-description: "https://github.com/cockpit-project"
+date: "2022-09-28"
+updated: "2024-11-07"
+description: "Server and hosting control panels: Cockpit, VestaCP, HestiaCP and Coolify, saved as links."
 status: ["Not started"]
 source: "https://f3l1x.super.site/wiki/control-panels"
 ---

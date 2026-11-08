@@ -1,6 +1,8 @@
 ---
 title: "Monitoring"
-description: "https://www.loggly.com/"
+date: "2022-09-28"
+updated: "2025-08-05"
+description: "Bookmarks for log management and uptime monitoring: Loggly, Sematext Logsene, Datadog and the Monika HTTP checker."
 status: ["Not started"]
 source: "https://f3l1x.super.site/wiki/monitoring"
 ---

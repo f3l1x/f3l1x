@@ -1,6 +1,8 @@
 ---
 title: "AI"
-description: "SaaS"
+date: "2023-04-09"
+updated: "2026-08-25"
+description: "Curated AI tooling list: agent frameworks like Letta and CrewAI, MCP servers and directories, coding CLIs such as Aider and Cline, RAG and sandboxes."
 status: ["Not started"]
 source: "https://f3l1x.super.site/wiki/ai"
 ---

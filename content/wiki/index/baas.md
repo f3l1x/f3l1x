@@ -1,6 +1,8 @@
 ---
 title: "BaaS"
-description: "https://github.com/nhost/nhost"
+date: "2025-04-27"
+updated: "2025-04-27"
+description: "List of open-source backend-as-a-service projects: Nhost, Nakama, Parse Server, PocketBase, Strapi, Directus and Hasura."
 status: ["Not started"]
 source: "https://f3l1x.super.site/wiki/index/baas"
 ---

@@ -1,6 +1,8 @@
 ---
 title: "Awesome Lists"
-description: "CLI apps → https://github.com/agarrharr/awesome-cli-apps"
+date: "2023-04-09"
+updated: "2024-11-07"
+description: "Short list of awesome-list repositories on GitHub covering CLI apps, GPT-3 resources and network tunneling tools."
 status: ["Not started"]
 source: "https://f3l1x.super.site/wiki/awesome-lists"
 ---

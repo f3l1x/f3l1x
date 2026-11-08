@@ -1,6 +1,8 @@
 ---
 title: "Docker"
-description: "Docker Hub a vlastni hooky pro buildeni https://medium.com/microscaling-systems/labelling-automated-builds-on-docker-hub-f3d073fb8e1"
+date: "2022-09-28"
+updated: "2025-05-16"
+description: "Docker notes and links: Docker Hub build hooks, multi-stage builds, tiny static web images, image builders like BuildKit and Packer, and registries."
 status: ["Not started"]
 source: "https://f3l1x.super.site/wiki/docker"
 ---

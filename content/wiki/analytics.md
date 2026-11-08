@@ -1,6 +1,8 @@
 ---
 title: "Analytics"
-description: "https://usefathom.com/"
+date: "2022-09-28"
+updated: "2024-11-07"
+description: "Bookmarks of privacy-friendly web analytics services: Fathom, Simple Analytics, Plausible and Splitbee."
 status: ["Not started"]
 source: "https://f3l1x.super.site/wiki/analytics"
 ---

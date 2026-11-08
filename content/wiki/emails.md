@@ -1,6 +1,8 @@
 ---
 title: "Emails"
-description: "https://www.smartemailing.cz/ceny/"
+date: "2022-09-28"
+updated: "2024-11-07"
+description: "Pricing pages and services for email marketing, SMTP delivery and IMAP: SmartEmailing, Mailchimp, Mailgun and SendGrid, among others."
 status: ["Not started"]
 source: "https://f3l1x.super.site/wiki/emails"
 ---

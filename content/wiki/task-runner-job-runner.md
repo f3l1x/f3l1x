@@ -1,6 +1,8 @@
 ---
 title: "Task Runner / Job Runner"
-description: "https://github.com/apache/airflow"
+date: "2022-09-28"
+updated: "2024-11-07"
+description: "Task and job runner tools to look at: Apache Airflow, StackStorm, the just command runner and Windmill."
 status: ["Not started"]
 source: "https://f3l1x.super.site/wiki/task-runner-job-runner"
 ---

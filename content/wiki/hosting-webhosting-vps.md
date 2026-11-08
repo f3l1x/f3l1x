@@ -1,6 +1,8 @@
 ---
 title: "Hosting / Webhosting / VPS"
-description: "https://vercel.com/"
+date: "2022-09-28"
+updated: "2024-11-07"
+description: "Hosting options and pricing: static hosts like Vercel and Netlify, VPS and cloud from Hetzner, Vultr and DigitalOcean, and Fly.io notes."
 status: ["Not started"]
 source: "https://f3l1x.super.site/wiki/hosting-webhosting-vps"
 ---

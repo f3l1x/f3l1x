@@ -3,6 +3,7 @@ title: "Generated Readmes"
 description: "I ran a small experiment on one repository, one task, and three AI agents."
 date: "February 22, 2026"
 tags: ["ai","readme"]
+cover: "./generated-readmes.assets/cover.jpg"
 source: "https://f3l1x.super.site/notes/2026/generated-readmes"
 ---
 
@@ -22,7 +23,7 @@ Copilot produced the largest rewrite with many added sections, examples, and nav
 
 Strong when you want a full docs refresh in one pass, weaker when you want a tight diff.
 
-> > ![image](./generated-readmes.assets/copilot-d1a5cae3.png)
+> ![image](./generated-readmes.assets/copilot-d1a5cae3.png)
 
 ## Claude output
 
@@ -30,7 +31,7 @@ Claude delivered a balanced rewrite: clear intro, quick-start flow, endpoint ove
 
 This felt closest to a “ready for team review” docs draft.
 
-> > ![image](./generated-readmes.assets/markdown-image-514367-d5b1adec.png)
+> ![image](./generated-readmes.assets/markdown-image-514367-d5b1adec.png)
 
 ## Codex output
 
@@ -38,7 +39,7 @@ Codex made the most conservative pass: short, focused, less noisy changes.
 
 Great for maintainability and faster review cycles, but less ambitious in scope.
 
-> > ![image](./generated-readmes.assets/codex-980010ac.png)
+> ![image](./generated-readmes.assets/codex-980010ac.png)
 
 ## Takeaway
 

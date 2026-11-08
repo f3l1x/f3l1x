@@ -1,6 +1,8 @@
 ---
 title: "CSS"
-description: "https://www.keycdn.com/blog/resource-hints"
+date: "2022-08-13"
+updated: "2024-11-07"
+description: "CSS reading list with resource hints, Tailwind CSS, Milligram grids, Semantic UI inputs and a note on Tailwind dark mode."
 status: ["Not started"]
 source: "https://f3l1x.super.site/wiki/css"
 ---

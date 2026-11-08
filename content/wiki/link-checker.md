@@ -1,6 +1,8 @@
 ---
 title: "Link Checker"
-description: "https://github.com/filiph/linkcheck"
+date: "2023-08-23"
+updated: "2024-11-07"
+description: "Tools for finding broken links in websites and docs: linkcheck, muffet, htmltest, linkinator, lychee and other CLI checkers."
 status: ["Not started"]
 source: "https://f3l1x.super.site/wiki/link-checker"
 ---

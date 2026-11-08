@@ -2,6 +2,7 @@
 title: "Doctrine - calculation of changeSet"
 description: "Při práci s Doctrine a UUIDs v Symfony se často potýkáme s několika specifickými výzvami. Tento článek shrnuje klíčové aspekty správného použití."
 date: "2025-11-29"
+cover: "./doctrine-calculation-of-changeset.assets/cover.jpg"
 source: "https://f3l1x.super.site/blog/2025/doctrine-calculation-of-changeset"
 ---
 

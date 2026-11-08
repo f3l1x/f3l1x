@@ -1,6 +1,8 @@
 ---
 title: "Ansible"
-description: "https://www.jeffgeerling.com/blog/2020/ansible-best-practices-using-project-local-collections-and-roles"
+date: "2022-12-02"
+updated: "2024-11-06"
+description: "Ansible links: project-local collections and roles, the geerlingguy Docker role, Spotter, and Vagrant Docker base images."
 status: ["Not started"]
 source: "https://f3l1x.super.site/wiki/ansible"
 ---

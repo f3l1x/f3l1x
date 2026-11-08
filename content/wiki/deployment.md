@@ -1,6 +1,8 @@
 ---
 title: "Deployment"
-description: "https://kamal-deploy.org/docs/installation/"
+date: "2024-11-07"
+updated: "2024-11-07"
+description: "Deployment links with the Kamal installation docs and a gist on using Terraform."
 status: ["Not started"]
 source: "https://f3l1x.super.site/wiki/deployment"
 ---

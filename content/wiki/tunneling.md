@@ -1,6 +1,8 @@
 ---
 title: "Tunneling"
-description: "https://ngrok.com/"
+date: "2022-09-28"
+updated: "2025-07-29"
+description: "Tunneling tools grouped by type: SaaS like ngrok and expose.dev, Tailscale for WireGuard, and self-hosted bore, frp, rathole and chisel."
 status: ["Not started"]
 source: "https://f3l1x.super.site/wiki/tunneling"
 ---

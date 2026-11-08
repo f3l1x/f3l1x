@@ -1,6 +1,6 @@
 ---
 title: "Funding"
-description: "Opensource enthusiast and loving father. My daily job is to build web/desktop applications where one needs a lot of tools and packages these days. I do it constantly since 2010."
+description: "Support Milan Šulc's open-source work via GitHub Sponsors. He maintains about 300+ libraries across several organizations and welcomes feedback."
 source: "https://f3l1x.super.site/funding"
 ---
 

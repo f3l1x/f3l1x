@@ -1,6 +1,8 @@
 ---
 title: "Web Builders"
-description: "https://dorik.com"
+date: "2022-09-28"
+updated: "2024-11-07"
+description: "Website builders compared by bookmark: Webflow, Squarespace, Softr and Typedream, plus Notion-based ones like Super, Potion and Fruition."
 status: ["Not started"]
 source: "https://f3l1x.super.site/wiki/web-builders"
 ---

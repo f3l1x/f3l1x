@@ -1,6 +1,8 @@
 ---
 title: "GTD"
-description: "https://height.app/"
+date: "2022-09-28"
+updated: "2024-11-07"
+description: "Task management, notes and knowledge base apps for personal productivity: Notion, ClickUp, Things, Coda, Slite and Bear."
 status: ["Not started"]
 source: "https://f3l1x.super.site/wiki/gtd"
 ---

@@ -1,5 +1,7 @@
 ---
 title: "Functional Programming [FP]"
+date: "2022-08-13"
+updated: "2024-11-07"
 description: "lodash - Utility library delivering consistency, customization, performance, & extras. A better and faster Underscore.js."
 status: ["Not started"]
 source: "https://f3l1x.super.site/wiki/functional-programming-fp"

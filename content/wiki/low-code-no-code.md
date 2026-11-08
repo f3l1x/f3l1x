@@ -1,6 +1,8 @@
 ---
 title: "Low-Code / No-Code"
-description: "https://getconduit.dev/"
+date: "2023-12-30"
+updated: "2025-04-27"
+description: "Low-code and internal tool builders: Appsmith, ToolJet, Windmill, PocketBase, DashPress and other admin panel generators."
 status: ["Not started"]
 source: "https://f3l1x.super.site/wiki/low-code-no-code"
 ---

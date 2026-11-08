@@ -1,6 +1,8 @@
 ---
 title: "Observability"
-description: "https://timber.io/"
+date: "2022-09-28"
+updated: "2025-08-11"
+description: "Bookmarks on error logging services such as Sentry, Rollbar, Bugsnag and Papertrail, plus Prometheus alternatives like Thanos, Mimir and VictoriaMetrics."
 status: ["Not started"]
 source: "https://f3l1x.super.site/wiki/observability"
 ---

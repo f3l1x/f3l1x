@@ -1,6 +1,8 @@
 ---
 title: "Password Managers"
-description: "https://medevel.com/14-web-password-managers/"
+date: "2023-04-09"
+updated: "2024-11-07"
+description: "Collected password managers and comparisons: KeeWeb, Passbolt, Psono, Bitwarden, plus self-hosted options such as Passman and Vaultage."
 status: ["Not started"]
 source: "https://f3l1x.super.site/wiki/password-managers"
 ---

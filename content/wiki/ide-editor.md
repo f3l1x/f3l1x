@@ -1,6 +1,8 @@
 ---
 title: "IDE / Editor"
-description: "https://laracasts.com/series/how-to-be-awesome-in-phpstorm/"
+date: "2022-08-13"
+updated: "2024-11-07"
+description: "Learning resources and shortcut references for editors: PhpStorm videos and courses, Sublime Text keyboard shortcuts and a Vim section."
 status: ["Not started"]
 source: "https://f3l1x.super.site/wiki/ide-editor"
 ---

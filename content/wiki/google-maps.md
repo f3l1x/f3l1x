@@ -1,5 +1,7 @@
 ---
 title: "Google Maps"
+date: "2021-08-30"
+updated: "2024-11-06"
 description: "The most basic is a simple destination. This will link directly to an address. Here are two possible ways:"
 status: ["Not started"]
 source: "https://f3l1x.super.site/wiki/google-maps"

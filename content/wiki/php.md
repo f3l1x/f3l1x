@@ -1,6 +1,8 @@
 ---
 title: "PHP"
-description: "Composer na shared hostingu - https://stackoverflow.com/questions/20894518/how-do-i-install-composer-on-a-shared-hosting/26277355#26277355"
+date: "2023-05-09"
+updated: "2026-01-19"
+description: "PHP notes: Composer on shared hosting, Doctrine, xdebug and Blackfire setup, Swoole, RoadRunner, Symfony, serverless PHP and performance links."
 status: ["Not started"]
 source: "https://f3l1x.super.site/wiki/php"
 ---

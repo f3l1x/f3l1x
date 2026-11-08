@@ -1,6 +1,8 @@
 ---
 title: "Livestream"
-description: "https://www.uscreen.tv/"
+date: "2022-09-28"
+updated: "2024-11-07"
+description: "Livestreaming platforms and gear: Uscreen, StreamYard, Restream, Streamlabs and Castr, plus a hardware section."
 status: ["Not started"]
 source: "https://f3l1x.super.site/wiki/livestream"
 ---

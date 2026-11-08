@@ -1,6 +1,8 @@
 ---
 title: "Roadmap"
-description: "https://www.kampsite.co/"
+date: "2022-09-28"
+updated: "2024-11-07"
+description: "Tools for public product roadmaps and customer feedback portals: Kampsite, UserVoice, Freshdesk, Zendesk, ProdPad and a few alternatives."
 status: ["Not started"]
 source: "https://f3l1x.super.site/wiki/roadmap"
 ---

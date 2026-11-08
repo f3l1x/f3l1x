@@ -1,6 +1,8 @@
 ---
 title: "Customer Support Platform"
-description: "https://www.groovehq.com/pricing"
+date: "2022-09-28"
+updated: "2024-11-07"
+description: "Help desk and customer support platforms compared by pricing: Zendesk, Freshdesk, Groove, LiveChat and open-source options like UVdesk."
 status: ["Not started"]
 source: "https://f3l1x.super.site/wiki/customer-support-platform"
 ---

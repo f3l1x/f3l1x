@@ -1,6 +1,8 @@
 ---
 title: "Games"
-description: "Headless server in Docker (docker-compose.yml)."
+date: "2021-08-30"
+updated: "2024-11-07"
+description: "Notes on running a headless Factorio game server in Docker, with a docker-compose.yml example exposing the game and RCON ports."
 status: ["Not started"]
 source: "https://f3l1x.super.site/wiki/games"
 ---

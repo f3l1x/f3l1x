@@ -1,6 +1,8 @@
 ---
 title: "Vercel"
-description: "ZEIT Now jako routing na Plex https://josefaidt.dev/blog/2019/11/using-zeit-now-proxy/"
+date: "2022-04-11"
+updated: "2024-11-07"
+description: "Vercel notes: using ZEIT Now as a proxy for Plex, monorepos with GitHub Actions, websockets, and deploying Laravel and PHP via vercel-php."
 status: ["Not started"]
 source: "https://f3l1x.super.site/wiki/vercel"
 ---

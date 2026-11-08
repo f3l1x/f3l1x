@@ -1,6 +1,8 @@
 ---
 title: "Wysiwyg"
-description: "Paste clean text into TinyMCE."
+date: "2021-08-30"
+updated: "2024-11-07"
+description: "TinyMCE snippet in JavaScript for pasting clean text, using the paste plugin to strip styles, classes and header formatting."
 status: ["Not started"]
 source: "https://f3l1x.super.site/wiki/wysiwyg"
 ---

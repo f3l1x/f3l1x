@@ -3,6 +3,7 @@ title: "Sonatype Nexus Repository: OrientDB a H2"
 description: "Sonatype Nexus je univerzální uložiště pro APT, NPM, Docker a spoustu dalších balíčků. Funguje cloudově, dá se i selfhostovat."
 tags: ["nexus","docker"]
 date: "2024-08-15"
+cover: "./sonatype-nexus-repository-orientdb-a-h2.assets/cover.png"
 source: "https://f3l1x.super.site/blog/2024/sonatype-nexus-repository-orientdb-a-h2"
 ---
 

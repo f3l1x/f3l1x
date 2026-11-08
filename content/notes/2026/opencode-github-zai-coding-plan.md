@@ -3,6 +3,7 @@ title: "OpenCode + Github + Z.AI Coding Plan"
 description: "Combine OpenCode.ai with GitHub CLI to automate release tracking, generate reports, and query GitHub data through natural language prompts."
 date: "January 15, 2026"
 tags: ["github","opencode"]
+cover: "./opencode-github-zai-coding-plan.assets/cover.png"
 source: "https://f3l1x.super.site/notes/2026/opencode-github-zai-coding-plan"
 ---
 

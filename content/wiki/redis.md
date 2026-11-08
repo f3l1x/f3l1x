@@ -1,6 +1,8 @@
 ---
 title: "Redis"
-description: "https://docs.keydb.dev/"
+date: "2023-01-29"
+updated: "2024-11-07"
+description: "Redis and alternative key-value stores: KeyDB, Dragonfly and Skytable, plus an article on replacing RabbitMQ with Redis for queues."
 status: ["Not started"]
 source: "https://f3l1x.super.site/wiki/redis"
 ---

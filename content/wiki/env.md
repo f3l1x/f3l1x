@@ -1,5 +1,8 @@
 ---
 title: ".ENV"
+date: "2021-08-30"
+updated: "2024-11-07"
+description: "Shell script that merges a .env example file into a production .env, adding only the variables that are missing, with usage example."
 status: ["Not started"]
 source: "https://f3l1x.super.site/wiki/env"
 ---

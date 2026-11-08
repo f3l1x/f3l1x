@@ -1,5 +1,8 @@
 ---
 title: "Terminal"
+date: "2021-08-30"
+updated: "2024-11-07"
+description: "Terminator terminal notes: the apt install command and a table of keyboard shortcuts for splitting and switching between views."
 status: ["Not started"]
 source: "https://f3l1x.super.site/wiki/terminal"
 ---

@@ -1,6 +1,8 @@
 ---
 title: "Video"
-description: "https://github.com/AkashiSN/ffmpeg-docker"
+date: "2025-05-01"
+updated: "2025-05-01"
+description: "FFmpeg links: Docker images, static builds, the ffmpeg.wasm browser port and build scripts from GitHub repositories."
 status: ["Not started"]
 source: "https://f3l1x.super.site/wiki/index/video"
 ---

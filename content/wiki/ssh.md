@@ -1,5 +1,7 @@
 ---
 title: "SSH"
+date: "2021-08-30"
+updated: "2024-11-06"
 description: "You can setup multiple ssh keys on your host by following config."
 status: ["Not started"]
 source: "https://f3l1x.super.site/wiki/ssh"

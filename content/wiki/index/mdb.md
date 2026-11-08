@@ -1,6 +1,8 @@
 ---
 title: "MDB"
-description: "Services"
+date: "2025-07-17"
+updated: "2025-07-17"
+description: "Movie database links: IMDb APIs such as OMDb and libremdb, PHP and scraper libraries, plus the node-csfd-api library for the Czech ČSFD site."
 status: ["Not started"]
 source: "https://f3l1x.super.site/wiki/index/mdb"
 ---

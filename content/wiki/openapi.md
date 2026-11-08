@@ -1,6 +1,8 @@
 ---
 title: "OpenAPI"
-description: "https://zircote.github.io/swagger-php/guide/generating-openapi-documents.html"
+date: "2023-05-09"
+updated: "2024-11-07"
+description: "Links for working with OpenAPI: swagger-php and php-openapi libraries, the Swagger editor, and API tools like Stoplight, Insomnia and Postman."
 status: ["Not started"]
 source: "https://f3l1x.super.site/wiki/openapi"
 ---

@@ -1,6 +1,8 @@
 ---
 title: "Cron"
-description: "https://juliendubreuil.fr/blog/devops/creating-docker-container-to-execute-jobs-to-other-containers/"
+date: "2022-08-13"
+updated: "2024-11-07"
+description: "Running cron jobs in Docker: articles on scheduling inside containers, Supervisor configuration, and the crontab.guru editor."
 status: ["Not started"]
 source: "https://f3l1x.super.site/wiki/cron"
 ---

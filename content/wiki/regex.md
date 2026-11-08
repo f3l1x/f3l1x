@@ -1,6 +1,8 @@
 ---
 title: "Regex"
-description: "https://regex101.com/"
+date: "2022-09-28"
+updated: "2024-11-07"
+description: "Two online regular expression testers bookmarked for quick checks: regex101 and RegExr."
 status: ["Not started"]
 source: "https://f3l1x.super.site/wiki/regex"
 ---

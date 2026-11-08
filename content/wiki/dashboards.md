@@ -1,6 +1,8 @@
 ---
 title: "Dashboards"
-description: "https://www.metabase.com/"
+date: "2024-09-04"
+updated: "2024-11-07"
+description: "Dashboard and BI tools for data: Metabase, Apache Superset, Redash, SigNoz and OpenObserve, plus RAWGraphs and Flourish."
 status: ["Not started"]
 source: "https://f3l1x.super.site/wiki/dashboards"
 ---

@@ -1,6 +1,8 @@
 ---
 title: "JavaScript / Typescript"
-description: "Resource hints - https://www.keycdn.com/blog/resource-hints"
+date: "2022-08-13"
+updated: "2024-11-07"
+description: "JavaScript and TypeScript links: resource hints, npm registry setup with Nexus, Vue and Nuxt.js components, React, dayjs and lightbox libraries."
 status: ["Not started"]
 source: "https://f3l1x.super.site/wiki/javascript-typescript"
 ---

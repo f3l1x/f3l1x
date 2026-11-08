@@ -1,6 +1,8 @@
 ---
 title: "Color Picker"
-description: "https://sipapp.io/"
+date: "2022-09-28"
+updated: "2024-11-07"
+description: "Color picker apps for macOS, including Sip, ColorSlurp, Roy and ColorMate, collected from Product Hunt."
 status: ["Not started"]
 source: "https://f3l1x.super.site/wiki/color-picker"
 ---

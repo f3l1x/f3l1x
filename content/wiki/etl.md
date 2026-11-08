@@ -1,6 +1,8 @@
 ---
 title: "ETL"
-description: "https://www.keboola.com/"
+date: "2023-04-09"
+updated: "2024-11-07"
+description: "Bookmarks for ETL and data pipeline tools: Keboola, CloudQuery, Apache Airflow, Airbyte and dbt, plus Kapacitor and usql."
 status: ["Not started"]
 source: "https://f3l1x.super.site/wiki/etl"
 ---

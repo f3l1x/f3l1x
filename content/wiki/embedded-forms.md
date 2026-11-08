@@ -1,6 +1,8 @@
 ---
 title: "Embedded Forms"
-description: "https://www.powr.io/pricing"
+date: "2022-09-28"
+updated: "2024-11-07"
+description: "Link list of embeddable form and survey builders with pricing pages, including Formspree, Typeform, Jotform and POWR."
 status: ["Not started"]
 source: "https://f3l1x.super.site/wiki/embedded-forms"
 ---

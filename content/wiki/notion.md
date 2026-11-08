@@ -1,6 +1,8 @@
 ---
 title: "Notion"
-description: "https://medium.com/@andersondario/creating-a-personal-website-with-notion-aws-s3-cloudflare-and-google-domains-5f453bdc0487"
+date: "2023-07-02"
+updated: "2024-11-07"
+description: "Notion as a website backend: an article on hosting with S3 and Cloudflare, site builders like Super, Simple.ink and Loconotion, and a cover generator."
 status: ["Not started"]
 source: "https://f3l1x.super.site/wiki/notion"
 ---

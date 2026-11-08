@@ -1,8 +1,9 @@
 ---
 title: "AI discovery: 2026/02"
-description: "Product"
+description: "Weekly AI news for February 2026: Claude Opus 4.6, GPT-5.3-Codex in Copilot, Devin scheduled runs, Cursor limits and OWASP agentic security."
 date: "2026-02-13"
 tags: ["discovery","ai"]
+cover: "./ai-discovery-202602.assets/cover.png"
 source: "https://f3l1x.super.site/blog/2026/ai-discovery-202602"
 ---
 

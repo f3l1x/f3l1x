@@ -1,6 +1,8 @@
 ---
 title: "Nette"
-description: "https://github.com/nattreid"
+date: "2021-08-30"
+updated: "2024-11-07"
+description: "Link list for Nette: open-source CMS projects built on it (nattreid, dravencms, ThunboltCMS, npress), plus a Latte ifCurrentIn macro example."
 status: ["Not started"]
 source: "https://f3l1x.super.site/wiki/nette"
 ---

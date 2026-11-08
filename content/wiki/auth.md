@@ -1,6 +1,8 @@
 ---
 title: "Auth"
-description: "https://auth0.com/"
+date: "2023-07-02"
+updated: "2024-11-07"
+description: "Authentication and identity software links: Auth0, Clerk, Keycloak, Authelia, authentik and Ory, plus LDAP servers and oauth2-proxy."
 status: ["Not started"]
 source: "https://f3l1x.super.site/wiki/auth"
 ---

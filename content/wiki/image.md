@@ -1,6 +1,8 @@
 ---
 title: "Image"
-description: "http://bg.siteorigin.com/"
+date: "2022-09-28"
+updated: "2024-11-07"
+description: "Image tools and references: background generators like Trianglify, optimization and speed tests with TinyPNG and ShortPixel, and resizers."
 status: ["Not started"]
 source: "https://f3l1x.super.site/wiki/image"
 ---

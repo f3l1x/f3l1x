@@ -1,6 +1,8 @@
 ---
 title: "CLI Tools"
-description: "ls → https://github.com/ogham/exa"
+date: "2023-04-09"
+updated: "2025-11-20"
+description: "Command-line tool picks: fzf, fd, bat, ripgrep, glow and nnn as modern replacements for ls, find, cat and grep, plus CLI frameworks like oclif and yargs."
 status: ["Not started"]
 source: "https://f3l1x.super.site/wiki/cli-tools"
 ---

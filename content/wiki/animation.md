@@ -1,6 +1,8 @@
 ---
 title: "Animation"
-description: "https://www.haikuanimator.com/"
+date: "2022-09-28"
+updated: "2024-11-06"
+description: "Link list of animation and video-making tools, including Haiku Animator, Vyond, Biteable, Animaker and Canva."
 status: ["Not started"]
 source: "https://f3l1x.super.site/wiki/animation"
 ---

@@ -1,6 +1,8 @@
 ---
 title: "Presentation Tools"
-description: "http://lab.hakim.se/reveal-js/#/"
+date: "2022-09-28"
+updated: "2024-11-07"
+description: "List of web presentation frameworks and tools: reveal.js, impress.js, deck.js, Spectacle, WebSlides and Marp, plus Prezi and a few terminal options."
 status: ["Not started"]
 source: "https://f3l1x.super.site/wiki/presentation-tools"
 ---

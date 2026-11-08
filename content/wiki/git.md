@@ -1,6 +1,8 @@
 ---
 title: "Git"
-description: "Submoduly - https://chrisjean.com/git-submodules-adding-using-removing-and-updating/"
+date: "2022-08-13"
+updated: "2024-11-07"
+description: "Git notes: a guide to submodules, SQL-style repository query tools such as MergeStat and Dolt, git-filter-repo, and listing changed files."
 status: ["Not started"]
 source: "https://f3l1x.super.site/wiki/git"
 ---

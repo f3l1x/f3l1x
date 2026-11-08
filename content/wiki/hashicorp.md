@@ -1,6 +1,8 @@
 ---
 title: "Hashicorp"
-description: "https://github.com/input-output-hk/bitte"
+date: "2022-05-13"
+updated: "2025-03-11"
+description: "Links and notes on HashiCorp tools, mostly Nomad (Terraform modules, templating, networking, CSI), with sections on Packer and Terraform."
 status: ["Not started"]
 source: "https://f3l1x.super.site/wiki/hashicorp"
 ---

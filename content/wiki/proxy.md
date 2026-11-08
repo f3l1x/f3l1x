@@ -1,6 +1,8 @@
 ---
 title: "Proxy"
-description: "https://github.com/snail007/goproxy"
+date: "2023-10-12"
+updated: "2024-11-06"
+description: "Bookmarks of open-source proxy servers and libraries: goproxy, moxxiproxy and Apify's proxy-chain for Node.js."
 status: ["Not started"]
 source: "https://f3l1x.super.site/wiki/proxy"
 ---

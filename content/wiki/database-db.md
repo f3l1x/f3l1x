@@ -1,6 +1,8 @@
 ---
 title: "Database / DB"
-description: "Pooling"
+date: "2022-09-28"
+updated: "2025-04-27"
+description: "Postgres tool links grouped by theme: pooling with PgBouncer and Supavisor, monitoring, pgbadger logging, Citus, plus DBaaS options and general DB tools."
 status: ["Not started"]
 source: "https://f3l1x.super.site/wiki/database-db"
 ---
