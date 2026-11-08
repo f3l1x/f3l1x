@@ -10,3 +10,6 @@
 /security.txt /.well-known/security.txt 301
 /feed /rss.xml 301
 /feed.xml /rss.xml 301
+
+# Renamed talks
+/talks/posobota-nette-contributte-final-destination /talks/posobota-nette-contributte 301

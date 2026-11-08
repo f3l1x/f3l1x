@@ -6,7 +6,7 @@ event: "https://www.facebook.com/events/1783858791700944/"
 meetup: "https://pehapkari.cz/"
 slides: "https://slides.com/f3l1x/2018-06-06-vuejs-nuxtjs-vuepress/"
 github: "https://codesandbox.io/s/p5jl7qplvq"
-video: "https://www.facebook.com/watch/live/?v=1704791359570667&t=6346"
+video: "https://www.youtube.com/watch?v=Yl0NQ0o9erg"
 cover: "./vuejs-vuex-nuxtjs-vuepress.assets/cover.png"
 source: "https://f3l1x.super.site/talks/vuejs-vuex-nuxtjs-vuepress"
 ---
