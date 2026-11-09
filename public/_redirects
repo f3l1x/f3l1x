@@ -11,5 +11,11 @@
 /feed /rss.xml 301
 /feed.xml /rss.xml 301
 
-# Renamed talks
-/talks/posobota-nette-contributte-final-destination /talks/posobota-nette-contributte 301
+# Old dated blog URLs (/blog/YYYY/MM/DD/slug) seen in traffic
+/blog/2018/05/30/contributte-killer-balicky-pro-nette-framework /blog/2017/contributte-killer-balicky-pronad-nette 301
+/blog/2019/01/100/online-sluzba-ipapi-co /blog/2019/online-sluba-ipapico 301
+/blog/2018/03/18/nette-framework-webpack-4 /blog/2018/nette-framework-webpack-4 301
+/blog/2018/03/18/nette- /blog/2018/nette-framework-webpack-4 301
+
+# Old resume URL
+/resume /about 301
