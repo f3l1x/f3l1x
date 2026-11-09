@@ -3,6 +3,7 @@ title: "AI discovery: 2026/03"
 description: "AI news for March 2026: GPT-5.4, Claude Code auto mode, Cursor Composer 2, the LiteLLM and axios supply chain attacks and the Claude Code source leak."
 date: "2026-03-31"
 tags: ["discovery","ai"]
+cover: "./ai-discovery-202603.assets/cover.png"
 ---
 
 ## 01.03.2026 – 31.03.2026

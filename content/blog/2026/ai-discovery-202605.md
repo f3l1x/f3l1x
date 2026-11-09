@@ -3,6 +3,7 @@ title: "AI discovery: 2026/05"
 description: "AI news for May 2026: Claude Opus 4.8, Gemini 3.5 Flash and Antigravity 2.0 from Google I/O, Cursor Composer 2.5 and Mythos security findings."
 date: "2026-05-31"
 tags: ["discovery","ai"]
+cover: "./ai-discovery-202605.assets/cover.png"
 ---
 
 ## 01.05.2026 – 31.05.2026

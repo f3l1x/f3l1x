@@ -3,6 +3,7 @@ title: "AI discovery: 2026/04"
 description: "Monthly AI news for April 2026: Claude Opus 4.7, GPT-5.5, Project Glasswing, the Vercel incident, Gemma 4 and DeepSeek V4."
 date: "2026-04-30"
 tags: ["discovery","ai"]
+cover: "./ai-discovery-202604.assets/cover.png"
 ---
 
 ## 01.04.2026 – 30.04.2026

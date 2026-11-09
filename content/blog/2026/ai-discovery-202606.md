@@ -3,6 +3,7 @@ title: "AI discovery: 2026/06"
 description: "AI news for June 2026: Claude Fable 5 and Sonnet 5, Codex for knowledge work, GLM-5.2 open weights, npm supply chain attacks and Patch the Planet."
 date: "2026-06-30"
 tags: ["discovery","ai"]
+cover: "./ai-discovery-202606.assets/cover.png"
 ---
 
 ## 01.06.2026 – 30.06.2026

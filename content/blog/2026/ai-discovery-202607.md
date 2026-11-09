@@ -3,6 +3,7 @@ title: "AI discovery: 2026/07"
 description: "Monthly AI news for July 2026: Claude Opus 5, GPT-5.6, the 2026-07-28 MCP spec, the AsyncAPI npm compromise and GitHub stacked pull requests."
 date: "2026-07-31"
 tags: ["discovery","ai"]
+cover: "./ai-discovery-202607.assets/cover.png"
 ---
 
 ## 01.07.2026 – 31.07.2026

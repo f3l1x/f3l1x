@@ -3,6 +3,7 @@ title: "AI discovery: 2026/08"
 description: "Monthly AI digest for August 2026: Meta Muse Code, Gemini 3.7 Flash, Cursor joining SpaceX, Claude Code auto mode default and the ChainDrop npm worm."
 date: "2026-08-31"
 tags: ["discovery","ai"]
+cover: "./ai-discovery-202608.assets/cover.png"
 ---
 
 ## 01.08.2026 – 31.08.2026

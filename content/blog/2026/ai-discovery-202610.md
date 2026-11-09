@@ -3,6 +3,7 @@ title: "AI discovery: 2026/10"
 description: "AI news for October 2026: Claude Haiku 5.5, GPT-6.1 Terra, Copilot Fusion, Agentic Workflows GA and the Tensorlake npm compromise."
 date: "2026-10-31"
 tags: ["discovery","ai"]
+cover: "./ai-discovery-202610.assets/cover.png"
 ---
 
 ## 01.10.2026 – 31.10.2026

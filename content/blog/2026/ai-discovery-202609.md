@@ -3,6 +3,7 @@ title: "AI discovery: 2026/09"
 description: "AI news for September 2026: Claude Opus 5.5 and Sonnet 5.5, GPT-6 Astra, Gemini 3.8 Flash, Cursor Projects and the Plugin4Shell flaw."
 date: "2026-09-30"
 tags: ["discovery","ai"]
+cover: "./ai-discovery-202609.assets/cover.png"
 ---
 
 ## 01.09.2026 – 30.09.2026
