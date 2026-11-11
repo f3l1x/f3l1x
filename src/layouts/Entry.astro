@@ -27,12 +27,13 @@ const date = d.date?.toISOString().slice(0, 10)
 const updated = d.updated?.toISOString().slice(0, 10)
 const published = d.date?.toISOString()
 const modified = (d.updated ?? d.date)?.toISOString()
+const videoEmbed = toVideoEmbed(d.video)
 const me = { '@id': `${SITE}/#person` }
 
 const crumbs = [{ name: 'Home', path: '/' }, ...(section === 'pages' ? [] : [{ name: section[0].toUpperCase() + section.slice(1), path: `/${section}` }]), { name: d.title, path: urlPath }]
 const ld: any[] = [breadcrumbLd(crumbs)]
 if (isArticle) ld.push({ '@type': 'BlogPosting', headline: d.title, description: summary, datePublished: published, dateModified: modified, url, mainEntityOfPage: url, inLanguage: lang, keywords: d.tags?.join(', '), author: me, publisher: me })
-else if (isTalk) ld.push({ '@type': 'CreativeWork', name: d.title, description: summary, datePublished: published, url, inLanguage: lang, creator: me, ...(d.video ? { video: { '@type': 'VideoObject', name: d.title, url: d.video, uploadDate: published, thumbnailUrl: `${SITE}${og}` } } : {}) })
+else if (isTalk) ld.push({ '@type': 'CreativeWork', name: d.title, description: summary, datePublished: published, url, inLanguage: lang, creator: me, ...(videoEmbed ? { video: { '@type': 'VideoObject', name: d.title, description: summary ?? d.title, embedUrl: videoEmbed, uploadDate: published, thumbnailUrl: `${SITE}${og}` } } : {}) })
 else ld.push({ '@type': 'WebPage', name: d.title, description: summary, url, inLanguage: lang, datePublished: published, dateModified: modified })
 
 // Wiki pages are living documents: show only when they were last touched.
@@ -40,7 +41,6 @@ const human = (x: Date) => x.toLocaleDateString('en-GB', { day: 'numeric', month
 const lastTouched: Date | undefined = isWiki ? (d.updated ?? d.date) : undefined
 
 // Talk-only fields
-const videoEmbed = toVideoEmbed(d.video)
 const slidesEmbed = toSlidesEmbed(d.slides)
 const links = [['Slides', d.slides], ['GitHub', d.github], ['Video', videoEmbed ? null : d.video], ['Meetup', d.meetup]].filter(([, u]) => u)
 const event = d.event && !/^https?:/.test(d.event) ? d.event : undefined
